@@ -1,0 +1,61 @@
+@use "../base/var" as *;
+/*burger*/
+.menu-button {
+	width: 35px;
+	height: 35px;
+	-webkit-box-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+			align-items: center;
+	cursor: pointer;
+	display: none;
+	
+	@media (max-width: 767px) {
+		display: -webkit-box;
+		display: flex;
+		z-index: 15;
+	}
+  }
+  
+  .menu-button span {
+	position: relative;
+	width: 30px;
+	height: 2px;
+	background-color: #1c1c1c;
+  }
+  .menu-button span::before, .menu-button span::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 30px;
+	height: 2px;
+	transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+	transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+	background-color: #1c1c1c;
+  }
+  .menu-button span::before {
+	top: -6px;
+  }
+  .menu-button span::after {
+	top: 6px;
+  }
+  
+  /* Active state */
+  .menu-button.active  span {
+	background-color: transparent;
+  }
+  .menu-button.active span::before,  .menu-button.active span::after {
+	top: 0;
+	transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  }
+  .menu-button.active span::before {
+	-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+  }
+  .menu-button.active span::after {
+	-webkit-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+  }

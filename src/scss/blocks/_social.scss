@@ -12,7 +12,7 @@
 		border-radius: 50%;
 		background-color: $s5;
 	}
-	@media (max-width: 1364px) {
+	@media(min-width:768px) and (max-width: 1364px) {
 		column-gap:remy(10);
 		&-item{
 			width: remy(24);
