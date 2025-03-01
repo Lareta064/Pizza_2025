@@ -12,4 +12,11 @@
 		border-radius: 50%;
 		background-color: $s5;
 	}
+	@media (max-width: 1364px) {
+		column-gap:remy(10);
+		&-item{
+			width: remy(24);
+		    height: remy(24);
+		}
+	}
 }
