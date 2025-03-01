@@ -5,8 +5,6 @@ header.header{
 	border-bottom: 1px solid $s1;
 	height: 140px;
 	@media (max-width: 767px) {
-		
-
 		position: fixed;
 		bottom: 0;
 		left: 0;
@@ -54,6 +52,7 @@ header.header{
 .profile-status{
 	cursor:pointer;
 	flex-shrink: 0;
+	
 }
 .logo{
 	width: 262px;
@@ -192,4 +191,63 @@ header.header{
 			display: block;
 		}
 	}
+}
+
+.header-menu__list{
+	position: relative;
+	
+	ul{
+		display: flex;
+		column-gap:24px;
+	}
+	.menu-item  .menu-link{
+		padding-block: 6px;
+		border-bottom: 1px solid transparent;
+		font-weight: 400;
+		font-size: 16px;
+		color: var(--primary);
+		transition: .3s; 
+		&:hover{
+			color: $a2;
+			border-bottom-color: $a2;
+		}
+	}
+	.menu-item.active .menu-link{
+		color: $a2;
+		border-bottom-color: $a2;
+	}
+}
+.header-menu__list .sub-menu{
+	position: absolute;
+	height: 70px;
+	background-color: white;
+	top:65px;
+	left: 0;
+	right: 0;
+	z-index: 9;
+	height: 0;
+	overflow: hidden;
+	transition: .3s; 
+}
+header.header{position: relative;}
+header.header:after{
+	content:'';
+	height: 0;
+	background-color: #fff;
+	position: absolute;
+	top: 100%;
+	height: 0;
+	left: 0;
+	right: 0;
+	transition: .3s; 
+}
+header.header.show-after:after{
+	height: 64px;
+}
+.header-menu__list .sub-menu.active{
+	height: 64px;
+}
+.header-menu__list .sub-menu ul{
+	position: relative;
+	z-index: 2;
 }
