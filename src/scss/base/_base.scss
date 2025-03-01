@@ -1,0 +1,230 @@
+@use "base/var" as *;
+@font-face{
+	font-family: 'Cuprum';
+	src: url('../fonts/Cuprum-Regular.woff2'), format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'Cuprum';
+	src: url('../fonts/Cuprum-Bold.woff2'), format('woff2');
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'RobotoCondensed';
+	src: url('../fonts/RobotoCondensed-Regular.woff2'), format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
+	font-family: 'RobotoCondensed';
+	src: url('../fonts/RobotoCondensed-Bold.woff2'), format('woff2');
+	font-weight: 700;
+	font-display: swap;
+}
+*, *:after, *:before {
+	box-sizing: border-box;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+
+html {
+	scroll-behavior: smooth;
+	
+	scroll-padding-top: 130px;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: $ff;
+	font-size: 16px;
+    line-height: 1.50;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: auto;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	&>*{width: 100%;}
+	@media (max-width: 399px) {
+		font-size: 13px;
+	}
+}
+.lock{overflow: hidden; }
+
+a,
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+a[href^="tel:"],
+a[href^="mailto:"] {
+	white-space: nowrap;
+}
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	padding: 0;
+	margin: 0;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	
+}
+
+input,
+button, textarea{border: none;}
+button:focus,
+input:focus,textarea:focus{outline: none;}
+button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+input[type="submit"] {
+	padding-block: 0;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+input::placeholder, textarea::placeholder, textarea::placeholder{
+	font-family: inherit;
+	font-size: inherit;
+}
+
+
+.container{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width:600px;
+	margin-left: auto;
+	margin-right: auto;
+	// overflow: hidden;
+	// @media (max-width: 399px) {
+	// 	padding-left: 10px;
+	// 	padding-right: 10px;
+	// }
+}
+
+.header, .footer{flex-shrink: 0;}
+main{flex:1; padding-bottom: 200px; background-color: #fff;}
+
+.flex, .flex-center, .header-content, .header-right,.footer-content,.footer, .cat-wrapper, .flex-link, .column-center,.filter-label,.flex-between{
+	display: flex;
+	align-items: center;
+	column-gap:12px;
+}
+.column-center{
+	flex-direction: column;
+	row-gap:12px;
+	justify-content: center;
+}
+.flex-center{
+	justify-content: center;
+	width: 100%;
+}
+.flex-between{justify-content: space-between;}
+*.two-columns, .two-columns, .products-content.two-columns{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	row-gap:12px;
+	column-gap: 12px;
+	&>*{
+		grid-column: span 3;
+	}
+}
+.flx-1{flex:1}
+.wrapper-gap-20{
+	display: flex;
+	flex-direction: column;
+	row-gap:20px;
+	&>*{width: 100%;}
+}
+.gap-20{
+	&>*+*{margin-top: 20px!important;}
+}
+.gap-12{
+	&>*+*{margin-top: 12px!important;}
+}
+.w-100{width:100%!important;}
+.p-10{
+	padding: 10px;
+}
+.pb-100{padding-bottom: 100px!important;}
+.pb-140{padding-bottom: 140px!important;}
+.pb-200{padding-bottom: 260px!important;}
+.mt-20{margin-top: 20px!important;}
+.mb-20{margin-bottom: 20px!important;}
+.mt-auto{margin-top: auto;}
+.mt-6{margin-top: 6px!important;}
+.scroll-y{
+	overflow:hidden;
+	overflow-y: auto;
+	scrollbar-width: 0;
+	&::-webkit-scrollbar{display: none;}
+}
+.top-border, .popUp-footer{
+	border-top: 1px solid $s1;
+
+}
+.popup-wrapper{
+	backdrop-filter: blur(16px);
+	background: rgba(31, 31, 31, 0.7);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	inset:0;
+	z-index: 15;
+	flex-direction: column;
+	&>*{width: 95%; max-width: 382px;}
+	
+	.popup-small{
+		padding: 60px 24px;
+		border-radius: 20px;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		row-gap:20px;
+		.flex-center{
+			width: 100%;
+			.btn-light, .btn-accent{flex:1}
+		}
+	}
+}
+.progress-ring {
+	transform: rotate(-90deg);
+}
+
+.progress-ring-circle {
+	transition: stroke-dashoffset 1s linear;
+}

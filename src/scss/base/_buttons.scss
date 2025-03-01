@@ -1,0 +1,168 @@
+@use "var" as *;
+
+
+.btn, .btn-accent, .btn-light{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 48px;
+	padding-left: 28px;
+	padding-right: 28px;
+	border-radius: 100px;
+	background-color: $a2;
+	font-size: 16px;
+	color: $p;
+	font-weight: 400;
+	transition: .3s;
+	border:1px solid $a2;
+	column-gap:12px;
+	white-space: nowrap;
+	
+}
+.btn:hover, .btn:focus{background-color: $a3;border-color:$a3;}
+.btn-accent{
+	background-color: $a1;
+	border-color:$a1;
+	color: white;
+	&:hover, &:focus{
+		background-color: $a4;
+		border-color:$a4;
+		color: white;
+
+	}
+}
+.btn-light{
+	background-color: transparent;
+	border-color:$p;
+	
+	&:hover, &:focus{
+		background-color: $a2;
+		border-color:$a2;
+
+	}
+	&:active{
+		background-color: transparent;
+		border-color:$a1;
+		color: $a1;
+
+	}
+}
+.btn-back, .btn-close, .btn-back-dark, .btn-close-dark, .btn-open-cart{
+	width: 54px;
+	height: 54px;
+	display: inline-block;
+	background-color: #fff;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.5334 21.1998C10.3844 21.2003 10.2368 21.1713 10.0991 21.1145C9.96139 21.0577 9.83628 20.9742 9.73099 20.8688L0.664321 11.8022C0.453363 11.5884 0.335083 11.3001 0.335083 10.9998C0.335083 10.6994 0.453363 10.4112 0.664321 10.1974L9.73099 1.1307C9.9438 0.917895 10.2324 0.79834 10.5334 0.79834C10.8343 0.79834 11.123 0.917895 11.3358 1.1307C11.5486 1.34351 11.6682 1.63215 11.6682 1.9331C11.6682 2.23406 11.5486 2.5227 11.3358 2.7355L3.05339 10.9998L11.3358 19.264C11.5467 19.4778 11.665 19.7661 11.665 20.0664C11.665 20.3668 11.5467 20.6551 11.3358 20.8688C11.2305 20.9742 11.1054 21.0577 10.9677 21.1145C10.83 21.1713 10.6824 21.2003 10.5334 21.1998Z' fill='%232C2C2C' /%3e%3c/svg%3e");
+	background-size: 12px 22px;
+	background-position: center;
+	flex-shrink: 0;
+}
+.btn-back-dark{
+	background-color: $p;
+	background-size: 12px 22px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.5334 21.1998C10.3844 21.2003 10.2368 21.1713 10.0991 21.1145C9.96139 21.0577 9.83628 20.9742 9.73099 20.8688L0.664321 11.8022C0.453363 11.5884 0.335083 11.3001 0.335083 10.9998C0.335083 10.6994 0.453363 10.4112 0.664321 10.1974L9.73099 1.1307C9.9438 0.917895 10.2324 0.79834 10.5334 0.79834C10.8343 0.79834 11.123 0.917895 11.3358 1.1307C11.5486 1.34351 11.6682 1.63215 11.6682 1.9331C11.6682 2.23406 11.5486 2.5227 11.3358 2.7355L3.05339 10.9998L11.3358 19.264C11.5467 19.4778 11.665 19.7661 11.665 20.0664C11.665 20.3668 11.5467 20.6551 11.3358 20.8688C11.2305 20.9742 11.1054 21.0577 10.9677 21.1145C10.83 21.1713 10.6824 21.2003 10.5334 21.1998Z' fill='%23ffffff' /%3e%3c/svg%3e");
+	border-radius: 50%;
+}
+.btn-close, .remove-self{
+	background-size: 34px 34px;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.66679 29.4665C5.51783 29.467 5.37023 29.438 5.23252 29.3812C5.0948 29.3244 4.96969 29.241 4.86439 29.1356C4.65344 28.9218 4.53516 28.6335 4.53516 28.3332C4.53516 28.0328 4.65344 27.7446 4.86439 27.5308L27.5311 4.8641C27.7439 4.65129 28.0325 4.53174 28.3335 4.53174C28.6344 4.53174 28.9231 4.65129 29.1359 4.8641C29.3487 5.07691 29.4682 5.36554 29.4682 5.6665C29.4682 5.96746 29.3487 6.25609 29.1359 6.4689L6.46919 29.1356C6.3639 29.241 6.23879 29.3244 6.10107 29.3812C5.96336 29.438 5.81576 29.467 5.66679 29.4665V29.4665Z' fill='%231F1F1F' /%3e%3cpath d='M28.3334 29.4665C28.1844 29.467 28.0369 29.438 27.8991 29.3812C27.7614 29.3244 27.6363 29.241 27.531 29.1356L4.86435 6.4689C4.65154 6.25609 4.53198 5.96746 4.53198 5.6665C4.53198 5.36554 4.65154 5.07691 4.86435 4.8641C5.07716 4.65129 5.36579 4.53174 5.66675 4.53174C5.96771 4.53174 6.25634 4.65129 6.46915 4.8641L29.1358 27.5308C29.3468 27.7446 29.4651 28.0328 29.4651 28.3332C29.4651 28.6335 29.3468 28.9218 29.1358 29.1356C29.0305 29.241 28.9054 29.3244 28.7677 29.3812C28.63 29.438 28.4824 29.467 28.3334 29.4665V29.4665Z' fill='%231F1F1F' /%3e%3c/svg%3e");
+}
+.remove-self{
+	width: 14px;
+	height: 14px;
+	position: relative;
+	z-index: 2;
+	background-size: 14px 14px;
+}
+.btn-close-dark{
+	background-size: 34px 34px;
+	background-color: $p;
+	border-radius: 50%;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.66679 29.4665C5.51783 29.467 5.37023 29.438 5.23252 29.3812C5.0948 29.3244 4.96969 29.241 4.86439 29.1356C4.65344 28.9218 4.53516 28.6335 4.53516 28.3332C4.53516 28.0328 4.65344 27.7446 4.86439 27.5308L27.5311 4.8641C27.7439 4.65129 28.0325 4.53174 28.3335 4.53174C28.6344 4.53174 28.9231 4.65129 29.1359 4.8641C29.3487 5.07691 29.4682 5.36554 29.4682 5.6665C29.4682 5.96746 29.3487 6.25609 29.1359 6.4689L6.46919 29.1356C6.3639 29.241 6.23879 29.3244 6.10107 29.3812C5.96336 29.438 5.81576 29.467 5.66679 29.4665V29.4665Z' fill='%23FFFFFF' /%3e%3cpath d='M28.3334 29.4665C28.1844 29.467 28.0369 29.438 27.8991 29.3812C27.7614 29.3244 27.6363 29.241 27.531 29.1356L4.86435 6.4689C4.65154 6.25609 4.53198 5.96746 4.53198 5.6665C4.53198 5.36554 4.65154 5.07691 4.86435 4.8641C5.07716 4.65129 5.36579 4.53174 5.66675 4.53174C5.96771 4.53174 6.25634 4.65129 6.46915 4.8641L29.1358 27.5308C29.3468 27.7446 29.4651 28.0328 29.4651 28.3332C29.4651 28.6335 29.3468 28.9218 29.1358 29.1356C29.0305 29.241 28.9054 29.3244 28.7677 29.3812C28.63 29.438 28.4824 29.467 28.3334 29.4665V29.4665Z' fill='%23FFFFFF' /%3e%3c/svg%3e");
+}
+.btn-open-cart{
+	border-radius: 50%;
+	background-color: $a2;
+	background-size:34px 34px;
+	background-position: center;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.4666 27.1998C12.3176 27.2003 12.17 27.1713 12.0323 27.1145C11.8946 27.0577 11.7694 26.9742 11.6642 26.8688C11.4532 26.6551 11.3349 26.3668 11.3349 26.0664C11.3349 25.7661 11.4532 25.4778 11.6642 25.264L19.9466 16.9998L11.6642 8.7355C11.4513 8.5227 11.3318 8.23406 11.3318 7.9331C11.3318 7.63215 11.4513 7.34351 11.6642 7.1307C11.877 6.9179 12.1656 6.79834 12.4666 6.79834C12.7675 6.79834 13.0561 6.9179 13.269 7.1307L22.3356 16.1974C22.5466 16.4112 22.6649 16.6994 22.6649 16.9998C22.6649 17.3001 22.5466 17.5884 22.3356 17.8022L13.269 26.8688C13.1637 26.9742 13.0385 27.0577 12.9008 27.1145C12.7631 27.1713 12.6155 27.2003 12.4666 27.1998Z' fill='%232C2C2C' /%3e%3c/svg%3e");
+
+}
+.footer .btn-open-cart{margin-left: auto;
+}
+.btn-round, .btn-out, .btn-profile,.round-link{
+	border-radius: 50%;
+	background-color: #fff;
+	width: 54px;
+	height: 54px;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.btn-profile{
+	border:2px solid $p;
+	overflow: hidden;
+	img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+.btn-out{
+	background-color: $s2;
+}
+.menu-btn{
+	display: inline-block;
+	
+	display: flex;
+	flex-direction: column;justify-content: center; align-items: center;
+	width: 54px;
+	height: 54px;
+	span{position: relative;
+	}
+	span,	span:after, span:before{
+		height: 2px;width:28px; border-radius: 2px;
+		background-color: $p;
+	}
+	span:after, span:before{
+		content:'';
+		position: absolute;
+		left: 0;right: 0;
+		top: -8px;
+	}
+	span:before{bottom: -8px;top:auto;}
+
+}
+.product-popup-header .btn-close-dark{ 
+	position: absolute;
+	left: 0;
+	top:50%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+input.btn{width: fit-content;}
+.btn-favor input:checked + svg{color: $a1;}
+.show-add-product>*{pointer-events: none;}
+.show-add-product, .show-all-product{color: $p;}
+.w-100{width:100%!important;}
+.filter-label{
+	border-radius: 100px;
+	padding: 8px 10px;
+	height: 36px;
+	width: fit-content;
+	background-color: $s2;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.43;
+	text-align: center;
+	color:$p;
+	
+}
+.filters-set{
+	display: flex;
+	flex-wrap: wrap;
+	gap:10px;
+}

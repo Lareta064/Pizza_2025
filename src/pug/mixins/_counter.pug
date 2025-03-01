@@ -1,0 +1,11 @@
+mixin counter
+	.counter
+		button(type="button"  aria-label="Уменьшить количество").counter-minus –
+		span.counter-value(contenteditable="true") 2
+		button(type="button" aria-label="Увеличить количество" ).counter-plus +
+
+mixin counter-grey
+	.counter.counter--round
+		button(type="button"  aria-label="Уменьшить количество").counter-minus –
+		span.counter-value(contenteditable="true") 2
+		button(type="button" aria-label="Увеличить количество" ).counter-plus +

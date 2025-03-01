@@ -1,0 +1,207 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Карточки
+
+				.container-dashboard__content
+					.cat-wrapper.scroll-wrapper(style="width: 430px")
+						+catCard-ui(1,'Пицца')
+						+catCard-ui(2,'Роллы')
+						+catCard-ui(3,'Бургеры')
+						+catCard-ui(4,'Закуски')
+						+catCard-ui(5,'Напитки')
+						+catCard-ui(6,'Десерты')
+						+catCard-ui(7,'Салаты')
+						+catCard-ui(8,'Наборы')
+					
+					.cat-wrapper.two-columns(style="width: 430px")
+						+catCard-flex-ui(1,'Пицца')
+						+catCard-flex-ui(2,'Роллы')
+						+catCard-flex-ui(3,'Бургеры')
+						+catCard-flex-ui(4,'Закуски')
+						+catCard-flex-ui(5,'Напитки')
+						+catCard-flex-ui(6,'Десерты')
+						+catCard-flex-ui(7,'Салаты')
+						+catCard-flex-ui(8,'Наборы')
+						
+				.products-content(style="width:482px")
+					.product
+						.product__img.p-10
+							img(src="../img/goods/pizza2.webp", srcset="../img/goods/pizza2@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						.product__footer
+							button.btn.w-100(type="button") от 630 &#8381;
+					pre.
+						.product
+					hr
+					a(href="#!").product.product-horiz
+						.product__img
+							img(src="../img/goods/chiken1.webp", srcset="../img/goods/chiken1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Куриные наггетсы
+							p 6 шт
+							button.btn(type="button") от 630 &#8381;
+					
+					pre.
+						a(href="#!").product.product-horiz
+					hr
+					a(href="#!").product.product-horiz.align-left
+						.product__img
+							img(src="../img/goods/chiken1.webp", srcset="../img/goods/chiken1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Куриные наггетсы
+							p 6 шт
+							button.btn(type="button") Заменить
+					
+					pre.
+						a(href="#!").product.product-horiz.align-left
+					
+					p Класс p-10  у картинки задает ей отступы в 10 пикселей
+				hr
+				.products-content.two-columns(style="width:482px")
+					a(href="#!").product
+						.product__img.p-10
+							img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					a(href="#!").product
+						.product__img.p-10
+							img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+				
+				.products-content.two-columns(style="width:482px")
+					a(href="#!").product
+						.product__img.p-10
+							img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							button.btn(type="button") от 630 &#8381;
+					a(href="#!").product
+						.product__img.p-10
+							img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" width="185" height="146" alt="img")
+						.product__body
+							p.product__name Пицца Баварская
+							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+							button.btn(type="button") от 630 &#8381;
+				
+				hr
+				h3 Карточка корзины
+				.cart-item-group
+					.cart-item
+						.cart-item__top
+							.card-img
+								img(src="../img/goods/pizza1.webp", srcset="../img/goods/pizza1@2x.webp 2x" width="70"  height="62" alt="img")
+							.card-txt
+								.title-16 Пицца “Маргарита”
+								p Традиционное, 28 см
+								span.txt-14 1 шт
+							
+							button.remove-self
+						
+						.cart-item__bottom
+							.cart-price.title-16 335 &#8381;
+							.counter-wrapper__group
+								span.txt-14.txt-red Изменить:
+								+counter-grey
+					
+					button.swipe-btn
+						svg.svg-delete
+							use(href='../img/sprite.svg#svg-delete')
+				h3 Оформление
+				.order-card
+					.order-header
+						p.h11 Сумма заказа
+						p.h11 1675&nbsp;&#8381;
+					.order-body
+						.order-body__address
+							.h11 Доставка
+							a.h11.txt-s5(href="#!") Укажите адрес
+					
+						p.txt-12.txt-s5 Бесплатная доставка за заказ от 550₽. Если стоимость заказа ниже, то взимаем 335₽.
+					.order-footer
+						p.h5 Сумма заказа
+						p.h5 1675&nbsp;&#8381;
+				
+				h3 Оплата
+					.payment-types.switch-group
+						label.switch-label
+							input(type="radio" name="pay_type" checked)
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 Оплата наличными
+								.payment_img
+									img(src="../img/payment/pay1.webp", width="40" alt="img")
+						
+						label.switch-label
+							input(type="radio" name="pay_type")
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 Картой онлайн
+								.payment_img
+									img(src="../img/payment/pay2.webp", width="40" alt="img")
+									img(src="../img/payment/pay3.webp", width="40" alt="img")
+									img(src="../img/payment/pay4.webp", width="40" alt="img")
+						label.switch-label
+							input(type="radio" name="pay_type")
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 Картой курьеру
+								.payment_img
+									img(src="../img/payment/pay2.webp", width="40" alt="img")
+									img(src="../img/payment/pay3.webp", width="40" alt="img")
+									img(src="../img/payment/pay4.webp", width="40" alt="img")
+						label.switch-label
+							input(type="radio" name="pay_type")
+							span.payment-item
+								.payment-icon
+									svg.svg-wallet
+										use(href='../img/sprite.svg#svg-wallet')
+								p.txt-12 СБП
+								.payment_img
+									img(src="../img/payment/pay5.webp", width="40" alt="img")
+
+				h3 Order steps
+				.order-steps
+					.step-item
+						svg.svg-assig
+							use(href='../img/sprite.svg#svg-assig')
+					.step-item
+						svg.svg-alarm
+							use(href='../img/sprite.svg#svg-alarm')
+					.step-item
+						svg.svg-trolley
+							use(href='../img/sprite.svg#svg-trolley')
+					.step-item
+						svg.svg-flag
+							use(href='../img/sprite.svg#svg-flag')

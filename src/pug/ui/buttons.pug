@@ -1,0 +1,75 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard(style="background:#e0e0e0;")
+				h2 Кнопки
+
+				.container-dashboard__content
+					button.btn Заказать
+					pre.
+						button.btn Заказать
+					hr
+					a(href="#!").btn Заказать
+					pre.
+						a(href="#!").btn Заказать
+					hr
+					input.btn(type="submit" value="Заказать")
+					pre.
+						input.btn(type="submit" value="Заказать")
+					hr
+					button.btn-accent Заказать
+					pre.
+						button.btn-accent Заказать
+					hr
+					button.btn-light Дополнительно
+					pre.
+						button.btn-light Дополнительно
+					br
+					a(href="#!").btn-back
+					pre.
+						a(href="#!").btn-back
+					br
+					a(href="#!").btn-back.btn-round
+					pre.
+						a(href="#!").btn-back.btn-round
+					br
+					a(href="#!").btn-close
+					br
+					.switch-group
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Традиционное
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Тонкое
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Сырный бортик
+					br
+					.switch-group
+						label.switch-label
+							input(type="radio" name="switch_name2")
+							span.switch-btn 28см
+						label.switch-label
+							input(type="radio" name="switch_name2")
+							span.switch-btn 32см
+						label.switch-label
+							input(type="radio" name="switch_name2")
+							span.switch-btn 42см

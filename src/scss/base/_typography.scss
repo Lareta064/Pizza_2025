@@ -1,0 +1,110 @@
+
+@use "var" as *;
+.h1, h1, .h2, h2, .h1-up, .h2-up, .h3, h3, .h4, h4,.h5, h5{
+	font-family: $fs;
+	font-weight: 700;
+	font-size: 46px;
+	line-height: 1.1;
+	color: $p;
+}
+.h1-up, .h2-up{
+	font-weight: 400;
+    text-transform: uppercase;
+}
+.h2, .h2-up{
+	font-size: 34px;
+    line-height: 1.18;
+}
+.h2-up{
+	line-height: 1.1;
+}
+.h3, h3{
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 1.50;
+
+}
+.h4, h4, .h5, h5{
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.25;
+}
+.h5, h5{
+	font-weight: 700;
+
+}
+.h6, h6, .h7, .h8{
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.25;
+	text-transform: uppercase;
+	color: $p;
+	font-family: $fs;
+}
+.h7, .h9, .h10{font-weight: 700;}
+.h8, .h9, .h10, .h11{
+	font-size: 20px;
+	line-height: 1.3;
+	color: $p;
+	font-family: $fs;
+}
+.h8, .h9{text-transform: uppercase;}
+.h8, .h11{
+	font-weight: 400;
+}
+
+.txt-14{
+	font-size: 14px;
+    line-height: 1.43;
+}
+.txt-16{font-size: 15px;  line-height: 1.5!important;}
+.txt-12{
+	font-size: 12px;
+    line-height: 1.43;
+}
+
+.title-16, .txt-bold{font-weight: 700!important;}
+.title-16{font-size:16px;}
+.txt-up{text-transform: uppercase!important;}
+.txt-grey{color: $s5;}
+.txt-red{color: $a1;}
+.bg-grey{background-color: $s2!important;}
+.txt-s3{color: $s3!important;}
+.txt-s5{color: $s5!important;}
+.txt-s4{color: $s4!important;}
+/*components*/
+.notify-item{
+	display: inline-block;
+	text-align: center;
+	border-radius: 100px;
+	padding: 4px 3px 2px 3px;
+	line-height: 1.3;
+	width: 32px;
+	height: 32px;
+	background-color: $a2;
+	font-size: 20px;
+	font-family: $fs;
+
+}
+.h9{margin-bottom: 12px;}/*на главной Популярное*/
+.title-group{
+	text-align: center;
+	&>*+*{margin-top: 4px;}
+}
+.custom-text{
+	h1, h2, h3{
+		font-family: $fs;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 125%;
+		color: $p;
+		margin-bottom: 12px;
+		margin-top: 12px;
+	}
+	p{
+		font-size: 16px;
+		line-height: 1.5;
+		color: $p;
+		margin-bottom: 10px;
+	}
+}

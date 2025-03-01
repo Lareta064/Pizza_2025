@@ -1,0 +1,97 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel='stylesheet' href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css")
+		
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 Форма
+				.container-dashboard__content
+					.form-item
+						input(type="text" placeholder="Placeholder Text" name="name")
+					pre.
+						.form-item
+							input(type="text" placeholder="Placeholder Text" name="name")
+					br
+					.form-item
+						textarea( placeholder="Placeholder Text" name="message")
+					pre.
+						.form-item
+							textarea(type="text" placeholder="Placeholder Text" name="message")
+					
+					br
+					.form-item.error
+						input(type="text" placeholder="Placeholder Text" name="name")
+						p Error text
+					pre.
+						.form-item.error
+							input(type="text" placeholder="Placeholder Text" name="name")
+							p Error text
+					
+					br
+					+select("Choose An Option", 'product_name')
+					pre.
+						+select("Речной песок", 'product_name')
+				
+		script.
+			document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
+				const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');
+				const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
+				const dropDownListItems = dropDownList.querySelectorAll('.dropdown__list-item');
+				const dropDownInput = dropDownWrapper.querySelector('.dropdown__input-hidden');
+				const dropDownSelected = dropDownList.querySelector('.selected');
+
+				// Клик по кнопке. Открыть/Закрыть select
+				dropDownBtn.addEventListener('click', function (e) {
+					dropDownList.classList.toggle('dropdown__list--visible');
+					this.classList.toggle('dropdown__button--active');
+				});
+					
+
+				// Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+				dropDownListItems.forEach(function (listItem) {
+					listItem.addEventListener('click', function (e) {
+					e.stopPropagation();
+					dropDownListItems.forEach(function (item){item.classList.remove('selected')});
+					
+					dropDownBtn.innerText = this.dataset.value;
+					dropDownBtn.focus();
+					if(dropDownInput){dropDownInput.value = this.dataset.value;}
+					this.classList.add('selected')
+					dropDownList.classList.remove('dropdown__list--visible');
+					dropDownBtn.classList.remove('dropdown__button--active');
+					
+					});
+				});
+
+				// Клик снаружи дропдауна. Закрыть дропдаун
+				document.addEventListener('click', function (e) {
+					if (e.target !== dropDownBtn) {
+					dropDownBtn.classList.remove('dropdown__button--active');
+					dropDownList.classList.remove('dropdown__list--visible');
+					}
+				});
+
+				// Нажатие на Tab или Escape. Закрыть дропдаун
+				document.addEventListener('keydown', function (e) {
+					if (e.key === 'Tab' || e.key === 'Escape') {
+					dropDownBtn.classList.remove('dropdown__button--active');
+					dropDownList.classList.remove('dropdown__list--visible');
+					}
+				});
+			});

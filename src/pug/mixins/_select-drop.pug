@@ -1,0 +1,16 @@
+mixin select(plh="Пример заполнения", inpName = 'input_name', label)
+	.form-item&attributes(attributes)
+		if label
+			label #{label}
+		.dropdown
+			button.dropdown__button(type="button") #{plh}
+			
+			.dropdown__list
+				ul
+					li.dropdown__list-item(data-value="Речной песок") Речной песок 555
+					li.dropdown__list-item(data-value="Пример заполнения 2") Пример заполнения 2
+					li.dropdown__list-item(data-value="Пример заполнения 3") Пример заполнения 3
+					li.dropdown__list-item(data-value="Пример заполнения 4") Пример заполнения 4
+
+			//==== в этот скрытый инпут в качестве value  выводится значение из data-value у.dropdown__list-item ===
+			input.dropdown__input-hidden(type="hidden", name=""+ inpName)

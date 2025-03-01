@@ -1,0 +1,78 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard(style="background-color: lightblue;")
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard
+				h2 иконки
+				.container-dashboard__content
+					span.arrow-left
+					pre.
+						span.arrow-left
+					span.arrow-right
+					pre.
+						span.arrow-right
+					.swiper-nav
+						button.arrow-left
+						button.arrow-right
+					pre.
+						.swiper-nav
+							button.arrow-left
+							button.arrow-right
+					br
+					svg.svg-logo
+						use(href="../img/sprite.svg#svg-logo")
+					pre.
+						svg.svg-logo
+							use(href="../img/sprite.svg#svg-logo")
+					br
+					svg.svg-cart
+						use(href="../img/sprite.svg#svg-cart")
+					pre.
+						svg.svg-cart
+							use(href="../img/sprite.svg#svg-cart")
+					br
+					svg.logo-group
+						use(href="../img/sprite.svg#logo-group")
+					pre.
+						svg.logo-group
+							use(href="../img/sprite.svg#logo-group")
+					br
+					svg.svg-search
+						use(href="../img/sprite.svg#svg-search")
+					pre.
+						svg.svg-search
+							use(href="../img/sprite.svg#svg-search")
+					br
+					svg.svg-carret
+						use(href="./img/sprite.svg#svg-carret")
+					pre.
+						svg.svg-carret
+							use(href="./img/sprite.svg#svg-carret")
+					svg.svg-plus
+						use(href="../img/sprite.svg#svg-plus")
+					pre.
+						svg.svg-plus
+							use(href="../img/sprite.svg#svg-plus")
+					svg.svg-cross
+						use(href="../img/sprite.svg#svg-cross")
+					pre.
+						svg.svg-cross
+							use(href="../img/sprite.svg#svg-cross")
+					
+
