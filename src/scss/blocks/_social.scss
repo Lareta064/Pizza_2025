@@ -1,0 +1,15 @@
+@use "../base/var" as *;
+.social{
+	display: flex;
+	column-gap:10px;
+	flex-shrink: 0;
+	&-item{
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: $s5;
+	}
+}
