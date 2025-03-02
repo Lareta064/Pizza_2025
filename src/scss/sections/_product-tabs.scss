@@ -3,12 +3,27 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	row-gap:88px;
+	@media (max-width: 1364px) {
+		row-gap:remy(88);
+	}
+	@media (max-width: 767px) {
+		row-gap:50px;
+	}
 }
 .tabs{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	column-gap:10px;
+	@media(min-width:768px) and (max-width: 1919px) {
+		column-gap:remy(10);
+	}
+}
+.tabs.scroll-sm,.js-group.scroll-sm{
+	@media (max-width: 767px) {
+	   justify-content: flex-start;
+	
+	}
 }
 .tabs .tab, .level_2 .multi-tab-btn{
 	font-weight: 400;
@@ -20,6 +35,10 @@
 	padding: 8px 20px;
 	background-color: $s2;
 	color: var(--primary);
+	@media(min-width:768px) and (max-width: 1919px) {
+		font-size:remy(14);
+		padding: remy(8) remy(20);
+	}
 }
 
   .tab.active, .level_2 .multi-tab-btn.active{
@@ -35,7 +54,7 @@
 		
 	}
 	@media (max-width: 767px) {
-		&>*+*{margin-top: remy(20);}
+		&>*+*{margin-top: 20px;}
 	}
   }
 .tab-content.active{display: block;}
@@ -43,7 +62,7 @@
 // tabs in tabs
 .multi-tabs {
 	
-}
+
 .level_1 .multi-tab-btn{
 	font-weight: 400;
 	font-size: 24px;
@@ -59,6 +78,10 @@
 		color: var(--accent-color-1);
 		border-bottom-color:var(--accent-color-2); ;
 	}
+	@media(min-width:768px) and (max-width: 1919px) {
+		font-size:remy(24);
+		
+	}
 }
 
 
@@ -67,10 +90,17 @@
 	justify-content: center;
 	align-items: center;
 	column-gap:10px;
+	@media(min-width:768px) and (max-width: 1919px) {
+		column-gap:remy(10);
+	}
 }
 .level_1{
 	column-gap:30px;
 	margin-bottom: 20px;
+	@media(min-width:768px) and (max-width: 1919px) {
+		column-gap:remy(30);
+	    margin-bottom: remy(20);
+	}
 }
 /*Стили, требующиеся для скрипта*/
 .js-level_2,
@@ -90,3 +120,4 @@
 
 }
 
+}

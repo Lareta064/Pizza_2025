@@ -1,6 +1,5 @@
 @use "var" as *;
 
-
 .btn, .btn-accent, .btn-light{
 	display: inline-flex;
 	justify-content: center;
@@ -17,6 +16,13 @@
 	border:1px solid $a2;
 	column-gap:12px;
 	white-space: nowrap;
+	@media(min-width:768px) and (max-width: 1364px) {
+		height:remy(48);
+		padding-left: remy(28);
+		padding-right: remy(28);
+		font-size: remy(16);
+		column-gap:remy(12);
+	}
 	
 }
 .btn:hover, .btn:focus{background-color: $a3;border-color:$a3;}
@@ -160,6 +166,11 @@ input.btn{width: fit-content;}
 	text-align: center;
 	color:$p;
 	
+}
+.btn.sm-w100{
+	@media (max-width: 767px) {
+	width: 100%;
+	}
 }
 .filters-set{
 	display: flex;

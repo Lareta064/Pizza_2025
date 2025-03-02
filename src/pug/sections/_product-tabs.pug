@@ -17,7 +17,7 @@ mixin card(img, title, price, old)
 				if old
 					span.old-price #{old} &#8381;
 			
-			button.btn(type="button")
+			button.btn.sm-w100(type="button")
 				span Выбрать
 
 mixin cardMulti(img, title, tags, price,  old )
@@ -39,7 +39,7 @@ mixin cardMulti(img, title, tags, price,  old )
 				if old
 					span.old-price #{old} &#8381;
 			
-			button.btn(type="button")
+			button.btn.sm-w100(type="button")
 				span Выбрать
 section.product-assortiment
 	.container.gap-88
@@ -49,7 +49,7 @@ section.product-assortiment
 				.h2 Пицца
 			
 			.tabs-container.gap-40
-				.tabs
+				.tabs.scroll-sm
 					.tab.active(data-tab-target='#content1') Все
 					.tab(data-tab-target='#content2') Мясные
 					.tab(data-tab-target='#content3') Рыбные
@@ -115,7 +115,7 @@ section.product-assortiment
 		.multi-tabs.gap-40
 			.multi-tabs__buttons
 				//  КНОПКИ ПЕРВОГО УРОВЕНЯ  - КАТЕГОРИИ  
-				.level_1.js-level_1.js-group
+				.level_1.js-level_1.js-group.scroll-sm
 					button.js-group-item.multi-tab-btn.active Пицца
 					button.js-group-item.multi-tab-btn Роллы
 					button.js-group-item.multi-tab-btn Напитки
@@ -123,20 +123,20 @@ section.product-assortiment
 				//  КНОПКИ ВТОРОГО УРОВЕНЯ  - ПОДКАТЕГОРИИ  
 				//  ПОДКАТЕГОРИЯ ПЕРВОЙ КАТЕГОРИИ  
 				.level_2-wrapper
-					.level_2.active.js-level_2.js-group
+					.level_2.active.js-level_2.js-group.scroll-sm
 						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='meat') Мясные
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Рыбные
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='forKids') Детские
 					//  ПОДКАТЕГОРИЯ ВТОРОЙ КАТЕГОРИИ  
-					.level_2.js-level_2.js-group
-						a.js-group-item.multi-tab-btn(href='#!' data-tag='*') Все
+					.level_2.js-level_2.js-group.scroll-sm
+						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='japan') Жаренные
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='sweet') Классические
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Детские
 					//  ПОДКАТЕГОРИЯ ТРЕТЬЕЙ КАТЕГОРИИ  
-					.level_2.js-level_2.js-group
-						a.js-group-item.multi-tab-btn(href='#!' data-tag='*') Все
+					.level_2.js-level_2.js-group.scroll-sm
+						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='juice') Сок
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='tea') Чай
 						a.js-group-item.multi-tab-btn(href='#!' data-tag='coffee') Кофе
@@ -165,12 +165,12 @@ section.product-assortiment
 					
 				//  ПОДКАТЕГОРИИ НАПИТКИ 
 				.grid-three-columns.level_3.js-level_3
-					+cardMulti('pizza2', 'Roll Мясная','juice', '650', 800)
+					+cardMulti('pizza2', 'Кока-кола','juice', '650', 800)
 						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-					+cardMulti('pizza2', 'Roll Мясная','tea', '650', 800)
+					+cardMulti('pizza2', 'Фанта','tea', '650', 800)
 						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-					+cardMulti('pizza2', 'Roll Мясная','coffee', '650', 800)
+					+cardMulti('pizza2', 'Американо','coffee', '650', 800)
 						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-					+cardMulti('pizza2', 'Roll Мясная','juice tea', '650', 800)
+					+cardMulti('pizza2', 'Сенча','juice tea', '650', 800)
 						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 					

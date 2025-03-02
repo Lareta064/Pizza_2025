@@ -36,6 +36,7 @@
 	--second-family: "Cuprum",  sans-serif;
 	--accent-color-1: #D7001A;
 	--accent-color-2: #FBD10E;
+	--secondary-1: #EEEEEE;
 	--white: white;
 }
 
@@ -156,7 +157,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 .scroll-sm{
 	@media (max-width: 767px) {
-	  width: calc(50% + 50vw);
+	  width: calc(160px + 50vw);
 	  overflow: hidden;
 	  scrollbar-width: none;
 	  overflow-x: auto;
@@ -164,6 +165,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	 &>*:last-child{margin-right: 10px;}
 	}
 }
+
 .header, .footer{flex-shrink: 0;}
 main{
 	flex:1;  background-color: #fff;
@@ -199,5 +201,14 @@ main{
 	row-gap:30px;
 	&>*{
 		grid-column:  span 4;
+	}
+	@media (max-width: 1364px) {
+		column-gap:remy(30);
+		row-gap:remy(30);
+	}
+	@media (max-width: 767px) {
+		&>*{
+			grid-column:  span 6;
+		}
 	}
 }

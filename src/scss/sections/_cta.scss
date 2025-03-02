@@ -1,0 +1,22 @@
+@use "../base/var" as *;
+.cta-content{
+	background-color: $p;
+	padding-top: 170px;
+	padding-bottom: 170px;
+	text-align: center;
+	.title-wrapper{margin-bottom: 0;}
+	@media (max-width: 1364px) {
+		padding-top: remy(170);
+		padding-bottom: remy(170);
+	}
+	@media (max-width: 767px) {
+		.title-wrapper {row-gap:10px;}
+		.h2{
+			font-size: 24px;
+			line-height: 125%;
+			max-width: 240px;
+		}
+		padding-top: 55px;
+		padding-bottom: 55px;
+	}
+}

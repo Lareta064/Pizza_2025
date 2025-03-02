@@ -43,10 +43,18 @@
 	.txt-16{max-width: 400px;}
 	@media (max-width: 1364px) {
 		margin-bottom: remy(40);
-		row-gap:remy(20)
+		row-gap:remy(20);
+		.txt-16{max-width: remy(400);}
 	}
-	@media (max-width: 767px) {margin-bottom: 25px;}
+	@media (max-width: 767px) {
+		margin-bottom: 25px;.txt-16{max-width: 100%;}
+		row-gap:20px;
+	}
 }
 .txt-center{
 	text-align: center;
+}
+.txt-white{
+	color: white;
+	
 }

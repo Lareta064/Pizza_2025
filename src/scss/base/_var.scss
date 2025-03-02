@@ -15,10 +15,8 @@ $a4: #BF0017;
 $fs: "Cuprum",  sans-serif;
 $ff: "RobotoCondensed",  sans-serif;
 @function remy($pxsize) {
-  
 	@return calc(($pxsize/13.64))*1vw;
 }
 @function remyL($pxsize) {
-  
 	@return calc(($pxsize/19.2))*1vw;
 }
