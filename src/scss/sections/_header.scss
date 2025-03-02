@@ -285,7 +285,7 @@ header.header{
 }
 .header-menu__list .sub-menu{
 	position: absolute;
-	height: 70px;
+	
 	background-color: white;
 	top:65px;
 	left: 0;
@@ -300,7 +300,7 @@ header.header{
 		display: block;
 	}
 	@media (max-width: 1364px) {
-		height: remy(70);
+		
 		top:remy(65);
 		.sub-menu-link{font-size: remy(16);}
 	}

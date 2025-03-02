@@ -46,10 +46,10 @@ document.addEventListener("DOMContentLoaded", function () {
           hideMobileMenu();
         }
       });
-      dropMenu.querySelectorAll('A').forEach((item, ()=>{
+      dropMenu.querySelectorAll('A').forEach((item)=>{
         item.addEventListener('click', ()=>{
           hideMobileMenu();
         });
-      }));
+      });
     }
 });
