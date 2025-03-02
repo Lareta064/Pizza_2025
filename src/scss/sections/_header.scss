@@ -448,17 +448,29 @@ header.header.show-after:after{
 			top: auto;
 			height:0;
 			overflow: hidden;
-			border-bottom: 1px solid $s5;
-			border-top: 1px solid $s5;
-			margin-top: 16px;
-			margin-bottom: 16px;
-			padding: 6px 0px;
-
 			ul{
 				flex-direction: column;
 				row-gap:12px;
+				// border-bottom: 1px solid $s5;
+				// border-top: 1px solid $s5;
+				// margin-top: 16px;
+				// margin-bottom: 16px;
+				padding: 16px 0px;
 			}
-			
+			&-item:first-child,&-item:last-child{
+				position: relative;
+				&:after{
+					content: '';
+					height: 1px;
+					width: 100%;
+					position: absolute;
+					top: -15px;
+					left: 0;
+					right: 0;
+					background-color: $s5;;
+				}
+			}
+			&-item:last-child:after{top: auto; bottom:-15px;}
 		}
 	}
 }
