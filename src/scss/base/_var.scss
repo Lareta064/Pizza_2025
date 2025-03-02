@@ -16,7 +16,7 @@ $fs: "Cuprum",  sans-serif;
 $ff: "RobotoCondensed",  sans-serif;
 @function remy($pxsize) {
   
-	@return calc(($pxsize/14))*1vw;
+	@return calc(($pxsize/13.64))*1vw;
 }
 @function remyL($pxsize) {
   

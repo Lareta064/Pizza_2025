@@ -50,6 +50,7 @@
 	transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
 	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
 	transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+	background-color: $a1;
   }
   .menu-button.active span::before {
 	-webkit-transform: rotate(45deg);

@@ -44,8 +44,11 @@ header.header
 								ul
 									li.menu-item.active
 										a.menu-link(href="#!") Главная
-									li.menu-item
-										a.menu-link.has-drop#has-drop(href="#!") Меню
+									li.menu-item.has-drop#has-drop
+										a.menu-link(href="#!") Меню
+										//иконка галочка на моб версии
+										svg.svg-carret
+											use(href='./img/sprite.svg#svg-carret')
 										.sub-menu#drop-menu
 											ul
 												li.sub-menu-item

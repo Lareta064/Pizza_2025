@@ -62,7 +62,12 @@
 	width: 18px;
 	height: 20px;
 }
-
+.svg-carret{
+	width: 12px;
+	height: 7px;
+	display: inline-block;
+	color: $p;
+}
 .svg-cross, .svg-out,.svg-reload, .svg-menu, .svg-logo, .svg-star, .svg-discount, .svg-info, .svg-list, .svg-delete, .svg-doc, .svg-favor, .svg-share,.svg-explore, .svg-plus{
 	color: $p;
 	display: inline-block;
