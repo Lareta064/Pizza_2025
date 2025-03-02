@@ -1,0 +1,176 @@
+mixin card(img, title, price, old)
+	.product
+		.product__img
+			.tag-meta.tag-meta--new new
+			.tag-meta.tag-meta--sale Акция!
+			.tag-meta.tag-meta--hit Популярное
+
+			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
+		
+		.product__body
+			p.product__name !{title}
+			block 
+		
+		.product__footer
+			.price-box
+				span.new-price от #{price} &#8381;
+				if old
+					span.old-price #{old} &#8381;
+			
+			button.btn(type="button")
+				span Выбрать
+
+mixin cardMulti(img, title, tags, price,  old )
+	.product(data-tags=""+ tags)
+		.product__img
+			.tag-meta.tag-meta--new new
+			.tag-meta.tag-meta--sale Акция!
+			.tag-meta.tag-meta--hit Популярное
+
+			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
+		
+		.product__body
+			p.product__name !{title}
+			block 
+		
+		.product__footer
+			.price-box
+				span.new-price от #{price} &#8381;
+				if old
+					span.old-price #{old} &#8381;
+			
+			button.btn(type="button")
+				span Выбрать
+section.product-assortiment
+	.container.gap-88
+		//Пиццы
+		.product-assortiment-single
+			.title-wrapper
+				.h2 Пицца
+			
+			.tabs-container.gap-40
+				.tabs
+					.tab.active(data-tab-target='#content1') Все
+					.tab(data-tab-target='#content2') Мясные
+					.tab(data-tab-target='#content3') Рыбные
+					.tab(data-tab-target='#content4') Овощные
+					.tab(data-tab-target='#content5') Классика
+					.tab(data-tab-target='#content6') Закрытые
+				.tab-content-wrapper
+					#content1.tab-content.active
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza1', 'Пицца Карбонара', '850')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza3', 'Пицца Ранчоус', '650')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+								
+						
+					#content2.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza1', 'Пицца Карбонара', '850')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza3', 'Пицца Ранчоус', '650')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+					#content3.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					#content4.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+					#content5.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+					#content6.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+		//Комбо
+		.product-assortiment-single
+			.title-wrapper
+				.h2 Комбо
+			
+			.grid-three-columns
+				+card('pizza2', 'Пицца Баварская', '650', 800)
+					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+				+card('pizza1', 'Пицца Карбонара', '850')
+					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+				+card('pizza3', 'Пицца Ранчоус', '650')
+					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+
+section.product-assortiment
+	.container
+		.title-wrapper.txt-center
+			.h2 Пиццы
+			p.txt-16 Не будь жадиной - приводи своих друзей! Пусть они тоже попробуют нашу божественную пиццу!
+		.multi-tabs.gap-40
+			.multi-tabs__buttons
+				//  КНОПКИ ПЕРВОГО УРОВЕНЯ  - КАТЕГОРИИ  
+				.level_1.js-level_1.js-group
+					button.js-group-item.multi-tab-btn.active Пицца
+					button.js-group-item.multi-tab-btn Роллы
+					button.js-group-item.multi-tab-btn Напитки
+				
+				//  КНОПКИ ВТОРОГО УРОВЕНЯ  - ПОДКАТЕГОРИИ  
+				//  ПОДКАТЕГОРИЯ ПЕРВОЙ КАТЕГОРИИ  
+				.level_2-wrapper
+					.level_2.active.js-level_2.js-group
+						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='meat') Мясные
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Рыбные
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='forKids') Детские
+					//  ПОДКАТЕГОРИЯ ВТОРОЙ КАТЕГОРИИ  
+					.level_2.js-level_2.js-group
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='*') Все
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='japan') Жаренные
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='sweet') Классические
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Детские
+					//  ПОДКАТЕГОРИЯ ТРЕТЬЕЙ КАТЕГОРИИ  
+					.level_2.js-level_2.js-group
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='*') Все
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='juice') Сок
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='tea') Чай
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='coffee') Кофе
+				//  END  КНОПКИ ВТОРОГО УРОВЕНЯ  - ПОДКАТЕГОРИИ 
+				//   КНОПКИ ТРЕТЬЕГО УРОВЕНЯ  - КАТЕГОРИИ ПОДКАТЕГОРИЙ 
+			.main-content
+				//  ПОДКАТЕГОРИИ Пицца 
+				.grid-three-columns.level_3.active.js-level_3
+					+cardMulti('pizza2', 'Мясная','meat fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Детская','meat', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Рыбная','meat forKids fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					
+				//  ПОДКАТЕГОРИИ РОЛЛЫ 
+				.grid-three-columns.level_3.js-level_3
+					+cardMulti('pizza2', 'Roll Мясная','japan', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Детская','japan fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Рыбная','sweet', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Рыбная','japan fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					
+				//  ПОДКАТЕГОРИИ НАПИТКИ 
+				.grid-three-columns.level_3.js-level_3
+					+cardMulti('pizza2', 'Roll Мясная','juice', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Мясная','tea', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Мясная','coffee', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Мясная','juice tea', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					

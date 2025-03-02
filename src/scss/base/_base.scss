@@ -34,6 +34,9 @@
 	--primary: #1f1f1f;
 	--font-family: "RobotoCondensed",  sans-serif;
 	--second-family: "Cuprum",  sans-serif;
+	--accent-color-1: #D7001A;
+	--accent-color-2: #FBD10E;
+	--white: white;
 }
 
 html {
@@ -98,7 +101,13 @@ img {
 	height: auto;
 	display: block;
 }
-
+.img-cover{
+	width: 100%;
+	height: 100%;
+	aspect-ratio: inherit;
+	object-position: center;
+	object-fit: cover;
+}
 input,
 button, textarea{border: none;}
 button:focus,
@@ -182,4 +191,13 @@ main{
 
 .flex-center{
 	justify-content: center;
+}
+.grid-three-columns{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap:30px;
+	row-gap:30px;
+	&>*{
+		grid-column:  span 4;
+	}
 }

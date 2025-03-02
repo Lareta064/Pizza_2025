@@ -1,0 +1,92 @@
+@use "../base/var" as *;
+.product-assortiment .gap-88{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:88px;
+}
+.tabs{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap:10px;
+}
+.tabs .tab, .level_2 .multi-tab-btn{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143%;
+	text-align: center;
+	flex-shrink: 0;
+	border-radius: 100px;
+	padding: 8px 20px;
+	background-color: $s2;
+	color: var(--primary);
+}
+
+  .tab.active, .level_2 .multi-tab-btn.active{
+	background-color: $a2;
+  }
+  .tab-content{
+	display: none;
+  }
+  .gap-40{
+	&>*+*{margin-top: 40px;}
+	@media (max-width: 1364px) {
+		&>*+*{margin-top: remy(40);}
+		
+	}
+	@media (max-width: 767px) {
+		&>*+*{margin-top: remy(20);}
+	}
+  }
+.tab-content.active{display: block;}
+
+// tabs in tabs
+.multi-tabs {
+	
+}
+.level_1 .multi-tab-btn{
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 125%;
+	text-transform: uppercase;
+	color: var(--primary);
+	
+	background-color: transparent;
+	font-family: var(--second-family);
+	border-bottom: 2px solid transparent;
+	&.active{
+		background-color: transparent;
+		color: var(--accent-color-1);
+		border-bottom-color:var(--accent-color-2); ;
+	}
+}
+
+
+.level_1,.level_2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap:10px;
+}
+.level_1{
+	column-gap:30px;
+	margin-bottom: 20px;
+}
+/*Стили, требующиеся для скрипта*/
+.js-level_2,
+.js-level_3 {
+  display: none;
+}
+
+.js-level_2.active {
+  display: flex;
+}
+
+.grid-three-columns.level_3.active {
+  display: grid;
+}
+.js-level_3 [data-tags].filtered {
+ display: none;
+
+}
+
