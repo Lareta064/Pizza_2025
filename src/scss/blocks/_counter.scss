@@ -1,0 +1,44 @@
+@use "../base/var" as *;
+.counter{
+	
+	font-size: 18px;
+	.counter-minus,
+	.counter-plus{
+		width: 25px;
+		display: flex;
+		height: 30px;
+		flex-shrink: 0;
+		color: $p;
+	}
+	.counter-plus{justify-content: flex-end;}
+	.counter-value{
+		min-width: 45px;
+		height: 30px;
+		text-align: center;
+		background-color: $s2;
+		border: 1px solid $s1;
+		border-radius: 100px;
+		padding-inline: 4px ;
+		flex-shrink: 0;
+		justify-content: center;
+		font-size: 16px;
+	}
+}
+.counter.counter--round{
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 100px;
+	background-color: $s2;
+	.counter-value{border:0;}
+	.counter-minus,
+	.counter-plus{justify-content: center;}
+}
+.counter-wrapper__group,.counter-wrapper ,.counter, .counter-minus,.counter-plus,.counter-value{
+	display: flex;
+	align-items: center
+}
+.counter-wrapper__group{column-gap: 30px;}
+.counter-wrapper {
+	justify-content: space-between;
+	font-size: 14px;
+}

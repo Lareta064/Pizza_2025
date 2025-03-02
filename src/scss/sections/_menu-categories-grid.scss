@@ -1,0 +1,79 @@
+@use "../base/var" as *;
+.cat-card{
+	border: 1px solid $s1;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 10px 20px 10px 10px;
+	padding: 6px;
+	
+	display: flex;
+	flex-direction: column;
+	row-gap:4px;
+	text-align: center;
+	color: $p;
+	flex-shrink: 0;
+	transition: .3s; 
+	.card-img{
+		width: 100%;
+		height: 30px;
+	}
+	&.active{border: 1px solid $a2;}
+	&:hover{border: 1px solid $s;}
+
+	@media (max-width: 767px) {
+		padding: 6px;
+		width: 80px;
+	}
+}
+.cat-card.card-flex{
+	padding: 10px 20px 10px 10px;
+	border-radius: 20px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 125%;
+	width: 100%;
+	align-items: center;
+	font-family: $fs;
+	.card-img{height: 106px;width: 106px;}
+	@media(min-width: 768px) and (max-width: 1364px) {
+		padding: remy(10) remy(20) remy(10) remy(10);
+		border-radius: remy(20);
+		font-size: remy(24);
+		.card-img{height: remy(106);width: remy(106);}
+	}
+}
+.card-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	margin: auto;
+}
+.card-flex, *.card-flex{
+	display: flex;
+	column-gap:10px;
+	flex-direction: row;
+}
+
+.products-categories .products-categories--grid{
+	display: flex;
+	flex-wrap: wrap;
+	
+	column-gap:30px;
+	row-gap:30px;
+	.cat-card{width: 270px; flex-shrink: 0;}
+		
+	
+	@media (max-width: 1364px) {
+		column-gap:16px;
+		row-gap:16px;
+		.cat-card{width: calc((100% - 48px)/4);}
+	}
+	@media (max-width: 767px) {
+		display: flex;
+		flex-wrap: nowrap;
+		column-gap:10px;
+	
+		.cat-card{width: 270px;}
+
+	}
+}

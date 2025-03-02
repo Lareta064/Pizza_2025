@@ -1,25 +1,25 @@
 mixin catCard(img, title, link="#!")
 	
-	a(href=""+ link).cat-card
+	a(href=""+ link).cat-card&attributes(attributes)
 		.card-img
 			img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x"  alt="img")
 		.card-txt
 			p !{title}
 mixin catCard-ui(img, title, link="#!")
-	a(href=""+ link).cat-card
+	a(href=""+ link).cat-card&attributes(attributes)
 		.card-img
 			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x"  alt="img")
 		.card-txt
 			p !{title}
 mixin catCard-flex(img, title, link="#!")
-	a(href=""+ link).cat-card.card-flex
+	a(href=""+ link).cat-card.card-flex&attributes(attributes)
 		.card-img
 			img(src="./img/category/cat"+ img +".webp", srcset="./img/category/cat"+ img +"@2x.webp 2x"  alt="img")
 		.card-txt
 			p !{title}
 
 mixin catCard-flex-ui(img, title, link="#!")
-	a(href=""+ link).cat-card.card-flex
+	a(href=""+ link).cat-card.card-flex&attributes(attributes)
 		.card-img
 			img(src="../img/category/cat"+ img +".webp", srcset="../img/category/cat"+ img +"@2x.webp 2x"  alt="img")
 		.card-txt
@@ -27,7 +27,7 @@ mixin catCard-flex-ui(img, title, link="#!")
 
 mixin addCard(nameNum,name, pr)
 		
-	label.add-product-card.fake-label&attributes(attributes)
+	label.fake-label&attributes(attributes)
 		input(type="checkbox" name="add" + nameNum)
 		span.check-icon
 		.add-product

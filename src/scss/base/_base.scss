@@ -133,15 +133,45 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	margin-left: auto;
 	margin-right: auto;
 	@media (max-width: 1439px) {
-		width: remy(1190)
+		width: remy(1190);
+		padding-left: remy(10);
+	   padding-right: remy(10);
 	}
 	@media (max-width: 767px) {
 	  width: 360px;
+	  padding-left: 10px;
+	  padding-right: 10px;
 	}
 }
-
+.scroll-sm{
+	@media (max-width: 767px) {
+	  width: calc(50% + 50vw);
+	  overflow: hidden;
+	  scrollbar-width: none;
+	  overflow-x: auto;
+	 &::-webkit-scrollbar{display: none;}
+	 &>*:last-child{margin-right: 10px;}
+	}
+}
 .header, .footer{flex-shrink: 0;}
-main{flex:1;  background-color: #fff;}
+main{
+	flex:1;  background-color: #fff;
+	padding-top: 55px;
+	padding-bottom: 55px;
+	section, .p-block-50 {padding-block:55px;}
+		
+	
+	@media (max-width: 1364px) {
+		padding-top: remy(55);
+		padding-bottom: remy(55);
+		section, .p-block-50 {padding-block:remy(55);}
+	}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		section, .p-block-50 {padding-block:20px;}
+	}
+}
 
 .flex, .flex-center{
 	display: flex;
