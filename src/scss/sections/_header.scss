@@ -335,6 +335,9 @@ header.header.show-after:after{
 		height: remy(64);
 		
 	}
+	@media (max-width: 767px) {
+		height: auto;
+	}
 }
 .header-menu__list .sub-menu ul{
 	position: relative;
@@ -443,12 +446,14 @@ header.header.show-after:after{
 			background-color: transparent;
 			position: relative;
 			top: auto;
-			height: auto;
+			height:0;
+			overflow: hidden;
 			border-bottom: 1px solid $s5;
 			border-top: 1px solid $s5;
 			margin-top: 16px;
 			margin-bottom: 16px;
 			padding: 6px 0px;
+
 			ul{
 				flex-direction: column;
 				row-gap:12px;

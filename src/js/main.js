@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let bodyEl = document.body;
     let headerBlock = document.querySelector('header.header');
     const hasDropItem = document.querySelector('#has-drop');
-   
+    const dropMenu =  document.querySelector('#drop-menu');
     // HEADER SUBMENU
     if(hasDropItem){
-      const dropMenu =  document.querySelector('#drop-menu');
+      
 
       hasDropItem.addEventListener('click', ()=>{
           if(dropMenu.classList.contains('active')){
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // MOBILE MENU
     const mobileMenuIcon = document.querySelector('#menu-toggle');
     const mobileMenuBlock = document.querySelector('#moble-menu');
+    const hasDropMobileLi = document.querySelector('#moble-menu');
     
     if(mobileMenuIcon){
       mobileMenuIcon.addEventListener('click', ()=>{
@@ -35,5 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
      
+
     }
 });
