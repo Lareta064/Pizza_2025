@@ -8,6 +8,9 @@
 	}
 	@media (max-width: 767px) {
 		row-gap:50px;
+		.product-assortiment-single{
+			max-width: 340px;
+		}
 	}
 }
 .tabs{

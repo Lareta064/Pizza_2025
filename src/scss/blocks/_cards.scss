@@ -48,9 +48,7 @@
 		line-height: 143%;
 		color: var(--primary);
 		padding-bottom: 20px;
-		@media (max-width: 767px) {
-		text-align: center;
-		}
+		
 	}
 	.product__footer{
 		flex-shrink: 0;
@@ -91,16 +89,18 @@
 		}
 		p{	
 			font-size: 14px;
-			padding-bottom: 10px;
+			text-align: center;
+			padding-bottom: 5px;
 		}
 		.product__footer{
 			flex-direction: column;
 			row-gap:10px;
-			padding: 10px;
+			padding: 10px 9px;
 			padding-top: 0;
 		}
 		.product__body{
-			padding: 10px;
+			padding: 10px 9px 0;
+			padding-bottom: 0;
 			row-gap:4px;
 		}
 		.price-box{
