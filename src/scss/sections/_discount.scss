@@ -1,0 +1,109 @@
+
+@use "../base/var" as *;
+.our-discount{
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: -55px;
+	.our-discount-bg{
+		background-position: top;
+	}
+	@media (max-width: 1364px) {
+		margin-top: remy(-55);
+	}
+	@media (max-width: 767px) {
+		margin-top: 0;
+		.our-discount-bg{background-position: 28%;}
+	}
+}
+.our-discount +*{padding-top: 0;}
+.our-discount-content{
+	width: 240px;
+	display: inline-flex;
+	flex-direction: column;
+	row-gap:10px;
+	position: relative;
+	.btn-accent{width: fit-content; min-width:140px;}
+	.price-box{
+		font-size: 34px;
+       line-height: 118%;
+	}
+	@media (max-width: 1364px) {
+		width: remy(240);
+		row-gap:remy(10);
+		.btn-accent{width: fit-content; min-width:remy(140);}
+		.price-box{font-size: remy(34);}
+	}
+	@media (max-width: 767px) {
+	  width: 190px;
+	  row-gap:5px;
+	  .btn-accent{min-width:140px; margin-top: 15px;}
+	  .price-box{
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 125%;
+	  }
+	}
+}
+.our-discount .container{
+	height: 560px;
+	display: flex;
+	column-gap: 14px;
+	padding-top: 125px;
+	@media (max-width: 1364px) {
+		height: remy(560);
+		column-gap: remy(14);
+	   padding-top:remy(125);
+	}
+	@media (max-width: 767px) {
+	  height: 370px;
+	  padding-top: 60px;
+	}
+}
+.decore-sale{
+	font-family: var(--second-family);
+	margin-top: -20px;
+	width: max-content;
+	background-image: url('../img/images/border-dashed.webp');
+	background-size: contain;
+	display: flex;
+	justify-content: center;
+	
+	align-items: center;
+	width: 279px;
+	height: 93px;
+	
+	span{
+		font-weight: 400;
+		font-size: 85px;
+		width: 245px;
+		height: 80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: var(--primary);
+		
+		background: var(--accent-color-2);
+	}
+	@media (max-width: 1364px) {
+		margin-top: remy(-20);
+		width: remy(279);
+		height: remy(93);
+		span{
+			font-size:remy(85);
+		   width: remy(245);
+		   height: remy(80);
+		   
+		}
+	}
+	@media (max-width: 767px) {
+		width: 144px;
+		height: 65px;
+		background-size: 144px 65px;
+	span{
+		font-size: 40px;
+		width: 126px;
+		height: 53px;
+		
+	}
+	}
+}

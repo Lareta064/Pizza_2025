@@ -48,6 +48,9 @@
 		line-height: 143%;
 		color: var(--primary);
 		padding-bottom: 20px;
+		@media (max-width: 767px) {
+		text-align: center;
+		}
 	}
 	.product__footer{
 		flex-shrink: 0;
