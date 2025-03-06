@@ -121,8 +121,6 @@ header.header{
 			display: inline-block;
 		}
 	}
-	
-
 }
 
 .phone-item{
@@ -319,6 +317,7 @@ header.header:after{
 	left: 0;
 	right: 0;
 	transition: .3s; 
+	z-index: 3;
 	@media (max-width: 767px) {
 	display: none;
 	}

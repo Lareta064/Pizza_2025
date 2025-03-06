@@ -6,6 +6,12 @@
 	font-display: swap;
 }
 @font-face{
+	font-family: 'Chekharda';
+	src: url('../fonts/Chekharda-BoldItalic.woff2'), format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face{
 	font-family: 'Cuprum';
 	src: url('../fonts/Cuprum-Bold.woff2'), format('woff2');
 	font-weight: 700;
@@ -34,6 +40,7 @@
 	--primary: #1f1f1f;
 	--font-family: "RobotoCondensed",  sans-serif;
 	--second-family: "Cuprum",  sans-serif;
+	--font3: 'Chekharda';
 	--accent-color-1: #D7001A;
 	--accent-color-2: #FBD10E;
 	--secondary-1: #EEEEEE;
@@ -50,7 +57,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: $ff;
+	font-family: var(--font-family);
 	font-size: 16px;
     line-height: 1.5;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -108,6 +115,11 @@ img {
 	aspect-ratio: inherit;
 	object-position: center;
 	object-fit: cover;
+}
+.img-contain{
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
 }
 input,
 button, textarea{border: none;}

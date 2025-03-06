@@ -1,5 +1,20 @@
 
 @use "var" as *;
+.promo-title{
+	font-family: var(--font3);
+	font-style: italic;
+	font-weight: 700;
+	font-size: 119px;
+	line-height: 110%;
+	color: var(--white);
+	@media (max-width: 1364px) {
+		font-size: remyL(119);
+	}
+	@media (max-width: 767px) {
+		font-size: 40px;
+		line-height: 110%;
+	}
+}
 .h2,h2{
 	font-family: var(--second-family);
 	font-weight: 400;
@@ -49,6 +64,35 @@
 		font-size: 24px;
 		line-height: 125%;
 	}
+}
+.font_50{
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 50px;
+	line-height: 120%;
+	text-transform: uppercase;
+	@media (max-width: 1364px) {
+		font-size: remy(50);
+	}
+	@media (max-width: 767px) {
+		font-size: 24px;
+		line-height: 125%;
+	}
+	
+}
+.font_35{
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 100%;
+	@media (max-width: 1364px) {
+		font-size: remy(35);
+	}
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 143%;
+	}
+
 }
 .txt-16{
 	font-size: 16px;
