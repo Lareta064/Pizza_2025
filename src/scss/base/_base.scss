@@ -224,3 +224,17 @@ main{
 		}
 	}
 }
+.gap-88{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:88px;
+	@media (max-width: 1364px) {
+		row-gap:remy(88);
+	}
+	@media (max-width: 767px) {
+		row-gap:50px;
+		.product-assortiment-single{
+			max-width: 340px;
+		}
+	}
+}

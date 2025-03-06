@@ -47,7 +47,7 @@
 		font-size: 14px;
 		line-height: 143%;
 		color: var(--primary);
-		padding-bottom: 20px;
+		margin-bottom: 20px;
 		
 	}
 	.product__footer{
@@ -71,7 +71,7 @@
 		}
 		p{	
 			font-size: remy(14);
-			padding-bottom: remy(20);
+			margin-bottom: remy(20);
 		}
 		.product__footer{
 			column-gap:remy(20);
@@ -90,7 +90,7 @@
 		p{	
 			font-size: 14px;
 			text-align: center;
-			padding-bottom: 5px;
+			margin-bottom: 5px;
 		}
 		.product__footer{
 			flex-direction: column;
@@ -194,6 +194,21 @@
 		.old-price{font-size: 16px;}
 	}
 }
+/*Карточка с квадратной картинкой*/
+.product.img-370{
+	.product__img{
+		aspect-ratio:1;
+	}
+}
+.product p.txt-cut2{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+
+}
+
+
 // .product.product-horiz{
 // 	flex-direction: row;
 // 	align-items: stretch;
