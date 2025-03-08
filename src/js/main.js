@@ -64,6 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+    // FANCY POPUP
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
