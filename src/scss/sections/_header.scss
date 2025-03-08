@@ -245,11 +245,16 @@ header.header{
 	  }
 }
 .header-navigation{
-	.mobile-menu__contacts,
+	.contacts-phones,
 	.schedule-block{
 		display: none;
 		@media (max-width: 767px) {
 			display: block;
+		}
+	}
+	.contacts-phones{
+		@media (max-width: 767px) {
+			display:flex;
 		}
 	}
 }
@@ -381,6 +386,13 @@ header.header.show-after:after{
 	}
 	
 }
+.contacts-phones{
+	display: flex;
+	gap:10px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	flex-shrink: 0;
+}
 @media (max-width: 767px) {
 	.header{
 		.container{width: 100%;}
@@ -407,13 +419,8 @@ header.header.show-after:after{
 		
 		&.active{transform: translateX(0);}
 		.phone-item{color: white;}
-		.mobile-menu__contacts{
-			display: flex;
+		.contacts-phones{
 			flex-direction: column;
-			row-gap:10px;
-			padding-top: 16px;
-			padding-bottom: 16px;
-			flex-shrink: 0;
 		}
 		.schedule-block{padding-top: 16px; flex-shrink: 0;}
 	}
