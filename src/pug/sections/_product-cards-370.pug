@@ -3,22 +3,23 @@ mixin card-img-370(img, title, price, old, tags)
 	.product.img-370
 		.product__img
 			if tags
-				each item in tags
-					div(class="tag-meta tag-meta--"+ item.cl) #{item.txtTag}
+				.product-meta
+					each item in tags
+						div(class="tag-meta tag-meta--"+ item.cl) #{item.txtTag}
 			img.img-cover(src="./img/goods/"+ img +".webp", srcset="./img/goods/"+ img+"@2x.webp 2x" width="370" height="370" alt="img" loading="lazy")
 		
 		.product__body
 			p.product__name !{title}
 			block 
 		
-		.product__footer
-			.price-box
-				span.new-price от #{price} &#8381;
-				if old
-					span.old-price #{old} &#8381;
-			
-			button.btn.sm-w100(type="button")
-				span Выбрать
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
 
 //Карточка с картинкой 370х370 обрезать текстописание до 2-х строк
 mixin card-img-370-cut(img, title, price, old, tags)
@@ -34,21 +35,21 @@ mixin card-img-370-cut(img, title, price, old, tags)
 			
 			block 
 		
-		.product__footer
-			.price-box
-				span.new-price от #{price} &#8381;
-				if old
-					span.old-price #{old} &#8381;
-			
-			button.btn.sm-w100(type="button")
-				span Выбрать
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
 section.product-assortiment
 	.container.gap-88
 		.product-assortiment-single
 			.title-wrapper
 				.h2 Пицца
 			.grid-three-columns
-				+card-img-370('pizza-h370', 'Пицца Пепперони', '650', 800, [{cl: 'new', txtTag: 'new'}, {cl: 'sale', txtTag: 'Акция!'}])
+				+card-img-370('pizza-h370', 'Пицца Пепперони', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'}])
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 				+card-img-370('pizza2-h370', 'Пицца Карбонара', '650', 800,[{cl: 'hit', txtTag: 'Популярное'}])
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
@@ -56,7 +57,7 @@ section.product-assortiment
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 				+card-img-370('pizza4-h370', 'Пицца Баварская','650', 800)
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-				+card-img-370('pizza5-h370', 'Пицца Гавайская', '650', 800, [{cl: 'new', txtTag: 'new'}, {cl: 'sale', txtTag: 'Акция!'},{cl: 'hit', txtTag: 'Популярное'}])
+				+card-img-370('pizza5-h370', 'Пицца Гавайская', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'},{cl: 'hit', txtTag: 'Популярное'}])
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 				+card-img-370('pizza6-h370', 'Пицца Неаполитанская','650', 800)
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
@@ -64,7 +65,7 @@ section.product-assortiment
 			.title-wrapper
 				.h2 Комбо
 			.grid-three-columns
-				+card-img-370('combo2-h370', 'Комбо 2 друга', '650', 800, [{cl: 'new', txtTag: 'new'}, {cl: 'sale', txtTag: 'Акция!'}])
+				+card-img-370('combo2-h370', 'Комбо 2 друга', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'}])
 					p Сырный цыпленок 25см, маргарита 25см, пепси 0,5л...
 				+card-img-370('combo4-h370', 'Комбо любительский', '650', 800,[{cl: 'hit', txtTag: 'Популярное'}])
 					p Мамма миа 25 см, терияки 25 см, салат овощной
@@ -72,7 +73,7 @@ section.product-assortiment
 					p Сырный цыпленок 25см, маргарита 25см, пепси 0,5л...
 				+card-img-370('combo2-h370', 'Комбо 2 друга','650')
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-				+card-img-370('combo3-h370', 'Комбо 1 = 3', '650', 800, [{cl: 'new', txtTag: 'new'}, {cl: 'sale', txtTag: 'Акция!'},{cl: 'hit', txtTag: 'Популярное'}])
+				+card-img-370('combo3-h370', 'Комбо 1 = 3', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'},{cl: 'hit', txtTag: 'Популярное'}])
 					p Сырный цыпленок 25см, маргарита 25см, пепси 0,5л...
 				+card-img-370('combo4-h370', 'Комбо любительский','650')
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.

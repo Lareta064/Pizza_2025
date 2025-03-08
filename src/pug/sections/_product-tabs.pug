@@ -2,52 +2,53 @@
 mixin card(img, title, price, old)
 	.product
 		.product__img
-			.tag-meta.tag-meta--new new
-			.tag-meta.tag-meta--sale Акция!
-			.tag-meta.tag-meta--hit Популярное
+			.product-meta
+				.tag-meta.tag-meta--new Новинка
+				.tag-meta.tag-meta--sale Акция!
+				.tag-meta.tag-meta--hit Популярное
 
 			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
 		
 		.product__body
 			p.product__name !{title}
 			block 
-		
-		.product__footer
-			.price-box
-				span.new-price от #{price} &#8381;
-				if old
-					span.old-price #{old} &#8381;
 			
-			button.btn.sm-w100(type="button")
-				span Выбрать
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
 
 //Карточка с картинкой 370х370
 mixin card-img-370(img, title, price, old)
 	.product.img-370
 		.product__img
-			.tag-meta.tag-meta--new new
-			.tag-meta.tag-meta--sale Акция!
-			.tag-meta.tag-meta--hit Популярное
+			.product-meta
+				.tag-meta.tag-meta--new Новинка
+				.tag-meta.tag-meta--sale Акция!
+				.tag-meta.tag-meta--hit Популярное
 
 			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
-		
 		.product__body
 			p.product__name !{title}
 			block 
 		
-		.product__footer
-			.price-box
-				span.new-price от #{price} &#8381;
-				if old
-					span.old-price #{old} &#8381;
-			
-			button.btn.sm-w100(type="button")
-				span Выбрать
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
 //Карточка для фильтрации с дата-атрибутом
 mixin cardMulti(img, title, tags, price,  old )
 	.product(data-tags=""+ tags)
 		.product__img
-			.tag-meta.tag-meta--new new
+			.tag-meta.tag-meta--new Новинка
 			.tag-meta.tag-meta--sale Акция!
 			.tag-meta.tag-meta--hit Популярное
 
@@ -57,14 +58,14 @@ mixin cardMulti(img, title, tags, price,  old )
 			p.product__name !{title}
 			block 
 		
-		.product__footer
-			.price-box
-				span.new-price от #{price} &#8381;
-				if old
-					span.old-price #{old} &#8381;
-			
-			button.btn.sm-w100(type="button")
-				span Выбрать
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
 section.product-assortiment
 	.container.gap-88
 		//Пиццы
