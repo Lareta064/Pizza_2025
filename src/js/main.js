@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const hasDropItem = document.querySelector('#has-drop');
     const dropMenu =  document.querySelector('#drop-menu');
     // HEADER SUBMENU
-    
     if(hasDropItem){
       
 
@@ -52,6 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     }
+
+    //HEADER FIXED DESKTOP
+    const headerTop = document.querySelector('#header-fixed');
+    window.addEventListener('scroll', function(){
+        if(this.innerWidth >= 768){
+            if(this.pageYOffset > 200){
+                headerTop.classList.add('header--slim');
+            }
+            else{
+                headerTop.classList.remove('header--slim');
+            }
+        }
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {

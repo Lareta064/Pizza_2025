@@ -4,12 +4,16 @@ header.header{
 	background-color: #fff;
 	border-bottom: 1px solid $s1;
 	height: 140px;
+	position: sticky;
+	transition: .3s;
+	top:0;
+	z-index: 5;
 	@media (max-width: 767px) {
 		position: fixed;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		z-index: 5;
+		// z-index: 5;
 		border-top:1px solid $s1;
 	}
 	@media (max-width: 1364px) {
@@ -21,6 +25,14 @@ header.header{
 	 align-items: center;
 	}
 }
+@media (min-width: 768px) {
+	.header.header--slim{
+		transform: translateY(-50%);
+		.logo {transform: scale(.6) translateY(63%);}
+		
+	}
+}
+
 // HEADER
 .header-row{
   display: flex;
@@ -39,7 +51,7 @@ header.header{
 	flex:1;
 	display: flex;
 	flex-direction: column;
-	row-gap: 26px;
+	row-gap: 27px;
 	@media (max-width: 1364px) {
 		row-gap: remy(26);
 	}
@@ -55,7 +67,11 @@ header.header{
 .header-top{
 	position: relative;
 	z-index: 4;
+	padding-top: 15px;
 	.schedule-block{flex: 1;}
+	@media (max-width: 1364px) {
+		padding-top: remy(15);
+	  }
 }
 .header-profile{
 	display: flex;
@@ -79,6 +95,7 @@ header.header{
 	display: flex;
 	flex-shrink: 0;
 	align-items: center;
+	transition: .3s; 
 	img, svg{
 		width: 100%;
 		height: 100%;
@@ -249,7 +266,7 @@ header.header{
 		}
 	}
 	.menu-item  .menu-link{
-		padding-block: 6px;
+		padding-block: 2px;
 		border-bottom: 1px solid transparent;
 		font-weight: 400;
 		font-size: 16px;
@@ -266,7 +283,7 @@ header.header{
 			}
 		}
 		@media(min-width: 768px) and (max-width: 1364px) {
-			padding-block: remy(6);
+			padding-block: remy(3);
 			font-size: remy(16);
 		}
 		@media (max-width: 767px) {
@@ -285,7 +302,7 @@ header.header{
 	position: absolute;
 	
 	background-color: white;
-	top:65px;
+	top:50px;
 	left: 0;
 	right: 0;
 	z-index: 9;
@@ -299,14 +316,14 @@ header.header{
 	}
 	@media (max-width: 1364px) {
 		
-		top:remy(65);
+		top:remy(50);
 		.sub-menu-link{font-size: remy(16);}
 	}
 	@media (max-width: 767px) {
 		.sub-menu-link{font-size: 16px;}
 	}
 }
-header.header{position: relative;}
+
 header.header:after{
 	content:'';
 	height: 0;
