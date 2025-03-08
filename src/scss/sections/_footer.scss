@@ -74,32 +74,52 @@
 	font-size: 14px;
 	line-height: 157%;
 	transition: .3s; 
-	margin-top: -10px;
+	
 	&:hover{color: white;}
 	@media(min-width: 768px) and (max-width: 1364px) {
 		font-size: remy(14);
-		margin-top: remy(-10);
+		
 	}
 }
 .footer-copyright {
-	margin-top: 20px;
+	
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 143%;
 	color: var(--white);
 	@media (max-width: 1364px) {
-		margin-top: remy(20);
+		
 		font-size: remy(14);
 	}
 	@media (max-width: 767px) {
-	  margin-top: 50px;
+	 
 	  font-size: 14px;
+	}
+}
+.footer.footer-has-map{
+	.footer-copyright {
+		margin-top: 20px;
+		
+		@media (max-width: 1364px) {
+			margin-top: remy(20);
+			
+		}
+		@media (max-width: 767px) {
+		  margin-top: 50px;
+		 
+		}
+	}
+	.footer .email-link{
+		margin-top: -10px;
+		@media(min-width: 768px) and (max-width: 1364px) {
+			margin-top: remy(-10);
+		}
 	}
 }
 .politic-box{
 	display: flex;
 	column-gap: 10px;
-	margin-top: -14px;
+	
 	a{
 		font-weight: 400;
 		font-size: 12px;
@@ -137,4 +157,97 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
+
+}
+
+/*FOOTER ROW*/
+.footer.footer-light{
+	.footer-row{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 40px;
+		padding-bottom: 60px;
+		@media (max-width: 1364px) {
+			padding-top:remy(40);
+			padding-bottom: remy(60);
+		}
+		@media (max-width: 767px) {
+			flex-direction: column;
+			row-gap:30px;
+			padding-top: 40px;
+			padding-bottom: 36px;
+		}
+	}
+	.schedule-block{
+		display: block;
+		max-width: 170px;
+		@media (max-width: 1364px) {
+			max-width: remy(170);
+		}
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+	}
+	.footer-bottom{
+		padding-block: 20px;
+		border-top: 1px solid $s5;
+		@media (max-width: 1364px) {
+			padding-block: remy(20);
+		}
+		@media (max-width: 767px) {
+			padding-block: 20px;
+		}
+	}
+	
+	.footer-menu-list{
+		li +li{margin-top: 10px;}
+		@media (max-width: 1364px) {
+			li +li{margin-top: remy(10);}
+		}
+		@media (max-width: 767px) {
+			li +li{margin-top: 10px;}
+		}
+	}
+	.footer-contacts{
+		text-align: right;
+		display: flex;
+		flex-direction: column;
+		row-gap:20px;
+		align-items: flex-end;
+		.email-link:hover{color: $a2;}
+		.phone-item{
+			font-weight: 700;
+			font-size: 34px;
+			line-height: 71%;
+		}
+		@media(min-width: 767px) and (max-width: 1919px) {
+			row-gap:remy(20);
+			.phone-item{
+				font-size: remy(35);
+			}
+		}
+		@media (max-width: 767px) {
+			align-items: flex-start;
+		}
+		
+	}
+	.contacts-phones{
+		flex-direction: column;
+	}
+	.footer-address, .footer-logo{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		row-gap:20px;
+	}
+	.politic-box{
+		margin-top: 6px;
+		@media (max-width: 1919px) {
+			margin-top: remy(6);
+		}
+		@media (max-width: 767px) {
+			margin-top: 6px;
+		}
+	}
+	
 }
