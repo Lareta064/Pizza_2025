@@ -101,6 +101,7 @@ header.header{
 		height: 100%;
 		object-fit: contain;
 	}
+	&:hover{opacity: .8;}
 	@media (max-width: 1364px) {
 		width: remy(262);
 		height: remy(94);
@@ -127,8 +128,6 @@ header.header{
 	     font-size: 12px;
 		 p strong{text-transform: capitalize; font-weight: 400;;}
 	  }
-	
-	
 }
 .header-navigation .schedule-block{
 	@media (max-width: 767px) {
@@ -178,7 +177,7 @@ header.header{
 	
 	  }
 }
-.phone-contacts{
+.phone-list{
 	padding-left: 10px;
 	padding-right: 10px;
 	position: relative;
@@ -255,6 +254,8 @@ header.header{
 	.contacts-phones{
 		@media (max-width: 767px) {
 			display:flex;
+			padding-top: 15px;
+			padding-bottom: 15px;
 		}
 	}
 }
@@ -389,8 +390,8 @@ header.header.show-after:after{
 .contacts-phones{
 	display: flex;
 	gap:10px;
-	padding-top: 16px;
-	padding-bottom: 16px;
+	// padding-top: 16px;
+	// padding-bottom: 16px;
 	flex-shrink: 0;
 }
 @media (max-width: 767px) {

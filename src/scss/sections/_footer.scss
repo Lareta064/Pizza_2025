@@ -1,0 +1,140 @@
+@use "../base/var" as *;
+.footer{
+	background-color: $p2;
+	overflow: hidden;
+	color: white;
+}
+.footer .footer-content{
+	position: relative;
+	padding-block: 20px;
+	width: 370px;
+	padding-right: 40px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 14px;
+	@media (max-width: 1364px) {
+		padding-block:remy(20);
+		width: remy(370);
+		padding-right: remy(40);
+		row-gap: remy(14);
+	}
+	@media (max-width: 767px) {
+		padding-block:20px;
+		padding-right: 0;
+		row-gap: 20px;
+		width: 100%;
+	}
+}
+.footer  .logo{
+	width: 170px;
+	height: 69px;
+	@media(min-width: 768px) and (max-width: 1364px) {
+		width: remy(170);
+	    height: remy(69);
+	}
+}
+.footer .social{
+	.social-item {
+		background-color: #fff;
+		svg{fill: $p;}
+		&:hover{background-color: $a2;}
+	}
+	@media (max-width: 767px) {
+	  column-gap:20px;
+	}
+}
+.footer .contacts-phones{
+	gap: 10px 20px;
+	flex-wrap: wrap;
+	.phone-item{
+		color: white;
+		 &:hover{color: $a2;} }
+	
+	@media (max-width: 1364px) {
+		gap: remy(10) remy(20);
+	}
+	@media (max-width: 767px) {
+		gap: remy(10);
+	}
+}
+.footer .schedule-block{
+	color: white;
+	
+}
+.footer address{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143%;
+	@media(min-width: 768px) and (max-width: 1364px) {
+		font-size: remy(14);
+	}
+}
+.footer .email-link{
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 157%;
+	transition: .3s; 
+	margin-top: -10px;
+	&:hover{color: white;}
+	@media(min-width: 768px) and (max-width: 1364px) {
+		font-size: remy(14);
+		margin-top: remy(-10);
+	}
+}
+.footer-copyright {
+	margin-top: 20px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143%;
+	color: var(--white);
+	@media (max-width: 1364px) {
+		margin-top: remy(20);
+		font-size: remy(14);
+	}
+	@media (max-width: 767px) {
+	  margin-top: 50px;
+	  font-size: 14px;
+	}
+}
+.politic-box{
+	display: flex;
+	column-gap: 10px;
+	margin-top: -14px;
+	a{
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 150%;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		color: var(--secondary-5);
+		@media(min-width: 768px) and (max-width: 1364px) {
+			font-size: remy(12);
+		}
+		
+	}
+}
+.footer .footer-map{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:370px;
+	width: 70vw;
+	z-index: 2;
+	img, iframe{
+		object-fit: cover;width: 100%;height: 100%;
+	}
+	@media (max-width: 1364px) {
+		left:remy(370);
+	}
+	@media (max-width: 767px) {
+		width: 100vw;
+		position: relative;
+		left: auto;
+		top: auto;
+		bottom: auto;
+		height: 266px;
+		margin-top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
