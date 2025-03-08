@@ -3,11 +3,7 @@
 	.container
 		a(href="index.html").logo
 			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='232' height='94' loading='lazy' alt='img')
-		.social
-			a(href="#!").social-item
-			a(href="#!").social-item
-			a(href="#!").social-item
-			a(href="#!").social-item
+		+social
 
 //HEADER
 header.header
@@ -23,11 +19,7 @@ header.header
 							strong Прием заказов:
 						p  СР, ЧТ, ВС с 15:00 - 00:00; ПТ, СБ с 15:00 - 02:00; ПН, ВТ - 
 							small выходные дни
-					.social
-						a(href="#!").social-item
-						a(href="#!").social-item
-						a(href="#!").social-item
-						a(href="#!").social-item
+					+social
 				
 					.phone-contacts
 						a(href="tel:+79055555555").phone-item +7 (905) 555-55-55

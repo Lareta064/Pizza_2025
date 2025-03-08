@@ -11,7 +11,17 @@
 		align-items: center;
 		border-radius: 50%;
 		background-color: $s5;
+		transition: .3s; 
+		
 	}
+	svg{
+		width: 50%;
+		height: 50%;
+		color: white;
+		fill: white;
+	}
+	&-item:hover {background-color: $a2;}
+	&-item:hover svg{fill: $s5;}
 	@media(min-width:768px) and (max-width: 1364px) {
 		column-gap:remy(10);
 		&-item{

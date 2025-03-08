@@ -258,21 +258,25 @@
 .product.horiz-w370{
 	@media (max-width: 767px) {
 		flex-direction: row;
-		align-items: stretch;
-		column-gap: 12px;
+		align-items: flex-start;
+		column-gap: 10px;
 		padding-bottom: 0;
 		width: 100%;
 		justify-content: space-between;
+		.product-meta{display: none;}
 		.product__img{
-			width:169px;
-			
+			width:107px;
+			height: 107px;
 			border-radius: 12px 0 0 12px;
 			overflow: hidden;
+			flex-shrink:0;
+			padding: 10px;
+			padding-right: 0;
 			img{
 				// border-radius: 12px 0 0 12px;
 				height: 100%;
 				width: 100%;
-				object-fit: cover;
+				object-fit: contain;
 			}
 		}
 		
@@ -290,8 +294,8 @@
 			}
 			.btn{width: fit-content;}
 		}
-		column-gap: remy(12);
-		.product__img{width:remy(169);}
+		column-gap: 12px;
+		
 		
 	}
 }
