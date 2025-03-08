@@ -48,9 +48,10 @@ mixin card-img-370(img, title, price, old)
 mixin cardMulti(img, title, tags, price,  old )
 	.product(data-tags=""+ tags)
 		.product__img
-			.tag-meta.tag-meta--new Новинка
-			.tag-meta.tag-meta--sale Акция!
-			.tag-meta.tag-meta--hit Популярное
+			.product-meta
+				.tag-meta.tag-meta--new Новинка
+				.tag-meta.tag-meta--sale Акция!
+				.tag-meta.tag-meta--hit Популярное
 
 			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
 		

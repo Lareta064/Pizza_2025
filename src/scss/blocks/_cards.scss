@@ -7,7 +7,7 @@
 	background: var(--white);
 	border-radius: 24px;
 	overflow: hidden;
-	row-gap:20px;
+	// row-gap:20px;
 	display: flex;
 	flex-direction: column;
 	
@@ -36,13 +36,13 @@
 		}
 	}
 	.product__body{
-		padding-inline:20px;
+		padding:20px;
 		flex: 1;
 		
 		display: flex;
 		flex-direction: column;
-		row-gap:15px;
-		.btn{flex-shrink:0; margin-top: 8px;}
+		
+		.btn{flex-shrink:0;}
 	}
 	.product__name{
 		width: 100%;
@@ -51,6 +51,7 @@
 		line-height: 125%;
 		color: var(--primary);
 		padding-bottom: 0;
+		margin-bottom: 15px;
 	}
 	p{	display: -webkit-box;
 		-webkit-box-orient: vertical;
@@ -62,6 +63,7 @@
 		line-height: 143%;
 		color: var(--primary);
 		margin-bottom: 20px;
+		flex-grow: 1;
 		
 	}
 	.product__footer{
@@ -70,18 +72,20 @@
 		align-items: center;
 		justify-content: space-between;
 		column-gap:20px;
-		padding: 20px;
+		padding-top: 20px;
 	}
 	@media (max-width: 1364px) {
 		border-radius: remy(20);
-		row-gap:remy(20);
+		// row-gap:remy(20);
 		
 		.product__body{
-			padding-inline:remy(20);
-			row-gap:remy(15);
+			padding:remy(20);
+
+			// row-gap:remy(15);
 		}
 		.product__name{
 			font-size: remy(24);
+			margin-bottom: remy(15);
 		}
 		p{	
 			font-size: remy(14);
@@ -89,7 +93,7 @@
 		}
 		.product__footer{
 			column-gap:remy(20);
-			padding: remy(20);
+			padding-top: remy(20);
 		}
 	}
 	@media (max-width: 767px) {
@@ -100,22 +104,24 @@
 		.product__name{
 			font-size: 16px;
 			line-height: 150%;
+			margin-bottom: 4px;
 		}
 		p{	
 			font-size: 14px;
 			text-align: center;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 		}
 		.product__footer{
 			flex-direction: column;
 			row-gap:10px;
-			padding: 10px 9px;
 			padding-top: 0;
+			// padding: 10px 9px;
+			// padding-top: 10px;
 		}
 		.product__body{
-			padding: 10px 9px 0;
+			padding: 10px;
 			padding-bottom: 0;
-			row-gap:4px;
+			// row-gap:4px;
 		}
 		.price-box{
 			flex-direction: row;
@@ -126,11 +132,7 @@
 		}
 	}
 }
-.product.horiz-w370{
-	@media (max-width: 767px) {
-	
-	}
-}
+
 .tag-meta{
 	position: absolute;
 	z-index: 2;
@@ -276,6 +278,16 @@
 		
 		.product__body{
 			padding: 10px;
+			.product__footer{
+				flex-direction: row-reverse;
+				align-items: center;
+			}
+			.price-box{
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				.old-price{margin-left: 0;}
+			}
 			.btn{width: fit-content;}
 		}
 		column-gap: remy(12);
