@@ -1,0 +1,47 @@
+@use "../base/var" as *;
+.accordion__item{
+	overflow: hidden;
+	border-bottom: 1px solid var(--secondary);
+    border-top: 1px solid var(--secondary);
+	.accordion-btn{
+		font-family: var(--second-family);
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 125%;
+		color: var(--primary);
+		flex-grow: 1;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.icon-arr{
+		flex-shrink: 0;
+	}
+  }
+  .accordion__item .accordion__title {
+	  position: relative;
+	  display: flex;
+	  justify-content: space-between;
+	  
+	  
+	  -webkit-transition: background-color 0.2s;
+	  transition: background-color 0.2s;
+	  cursor: pointer;
+  
+  }
+  .accordion__item .accordion__title:hover {
+	  transition: all 0.5s ease-out;
+  }
+  .accordion__item .icon-arr{
+	
+    align-self:  center;
+
+  }
+  .accordion__item .icon-arr.accordion__rotate {
+	 transform: rotate(180deg);
+  }
+  .accordion__item .accordion__content {
+	 
+	  display: none;
+	  
+  }
+  

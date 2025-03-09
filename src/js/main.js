@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Fancybox.bind("[data-fancybox]", {
       // Your custom options
     });
-    
+
     // modal с атрибутом [data-modal]
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
@@ -107,6 +107,29 @@ document.addEventListener("DOMContentLoaded", function () {
         
       }
     }
+
+    //ACORDION
+	$(function() {
+	
+		//BEGIN
+		$(".accordion__title").on("click", function(e) {
+	  
+		  e.preventDefault();
+		  var $this = $(this);
+	  
+		  if (!$this.hasClass("accordion-active")) {
+			$(".accordion__content").slideUp(400);
+			$(".accordion__title").removeClass("accordion-active");
+			$('.accordion__arrow').removeClass('accordion__rotate');
+		  }
+	  
+		  $this.toggleClass("accordion-active");
+		  $this.next().slideToggle();
+		  $('.accordion__arrow',this).toggleClass('accordion__rotate');
+		});
+		//END
+		
+	  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -41,8 +41,10 @@
 	--font-family: "RobotoCondensed",  sans-serif;
 	--second-family: "Cuprum",  sans-serif;
 	--font3: 'Chekharda';
+	
 	--accent-color-1: #D7001A;
 	--accent-color-2: #FBD10E;
+	--secondary: #BFBFBF;
 	--secondary-1: #EEEEEE;
 	--secondary-2: #F7F7F7;
 	--secondary-4: #A3A7B4;
@@ -259,4 +261,45 @@ main{
 			max-width: 340px;
 		}
 	}
+}
+/*.breadcrumbs*/
+.breadcrumbs {
+	
+}
+
+.breadcrumbs>li {
+	position: relative;
+	display: inline;
+	font-family: "Rubik", sans-serif;
+	font-weight: 400;
+	padding-right: 3px;
+	line-height: .5;
+	color: var(--secondary-5);
+	position: relative;
+	&+li:before{
+		content: "";
+		position: absolute;
+		left: -1px;
+		bottom: 3px;
+		height: 14px;
+		width: 1px;
+		background-color: var(--secondary-5);
+	}
+	a {
+		color: var(--secondary-5);
+		font-size: 12px;
+		line-height: .5;
+	}
+	&:last-child{padding-right: 0;}
+	&:last-child:before{background-color: var(--secondary);}
+	&:last-child>* {
+		border-bottom: 0;
+		pointer-events: none;
+		cursor: default;
+		color: var(--secondary);
+	}
+
+}
+.breadcrumbs>li +li{
+	padding-left: 6px;
 }
