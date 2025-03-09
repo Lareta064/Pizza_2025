@@ -1,0 +1,23 @@
+@use "../base/var" as *;
+.payment-block, .payment-types{
+	display: flex;
+	align-items: center;
+}
+.payment-block{
+	column-gap: 16px;
+	p{
+		font-family: var(--second-family);
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 125%;
+		color: var(--primary);
+	}
+}
+.payment-types{
+	img{
+		width: 60px;
+		height: 40px;
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+}

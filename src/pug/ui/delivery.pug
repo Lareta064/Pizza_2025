@@ -1,0 +1,56 @@
+include ../layouts/_mixins-links.pug
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+		//====убрать синий цвет у ссылок в сафари ========
+		meta(name="format-detection" content="telephone=no")
+		link(rel="stylesheet", href="../css/main.css")
+		title UI-KIT
+
+	body.body-dashboard
+
+		include ui-navigation.pug
+
+		block content
+			.container-dashboard(style="background:#e0e0e0;")
+				h2 Копоненты
+
+				.container-dashboard__content
+					.payment-block
+						p При получении
+						.payment-types
+							img(src='../img/cash.webp', srcset='../img/cash@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/visa.webp', srcset='../img/visa@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/mastercard.webp', srcset='../img/mastercard@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/mir.webp', srcset='../img/mir@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/sbp.webp', srcset='../img/sbp@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+
+					.payment-block
+						p Картой онлайн
+						.payment-types
+							img(src='../img/cash.webp', srcset='../img/cash@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/visa.webp', srcset='../img/visa@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/mastercard.webp', srcset='../img/mastercard@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/mir.webp', srcset='../img/mir@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+							img(src='../img/sbp.webp', srcset='../img/sbp@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+
+					
+					
+					ul.text-list.txt-s5
+						li Оплата заказа банковской картой при получении. Принимаются банковские карты MasterCard, Visa (кроме Visa Electron) и карты МИР.
+						li Оплата наличными курьеру или в ресторане при получении заказа.
+
+					.deliv-list
+						.deliv-list__title Бесплатная доставка
+						.deliv-item
+							img(src='../img/icons/cash.svg' width='24' height='24' loading='lazy' alt='img')
+							.deliv-item__txt
+								.deliv-title Минимальная сумма заказа 500 ₽
+								p Мы осуществляем бесплатную доставку еды на дом. Чтобы воспользоваться нашими предложением, оформите заказ стоимостью от 500 рублей.
+					

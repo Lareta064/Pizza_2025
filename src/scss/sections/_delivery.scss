@@ -1,0 +1,43 @@
+@use "../base/var" as *;
+.deliv-list__title{
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 150%;
+	color: var(--primary);
+	@media (max-width: 1364px) {
+		font-size: remy(30);
+		line-height: 1.35;
+	}
+	@media (max-width: 767px) {
+		font-size: 24px;
+		line-height: 125%;
+	}
+}
+.deliv-list{
+	padding: 30px;
+	border-radius: 40px;
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+	background: var(--secondary-2);
+}
+.deliv-item{
+	
+	display: flex;
+	column-gap:10px;
+	align-items: flex-start;
+	.deliv-title{
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 150%;
+		color: var(--primary);
+	}
+	.deliv-item__txt p{
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143%;
+		color: var(--secondary-5);
+		flex-wrap: 1;
+	}
+}

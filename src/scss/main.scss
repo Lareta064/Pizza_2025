@@ -5,6 +5,7 @@
 @use "base/_buttons";
 @use "base/_form";
 
+@use "blocks/_payment";
 @use "blocks/_social";
 @use "blocks/_burger-menu";
 @use "blocks/_counter";
@@ -20,6 +21,8 @@
 @use "sections/_about-seo";
 @use "sections/_footer";
 @use "sections/_product-popup";
+@use "sections/_delivery";
+
 
 
 

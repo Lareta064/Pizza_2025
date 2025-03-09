@@ -138,7 +138,9 @@
 }
 .txt-white{
 	color: white;
-	
+}
+.txt-s5{
+	color: var(--secondary-5);
 }
 .txt-bold{font-weight: 700;}
 .txt-accent{color: $a2;}
@@ -153,4 +155,14 @@
 	overflow-y: auto;
 	scrollbar-color:  red green;
 	scrollbar-width: thin;
+}
+.text-list{
+	list-style-type: disc;
+	margin-left: 20px;
+	@media (max-width: 1364px) {
+		margin-left: remy(20);
+	}
+	@media (max-width: 767px) {
+		margin-left: 10px;
+	}
 }
