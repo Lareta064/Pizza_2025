@@ -1,6 +1,7 @@
 @use "../base/var" as *;
 .counter{
-	
+	display: flex;
+	align-items: center;
 	font-size: 18px;
 	.counter-minus,
 	.counter-plus{
@@ -33,12 +34,21 @@
 	.counter-minus,
 	.counter-plus{justify-content: center;}
 }
-.counter-wrapper__group,.counter-wrapper ,.counter, .counter-minus,.counter-plus,.counter-value{
+
+.total-price__counter{
 	display: flex;
-	align-items: center
+	align-items: center;
+	.txt-bold{
+		font-size: 14px;
+		line-height: 157%;
+	}
 }
-.counter-wrapper__group{column-gap: 30px;}
-.counter-wrapper {
-	justify-content: space-between;
-	font-size: 14px;
+.counter-wrapper__group, .counter-wrapper, .counter, .counter-minus, .counter-plus, .counter-value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
+.counter-wrapper__group {column-gap:30px;}

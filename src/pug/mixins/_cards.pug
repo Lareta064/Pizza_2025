@@ -25,9 +25,20 @@ mixin catCard-flex-ui(img, title, link="#!")
 		.card-txt
 			p !{title}
 
-mixin addCard(nameNum,name, pr)
+//- mixin addCard(nameNum,name, pr)
 		
-	label.fake-label&attributes(attributes)
+//- 	label.fake-label&attributes(attributes)
+//- 		input(type="checkbox" name="add" + nameNum)
+//- 		span.check-icon
+//- 		.add-product
+//- 			.card-img
+//- 				img(src="./img/goods/add"+nameNum+".webp", srcset="./img/goods/add"+nameNum+"@2x.webp 2x" width="95" height="62" alt="img")
+//- 			.card-txt
+//- 				p #{name}
+//- 				.card-price #{pr} #[span &#8381;]
+
+mixin addCard(nameNum,name, pr)
+	label.add-product-card.fake-label&attributes(attributes)
 		input(type="checkbox" name="add" + nameNum)
 		span.check-icon
 		.add-product

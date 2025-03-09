@@ -140,10 +140,17 @@
 	color: white;
 	
 }
+.txt-bold{font-weight: 700;}
 .txt-accent{color: $a2;}
 .product p.txt-cut2{
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
+}
+.scroll-y{
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-color:  red green;
+	scrollbar-width: thin;
 }

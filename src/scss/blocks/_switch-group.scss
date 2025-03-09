@@ -2,7 +2,7 @@
 .switch-group{
 	display: flex;
 	justify-content: space-between;
-	height: 48px;
+	height: 30px;
 	border-radius: 50px;
 	padding: 2px;
 	background-color: $s2;
@@ -20,6 +20,8 @@
 			align-items: center;
 			color: $p;
 			width: 100%;
+			font-size: 12px;
+			line-height: 150%;
 			border-radius: 100px;
 		}
 		input:checked + span.switch-btn{
@@ -28,5 +30,12 @@
 			
 
 		}
+	}
+	@media(max-width: 768px) and (max-width: 1364px) {
+		height: remy(30);
+		border-radius: remy(50);
+		padding: remy(2);
+		input:checked + span.switch-btn{box-shadow: 0 remy(12) remy(38) 0 rgba(0, 0, 0, 0.08);}
+		.switch-btn{font-size: remy(12);}
 	}
 }
