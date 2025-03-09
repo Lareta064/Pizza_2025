@@ -10,8 +10,17 @@
 		line-height: 125%;
 		color: var(--primary);
 		flex-grow: 1;
-		padding-top: 30px;
-		padding-bottom: 30px;
+		padding-block: 30px;
+		
+		@media (max-width: 1364px) {
+			font-size: remy(24);
+			padding-block: remy(30);
+		}
+		@media (max-width: 767px) {
+			font-size: 20px;
+			line-height: 130%;
+			padding-block: 30px;
+		}
 	}
 	.icon-arr{
 		flex-shrink: 0;
@@ -31,12 +40,13 @@
   .accordion__item .accordion__title:hover {
 	  transition: all 0.5s ease-out;
   }
+  .accordion__content {padding-bottom: 20px;}
   .accordion__item .icon-arr{
-	
+	transition: .3s; 
     align-self:  center;
 
   }
-  .accordion__item .icon-arr.accordion__rotate {
+  .accordion__item .accordion-active .icon-arr {
 	 transform: rotate(180deg);
   }
   .accordion__item .accordion__content {

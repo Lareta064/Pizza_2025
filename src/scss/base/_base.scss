@@ -202,8 +202,25 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	}
 }
 .header, .footer{flex-shrink: 0;}
-main{
-	flex:1;  background-color: #fff;
+.inner-main{
+	flex:1; 
+	background-color: #fff; 
+	padding-top: 20px;
+	@media (max-width: 767px) {
+		padding-top: 10px
+	}
+}
+.inner-main section {
+	padding-block:50px 80px;
+	@media (max-width: 1364px) {
+		padding-block:remy(55) remy(80);
+	}
+	@media (max-width: 767px) {
+		padding-block:40px 50px;
+	}
+}
+.main{
+	background-color: #fff;
 	padding-top: 55px;
 	padding-bottom: 55px;
 	section, .p-block-50 {padding-block:55px;}
@@ -263,9 +280,6 @@ main{
 	}
 }
 /*.breadcrumbs*/
-.breadcrumbs {
-	
-}
 
 .breadcrumbs>li {
 	position: relative;
@@ -280,7 +294,7 @@ main{
 		content: "";
 		position: absolute;
 		left: -1px;
-		bottom: 3px;
+		bottom: 2px;
 		height: 14px;
 		width: 1px;
 		background-color: var(--secondary-5);

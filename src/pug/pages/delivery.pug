@@ -1,0 +1,20 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.inner-main
+		.breadcrumbs-wrapper
+			.container
+				ul.breadcrumbs
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#!") Доставка
+		include ../sections/_delivery
+	
+	//FOOTER
+	include ../sections/_footer
+	
+
+block variables
+	-var title = "Pizza Mega Magic";
