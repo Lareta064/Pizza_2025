@@ -51,4 +51,5 @@
     -ms-flex-align: center;
     align-items: center;
 }
-.counter-wrapper__group {column-gap:30px;}
+.counter-minus, .counter-plus, .counter-value{justify-content: center;}
+.counter-wrapper__group {column-gap:6px;}
