@@ -99,7 +99,17 @@ margin-bottom: 16px;
 	height: 440px;
 	flex-shrink: 0;
 }
-.popUp-footer .counter-wrapper__group {column-gap:10px;}
+.popUp-footer{
+	padding-block:15px;
+	display: flex;
+	column-gap:10px;
+	align-items: center;
+}
+.popUp-price-wrapper{
+	display: flex;
+	column-gap:10px;
+	align-items: center;
+}
 // .resize-img{
 // 	position: relative;
 // 	height: 295px;

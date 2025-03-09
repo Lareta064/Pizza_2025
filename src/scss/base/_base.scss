@@ -181,7 +181,23 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	 &>*:last-child{margin-right: 10px;}
 	}
 }
-
+.hide-sm{
+	@media (max-width: 767px) {
+	display: none!important;
+	}
+}
+.block-sm{
+	display: none!important;
+	@media (max-width: 767px) {
+	display: block!important;
+	}
+}
+.flex-sm{
+	display: none!important;
+	@media (max-width: 767px) {
+	display: flex!important;
+	}
+}
 .header, .footer{flex-shrink: 0;}
 main{
 	flex:1;  background-color: #fff;
