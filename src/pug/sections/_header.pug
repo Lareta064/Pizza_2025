@@ -80,12 +80,12 @@ header.header#header-fixed
 
 					.header-profile
 						.profile-status
-							//.signin-btn имеет фоновую картинку иконку входа
-							.signin-btn
+							//.signin-btn имеет фоновую картинку иконку входа, что бы скрыть добавляем класс d-none
+							.signin-btn.d-none
 							
 							//.lognin-btn   автатар пользователя
-							//- .lognin-btn
-							//- 	img(src='./img/avatar2.webp', srcset='./img/avatar2@2x.webp 2x' width='24' height='24' loading='lazy' alt='img')
+							.lognin-btn
+								img(src='./img/avatar2.webp', srcset='./img/avatar2@2x.webp 2x' width='24' height='24' loading='lazy' alt='img')
 						.basket-btn
 							.count-notify 5
 					
