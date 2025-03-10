@@ -399,3 +399,55 @@
 		gap:remy(10);
 	}
 }
+
+.card-short{
+	display: flex;
+	align-items: center;
+	column-gap:4px;
+	border: 1px solid var(--secondary-1);
+	border-radius: 24px;
+	padding: 10px;
+	padding-right: 20px;
+	transition:.3s; 
+	cursor:pointer;
+	&__img{
+		flex-shrink: 0;
+		width: 104px;
+		height: 104px;
+	}
+	&__txt, .price-box{
+		display: flex;
+		flex-direction: column;
+		row-gap: 6px;
+		font-size: 14px;
+		line-height: 143%;
+		align-items: flex-start;
+		color: var(--primary);
+		.old-price,.new-price{
+			font-size: 14px;
+			line-height: 143%;
+			color: var(--primary);
+		}
+		.old-price{color: $a1;}
+
+	}
+	
+	@media (min-width: 768px) and (max-width: 1364px) {
+		column-gap:remy(4);
+		border-radius: remy(24);
+		padding: remy(10);
+		padding-right: remy(20);
+		&__img{
+			width: remy(104);
+			height: remy(104);
+		}
+		&__txt, .price-box{
+			row-gap: remy(6);
+		    font-size: remy(14);
+		}
+		.old-price,.new-price{
+			font-size: remy(14);
+		}
+	}
+	&:hover{box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.03);border: 1px solid var(--secondary);}
+}

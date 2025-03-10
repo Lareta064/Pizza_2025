@@ -1,0 +1,62 @@
+section.stories-slider-content
+	
+	.container
+		.stories-slider-wrapper#stories-slider-wrapper
+			.stories-line-inner-wrapper
+				.stories-slider-line(style='transform: translate(-238px);')
+					.stories-slider-slide(data-id='1')
+						img(src='./img/stories/1.webp' alt='слайд1')
+					.stories-slider-slide(data-id='2')
+						img(src='./img/stories/2.webp' alt='слайд2')
+					.stories-slider-slide(data-id='3')
+						img(src='./img/stories/1.webp' alt='слайд3')
+					.stories-slider-slide(data-id='4')
+						img(src='./img/stories/2.webp' alt='слайд4')
+					.stories-slider-slide(data-id='5')
+						img(src='./img/stories/1.webp' alt='слайд5')
+					.stories-slider-slide(data-id='6')
+						img(src='./img/stories/2.webp' alt='слайд6')
+					.stories-slider-slide(data-id='7')
+						img(src='./img/stories/1.webp' alt='слайд7')
+			.control-icon.control-icon-left
+			.control-icon.control-icon-right
+		.stories-wrapper.hide(style='background-image: url("./img/stories/1.webp");')
+			.stories-wrapper-bg-blur
+			.stories-wrapper-inner
+				.story-button.prev-story(onclick='prevInnerSlide();')
+					svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M19.8076 6.80761L9.20101 17.4142L7.7868 16L18.3934 5.3934L19.8076 6.80761Z' fill='white')
+						path(d='M18.3934 26.6066L7.7868 16L9.20101 14.5858L19.8076 25.1924L18.3934 26.6066Z' fill='white')
+				.story-button.next-story(onclick='nextInnerSlide();')
+					svg(width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg')
+						path(d='M12.1924 25.1924L22.799 14.5858L24.2132 16L13.6066 26.6066L12.1924 25.1924Z' fill='white')
+						path(d='M13.6066 5.3934L24.2132 16L22.799 17.4142L12.1924 6.80761L13.6066 5.3934Z' fill='white')
+				.stories-slider-full
+					.close-stories
+						span
+					.progress-bar
+						.progress-bar-item(style='--progress-bar-width: 100%;')
+						.progress-bar-item(style='--progress-bar-width: 100%;')
+					.stories-navigation
+						.stories-navigation-left
+						.stories-navigation-right
+					.stories-slider-line-full(style='transform: translate(0px);')
+						.stories-slider-full-slide(data-id='1')
+							.full-slide-content
+								img.full-slide-content-item(src='./img/stories/1.webp' data-btn-text='Заказать' data-btn-href='#' alt='слайд1-1' loading='lazy')
+								video.full-slide-content-item.hide(playsinline autobuffer preload='auto' webkit-playsinline data-btn-text data-btn-href muted data-default-muted='1' autoplay)
+									source(type='video/mp4' src='assets/template/img/stories/1-2.mp4')
+						.stories-slider-full-slide(data-id='2')
+							.full-slide-content
+								img.full-slide-content-item(src='./img/stories/2.webp' data-btn-text='Заказать' data-btn-href='#' alt='слайд2-1' loading='lazy')
+								img.full-slide-content-item.hide(src='./img/stories/3.webp' data-btn-text data-btn-href alt='слайд2-2' loading='lazy')
+								img.full-slide-content-item.hide(src='./img/stories/1.webp' data-btn-text data-btn-href alt='слайд2-3' loading='lazy')
+						.stories-slider-full-slide(data-id='3')
+							.full-slide-content
+								img.full-slide-content-item(src='./img/stories/1.webp' data-btn-text data-btn-href alt='слайд3-1' loading='lazy')
+								img.full-slide-content-item.hide(src='./img/stories/2.webp' data-btn-text data-btn-href alt='слайд3-2' loading='lazy')
+						.stories-slider-full-slide(data-id='4')
+							.full-slide-content
+								img.full-slide-content-item(src='./img/stories/1.webp' data-btn-text data-btn-href alt='слайд4-1' loading='lazy')
+								img.full-slide-content-item.hide(src='./img/stories/2.webp' data-btn-text data-btn-href alt='слайд4-2' loading='lazy')
+				a.full-slide-button.hide(href='#') Попробовать

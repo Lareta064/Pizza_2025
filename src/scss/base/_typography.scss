@@ -42,6 +42,15 @@
 		margin-bottom: 20px;
 	}
 }
+.h4,.h4-upper{
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 125%;
+	color: var(--primary);
+	@media(min-width: 768px) and (max-width: 1364px) {font-size: remy(25);}
+}
+.h4-upper{text-transform: uppercase;}
 .title-46{
 	font-family: var(--second-family);
 	font-weight: 400;
@@ -156,14 +165,7 @@
 		row-gap:20px;
 	}
 }
-.h4{
-	font-family: var(--second-family);
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 125%;
-	color: var(--primary);
-	@media(min-width: 768px) and (max-width: 1364px) {font-size: remy(25);}
-}
+
 .txt-center{text-align: center;}
 .txt-white{color: white;}
 .txt-s5{color: var(--secondary-5);}

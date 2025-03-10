@@ -206,19 +206,23 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	flex:1; 
 	background-color: #fff; 
 	padding-top: 20px;
+	padding-bottom: 55px;
+	section, .p-block-50 {padding-block:55px;}
 	@media (max-width: 767px) {
 		padding-top: 10px
 	}
-}
-.inner-main section {
-	padding-block:50px 80px;
 	@media (max-width: 1364px) {
-		padding-block:remy(55) remy(80);
+		padding-top: remy(55);
+		padding-bottom: remy(55);
+		section, .p-block-50 {padding-block:remy(55);}
 	}
 	@media (max-width: 767px) {
-		padding-block:40px 50px;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		section, .p-block-50 {padding-block:20px;}
 	}
 }
+
 .main{
 	background-color: #fff;
 	padding-top: 55px;

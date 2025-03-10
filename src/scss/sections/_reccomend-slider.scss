@@ -1,0 +1,8 @@
+@use "../base/var" as *;
+.reccomend-slider{
+	.swiper-slide{
+		@media (max-width: 767px) {
+		  width: 270px!important;
+		}
+	}
+}
