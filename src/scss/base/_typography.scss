@@ -164,19 +164,13 @@
 	color: var(--primary);
 	@media(min-width: 768px) and (max-width: 1364px) {font-size: remy(25);}
 }
-.txt-center{
-	text-align: center;
-}
-.txt-white{
-	color: white;
-}
-
-.txt-s5{
-	color: var(--secondary-5);
-}
+.txt-center{text-align: center;}
+.txt-white{color: white;}
+.txt-s5{color: var(--secondary-5);}
 .txt-bold{font-weight: 700;}
 .txt-accent{color: $a2;}
 .txt-red{color: $a1;}
+.d-none{display: none!important;}
 .product p.txt-cut2{
 	display: -webkit-box;
 	-webkit-box-orient: vertical;

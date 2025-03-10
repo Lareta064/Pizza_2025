@@ -40,6 +40,32 @@
 		background-size: 25px 26px;
 	}
 }
+.lognin-btn{
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	border: 2px solid $a2;
+	padding: 1px;
+	position: relative;
+	&:after{
+		content:'';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: $a1;
+		border:1px solid white;
+	}
+	img{
+		border-radius: inherit;
+		border: 1px solid white;
+
+	}
+}
 .carret-down{
 	width: 18px;
 	height: 18px;

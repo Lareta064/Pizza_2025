@@ -109,27 +109,56 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     //ACORDION
-	$(function() {
-	
-		//BEGIN
-		$(".accordion__title").on("click", function(e) {
-	  
-		  e.preventDefault();
-		  var $this = $(this);
-	  
-		  if (!$this.hasClass("accordion-active")) {
-			$(".accordion__content").slideUp(400);
-			$(".accordion__title").removeClass("accordion-active");
-			$('.accordion__arrow').removeClass('accordion__rotate');
-		  }
-	  
-		  $this.toggleClass("accordion-active");
-		  $this.next().slideToggle();
-		  $('.accordion__arrow',this).toggleClass('accordion__rotate');
-		});
-		//END
-		
-	  });
+    $(function() {
+    
+        //BEGIN
+        $(".accordion__title").on("click", function(e) {
+        
+          e.preventDefault();
+          var $this = $(this);
+        
+          if (!$this.hasClass("accordion-active")) {
+          $(".accordion__content").slideUp(400);
+          $(".accordion__title").removeClass("accordion-active");
+          $('.accordion__arrow').removeClass('accordion__rotate');
+          }
+        
+          $this.toggleClass("accordion-active");
+          $this.next().slideToggle();
+          $('.accordion__arrow',this).toggleClass('accordion__rotate');
+        });
+        //END
+      
+      });
+    
+    //NEWS SLIDER
+    let newsSlider = new Swiper('.news-slider', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      speed:1000,
+      navigation: {
+        nextEl: ".news-slider__nav .swiper-button-next",
+        prevEl: ".news-slider__nav .swiper-button-prev",
+      },
+      breakpoints: {
+          320: {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1365: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          }
+        },
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
