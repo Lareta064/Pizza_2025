@@ -2,10 +2,9 @@ section.delivery-page
 	.container
 		h1.title Доставка и оплата
 		.delivery-content
-		
 			.delivery-mode.delivery-row
 				//single block
-				.deliv-list
+				.deliv-list.grey-bg
 					.deliv-list__title Бесплатная доставка
 					.deliv-item
 						img(src='../img/icons/cash.svg' width='24' height='24' loading='lazy' alt='img')
@@ -19,7 +18,7 @@ section.delivery-page
 							p Мы осуществляем бесплатную доставку еды на дом. Чтобы воспользоваться нашими предложением, оформите заказ стоимостью от 500 рублей.
 				
 				//single block
-				.deliv-list
+				.deliv-list.grey-bg
 					.deliv-list__title Самовывоз
 					.deliv-item
 						img(src='../img/icons/home.svg' width='24' height='24' loading='lazy' alt='img')
@@ -35,58 +34,80 @@ section.delivery-page
 			.deliv-text
 				p Если хочется отведать чего‑нибудь вкусного, но при этом нет ни времени, ни желания стоять у плиты, правильным решением станет доставка еды домой. Именно эту услугу предлагает клиентам наша мини-пиццерия.Наш сайт доставки еды гарантирует всем своим клиентам множество важных преимуществ, среди которых возможность совершения заказа и предзаказа в любое время, оперативная доставка к месту назначения и удобное оформление заявок. Вы также оцените привлекательную стоимость блюд, а так же их несомненное качество.
 			
-			//PAYMENT
-			.title-34 Платите как удобно!
-			.payment-mode.delivery-row
-				.payment-mode__block
+			.delivery-article
+				//PAYMENT
+				.title-34 Платите как удобно!
+				.payment-mode.delivery-row
+					.payment-mode__block
+						.payment-block
+							.h4 При получении
+							.payment-types
+								img(src='../img/cash.webp', srcset='../img/cash@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/visa.webp', srcset='../img/visa@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/mastercard.webp', srcset='../img/mastercard@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/mir.webp', srcset='../img/mir@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/sbp.webp', srcset='../img/sbp@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+						
+						ul.text-list.txt-s5
+							li Оплата заказа банковской картой при получении. Принимаются банковские карты MasterCard, Visa (кроме Visa Electron) и карты МИР.
+							li Оплата наличными курьеру или в ресторане при получении заказа.
 					
-					.payment-block
-						p При получении
-						.payment-types
-							img(src='../img/cash.webp', srcset='../img/cash@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/visa.webp', srcset='../img/visa@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/mastercard.webp', srcset='../img/mastercard@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/mir.webp', srcset='../img/mir@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/sbp.webp', srcset='../img/sbp@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-					
-					ul.text-list.txt-s5
-						li Оплата заказа банковской картой при получении. Принимаются банковские карты MasterCard, Visa (кроме Visa Electron) и карты МИР.
-						li Оплата наличными курьеру или в ресторане при получении заказа.
-				
-				.payment-mode__block
-					.payment-block
-						p Картой онлайн
-						.payment-types
-							img(src='../img/cash.webp', srcset='../img/cash@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/visa.webp', srcset='../img/visa@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/mastercard.webp', srcset='../img/mastercard@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/mir.webp', srcset='../img/mir@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-							img(src='../img/sbp.webp', srcset='../img/sbp@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
-					ul.text-list.txt-s5
-						li Оплата заказа банковской картой при получении. Принимаются банковские карты MasterCard, Visa (кроме Visa Electron) и карты МИР.
-						li Оплата наличными курьеру или в ресторане при получении заказа.
-
+					.payment-mode__block
+						.payment-block
+							.h4 Картой онлайн
+							.payment-types
+								img(src='../img/cash.webp', srcset='../img/cash@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/visa.webp', srcset='../img/visa@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/mastercard.webp', srcset='../img/mastercard@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/mir.webp', srcset='../img/mir@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+								img(src='../img/sbp.webp', srcset='../img/sbp@2x.webp 2x' width='60' height='40' loading='lazy' alt='img')
+						ul.text-list.txt-s5
+							li Оплата заказа банковской картой при получении. Принимаются банковские карты MasterCard, Visa (кроме Visa Electron) и карты МИР.
+							li Оплата наличными курьеру или в ресторане при получении заказа.
+			
+			
+			
 			//ACCORDION
 			.delivery-faq.delivery-row
 				.accordion
-						//single item
-						.accordion__item
-							.accordion__title
-								.accordion-btn Свободный рынок
-								span.icon-arr
-							
-							.accordion__content
-								
-								p Почти в любом городе России частных домов престарелых или нет совсем, или единицы: на Москву и Московскую область приходится 100 домов, на Петербург и Ленобласть — 40, а в Новосибирске с численностью населения около 1,5 млн человек всего 2 частных дома престарелых.
+					.title-34 Ответы на вопросы
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn Почему наша пиццерия?
+							span.icon-arr
 						
-						//single item
-						.accordion__item
-							.accordion__title
-								.accordion-btn Нет конкуренции со стороны государства
-								span.icon-arr
+						.accordion__content
 							
-							.accordion__content
-								p Почти в любом городе России частных домов престарелых или нет совсем, или единицы: на Москву и Московскую область приходится 100 домов, на Петербург и Ленобласть — 40, а в Новосибирске с численностью населения около 1,5 млн человек всего 2 частных дома престарелых.
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam corporis reiciendis, nemo nihil suscipit dolor incidunt, aut, ipsa obcaecati deserunt. Ratione corrupti sapiente nisi, corporis voluptatum illo ad distinctio.
+					
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn В какое время доставляете заказ?
+							span.icon-arr
+						
+						.accordion__content
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam corporis reiciendis, nemo nihil suscipit dolor incidunt, aut, ipsa obcaecati deserunt. Ratione corrupti sapiente nisi, corporis voluptatum illo ad distinctio.
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn Мне привезли не то, что делать?
+							span.icon-arr
+						
+						.accordion__content
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam corporis reiciendis, nemo nihil suscipit dolor incidunt, aut, ipsa obcaecati deserunt. Ratione corrupti sapiente nisi, corporis voluptatum illo ad distinctio.
 				
 				//SALE
-				.delivery-discount
+				.delivery-discount.grey-bg
+					.delivery-discount__txt
+						.h4 Приложение #[span.txt-red Pizza and rolls]
+						.txt-14.txt-s5 Скидка 20% на все меню в приложении с промокодом #[span.txt-red NEW20]
+						.app-block
+							.app-block__item
+								img(src='../img/news/app1.webp', srcset='../img/news/app1@2x.webp 2x' width='180' height='60' loading='lazy' alt='img')
+							.app-block__item
+								img(src='../img/news/app2.webp', srcset='../img/news/app2@2x.webp 2x' width='180' height='60' loading='lazy' alt='img')
+					
+					.delivery-discount__img
+						img(src='./img/app-sale.webp', srcset='./img/app-sale@2x.webp 2x' width='297' height='328' loading='lazy' alt='img')
