@@ -159,3 +159,13 @@ span.check-icon{
 		background-size: remy(14) remy(16);
 	}
 }
+.play-icon{
+	width: 74px;
+	height: 74px;
+	display: inline-block;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='74' height='74' viewBox='0 0 74 74' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='37' cy='37' r='37' fill='white' /%3e%3cpath d='M57.5 36.5885L26 52.1769V21L57.5 36.5885Z' fill='%23D7001A' /%3e%3c/svg%3e");
+	background-size: contain;
+	background-repeat: no-repeat;
+	flex-shrink: 0;
+	border-radius: 50%;
+}

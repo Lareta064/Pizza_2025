@@ -42,7 +42,7 @@
 		margin-bottom: 20px;
 	}
 }
-.h4,.h4-upper{
+.h4,.h4-upper, .h4-bold{
 	font-family: var(--second-family);
 	font-weight: 400;
 	font-size: 24px;
@@ -51,6 +51,7 @@
 	@media(min-width: 768px) and (max-width: 1364px) {font-size: remy(25);}
 }
 .h4-upper{text-transform: uppercase;}
+.h4-bold{font-weight: 700;}
 .title-46{
 	font-family: var(--second-family);
 	font-weight: 400;
