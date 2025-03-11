@@ -38,6 +38,7 @@
 	padding: 8px 20px;
 	background-color: $s2;
 	color: var(--primary);
+	cursor:pointer;
 	@media(min-width:768px) and (max-width: 1919px) {
 		font-size:remy(14);
 		padding: remy(8) remy(20);
