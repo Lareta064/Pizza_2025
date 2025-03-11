@@ -160,11 +160,12 @@
 	align-items: center;
 
 	margin-bottom: 40px;
-	.txt-16{max-width: 400px;}
+	&>*{margin-bottom: 0; width: 100%;}
+	.txt-16{max-width: 969px;}
 	@media (max-width: 1364px) {
 		margin-bottom: remy(40);
 		row-gap:remy(20);
-		.txt-16{max-width: remy(400);}
+		.txt-16{ max-width: remy(969);}
 	}
 	@media (max-width: 767px) {
 		margin-bottom: 25px;.txt-16{max-width: 100%;}

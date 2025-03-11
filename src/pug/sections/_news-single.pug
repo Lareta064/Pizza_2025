@@ -2,7 +2,7 @@ section.news-single
 	.container
 		h1.title.txt-bold.txt-center Сеть Pizza and rolls
 		
-		.news-single__contect.gap-110
+		.news-single__contect
 			.video.txt-center
 				.video-title Не только вкусная еда, но и качественное обслуживание
 				.video-box
@@ -36,7 +36,116 @@ section.news-single
 					p Равным образом реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. С другой стороны начало повседневной работы по формированию позиции способствует подготовки и реализации форм развития. С другой стороны новая модель организационной деятельности играет важную роль в формировании форм развития. Повседневная практика показывает, что укрепление и развитие структуры в значительной степени обуславливает создание модели развития.
 				.news-article__img
 					img.img-cover(src='./img/news/pizza-image.webp', srcset='./img/news/pizza-image@2x.webp 2x' width='470' height='363' loading='lazy' alt='img')
-			
-			
 
+			//thumbnail swiper
+			.news-swiper-block
+				h2.title-34 Галерея:
+				.swiper.mySwiper-news.calc-sm
+					.swiper-wrapper
+						.swiper-slide
+							img(src='./img/gallery/gallery1.webp' width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery2-thumb.webp",  width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery3-thumb.webp",  width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery4-thumb.webp",  width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery5-thumb.webp", width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery4-thumb.webp",  width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery5-thumb.webp", width="1170" height="574" alt="img")
 
+					.mySwiper-button-next
+					.mySwiper-button-prev
+				
+				.swiper.mySwiper(thumbsslider)
+					.swiper-wrapper
+						.swiper-slide
+							img(src='./img/gallery/gallery1-thumb.webp'  width="204" height="163" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery2-thumb.webp",  width="204" height="163" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery3-thumb.webp",  width="204" height="163" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery4-thumb.webp",  width="204" height="163" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery5-thumb.webp",  width="1170" height="574" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery4-thumb.webp",  width="204" height="163" alt="img")
+						.swiper-slide
+							img(src="./img/gallery/gallery5-thumb.webp",  width="1170" height="574" alt="img")
+
+			//news-benefit
+			.news-team
+				.title-wrapper.txt-center
+					.title-34 Делаем для вас самое вкусное!
+					p.txt-16 Сотрудники кафе всегда встретят вас дружелюбно и при необходимости помогут с выбором блюд. Мы подбираем жизнерадостных и трудолюбивых людей, которые готовят ответственно и с душой. А клиенты за это оставляют нам слова благодарности.
+				
+				.news-team-wrapper.swiper-box
+					.news-slider__nav
+						button.swiper-button-prev
+						button.swiper-button-next
+					.news-team-slider.swiper
+						.swiper-wrapper
+							.swiper-slide
+								img(src='./img/news/image1.webp', srcset='./img/news/image1@2x.webp 2x' width='303' height='216' loading='lazy' alt='img')
+							.swiper-slide
+								img(src='./img/news/image2.webp', srcset='./img/news/image2@2x.webp 2x' width='303' height='216' loading='lazy' alt='img')
+							.swiper-slide
+								img(src='./img/news/image3.webp', srcset='./img/news/image3@2x.webp 2x' width='303' height='216' loading='lazy' alt='img')
+							.swiper-slide
+								img(src='./img/news/image1.webp', srcset='./img/news/image1@2x.webp 2x' width='303' height='216' loading='lazy' alt='img')
+							.swiper-slide
+								img(src='./img/news/image2.webp', srcset='./img/news/image2@2x.webp 2x' width='303' height='216' loading='lazy' alt='img')
+
+			//ACCORDION
+			.delivery-faq.delivery-row
+				.accordion
+					.title-wrapper
+						.title-34 Отвечаем на популярные вопросы:
+						p Мы всегда рады видеть Вас в нашем ресторане, где вы можете провести банкет, приобрести наши блюда на вынос или отведать их в нашем уютном заведении!
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn Из каких продуктов мы готовим?
+							span.icon-arr
+						
+						.accordion__content
+							
+							p У нас готовят блюда из свежих овощей, различных видов мяса и рыбы, а также высококачественных сыров и теста для пиццы и роллов.
+					
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn Как долго доставляем заказ?
+							span.icon-arr
+						
+						.accordion__content
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam corporis reiciendis, nemo nihil suscipit dolor incidunt, aut, ipsa obcaecati deserunt. Ratione corrupti sapiente nisi, corporis voluptatum illo ad distinctio.
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn В какие районы доставляем заказы?
+							span.icon-arr
+						
+						.accordion__content
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam corporis reiciendis, nemo nihil suscipit dolor incidunt, aut, ipsa obcaecati deserunt. Ratione corrupti sapiente nisi, corporis voluptatum illo ad distinctio.
+					//single item
+					.accordion__item
+						.accordion__title
+							.accordion-btn Есть ли у нас безконтактная доставка?
+							span.icon-arr
+						
+						.accordion__content
+							p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam corporis reiciendis, nemo nihil suscipit dolor incidunt, aut, ipsa obcaecati deserunt. Ratione corrupti sapiente nisi, corporis voluptatum illo ad distinctio.
+				//SALE
+				.discount-card
+					.discount-card__img
+						img.img-cover(src='./img/news/card3.webp', srcset='./img/news/card3@2x.webp 2x' width='570' height='302' loading='lazy' alt='img')
+					
+					.discount-card__txt
+						.h5 Акции и скидки
+						p Чтобы наши клиенты всегда были сытыми и довольными, мы позаботились о самых выгодных скидках и акциях, благодаря которым заказ доставки еды в нашей пиццерии станет более выгодным.
+						a(href="discount-page.html").btn-accent.w-auto Смотреть все акции

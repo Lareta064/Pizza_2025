@@ -278,6 +278,54 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+  // fotorama
+    var swiperNews = new Swiper(".mySwiper", {
+      spaceBetween: 20,
+      slidesPerView: 5,
+      freeMode: true,
+      watchSlidesProgress: true,
+      
+    });
+    var swiper2 = new Swiper(".mySwiper-news", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".mySwiper-button-next",
+        prevEl: ".mySwiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiperNews,
+      },
+      
+    });
+
+    /** */
+    
+    var newsTeamSlider = new Swiper(".news-team-slider", {
+      spaceBetween: 30,
+      slidesPerView: 3,
+      navigation: {
+        nextEl: ".news-slider__nav .swiper-button-next",
+        prevEl: ".news-slider__nav .swiper-button-prev",
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 'auto',
+          spaceBetween: 10,
+        },
+        768:{
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        1200:{
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1365:{
+          slidesPerView: 3,
+          spaceBetween: 30,
+        }
+      }
+    });
 });
 document.addEventListener('DOMContentLoaded', function() {
   const tabsContainers = document.querySelectorAll('.tabs-container');
