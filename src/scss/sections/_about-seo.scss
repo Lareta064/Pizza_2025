@@ -1,1 +1,19 @@
 @use "../base/var" as *;
+
+.custom-txt{
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 140%;
+	color: #212529;
+	p+p{margin-top: 15px;}
+	@media (max-width: 1364px) {
+		font-size: remy(18);
+		p+p{margin-top: remy(15);}
+	}
+	@media (max-width: 767px) {
+		font-size: 14px;
+		line-height: 143%;
+		color: var(--primary);
+		p+p{margin-top: remy(15);}
+	}
+}
