@@ -1,0 +1,185 @@
+//Карточка с картинкой 370х370
+mixin card-img-370(img, title, price, old, tags)
+	.product.img-370
+		.product__img
+			if tags
+				.product-meta
+					each item in tags
+						div(class="tag-meta tag-meta--"+ item.cl) #{item.txtTag}
+			img.img-cover(src="./img/goods/"+ img +".webp", srcset="./img/goods/"+ img+"@2x.webp 2x" width="370" height="370" alt="img" loading="lazy")
+		
+		.product__body
+			p.product__name !{title}
+			block 
+		
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
+
+//Карточка с картинкой 370х370 обрезать текстописание до 2-х строк
+mixin card-img-370-cut(img, title, price, old, tags)
+	.product.img-370
+		.product__img
+			if tags
+				each item in tags
+					div(class="tag-meta tag-meta--"+ item.cl) #{item.txtTag}
+			img.img-cover(src="./img/goods/"+ img +".webp", srcset="./img/goods/"+ img+"@2x.webp 2x" width="370" height="370" alt="img" loading="lazy")
+		
+		.product__body
+			p.product__name !{title}
+			
+			block 
+		
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
+section.products-menu
+	.container
+		.title-wrapper
+			h2.h2 Меню
+		.products-categories
+			.products-categories--grid.scroll-sm
+				+catCard-flex(1,'Пицца','#pizza')
+				+catCard-flex(2,'Роллы','#pizza')
+				+catCard-flex(3,'Бургеры')
+				+catCard-flex(4,'Закуски')
+				+catCard-flex(5,'Напитки','#juce')
+				+catCard-flex(6,'Десерты','#dessert')
+				+catCard-flex(7,'Салаты','#salat')
+				+catCard-flex(8,'Наборы','#combo')
+
+section.product-assortiment#pizza
+	.container.gap-88
+		//ПИЦЦЫ
+		.product-assortiment-single
+			.title-wrapper
+				.h2 Пицца
+			.tabs-container.gap-40
+				.tabs.scroll-sm
+					.tab.active(data-tab-target='#content1') Все
+					.tab(data-tab-target='#content2') Мясные
+					.tab(data-tab-target='#content3') Рыбные
+					.tab(data-tab-target='#content4') Овощные
+					.tab(data-tab-target='#content5') Классика
+					.tab(data-tab-target='#content6') Закрытые
+				.tab-content-wrapper
+					#content1.tab-content.active
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza1', 'Пицца Карбонара', '850')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza3', 'Пицца Ранчоус', '650')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza1', 'Пицца Карбонара', '850')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza3', 'Пицца Ранчоус', '650')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.	
+						
+					#content2.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza1', 'Пицца Карбонара', '850')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza3', 'Пицца Ранчоус', '650')
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+						
+					#content3.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+					#content4.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+					#content5.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+						
+					#content6.tab-content
+						.grid-three-columns
+							+card('pizza2', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+		
+		//Комбо
+		.product-assortiment-single#combo
+			.title-wrapper
+				.h2 Комбо
+			.grid-three-columns
+				+card-img-370('combo2-h370', 'Комбо 2 друга', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'}])
+					p Сырный цыпленок 25см, маргарита 25см, пепси 0,5л...
+				+card-img-370('combo4-h370', 'Комбо любительский', '650', 800,[{cl: 'hit', txtTag: 'Популярное'}])
+					p Мамма миа 25 см, терияки 25 см, салат овощной
+				+card-img-370('combo3-h370', 'Комбо 1 = 3', '650', 800)
+					p Сырный цыпленок 25см, маргарита 25см, пепси 0,5л...
+				+card-img-370('combo2-h370', 'Комбо 2 друга','650')
+					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+				+card-img-370('combo3-h370', 'Комбо 1 = 3', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'},{cl: 'hit', txtTag: 'Популярное'}])
+					p Сырный цыпленок 25см, маргарита 25см, пепси 0,5л...
+				+card-img-370('combo4-h370', 'Комбо любительский','650')
+					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+		
+		//Салаты
+		.product-assortiment-single#salat
+			.title-wrapper
+				.h2 Салаты
+			.grid-three-columns
+				+card-img-370-cut('salat', 'Салат Овощной', '130')
+					p.txt-cut2 Лист салата, салат айсберг, редис, помидоры . Лист салата, салат айсберг, редис, помидоры черри
+
+				+card-img-370-cut('salat2', 'Салат Греческий', '150')
+					p.txt-cut2 Салат айсберг, томаты, огурец, лук красный, перец болгарский, айсберг, томаты, огурец, лук красный, перец болгарский
+					
+				+card-img-370-cut('salat3', 'Салат цезарь', '105')
+					p.txt-cut2 листья салата, соус цезарь, курица,помидоры черри, сыр пармезан, айсберг, томаты, огурец, лук красный, перец болгарский
+		
+		//Дессерты
+		.product-assortiment-single#dessert
+			.title-wrapper
+				.h2 Дессерты
+			.grid-three-columns
+				+card-img-370('dessert', 'Томатный соус', '45')
+					
+				+card-img-370('dessert2', 'Соус Ранч', '50')
+					
+				+card-img-370('dessert3', 'Сырный соус', '45')
+		
+		//Соусы
+		.product-assortiment-single#souse
+			.title-wrapper
+				.h2 Соусы
+			.grid-three-columns
+				+card-img-370('souse-370', 'Томатный соус', '45')
+					
+				+card-img-370('souse2-370', 'Соус Ранч', '50')
+					
+				+card-img-370('souse3-370', 'Сырный соус', '45')
+
+		//Напитки
+		.product-assortiment-single#juce
+			.title-wrapper
+				.h2 Напитки
+			.grid-three-columns
+				+card-img-370('juice', 'Пепси', '85')
+					
+				+card-img-370('juice7', 'Морс Клюква', '150')
+					
+				+card-img-370('juice4', 'Фанта', '45')
+		
+					
+				

@@ -250,7 +250,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .flex-center{
 	justify-content: center;
 }
-.grid-three-columns{
+.grid-three-columns,.grid-four-columns{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	column-gap:30px;
@@ -262,6 +262,19 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		column-gap:remy(30);
 		row-gap:remy(30);
 	}
+	@media (max-width: 767px) {
+		&>*{
+			grid-column:  span 6;
+		}
+		&>.product.horiz-w370{grid-column:  span 12;}
+	}
+}
+.grid-four-columns{
+	
+	&>*{
+		grid-column:  span 3;
+	}
+	
 	@media (max-width: 767px) {
 		&>*{
 			grid-column:  span 6;

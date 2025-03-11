@@ -133,3 +133,72 @@ section.product-assortiment
 				+card('pizza3', 'Пицца Ранчоус', '650')
 					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 
+section.product-assortiment
+	.container
+		.title-wrapper.txt-center
+			.h2 Пиццы
+			p.txt-16 Не будь жадиной - приводи своих друзей! Пусть они тоже попробуют нашу божественную пиццу!
+		.multi-tabs.gap-40
+			.multi-tabs__buttons
+				//  КНОПКИ ПЕРВОГО УРОВЕНЯ  - КАТЕГОРИИ  
+				.level_1.js-level_1.js-group.scroll-sm
+					button.js-group-item.multi-tab-btn.active Пицца
+					button.js-group-item.multi-tab-btn Роллы
+					button.js-group-item.multi-tab-btn Напитки
+				
+				//  КНОПКИ ВТОРОГО УРОВЕНЯ  - ПОДКАТЕГОРИИ  
+				//  ПОДКАТЕГОРИЯ ПЕРВОЙ КАТЕГОРИИ  
+				.level_2-wrapper
+					.level_2.active.js-level_2.js-group.scroll-sm
+						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='meat') Мясные
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Рыбные
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='forKids') Детские
+					//  ПОДКАТЕГОРИЯ ВТОРОЙ КАТЕГОРИИ  
+					.level_2.js-level_2.js-group.scroll-sm
+						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='japan') Жаренные
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='sweet') Классические
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Детские
+					//  ПОДКАТЕГОРИЯ ТРЕТЬЕЙ КАТЕГОРИИ  
+					.level_2.js-level_2.js-group.scroll-sm
+						a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='juice') Сок
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='tea') Чай
+						a.js-group-item.multi-tab-btn(href='#!' data-tag='coffee') Кофе
+				//  END  КНОПКИ ВТОРОГО УРОВЕНЯ  - ПОДКАТЕГОРИИ 
+				//   КНОПКИ ТРЕТЬЕГО УРОВЕНЯ  - КАТЕГОРИИ ПОДКАТЕГОРИЙ 
+			.main-content
+				//  ПОДКАТЕГОРИИ Пицца 
+				.grid-three-columns.level_3.active.js-level_3
+					+cardMulti('pizza2', 'Мясная','meat fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+					+cardMulti('pizza2', 'Детская','meat', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+					+cardMulti('pizza2', 'Рыбная','meat forKids fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					
+				//  ПОДКАТЕГОРИИ РОЛЛЫ 
+				.grid-three-columns.level_3.js-level_3
+					+cardMulti('pizza2', 'Roll Мясная','japan', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Детская','japan fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Рыбная','sweet', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Roll Рыбная','japan fish', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					
+				//  ПОДКАТЕГОРИИ НАПИТКИ 
+				.grid-three-columns.level_3.js-level_3
+					+cardMulti('pizza2', 'Кока-кола','juice', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Фанта','tea', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Американо','coffee', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+					+cardMulti('pizza2', 'Сенча','juice tea', '650', 800)
+						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+
+
+					

@@ -1,5 +1,5 @@
 //Горизонтальные в моб версии и для табов внутри табов
-mixin card-horiz-tags(img, title, tags, price, old)
+mixin card-horiz-tags(img, title, price, old)
 	.product.horiz-w370(data-tags=""+ tags)
 		.product__img
 			.product-meta
@@ -23,7 +23,6 @@ mixin card-horiz-tags(img, title, tags, price, old)
 					span Выбрать
 section.product-assortiment
 	.container.gap-88
-		//Пиццы
 		.product-assortiment-single
 			.title-wrapper.txt-center
 				.h2 Меню
@@ -39,77 +38,77 @@ section.product-assortiment
 					.tab(data-tab-target='#content6') Закрытые
 				.tab-content-wrapper
 					#content1.tab-content.active
-						.grid-three-columns
+						.grid-four-columns
 							+card-horiz-tags('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 							+card-horiz-tags('pizza1', 'Пицца Карбонара', '850')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 							+card-horiz-tags('pizza3', 'Пицца Ранчоус', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza1', 'Мясная','meat fish', '650', 800)
+							+card-horiz-tags('pizza1', 'Мясная','650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza2', 'Детская','meat', '650')
+							+card-horiz-tags('pizza2', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza3', 'Рыбная','meat forKids fish', '650', 800)
+							+card-horiz-tags('pizza3', 'Рыбная', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza4', 'Мясная','meat fish', '650')
+							+card-horiz-tags('pizza4', 'Мясная','650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza5', 'Детская','fish', '650')
+							+card-horiz-tags('pizza5', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza6', 'Рыбная','forKids fish', '650')
+							+card-horiz-tags('pizza6', 'Рыбная', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.	
 						
 					#content2.tab-content
-						.grid-three-columns
-							+card-horiz-tags('pizza1', 'Мясная','meat fish', '650', 800)
+						.grid-four-columns
+							+card-horiz-tags('pizza1', 'Мясная', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza2', 'Детская','meat', '650')
+							+card-horiz-tags('pizza2', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza3', 'Рыбная','meat forKids fish', '650', 800)
+							+card-horiz-tags('pizza3', 'Рыбная','650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza4', 'Мясная','meat fish', '650')
+							+card-horiz-tags('pizza4', 'Мясная', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza5', 'Детская','fish', '650')
+							+card-horiz-tags('pizza5', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza6', 'Рыбная','forKids fish', '650')
+							+card-horiz-tags('pizza6', 'Рыбная', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 						
 					#content3.tab-content
-						.grid-three-columns
+						.grid-four-columns
 							+card-horiz-tags('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza5', 'Детская','fish', '650')
+							+card-horiz-tags('pizza5', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza6', 'Рыбная','forKids fish', '650')
+							+card-horiz-tags('pizza6', 'Рыбная', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 					#content4.tab-content
-						.grid-three-columns
+						.grid-four-columns
 							+card-horiz-tags('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza1', 'Мясная','meat fish', '650', 800)
+							+card-horiz-tags('pizza1', 'Мясная', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza2', 'Детская','meat', '650')
+							+card-horiz-tags('pizza2', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza3', 'Рыбная','meat forKids fish', '650', 800)
+							+card-horiz-tags('pizza3', 'Рыбная', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza4', 'Мясная','meat fish', '650')
+							+card-horiz-tags('pizza4', 'Мясная', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 						
 					#content5.tab-content
-						.grid-three-columns
+						.grid-four-columns
 							+card-horiz-tags('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 							+card-horiz-tags('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza1', 'Мясная','meat fish', '650', 800)
+							+card-horiz-tags('pizza1', 'Мясная', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 						
 					#content6.tab-content
-						.grid-three-columns
+						.grid-four-columns
 							+card-horiz-tags('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-							+card-horiz-tags('pizza2', 'Детская','meat', '650')
+							+card-horiz-tags('pizza2', 'Детская', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-							+card-horiz-tags('pizza3', 'Рыбная','meat forKids fish', '650', 800)
+							+card-horiz-tags('pizza3', 'Рыбная', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 		

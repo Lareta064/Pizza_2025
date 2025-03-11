@@ -1,52 +1,6 @@
-//Карточка с картинкой 370х230
-mixin card(img, title, price, old)
-	.product
-		.product__img
-			.product-meta
-				.tag-meta.tag-meta--new Новинка
-				.tag-meta.tag-meta--sale Акция!
-				.tag-meta.tag-meta--hit Популярное
-
-			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
-		
-		.product__body
-			p.product__name !{title}
-			block 
-			
-			.product__footer
-				.price-box
-					span.new-price от #{price} &#8381;
-					if old
-						span.old-price #{old} &#8381;
-				
-				button.btn.sm-w100(type="button")
-					span Выбрать
-
-//Карточка с картинкой 370х370
-mixin card-img-370(img, title, price, old)
-	.product.img-370
-		.product__img
-			.product-meta
-				.tag-meta.tag-meta--new Новинка
-				.tag-meta.tag-meta--sale Акция!
-				.tag-meta.tag-meta--hit Популярное
-
-			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
-		.product__body
-			p.product__name !{title}
-			block 
-		
-			.product__footer
-				.price-box
-					span.new-price от #{price} &#8381;
-					if old
-						span.old-price #{old} &#8381;
-				
-				button.btn.sm-w100(type="button")
-					span Выбрать
-//Карточка для фильтрации с дата-атрибутом
-mixin cardMulti(img, title, tags, price,  old )
-	.product(data-tags=""+ tags)
+//Горизонтальные в моб версии и для табов внутри табов
+mixin card-horiz-tags(img, title, tags, price, old)
+	.product.horiz-w370(data-tags=""+ tags)
 		.product__img
 			.product-meta
 				.tag-meta.tag-meta--new Новинка
@@ -69,10 +23,10 @@ mixin cardMulti(img, title, tags, price,  old )
 					span Выбрать
 section.product-assortiment
 	.container.gap-88
-		//Пиццы
 		.product-assortiment-single
-			.title-wrapper
-				.h2 Пицца
+			.title-wrapper.txt-center
+				.h2 Меню
+				p.txt-16 Не будь жадиной - приводи своих друзей! Пусть они тоже попробуют нашу божественную пиццу!
 			
 			.tabs-container.gap-40
 				.tabs.scroll-sm
@@ -91,7 +45,12 @@ section.product-assortiment
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 							+card('pizza3', 'Пицца Ранчоус', '650')
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-								
+							+card('pizza3', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza4', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+							+card('pizza5', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 	
 						
 					#content2.tab-content
 						.grid-three-columns
@@ -104,32 +63,25 @@ section.product-assortiment
 						
 					#content3.tab-content
 						.grid-three-columns
-							+card('pizza2', 'Пицца Баварская', '650', 800)
+							+card('pizza1', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 					#content4.tab-content
 						.grid-three-columns
 							+card('pizza2', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza1', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 						
 					#content5.tab-content
 						.grid-three-columns
-							+card('pizza2', 'Пицца Баварская', '650', 800)
+							+card('pizza3', 'Пицца Баварская', '650', 800)
 								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza5', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 						
 					#content6.tab-content
 						.grid-three-columns
-							+card('pizza2', 'Пицца Баварская', '650', 800)
-								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-		//Комбо
-		.product-assortiment-single
-			.title-wrapper
-				.h2 Комбо
-			
-			.grid-three-columns
-				+card('pizza2', 'Пицца Баварская', '650', 800)
-					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-				+card('pizza1', 'Пицца Карбонара', '850')
-					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-				+card('pizza3', 'Пицца Ранчоус', '650')
-					p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-
+							+card('pizza5', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							+card('pizza1', 'Пицца Баварская', '650', 800)
+								p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
