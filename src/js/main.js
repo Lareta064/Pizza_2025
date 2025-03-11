@@ -258,6 +258,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
+  //SEO TEXT 
+
+  const seoAboutText = document.querySelector('.hide-seo');
+  if(seoAboutText){
+    const toggleSeoText = document.querySelector('.toggle-hide-seo');
+    if(toggleSeoText){
+      toggleSeoText.addEventListener('click', function(){
+        if(toggleSeoText.classList.contains('active')){
+
+          toggleSeoText.textContent = 'Подробнее';
+          toggleSeoText.classList.remove('active');
+          seoAboutText.style.height = 0;
+        }else{
+          toggleSeoText.textContent = 'Свернуть';
+          toggleSeoText.classList.add('active');
+          seoAboutText.style.height = seoAboutText.scrollHeight + 'px';
+        }
+      });
+    }
+  }
 });
 document.addEventListener('DOMContentLoaded', function() {
   const tabsContainers = document.querySelectorAll('.tabs-container');

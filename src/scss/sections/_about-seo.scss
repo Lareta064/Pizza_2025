@@ -1,19 +1,67 @@
 @use "../base/var" as *;
 
 .custom-txt{
+	color: #212529;
+	p{margin-block: 15px;}
+	@media (max-width: 1364px) {
+		p{margin-block: remy(15);}
+	}
+	@media (max-width: 767px) {
+		
+		p{margin-block: remy(15);}
+	}
+}
+
+.custom-txt, .toggle-hide-seo{
 	font-weight: 400;
 	font-size: 18px;
-	line-height: 140%;
-	color: #212529;
-	p+p{margin-top: 15px;}
+	line-height: 143%;
+	
 	@media (max-width: 1364px) {
 		font-size: remy(18);
-		p+p{margin-top: remy(15);}
 	}
 	@media (max-width: 767px) {
 		font-size: 14px;
 		line-height: 143%;
-		color: var(--primary);
-		p+p{margin-top: remy(15);}
+	}
+}
+.toggle-hide-seo{
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	color: var(--secondary-5);
+
+}
+.hide-seo{
+	height: 0;
+	overflow: hidden;
+	transition: .3s;
+}
+.about-seo-content{
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 767px) {
+	padding-left: 20px;
+	border-left:2px solid $a2;
+	}
+	
+}
+.about-seo-txt{
+	flex-grow: 1;
+	max-width: 644px;
+	@media (max-width: 1364px) {
+		max-width: remy(644);
+	}
+	@media (max-width: 767px) {
+		max-width: 100%;
+	}
+}
+.about-seo-img{
+	width: 351px;
+	flex-shrink: 0;
+	@media (max-width: 1364px) {
+		width: remy(351);
+	}
+	@media (max-width: 767px) {
+		display: none;
 	}
 }
