@@ -112,7 +112,7 @@
 	}
 
 }
-.title-34{
+.title-34, .h5{
 	font-family: var(--second-family);
 	font-weight: 700;
 	font-size: 34px;
@@ -125,6 +125,11 @@
 	}
 	@media (max-width: 767px) {
 		margin-bottom: 20px;
+	}
+}
+.h5{
+	@media (max-width: 767px) {
+		font-size: 24px;
 	}
 }
 .txt-16{
