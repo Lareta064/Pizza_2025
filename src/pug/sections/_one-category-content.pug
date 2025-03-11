@@ -1,0 +1,30 @@
+section.products-menu
+	.container
+		.title-wrapper
+			h2.h2 Пицца
+		.products-categories
+			.products-categories--grid.scroll-sm
+				+catCard-flex(1,'Пицца','one-category.html')(class="active")
+				+catCard-flex(2,'Роллы','one-category.html')
+				+catCard-flex(3,'Бургеры','one-category.html')
+				+catCard-flex(4,'Закуски','one-category.html')
+				+catCard-flex(5,'Напитки','one-category.html')
+				+catCard-flex(6,'Десерты','one-category.html')
+				+catCard-flex(7,'Салаты','one-category.html')
+				+catCard-flex(8,'Наборы','one-category.html')
+
+section.product-assortiment
+	.container.gap-88
+		.grid-three-columns
+			+card('pizza1', 'Пицца Баварская', '650', 800)
+				p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+			+card('pizza2', 'Пицца Карбонара', '850')
+				p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+			+card('pizza3', 'Пицца Ранчоус', '650')
+				p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+			+card('pizza7', 'Пицца Баварская', '650', 800)
+				p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+			+card('pizza8', 'Пицца Карбонара', '850')
+				p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+			+card('pizza9', 'Пицца Ранчоус', '650')
+				p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.

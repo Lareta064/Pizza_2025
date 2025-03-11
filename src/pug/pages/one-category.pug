@@ -1,0 +1,26 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.inner-main
+		.breadcrumbs-wrapper
+			.container
+				ul.breadcrumbs
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#!") Второй пункт
+					li
+						a(href="#!") Вложенная страница
+		include ../sections/_one-category-content.pug
+		include ../sections/_cta
+		include ../sections/_our-garantee
+		include ../sections/_discount
+		include ../sections/_about-seo
+	
+	//FOOTER
+	include ../sections/_footer
+	
+
+block variables
+	-var title = "Pizza";
