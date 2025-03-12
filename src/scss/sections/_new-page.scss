@@ -22,16 +22,32 @@
 .swiper-box > [class*="__nav"] {
 	.swiper-button-prev,
 	.swiper-button-next{
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		border:1px solid currentColor;
+		color: #1f1f1f;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		top: 50%;
-		// transform: translateY(-50%);
-		color: $a2;
+		color: $p;
+		svg{
+			width: 24px;
+			height: 24px;
+		}
 		&.swiper-button-disabled{opacity: 0;}
 		&:after{
-			font-size: 34px;
+			display: none;
 		}
 	}
-	.swiper-button-prev{left: -30px;}
-	.swiper-button-next{right: -30px;}
+	.swiper-button-prev{left: -58px;}
+	.swiper-button-next{right: -58px;}
+	.swiper-button-prev{
+		svg{
+			transform: rotate(180deg);
+		}
+	}
 	@media (max-width: 1199px) {
 	  display: none;
 	}
