@@ -283,14 +283,21 @@ document.addEventListener("DOMContentLoaded", function () {
       spaceBetween: 20,
       slidesPerView: 5,
       freeMode: true,
+      speed:1000,
       watchSlidesProgress: true,
+     navigation: {
+        nextEl: ".mySwiper-thumb__nav .swiper-button-next",
+        prevEl: ".mySwiper-thumb__nav .swiper-button-prev",
+      },
+      
       
     });
     var swiper2 = new Swiper(".mySwiper-news", {
       spaceBetween: 10,
+      speed:1000,
       navigation: {
-        nextEl: ".mySwiper-button-next",
-        prevEl: ".mySwiper-button-prev",
+        nextEl: ".mySwiper__nav .swiper-button-next",
+        prevEl: ".mySwiper__nav .swiper-button-prev",
       },
       thumbs: {
         swiper: swiperNews,

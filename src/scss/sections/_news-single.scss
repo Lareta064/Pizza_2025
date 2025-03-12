@@ -144,7 +144,7 @@
 	}
 }
 /**/
-.swiper .swiper-button-next, .swiper .swiper-button-prev{color: $a2;}
+// .swiper .swiper-button-next, .swiper .swiper-button-prev{color: $a2;}
 .mySwiper-news{
 	height: 574px;
 	margin-bottom: 20px;
@@ -218,7 +218,24 @@
 		.swiper-slide img{border-radius: 24px;}
 	}
   }
-
+  .mySwiper__nav .swiper-button-next, .mySwiper__nav .swiper-button-prev{
+	background: rgba(255,255,255, .3);
+	border-color:transparent;
+   
+}
+.mySwiper__nav .swiper-button-prev{left:30px}
+.mySwiper__nav .swiper-button-next{right:30px}
+.news-slider__nav .swiper-button-prev{left:0!important}
+.news-slider__nav  .swiper-button-next{right:0!important}
+@media (max-width: 1364px) {
+	.mySwiper__nav .swiper-button-prev{left:remy(30)}
+	.mySwiper__nav .swiper-button-next{right:remy(30)}
+}
+.news-slider .swiper-slide{
+	@media (max-width: 767px) {
+		width: 280px!important;
+	}
+}
   .discount-card{
 	background-color: var(--secondary-2);
 	border-radius: 40px;
@@ -234,5 +251,33 @@
 		display: flex;
 		flex-direction: column;
 		row-gap:20px;
+	}
+  }
+  .qr-image{
+	padding: 10px;
+	border-radius: 20px;
+	width: 170px;
+	height: 170px;
+	background-color: $p;
+	@media (max-width: 1364px) {
+		padding: remy(10);
+		border-radius: remy(20);
+		width: remy(170);
+		height: remy(170);
+	}
+	@media (max-width: 767px) {
+	width: 132px;
+	height: 132px;
+	}
+	
+  }
+  .our-app__img{
+	display: flex;
+	column-gap:30px;
+	@media (max-width: 1364px) {
+		column-gap:remy(30);
+	}
+	@media (max-width: 767px) {
+		column-gap:10px;
 	}
   }
