@@ -78,4 +78,30 @@ html(lang="ru")
 						.price-box
 							span.new-price от 450&#8381;
 				
+				pre.
+					.card-short
+						.card-short__img
+							img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+						.card-short__txt
+							p.txt-14 Пепперони фреш
+							.price-box
+								span.new-price от 450&#8381;
+				
+				hr
+				div(style="width: 120px;")
+					+addCard-ui(1,'Лук', 80)
+				pre.
+					+addCard(1,'Лук', 80)
+
+				hr
+				.switch-group.switch-group--size(style="width: 400px;")
+					label.switch-label(data-size="small")
+						input(type="radio" name="switch_name2")
+						span.switch-btn 28см
+					label.switch-label(data-size="medium")
+						input(type="radio" name="switch_name2" checked)
+						span.switch-btn 32см
+					label.switch-label(data-size="maxi")
+						input(type="radio" name="switch_name2" )
+						span.switch-btn 42см
 				
