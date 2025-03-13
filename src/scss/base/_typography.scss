@@ -204,3 +204,21 @@
 }
 .section-grey{background: var(--secondary-2);}
 .pb-0{padding-bottom: 0!important;}
+
+.round-label{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143%;
+	text-align: center;
+	color: var(--primary);
+	height: 36px;
+	padding-inline: 20px;
+	background: var(--secondary-2);
+	border-radius: 36px;
+	@media(min-width:768px) and (max-width:1364px){
+		font-size: remy(14);height: remy(36);padding-inline: remy(20);
+	}
+}

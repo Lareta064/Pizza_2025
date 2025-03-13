@@ -1,0 +1,115 @@
+@use "../base/var" as *;
+.basket-card{
+	font-size: 10px;
+	display: flex;
+	padding-block:3em;
+	column-gap: 3em;
+	color: var(--primary);
+	border-bottom: 1px dashed var(--secondary-1);
+
+	.basket-card__img{
+		width: 16em;
+		height: 16em;
+		flex-shrink: 0;
+	}
+	.basket-card__group{
+		display: flex;
+		flex-grow: 1;
+		font-size: 1em;
+		column-gap: 3em;
+	}
+	.basket-card__product {
+		width: 29em;
+		flex-shrink: 0;
+		padding-left: 3em;
+	}
+	.basket-card__product .prod-weight{display: none;}
+	.basket-card__name{
+		font-family: var(--second-family);
+		font-weight: 700;
+		font-size: 3.4em;
+		line-height: 118%;
+		color: var(--primary);
+		margin-bottom: .29em;
+	}
+	.basket-card__row{
+		display: flex;
+		gap:4px;
+		flex-wrap: wrap;
+	}
+	.basket-card__add{
+		display: flex;
+	}
+	.remove-basket-add{
+		width: 15px;
+		height: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+		svg{
+			width: 10px;
+			height: 10px;
+			color: var(--accent-color-1);
+		}
+	}
+	.basket-card__text{
+		width: 21.875em;
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1em;
+		justify-content: space-between;
+		color: var(--primary);
+		font-size: 1.6em;
+		line-height: 1.50;
+		padding-left: 1.875em;
+		padding-right: 1.875em;
+		border-left: 1px solid var(--secondary-1);
+		border-right: 1px solid var(--secondary-1);
+	}
+	.basket-card__add{
+		color: var(--secondary-4);
+	}
+	.basket-card__total{
+		flex-grow: 1;
+	}
+	.basket-card__total{
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: flex-end;
+		font-size: 1em;
+		.prod-weight{
+			position: absolute;
+			left: 0;
+			top: 0;
+			@media (max-width: 767px) {
+			 display: none;
+			}
+		}
+		.basket-card__remove{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+	}
+	.basket-card__remove{
+		svg{color: var(--accent-color-1);}
+		.svg-delete{display: none;}
+		.svg-cross{display: flex; width: 16px; height:16px;}
+		@media (max-width: 767px) {
+			.svg-delete{display:flex ;}
+			.svg-cross{display: none;}
+		}
+	}
+	.price-box{
+		font-weight: 700;
+		font-size: 3.4em;
+		line-height: 118%;
+	}
+	.counter{
+		column-gap:.7em;
+	}
+}
