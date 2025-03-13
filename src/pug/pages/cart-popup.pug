@@ -1,0 +1,34 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	include ../sections/_promo-slider
+	main.main
+		
+		include ../sections/_menu-categories-grid
+		include ../sections/_product-tabs
+		include ../sections/_cta
+		include ../sections/_our-garantee
+		include ../sections/_product-cards-370
+		include ../sections/_discount
+		include ../sections/_horiz-mobile-cards.pug
+		
+		include ../sections/_about-seo
+	
+	//FOOTER
+	include ../sections/_footer
+	//popup-basket
+	.popup-basket
+		.popup-basket-close x
+		.popup-basket-content
+			.popup-basket__header
+			.popup-basket__steps
+			.popup-basket__cards
+				+basket-card-popup
+				+basket-card-combo
+				+basket-card-popup
+
+
+
+block variables
+	-var title = "Pizza Mega Magic";

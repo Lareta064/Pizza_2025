@@ -253,3 +253,172 @@ mixin card-horiz-tags-ui(img, title, price, old)
 				
 				button.btn.sm-w100(type="button")
 					span Выбрать
+
+mixin basket-card-ui
+	.basket-card
+		//image
+		.basket-card__img
+			img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+		.basket-card__group
+			//title group
+			.basket-card__title
+				.basket-card__product
+					.basket-card__name Пицца Особая
+					.prod-weight Вес: 550 гр.
+				.basket-card__row
+					.round-label
+						span 42см
+					.round-label
+						span Традиционное
+			
+			//text group
+			.basket-card__text
+				.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+				.basket-card__add
+					p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+					button.remove-basket-add
+						svg.svg-cross
+							use(href='../img/sprite.svg#svg-cross')
+			
+		//price group
+		.basket-card__total
+			.prod-weight Вес: 550 гр.
+			//counter
+			.counter
+				button.counter-minus(type='button' aria-label='Уменьшить количество') –
+				span.counter-value(contenteditable='true') 2
+				button.counter-plus(type='button' aria-label='Увеличить количество') +
+			//price
+			.price-box
+				span 600 #[small &#8381;]
+			//remove card
+			button.basket-card__remove
+				svg.svg-delete
+					use(href='../img/sprite.svg#svg-delete')
+				svg.svg-cross
+					use(href='../img/sprite.svg#svg-cross')
+
+mixin basket-card
+	.basket-card
+		//image
+		.basket-card__img
+			img(src='./img/goods/pizza-h370.webp', srcset='./img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+		.basket-card__group
+			//title group
+			.basket-card__title
+				.basket-card__product
+					.basket-card__name Пицца Особая
+					.prod-weight Вес: 550 гр.
+				.basket-card__row
+					.round-label
+						span 42см
+					.round-label
+						span Традиционное
+			
+			//text group
+			.basket-card__text
+				.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+				.basket-card__add
+					p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+					button.remove-basket-add
+						svg.svg-cross
+							use(href='./img/sprite.svg#svg-cross')
+			
+		//price group
+		.basket-card__total
+			.prod-weight Вес: 550 гр.
+			//counter
+			.counter
+				button.counter-minus(type='button' aria-label='Уменьшить количество') –
+				span.counter-value(contenteditable='true') 2
+				button.counter-plus(type='button' aria-label='Увеличить количество') +
+			//price
+			.price-box
+				span 600 #[small &#8381;]
+			//remove card
+			button.basket-card__remove
+				svg.svg-delete
+					use(href='./img/sprite.svg#svg-delete')
+				svg.svg-cross
+					use(href='./img/sprite.svg#svg-cross')
+
+mixin basket-card-popup
+	.basket-card
+		//image
+		.basket-card__img
+			img(src='./img/goods/pizza-h370.webp', srcset='./img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+		.basket-card__group
+			//title group
+			.basket-card__title
+				.basket-card__product
+					.basket-card__name Пицца Особая
+					.prod-weight Вес: 550 гр.
+				.basket-card__row
+					.round-label
+						span 42см
+					.round-label
+						span Традиционное
+			
+			//text group
+			.basket-card__text
+				.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+				.basket-card__add
+					p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+					button.remove-basket-add
+						svg.svg-cross
+							use(href='./img/sprite.svg#svg-cross')
+			
+		//price group
+		.basket-card__total
+			//counter
+			.counter
+				button.counter-minus(type='button' aria-label='Уменьшить количество') –
+				span.counter-value(contenteditable='true') 2
+				button.counter-plus(type='button' aria-label='Увеличить количество') +
+			//price
+			.price-box
+				span 600 #[small &#8381;]
+			//remove card
+			button.basket-card__remove
+				svg.svg-delete
+					use(href='./img/sprite.svg#svg-delete')
+
+mixin basket-card-combo
+	.basket-card
+		//image
+		.basket-card__img
+			img(src='./img/goods/chiken1.webp', srcset='./img/goods/chiken1@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+		.basket-card__group
+			//title group
+			.basket-card__title
+				.basket-card__product
+					.basket-card__name Чикен бокс
+					.prod-weight Вес: 215 гр.
+				
+			//text group
+			.basket-card__text
+				ul.basket-card__list
+					li
+						p Куриные наггетсы
+						span.txt-s4 6 шт, 110 г.
+					li
+						p Картофель фри
+						span.txt-s4 Стандартная, 80 г
+					li
+						p Соус Сырный
+						span.txt-s4 1 шт, 25 г
+			
+		//price group
+		.basket-card__total
+			//counter
+			.counter
+				button.counter-minus(type='button' aria-label='Уменьшить количество') –
+				span.counter-value(contenteditable='true') 2
+				button.counter-plus(type='button' aria-label='Увеличить количество') +
+			//price
+			.price-box
+				span 600 #[small &#8381;]
+			//remove card
+			button.basket-card__remove
+				svg.svg-delete
+					use(href='./img/sprite.svg#svg-delete')
