@@ -160,7 +160,7 @@
 	align-items: center;
 
 	margin-bottom: 40px;
-	&>*{margin-bottom: 0; width: 100%;}
+	&>*{margin-bottom: 0!important; width: 100%;}
 	.txt-16{max-width: 969px;}
 	@media (max-width: 1364px) {
 		margin-bottom: remy(40);
@@ -203,3 +203,4 @@
 	}
 }
 .section-grey{background: var(--secondary-2);}
+.pb-0{padding-bottom: 0!important;}

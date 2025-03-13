@@ -2,7 +2,7 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header
-	main.inner-main
+	main.inner-main.pb-0
 		.breadcrumbs-wrapper
 			.container
 				ul.breadcrumbs
@@ -13,6 +13,7 @@ block content
 					li
 						a(href="#!") Вложенная страница
 		include ../sections/_news-single
+		include ../sections/_our-app
 	
 	//FOOTER
 	include ../sections/_footer

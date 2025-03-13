@@ -83,6 +83,25 @@
 }
 .app-block{
 	&>*+*{margin-top: 10px;}
+	img{
+		width: 180px;
+		height: 60px;
+		object-fit: contain;
+	}
+	@media (max-width: 1364px) {
+		img{
+			width: remy(180);
+			height: remy(60);
+			object-fit: contain;
+		}
+	}
+	@media (max-width: 767px) {
+		img{
+			width: 180px;
+			height: 60px;
+			
+		}
+	}
 }
 .delivery-row{
 	display: flex;
