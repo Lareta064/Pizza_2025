@@ -400,6 +400,35 @@
 	}
 }
 
+.add-product.price-border{
+	.card-txt {
+		
+		row-gap:10px;
+		p{
+			font-size: 16px;
+		}
+		@media (min-width: 768px) and (max-width: 1364px){row-gap:remy(10); p{font-size: remy(16);}}
+	}
+}
+.price-border{
+	.card-price, .price-box{
+		padding-inline: 20px;
+		height: 48px;
+		border-radius: 50px;
+		flex-shrink: 0;
+		font-size: 16px;
+		line-height: 150%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border:1px solid var(--primary);
+		@media (min-width: 768px) and (max-width: 1364px) {
+			padding-inline: remy(20);
+			height: remy(48);
+			font-size: remy(16);
+		}
+	}
+}
 .card-short{
 	display: flex;
 	align-items: center;
@@ -450,4 +479,10 @@
 		}
 	}
 	&:hover{box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.03);border: 1px solid var(--secondary);}
+}
+
+.card-short.price-border{
+	.card-short__txt{
+		row-gap:20px;
+	}
 }
