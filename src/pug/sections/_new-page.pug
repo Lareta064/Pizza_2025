@@ -15,27 +15,29 @@ section.news-page
 			.news-slider.swiper
 				.swiper-wrapper
 					.swiper-slide
-						a(href="news-single.html").news-card
+						a(href="#newsPopup" data-fancybox="news-popup").news-card
 							.news-card__img
 								img.img-cover(src='./img/news/card1.webp', srcset='./img/news/card1@2x.webp 2x' width='370' height='218' loading='lazy' alt='img')
 							p Маленькая пицца пепперони или маргарита в подарок за первый заказ
 					.swiper-slide
-						a(href="news-single.html").news-card
+						a(href="#newsPopup" data-fancybox="news-popup").news-card
 							.news-card__img
 								img.img-cover(src='./img/news/card2.webp', srcset='./img/news/card2@2x.webp 2x' width='370' height='218' loading='lazy' alt='img')
 							p Делайте заказы и получайте кешбэк 5%
 					.swiper-slide
-						a(href="news-single.html").news-card
+						a(href="#newsPopup" data-fancybox="news-popup").news-card
 							.news-card__img
 								img.img-cover(src='./img/news/card3.webp', srcset='./img/news/card3@2x.webp 2x' width='370' height='218' loading='lazy' alt='img')
 							p 1+1=3
-					.swiper-slide
-						a(href="news-single.html").news-card
-							.news-card__img
-								img.img-cover(src='./img/news/card1.webp', srcset='./img/news/card1@2x.webp 2x' width='370' height='218' loading='lazy' alt='img')
-							p Маленькая пицца пепперони или маргарита в подарок за первый заказ
-					.swiper-slide
-						a(href="news-single.html").news-card
-							.news-card__img
-								img.img-cover(src='./img/news/card2.webp', srcset='./img/news/card2@2x.webp 2x' width='370' height='218' loading='lazy' alt='img')
-							p Делайте заказы и получайте кешбэк 5%
+					
+
+			//popUp открыввется по клику на карточку новости
+			.popUp-wrapper
+				#newsPopup.news-popUp
+					.news-popUp__header
+						img.img-cover(src='./img/news/card1.webp', srcset='./img/news/card1@2x.webp 2x' width='830' height='438' loading='lazy' alt='img')
+					.news-popUp__body
+						.news-popUp__title Маленькая пицца пепперони или маргарита в подарок за первый заказ
+						p Благодаря отличному сервису и высокой степени ответственности сотрудников мини-пиццерии, клиенты получают горячие и тёплые блюда, даже если они заказали доставку в отдалённый район города. Внимательность к пожеланиям клиентов, позволяет нам совершенствовать меню и предлагать только те блюда, которые востребованы в пиццериях, а представленный разнообразный ассортимент пиццерий понравится даже гурманам.
+						p Технология приготовления доведена до совершенства и мы уверены в своей продукции, а также и в том, что заказав в наших заведениях один раз, вы с радостью вернётесь к нам снова или воспользуетесь услугой доставки заказа!
+						button.btn-accent(type="button") Заказать

@@ -89,6 +89,9 @@ a:hover {
 	text-decoration: none;
 	color: inherit;
 }
+a:focus{
+	outline: none;
+}
 a[href^="tel:"],
 a[href^="mailto:"] {
 	white-space: nowrap;
