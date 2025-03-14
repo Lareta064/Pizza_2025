@@ -9,12 +9,19 @@
 	display: flex;
 	justify-content: flex-end;
 	z-index: 10;
+	
 	.popup-basket-content{
 		background-color: #fff;
 	    width: 100%;
 		font-size: 10px;
 		max-width: 52.5em;
 		padding: 4em 3em;
-		
+		height: 100%;
+		overflow: hidden;
+	    overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		row-gap:30px;
+		&>*{width: 100%;}
 	}
 }

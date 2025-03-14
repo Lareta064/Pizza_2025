@@ -270,6 +270,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .flex-center{
 	justify-content: center;
 }
+.gap-10{gap:10px!important}
 .grid-three-columns,.grid-four-columns,.grid-two-columns,.grid-six-columns{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);

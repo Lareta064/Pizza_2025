@@ -21,13 +21,70 @@ block content
 	.popup-basket
 		.popup-basket-close x
 		.popup-basket-content
-			.popup-basket__header
-			.popup-basket__steps
+			.order-header.order-header--popup
+				.order-header__group
+					h1.title-2 Корзина:
+					.total__group
+						.total__count 4 шт. на сумму
+						.price-box 1675 #[small руб.]
+				//STEPS
+				.order-steps
+					.order-step.active
+						.step-num 1
+						span Корзина
+					.order-step-space
+					
+					.order-step
+						.step-num 2
+						span Оформление
+					
+					.order-step-space
+					
+					.order-step
+						.step-num 3
+						span Заказ принят
+			
 			.popup-basket__cards
 				+basket-card-popup
 				+basket-card-combo
 				+basket-card-popup
 
+			.popup-reccomend.grid-three-columns.gap-10
+				.add-product.price-border
+					.card-img
+						img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+					.card-txt
+						p Пепси
+						.card-price 120#[span &#8381;]
+				
+				.add-product.price-border
+					.card-img
+						img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+					.card-txt
+						p Пепси
+						.card-price 120#[span &#8381;]
+				.add-product.price-border
+					.card-img
+						img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+					.card-txt
+						p Пепси
+						.card-price 120#[span &#8381;]
+			.basket-footer.basket-footer--popup
+				//TOTAL SUMM
+				.total
+					.total__txt Итого: 
+					.total__group
+						.total__count 4 шт. на сумму
+						.price-box 1675 #[small руб.]
+				//BUTTONS
+				.buttons-row
+					a(href="order-page.html").btn-accent Перейти к оформлению
+					button.btn-light
+						span Очистить корзину
+						svg.svg-delete(style="width:1.25em; height: 1.25em;")
+							use(href='./img/sprite.svg#svg-delete')
+
+				
 
 
 block variables
