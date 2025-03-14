@@ -265,7 +265,7 @@
 	@media (max-width: 767px) {
 		flex-direction: row;
 		align-items: flex-start;
-		column-gap: 10px;
+		// column-gap: 10px;
 		padding-bottom: 0;
 		width: 100%;
 		justify-content: space-between;
@@ -277,7 +277,7 @@
 			overflow: hidden;
 			flex-shrink:0;
 			padding: 10px;
-			padding-right: 0;
+			
 			img{
 				// border-radius: 12px 0 0 12px;
 				height: 100%;
@@ -288,9 +288,11 @@
 		
 		.product__body{
 			padding: 10px;
+			padding-left: 0;
 			.product__footer{
 				flex-direction: row-reverse;
 				align-items: center;
+				padding-left: 10px;
 			}
 			.price-box{
 				flex-direction: column;
@@ -300,9 +302,6 @@
 			}
 			.btn{width: fit-content;}
 		}
-		column-gap: 12px;
-		
-		
 	}
 }
 .add-product, .add-product .card-txt{

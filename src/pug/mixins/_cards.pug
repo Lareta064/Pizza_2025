@@ -162,7 +162,7 @@ mixin card-img-370-ui(img, title, price, old)
 				button.btn.sm-w100(type="button")
 					span Выбрать
 mixin card-370-tabs(img, title, tags, price,  old)
-	.product.img-370(data-tags=""+ tags)
+	.product.img-370.horiz-w370(data-tags=""+ tags)
 		.product__img
 			.product-meta
 				.tag-meta.tag-meta--new Новинка
@@ -238,7 +238,6 @@ mixin card-horiz-tags-ui(img, title, price, old)
 				.tag-meta.tag-meta--new Новинка
 				.tag-meta.tag-meta--sale Акция!
 				.tag-meta.tag-meta--hit Популярное
-
 			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
 		
 		.product__body
