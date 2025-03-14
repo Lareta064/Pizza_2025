@@ -406,11 +406,13 @@
 	}
 	.card-txt {
 		
-		row-gap:10px;
+		row-gap:20px;
 		p{
 			font-size: 16px;
+			min-height: 3em;
+			max-height: 3em;
 		}
-		@media (min-width: 768px) and (max-width: 1364px){row-gap:remy(10); p{font-size: remy(16);}}
+		@media (min-width: 768px) and (max-width: 1364px){row-gap:remy(20); p{font-size: remy(16);}}
 	}
 }
 .price-border{

@@ -178,3 +178,19 @@ span.check-icon{
 	color: #1f1f1f;
 	display: inline-block;
 }
+.round-close{
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	flex-shrink:0;
+	display: flex;justify-content: center;
+	align-items: center;
+	svg{
+		color: white;
+		width: 16px;
+		height: 16px;
+	}
+	@media (max-width: 767px) {
+	 background-color: var(--primary);
+	}
+}

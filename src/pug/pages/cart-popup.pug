@@ -19,7 +19,10 @@ block content
 	include ../sections/_footer
 	//popup-basket
 	.popup-basket
-		.popup-basket-close x
+		button.round-close
+			svg.svg-cross(style="color: white;")
+				use(href='./img/sprite.svg#svg-cross')
+
 		.popup-basket-content
 			.order-header.order-header--popup
 				.order-header__group
