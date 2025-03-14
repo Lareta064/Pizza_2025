@@ -269,7 +269,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		&>*{
 			grid-column:  span 6;
 		}
-		&>.product.horiz-w370{grid-column:  span 12;}
+		&>.product.horiz-mob{grid-column:  span 12;}
 	}
 }
 .grid-four-columns{
@@ -282,7 +282,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		&>*{
 			grid-column:  span 6;
 		}
-		&>.product.horiz-w370{grid-column:  span 12;}
+		&>.product.horiz-mob{grid-column:  span 12;}
 	}
 }
 .grid-two-columns{
