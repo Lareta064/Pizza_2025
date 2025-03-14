@@ -421,3 +421,13 @@ mixin basket-card-combo
 			button.basket-card__remove
 				svg.svg-delete
 					use(href='./img/sprite.svg#svg-delete')
+
+
+mixin miniCard
+	.card-short
+		.card-short__img
+			img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+		.card-short__txt
+			p.txt-14 Пепперони фреш
+			.price-box
+				span.new-price от 450&#8381;
