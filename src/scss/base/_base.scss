@@ -253,7 +253,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 .flex-center{
 	justify-content: center;
 }
-.grid-three-columns,.grid-four-columns,.grid-two-columns{
+.grid-three-columns,.grid-four-columns,.grid-two-columns,.grid-six-columns{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	column-gap:30px;
@@ -296,6 +296,11 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		}
 		
 	}
+}
+.grid-six-columns{
+	&>*{grid-column:  span 2;}
+	@media (max-width: 767px) {&>*{grid-column:  span 6;}}
+
 }
 .gap-88,.gap-110{
 	display: grid;

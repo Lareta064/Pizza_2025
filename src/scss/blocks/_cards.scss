@@ -402,7 +402,7 @@
 .add-product.price-border{
 	.card-img{
 		height: 120px;
-		@media (min-width: 768px) and (max-width: 1364px){height: remy(120)}}
+		@media (min-width: 768px) and (max-width: 1364px){height: remy(120)}
 	}
 	.card-txt {
 		
@@ -425,6 +425,10 @@
 		justify-content: center;
 		align-items: center;
 		border:1px solid var(--primary);
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		
 		@media (min-width: 768px) and (max-width: 1364px) {
 			padding-inline: remy(20);
 			height: remy(48);

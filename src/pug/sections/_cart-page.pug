@@ -7,7 +7,7 @@ section.basket-page
 			+basket-card
 			+basket-card
 
-//Reccomend
+//Reccomend слайдер
 section.reccomend-products
 	.container
 		.title-wrapper
@@ -42,74 +42,10 @@ section.reccomend-products
 								p.txt-14 Пепперони фреш
 								.price-box
 									span.new-price 600&#8381;
-									span.old-price 800&#8381;
-					.swiper-slide
-						.card-short.price-border
-							.card-short__img
-								img(src='./img/goods/fri.webp', srcset='./img/goods/fri@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-							.card-short__txt
-								p.txt-14 Пепперони фреш
-								.price-box
-									span.new-price 600&#8381;
-					.swiper-slide
-						.card-short.price-border
-							.card-short__img
-								img(src='./img/goods/fri2.webp', srcset='./img/goods/fri2@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-							.card-short__txt
-								p.txt-14 Пепперони фреш
-								.price-box
-									span.new-price 600&#8381;
-					.swiper-slide
-						.card-short.price-border
-							.card-short__img
-								img(src='./img/goods/souse4.webp', srcset='./img/goods/souse4@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-							.card-short__txt
-								p.txt-14 Пепперони фреш
-								.price-box
-									span.new-price 600&#8381;
-									span.old-price 800&#8381;
-
-
-
-//Рекомендуемые продукты - слайдер
-section.reccomend-products
-	.container
-		.title-wrapper
-			h2.h4-upper Часто заказывают
-		
-		.reccomend-slider-wrapper.swiper-box
-			//slider nav
-			.reccomend-slider__nav
-				button.swiper-button-prev
-					svg.svg-arr
-						use(href='./img/sprite.svg#svg-arr')
-				button.swiper-button-next
-					svg.svg-arr
-						use(href='./img/sprite.svg#svg-arr')
-			//slider
-			.reccomend-slider.swiper
-				.swiper-wrapper
-					.swiper-slide
-						.card-short.price-border
-							.card-short__img
-								img(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-							.card-short__txt
-								p.txt-14 Пепперони фреш
-								.price-box
-									span.new-price от 450&#8381;
 									
 					.swiper-slide
 						.card-short.price-border
 							.card-short__img
-								img(src='./img/goods/kola.webp', srcset='./img/goods/kola@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-							.card-short__txt
-								p.txt-14 Пепперони фреш
-								.price-box
-									span.new-price 600&#8381;
-									span.old-price 800&#8381;
-					.swiper-slide
-						.card-short.price-border
-							.card-short__img
 								img(src='./img/goods/fri.webp', srcset='./img/goods/fri@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
 							.card-short__txt
 								p.txt-14 Пепперони фреш
@@ -131,7 +67,7 @@ section.reccomend-products
 								p.txt-14 Пепперони фреш
 								.price-box
 									span.new-price 600&#8381;
-									span.old-price 800&#8381;
+									
 
 
 //Рекомендуемые продукты - грид-сетка
@@ -139,18 +75,44 @@ section.reccomend-products
 	.container
 		.title-wrapper
 			h2.h4-upper Напитки
-		.reccomend-grid
-			.card-short.price-border
-				.card-short__img
-					img(src='./img/goods/juice2.webp', srcset='./img/goods/juice2@2x.webp 2x' width='120' height='120' loading='lazy' alt='img')
-				.card-short__txt
-					p.txt-14 Пепперони фреш
-					.price-box
-						span.new-price от 450&#8381;
-			.card-short.price-border
-				.card-short__img
-					img(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='120' height='120' loading='lazy' alt='img')
-				.card-short__txt
-					p.txt-14 Пепперони фреш
-					.price-box
-						span.new-price от 450&#8381;
+		//обертка для компонентов в 6 колонок
+		.grid-six-columns
+			.add-product.price-border
+				.card-img
+					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+				.card-txt
+					p Пепси
+					.card-price 120#[span &#8381;]
+			
+			.add-product.price-border
+				.card-img
+					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+				.card-txt
+					p Пепси
+					.card-price 120#[span &#8381;]
+			.add-product.price-border
+				.card-img
+					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+				.card-txt
+					p Пепси
+					.card-price 120#[span &#8381;]
+			
+			.add-product.price-border
+				.card-img
+					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+				.card-txt
+					p Пепси
+					.card-price 120#[span &#8381;]
+			.add-product.price-border
+				.card-img
+					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+				.card-txt
+					p Пепси
+					.card-price 120#[span &#8381;]
+			
+			.add-product.price-border
+				.card-img
+					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+				.card-txt
+					p Пепси
+					.card-price 120#[span &#8381;]
