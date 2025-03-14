@@ -210,14 +210,14 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	background-color: #fff; 
 	padding-top: 20px;
 	padding-bottom: 55px;
-	section, .p-block-50 {padding-block:55px;}
+	section, .p-block-50 {padding-block:50px;}
 	@media (max-width: 767px) {
 		padding-top: 10px
 	}
 	@media (max-width: 1364px) {
 		padding-top: remy(55);
 		padding-bottom: remy(55);
-		section, .p-block-50 {padding-block:remy(55);}
+		section, .p-block-50 {padding-block:remy(50);}
 	}
 	@media (max-width: 767px) {
 		padding-top: 10px;

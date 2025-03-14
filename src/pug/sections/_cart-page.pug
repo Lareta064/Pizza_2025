@@ -1,17 +1,38 @@
 section.basket-page
 	.container
-		.cart-page__header
-			h1.h2 Корзина
+		.order-header
+			.order-header__group
+				h1.title-2 Корзина
+				.total__group.flex-sm
+					.total__count 4 шт. на сумму
+					.price-box 1675 #[small руб.]
+			//STEPS
+			.order-steps
+				.order-step.active
+					.step-num 1
+					span Корзина
+				.order-step-space
+				
+				.order-step
+					.step-num 2
+					span Оформление
+				
+				.order-step-space
+				
+				.order-step
+					.step-num 3
+					span Заказ принят
 		.basket-page-content
 			+basket-card
-			+basket-card
-			+basket-card
+			+basket-card('pizza2', 'Пицца “Маргарита”', 'Моцарелла, помидоры, томатный соус, орегано.')
+			+basket-card('pizza3', 'Пицца “Карбонара”', 'Бекон, моцарелла, грана падано, яйцо куриное, сливки.')
+			+basket-card('pizza4', 'Пицца “Овощная”', 'Моцарелла, сладкий перец, орегано, помидоры, шампиньоны, томатный соус.')
 
 //Reccomend слайдер
 section.reccomend-products
 	.container
 		.title-wrapper
-			h2.h4-upper Часто заказывают
+			.h5 Рекомендуем к вашему заказу
 		
 		.reccomend-slider-wrapper.swiper-box
 			//slider nav
@@ -74,7 +95,7 @@ section.reccomend-products
 section.reccomend-products
 	.container
 		.title-wrapper
-			h2.h4-upper Напитки
+			.h5 Напитки
 		//обертка для компонентов в 6 колонок
 		.grid-six-columns
 			.add-product.price-border
@@ -99,20 +120,20 @@ section.reccomend-products
 			
 			.add-product.price-border
 				.card-img
-					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+					img(src="../img/goods/juice1.webp", srcset="../img/goods/juice1@2x.webp 2x" width="95" height="62" alt="img")
 				.card-txt
-					p Пепси
+					p Sprite
 					.card-price 120#[span &#8381;]
 			.add-product.price-border
 				.card-img
-					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+					img(src="../img/goods/juice5.webp", srcset="../img/goods/juice5@2x.webp 2x" width="95" height="62" alt="img")
 				.card-txt
-					p Пепси
+					p Кока-Кола
 					.card-price 120#[span &#8381;]
 			
 			.add-product.price-border
 				.card-img
-					img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+					img(src="../img/goods/juice7.webp", srcset="../img/goods/juice7@2x.webp 2x" width="95" height="62" alt="img")
 				.card-txt
-					p Пепси
+					p Клюквенный морс
 					.card-price 120#[span &#8381;]

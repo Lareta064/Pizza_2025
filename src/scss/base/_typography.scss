@@ -15,7 +15,7 @@
 		line-height: 110%;
 	}
 }
-.h2,h2,.title{
+.h2,h2,.title, .title-2{
 	font-family: var(--second-family);
 	font-weight: 400;
 	font-size: 46px;
@@ -32,6 +32,7 @@
 		line-height: 118%;
 	}
 }
+.title-2{font-weight: 700;}
 .h2{text-transform: uppercase;}
 .title{
 	margin-bottom: 40px;
@@ -75,7 +76,7 @@
 	font-size: 30px;
 	line-height: 150%;
 	color: var(--primary);
-	@media (max-width: 1439px) {
+	@media (max-width: 1364px) {
 	font-size: remy(30);
 	}
 	@media (max-width: 767px) {
