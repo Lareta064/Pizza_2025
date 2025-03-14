@@ -225,7 +225,24 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		section, .p-block-50 {padding-block:20px;}
 	}
 }
-
+.pt-50{
+	padding-top: 50px;
+	@media (max-width: 1364px) {
+		padding-top: remy(50);
+	}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+	}
+}
+.pb-50{
+	padding-bottom: 50px;
+	@media (max-width: 1364px) {
+		padding-bottom: remy(50);
+	}
+	@media (max-width: 767px) {
+		padding-bottom: 20px;
+	}
+}
 .main{
 	background-color: #fff;
 	padding-top: 55px;
