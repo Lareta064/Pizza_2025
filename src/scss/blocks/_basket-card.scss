@@ -365,3 +365,15 @@
 	}
 	
 }
+.basket-page-footer{
+	display: flex;
+	gap:20px;
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: 767px) {
+	flex-direction: column-reverse;
+	row-gap:30px;
+	padding-top: 20px;
+	border-top: 1px solid var(--secondary-1);
+	}
+}

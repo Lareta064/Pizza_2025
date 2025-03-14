@@ -91,7 +91,7 @@ section.basket-page
 
 
 		//Рекомендуемые продукты - грид-сетка
-		.reccomend-products.pt-50
+		.reccomend-products.p-block-50
 			.title-wrapper
 				.h5 Напитки
 			//обертка для компонентов в 6 колонок
@@ -115,4 +115,20 @@ section.basket-page
 					.card-txt
 						p Пепси
 						.card-price 120#[span &#8381;]
+		//ИТОГОВАЯ СТРОКА
+		.basket-page-footer
+			//BUTTONS
+			.buttons-row
+				a(href="order-page.html").btn-accent Перейти к оформлению
+				button.btn-light
+					span Очистить корзину
+					svg.svg-delete(style="width:1.25em; height: 1.25em;")
+						use(href='./img/sprite.svg#svg-delete')
+
+			//TOTAL SUMM
+			.total
+				.total__txt Итого: 
+				.total__group
+					.total__count 4 шт. на сумму
+					.price-box 1675 #[small руб.]
 

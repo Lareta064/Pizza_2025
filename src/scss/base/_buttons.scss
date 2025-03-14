@@ -178,3 +178,16 @@ input.btn{width: fit-content;}
 	flex-wrap: wrap;
 	gap:10px;
 }
+.buttons-row{
+	display: flex;
+	align-items: center;
+	gap:16px;
+	@media (max-width: 1364px) {
+		column-gap:remy(16);
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		gap:20px;
+		.btn-accent, .btn-light{width: 220px; text-align: center;}
+	}
+}
