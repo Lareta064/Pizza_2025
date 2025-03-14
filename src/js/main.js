@@ -162,32 +162,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //reccomend slider
    
-    let reccomendSlider = new Swiper(' .reccomend-slider', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      speed:1000,
-      navigation: {
-        nextEl: ".reccomend-slider__nav .swiper-button-next",
-        prevEl: ".reccomend-slider__nav .swiper-button-prev",
-      },
-      breakpoints: {
-          320: {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1365: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          }
-        },
+    // let reccomendSlider = new Swiper('.reccomend-slider', {
+    //   slidesPerView: 4,
+    //   spaceBetween: 30,
+    //   speed:1000,
+    //   navigation: {
+    //     nextEl: ".reccomend-slider__nav .swiper-button-next",
+    //     prevEl: ".reccomend-slider__nav .swiper-button-prev",
+    //   },
+    //   breakpoints: {
+    //       320: {
+    //         slidesPerView: 'auto',
+    //         spaceBetween: 10,
+    //       },
+    //       768: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 10,
+    //       },
+    //       1200: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 20,
+    //       },
+    //       1365: {
+    //         slidesPerView: 4,
+    //         spaceBetween: 30,
+    //       }
+    //     },
+    // });
+    let popUpSlider = new Swiper('.popup-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      speed:700,
     });
 });
 
