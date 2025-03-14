@@ -260,3 +260,38 @@
 	}
 	
 }
+.total{
+	color: var(--primary);
+	font-family: var(--second-family);
+	font-weight: 400;
+}
+.total,.total__group,.price-box{
+	display: flex;
+	align-items: center;
+	column-gap:20px;
+}
+.total__txt{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1;
+	
+}
+.total__group {
+	.total__count{
+		font-family: var(--font-family);
+		font-size: 16px;
+		line-height: 1;
+	}
+	.price-box{
+		font-size: 34px;
+		line-height:1;
+		column-gap:10px;
+		font-weight: 700;
+		small{
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 16px;
+			
+		}
+	}
+}
