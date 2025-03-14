@@ -400,6 +400,10 @@
 }
 
 .add-product.price-border{
+	.card-img{
+		height: 120px;
+		@media (min-width: 768px) and (max-width: 1364px){height: remy(120)}}
+	}
 	.card-txt {
 		
 		row-gap:10px;
