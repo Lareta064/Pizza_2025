@@ -415,7 +415,7 @@
 		@media (min-width: 768px) and (max-width: 1364px){row-gap:remy(20); p{font-size: remy(16);}}
 	}
 }
-.price-border{
+.price-border,.card-short.card-vertical,.card-short.card-row{
 	.card-price, .price-box,.card-btn{
 		padding-inline: 20px;
 		height: 48px;
@@ -512,74 +512,74 @@
 	}
 	&:hover{box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.03);border: 1px solid var(--secondary);}
 }
-.card-short.card-vertical{
-	flex-direction: column;
+
+.card-short.card-vertical,.card-short.card-row{
 	font-size: 10px;
-	row-gap: 1em;
+	padding: 1em;display: flex;
+	flex-direction: column;
+	row-gap:1em;
 	.card-short__img{
-		width: 12em;
+		width: 100%;
 		height: 12em;
+		overflow: hidden;
 		flex-shrink: 0;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		img{
-		width: 100px;
-		height: 100px;
-		object-fit: contain;
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+			object-position: center;
 		}
 	}
 	.card-short__txt{
-		.txt-14{
-			padding-bottom: 1em;
-			flex:1;
-			max-height: 48px;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		row-gap: 2em;
+		font-size: 1em;
+		p{
+			font-size: 1.6em;
+			min-height: 3em;
+			max-height: 3em;
+			flex: 1;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+
 		}
 		
 	}
-}
-.card-short.price-border{
-	.card-short__txt{
-		row-gap:20px;
+	
+	@media (max-width: 1364px) {
+		font-size: remy(10);
+	}
+	@media (max-width: 767px) {
+		font-size: 10px;
 	}
 }
-.card-short.card-short--flex{
-	font-size: 10px;
-	column-gap:1em;
+.card-short.card-row{
+	flex-direction: row;
+	align-items: center;
+
 	.card-short__img{
 		width: 8em;
 		height: 8em;
-		flex-shrink: 0;
 	}
 	.card-short__txt{
-		flex-direction: row; 
-		flex-grow:1;
-		column-gap: 1.2em;
+		flex-direction: row;
 		align-items: center;
-		.txt-14{flex:1;}
-	}
-	.price-box{
-		margin: 0;
-		flex-shrink: 0;
-		cursor:pointer;
-		padding-inline: 20px;
-		height: 48px;
-		border-radius: 50px;
-		flex-shrink: 0;
-		font-size: 16px;
-		line-height: 150%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border:1px solid var(--primary);
-		width: fit-content;
-		margin-left: auto;
-		margin-right: auto;
-		
-		@media (min-width: 768px) and (max-width: 1364px) {
-			padding-inline: remy(20);
-			height: remy(48);
-			font-size: remy(16);
+		justify-content: flex-start;
+		column-gap: 1.25em;
+		p{
+			min-height: unset;
+			max-height: unset;
+			
+		}
+		.price-box, .card-short__txt .card-btn{
+			padding-inline: 1.75em;
+			
 		}
 	}
 }
