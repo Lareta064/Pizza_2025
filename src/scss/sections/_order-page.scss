@@ -1,6 +1,32 @@
 @use "../base/var" as *;
-.form-col{
-	display: flex;
+.form-col,.form-fields-col{
+	display: inline-flex;
 	flex-direction: column;
 	row-gap: 20px;
+}
+.order-form{
+	display: grid;
+	font-size: 10px;
+	grid-template-columns: 57em 1fr;
+	column-gap:3em;
+	
+	.form-fields{
+		display: flex;
+		flex-direction: column;
+		row-gap:3em;
+		.form-item +.form-item {margin-top: 0;}
+	}
+}
+.order-form-group{
+	column-count: 2;
+    page-break-inside: avoid;
+    break-inside: avoid;
+	column-gap:6.5em;
+	.form-col{margin-bottom: 3.2em; }
+	
+}
+.form-delivery-block,.form-payment-block{width: 235px;}
+.form-time-block{
+	width: 270px;
+	.label-text{flex-grow: 1;}
 }
