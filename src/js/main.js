@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     	for(let item of modalFramesClose){
     		item.addEventListener('click', function(e){
     		e.preventDefault();
-        e.stopPropogation();
+        e.stopPropagation();
     		item.closest('[data-modal]').classList.remove('visible');
     		bodyEl.classList.remove('lock');
     		});

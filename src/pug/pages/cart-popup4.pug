@@ -1,15 +1,14 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_header-cart-popup
 	include ../sections/_promo-slider
 	main.main
-		
-	
+
 	//FOOTER
 	include ../sections/_footer
 	//popup-basket
-	.popup-basket(data-modal="basket-popup")
+	.popup-basket.visible-right(data-modal="basket-popup")
 		button.round-close(data-close)
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
@@ -62,7 +61,7 @@ block content
 		
 			
 		//popUp поверх корзины. Отображается за счет добавления класса visible. Должно быть внутри класса .popup-basket, так как размещается абсолютом относительно него. 
-		.popup-inner-frame(data-modal="inner-popup")
+		.popup-inner-frame.visible-down(data-modal="inner-popup")
 			button.round-close
 				svg.svg-cross(style="color: white;")
 					use(href='./img/sprite.svg#svg-cross')

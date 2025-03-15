@@ -1,8 +1,19 @@
 @use "../base/var" as *;
+*[data-modal]{
+	display: none;
+	transition: .3s; 
+}
+*[data-modal].visible{
+	display: flex;
+}
+.visible-right[data-modal]{
+	display: flex;
+	transform: translateX(110%);
+	&.visible{transform: translateX(0);}
+}
 .popup-inner-frame{
 	position: absolute;
 	bottom: 0;
-	
 	right: 0;
     font-size: 10px;
 	box-shadow: 0 -4px 40px 0 rgba(0, 0, 0, 0.08);
@@ -12,4 +23,8 @@
 	padding: 6em 3em;
 	z-index:5;
 	width: 52.5em;
+}
+.visible-down[data-modal]{
+	transform: translateY(-110%);
+	&.visible{transform: translateY(0);}
 }
