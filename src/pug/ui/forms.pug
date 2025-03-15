@@ -48,6 +48,23 @@ html(lang="ru")
 					pre.
 						+select("Речной песок", 'product_name')
 				
+					hr
+					.relative-label
+						input(type="radio" name="name1")
+						span.fake-radio
+						.label-text
+							p Самовывоз
+							span.txt-s4 г. Энгельс, ул. Трудовая 12/2
+					
+					.relative-label
+						input(type="checkbox" name="chbx1")
+						span.fake-checkbox
+						.label-text
+							p Доставка курьером
+							span.txt-s4 Минимальный заказ для бесплатной доставки 500 руб.
+
+				
+		
 		script.
 			document.querySelectorAll('.dropdown').forEach(function (dropDownWrapper) {
 				const dropDownBtn = dropDownWrapper.querySelector('.dropdown__button');

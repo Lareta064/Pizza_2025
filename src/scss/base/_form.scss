@@ -57,3 +57,162 @@
 		left: 0; z-index: -1;
 	}
 }
+/*custom select*/
+.dropdown {
+	position: relative;
+	font-size: 14px;
+  }
+  
+  .dropdown__button {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: left;
+	font-size: 1em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	cursor: pointer;
+	z-index: 3;
+	line-height: 1.43;
+	color: var(--primary);
+	border-bottom: 1px solid var(--primary)
+  }
+  
+  .dropdown__button::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	width: 1.4285em;
+	height: 1.4285em;
+	display: block;
+	// z-index: 2;
+	
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='8' viewBox='0 0 16 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M7.8844 7.61949L14.9474 0.00185977L16 1.10913L7.8844 10L0 1.10918L1.05263 0L7.8844 7.61949Z' fill='%231f1f1f' /%3e%3c/svg%3e");
+	transition: .3s; 
+	background-size: .9em 0.6em;
+	background-repeat: no-repeat;
+	background-position: center;
+	pointer-events: none;
+  }
+  .dropdown__button.dropdown__button--active:after{
+	transform: translateY(-50%) rotate(180deg);
+  }
+  
+  .dropdown__list {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style-type: none;
+	background: #FFFFFF;
+	max-height: 14em;
+	overflow: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--secondary-4) white;
+	z-index: 2;
+	&::-webkit-scrollbar{
+		width: 3px;
+		height: 20px;
+		&-track{background-color: #fff;}
+		&-thumb{background-color: var(--secondary-4);}
+	 }
+	
+	ul{
+	 
+	  overflow: hidden;
+	  overflow-y: auto;
+	  scrollbar-width: thin;
+	  scrollbar-color: var(--secondary-4) #fff;
+	  scrollbar-width: 3px;
+	  
+	  
+	  &::-webkit-scrollbar-track {
+		background-color:white;
+		border-radius: 5px;
+	  }
+	}
+ } 
+  
+  .dropdown__list--visible {
+	display: block;
+	
+	border-top:0;
+	
+  }
+  
+  .dropdown__list-item {
+	margin: 0;
+	padding: 0;
+	border-bottom: 0px;
+	
+	font-size: 1em;
+	padding-block: 1em;
+	line-height: 1.43;
+	transition: .3s; 
+	cursor: pointer;
+	color: var(--secondary-4);
+	border-bottom: 1px solid var(--secondary-2);
+	&.selected{color: var(--primary);}
+  }
+  
+  .dropdown__input-hidden {
+	display: none;
+  }
+  .relative-label{
+    position: relative;
+	display: flex;
+	font-size: 16px;
+	column-gap: .5em;
+	input[type="radio"], input[type="checkbox"]{
+		width: 0.01em;
+		height: 0.01em;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+	.fake-radio{
+		width: 1em;
+		height: 1em;
+		border-radius: 50%;
+		flex-shrink: 0;
+		display: block;
+		background-color: #fff;
+		border: 1px solid  var(--secondary);
+		transition: .3s; 
+		outline: 3px solid white;
+		outline-offset: -4px;
+		cursor:pointer;
+	}
+	input:checked + .fake-radio{
+		background-color:  var(--primary);
+		border: 1px solid  var(--primary);
+	}
+	.fake-checkbox{
+		border: 1px solid var(--secondary);
+		border-radius: 2px;
+		width: 15px;
+		height: 15px;
+		background-color: var(--secondary-1);
+		background-size: 0;
+		background-repeat: no-repeat;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='16' viewBox='0 0 24 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M9.19986 15.4667C8.95292 15.4651 8.71665 15.3658 8.5428 15.1904L1.25906 7.91041C1.08381 7.73515 0.985352 7.49745 0.985352 7.24961C0.985352 7.00176 1.08381 6.76406 1.25906 6.58881C1.43432 6.41355 1.67202 6.31509 1.91986 6.31509C2.16771 6.31509 2.40541 6.41355 2.58066 6.58881L9.19986 13.2117L21.4191 0.992539C21.5943 0.817284 21.832 0.718826 22.0799 0.718826C22.3277 0.718826 22.5654 0.817284 22.7407 0.992539C22.9159 1.16779 23.0144 1.40549 23.0144 1.65334C23.0144 1.90119 22.9159 2.13888 22.7407 2.31414L9.86066 15.1904C9.77413 15.2777 9.67122 15.347 9.55782 15.3944C9.44442 15.4419 9.32277 15.4664 9.19986 15.4667Z' fill='%231F1F1F' /%3e%3c/svg%3e");
+	}
+	input:checked + .fake-checkbox{
+		background-size: 12px 8px;
+		background-position: center;
+	}
+	.label-text{
+		display: flex;
+		flex-direction: column;
+		font-size: 12px;
+		column-gap:5px;
+		pointer-events: none;
+	}
+  }
