@@ -120,12 +120,12 @@
 			flex-direction: column;
 			row-gap:10px;
 			padding-top: 0;
-			// padding: 10px 9px;
+			column-gap:10px;
 			// padding-top: 10px;
 		}
 		.product__body{
 			padding: 10px;
-			padding-bottom: 0;
+			// padding-bottom: 0;
 			// row-gap:4px;
 		}
 		.price-box{
@@ -289,15 +289,16 @@
 		.product__body{
 			padding: 10px;
 			padding-left: 0;
+			p{text-align: left;}
 			.product__footer{
 				flex-direction: row-reverse;
 				align-items: center;
-				padding-left: 10px;
+				column-gap:10px;
 			}
 			.price-box{
 				flex-direction: column;
 				justify-content: center;
-				align-items: center;
+				// align-items: center;
 				.old-price{margin-left: 0;}
 			}
 			.btn{width: fit-content;}
