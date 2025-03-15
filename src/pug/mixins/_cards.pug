@@ -25,17 +25,6 @@ mixin catCard-flex-ui(img, title, link="#!")
 		.card-txt
 			p !{title}
 
-//- mixin addCard(nameNum,name, pr)
-		
-//- 	label.fake-label&attributes(attributes)
-//- 		input(type="checkbox" name="add" + nameNum)
-//- 		span.check-icon
-//- 		.add-product
-//- 			.card-img
-//- 				img(src="./img/goods/add"+nameNum+".webp", srcset="./img/goods/add"+nameNum+"@2x.webp 2x" width="95" height="62" alt="img")
-//- 			.card-txt
-//- 				p #{name}
-//- 				.card-price #{pr} #[span &#8381;]
 
 mixin addCard(nameNum,name, pr)
 	label.add-product-card.fake-label&attributes(attributes)
@@ -72,7 +61,7 @@ mixin addCard-price-ui(nameNum,name, pr)
 		.card-txt
 			p #{name}
 			.card-price #{pr} #[span &#8381;]
-//Карточка с картинкой 370х230
+//-Карточка с картинкой 370х230
 mixin card(img, title, price, old)
 	.product
 		.product__img
@@ -117,7 +106,7 @@ mixin card-ui(img, title, price, old)
 				
 				button.btn.sm-w100(type="button")
 					span Выбрать
-//Карточка с картинкой 370х370
+//-Карточка с картинкой 370х370
 mixin card-img-370(img, title, price, old)
 	.product.img-370
 		.product__img
@@ -139,7 +128,7 @@ mixin card-img-370(img, title, price, old)
 				
 				button.btn.sm-w100(type="button")
 					span Выбрать
-//Карточка ui с картинкой 370х370
+//-Карточка ui с картинкой 370х370
 mixin card-img-370-ui(img, title, price, old)
 	.product.img-370
 		.product__img
@@ -182,7 +171,7 @@ mixin card-370-tabs(img, title, tags, price,  old)
 				
 				button.btn.sm-w100(type="button")
 					span Выбрать
-//Карточка для фильтрации с дата-атрибутом
+//-Карточка для фильтрации с дата-атрибутом
 mixin cardMulti(img, title, tags, price,  old)
 	.product(data-tags=""+ tags)
 		.product__img
@@ -206,7 +195,7 @@ mixin cardMulti(img, title, tags, price,  old)
 				button.btn.sm-w100(type="button")
 					span Выбрать
 
-//Горизонтальные в моб версии и для табов внутри табов
+//-Горизонтальные в моб версии и для табов внутри табов
 mixin card-horiz-tags(img, title, price, old)
 	.product.horiz-mob(data-tags=""+ tags)
 		.product__img
@@ -230,7 +219,7 @@ mixin card-horiz-tags(img, title, price, old)
 				button.btn.sm-w100(type="button")
 					span Выбрать
 
-//Горизонтальные в моб версии и для табов внутри табов
+//-Горизонтальные в моб версии и для табов внутри табов
 mixin card-horiz-tags-ui(img, title, price, old)
 	.product.horiz-mob(data-tags=""+ tags)
 		.product__img
@@ -423,11 +412,11 @@ mixin basket-card-combo
 					use(href='./img/sprite.svg#svg-delete')
 
 
-mixin miniCard
-	.card-short
+mixin card-short-vertical(img, title)
+	.card-short.card-vertical
 		.card-short__img
-			img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+			img(src='./img/goods/'+img+'.webp', srcset='./img/goods/'+img+'@2x.webp 2x' width='120' height='120' loading='lazy' alt='img')
 		.card-short__txt
-			p.txt-14 Пепперони фреш
+			p.txt-16 !{title}
 			.price-box
 				span.new-price от 450&#8381;

@@ -70,6 +70,7 @@ html(lang="ru")
 						p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 				
 				div(style="width: 400px;")
+				h3 .card-short
 				.card-short
 					.card-short__img
 						img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
@@ -79,28 +80,30 @@ html(lang="ru")
 							span.new-price от 450&#8381;
 
 				hr
+				h3 .card-short.card-vertical
 				div(style="width: 400px;")
 					.card-short.card-vertical
 						.card-short__img
 							img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
 						.card-short__txt
-							p.txt-14 Пепперони фреш
+							p.txt-16 Пепперони фреш
 							.price-box
 								span.new-price от 450&#8381;
-				
-				pre.
-					.card-short
+				h3 .card-short.card-row
+				div(style="width: 400px;")
+					.card-short.card-row
 						.card-short__img
 							img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
 						.card-short__txt
-							p.txt-14 Пепперони фреш
+							p.txt-16 Пепперони фреш
 							.price-box
 								span.new-price от 450&#8381;
 				
-				
+				hr
+				h3 .card-short.price-border
 				.card-short.price-border
 					.card-short__img
-						img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+						img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='122' height='122' loading='lazy' alt='img')
 					.card-short__txt
 						p.txt-14 Пепперони фреш
 						.price-box
@@ -117,7 +120,7 @@ html(lang="ru")
 							img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
 						.card-txt
 							p Пепси
-							.card-price 120#[span &#8381;]
+							//+add 120#[span &#8381;]
 					+addCard-price-ui(2,'Лук', 80)
 				div(style="width:350px;")
 					.card-short.card-short--flex

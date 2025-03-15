@@ -120,12 +120,12 @@
 			flex-direction: column;
 			row-gap:10px;
 			padding-top: 0;
-			// padding: 10px 9px;
+			column-gap:10px;
 			// padding-top: 10px;
 		}
 		.product__body{
 			padding: 10px;
-			padding-bottom: 0;
+			// padding-bottom: 0;
 			// row-gap:4px;
 		}
 		.price-box{
@@ -289,15 +289,16 @@
 		.product__body{
 			padding: 10px;
 			padding-left: 0;
+			p{text-align: left;}
 			.product__footer{
 				flex-direction: row-reverse;
 				align-items: center;
-				padding-left: 10px;
+				column-gap:10px;
 			}
 			.price-box{
 				flex-direction: column;
 				justify-content: center;
-				align-items: center;
+				// align-items: center;
 				.old-price{margin-left: 0;}
 			}
 			.btn{width: fit-content;}
@@ -415,7 +416,7 @@
 		@media (min-width: 768px) and (max-width: 1364px){row-gap:remy(20); p{font-size: remy(16);}}
 	}
 }
-.price-border{
+.price-border,.card-short.card-vertical,.card-short.card-row{
 	.card-price, .price-box,.card-btn{
 		padding-inline: 20px;
 		height: 48px;
@@ -442,7 +443,7 @@
 .card-short{
 	display: flex;
 	align-items: center;
-	column-gap:4px;
+	column-gap:10px;
 	border: 1px solid var(--secondary-1);
 	border-radius: 24px;
 	padding: 10px;
@@ -493,11 +494,22 @@
 		}
 
 	}
+	&.price-border{
+		font-size: 10px!important;
+		column-gap:1em;
+		
+		.card-btn, .price-box{margin: 0; padding-inline: 1.73em;}
+		.price-box{font-size: 1em;}
+		.card-btn{font-size: 1em;padding-inline: 1.25em;}
+		.card-short__txt{column-gap: 1.45em;font-size: 1.6em;}
+		.price-box>*{font-size: 1em;}
+	}
 	@media (min-width: 768px) and (max-width: 1364px) {
-		column-gap:remy(4);
+		column-gap:remy(10);
 		border-radius: remy(24);
 		padding: remy(10);
 		padding-right: remy(20);
+		&.price-border{font-size: remy(10);}
 		&__img{
 			width: remy(104);
 			height: remy(104);
@@ -512,74 +524,86 @@
 	}
 	&:hover{box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.03);border: 1px solid var(--secondary);}
 }
-.card-short.card-vertical{
-	flex-direction: column;
+
+.card-short.card-vertical,.card-short.card-row{
 	font-size: 10px;
-	row-gap: 1em;
+	padding: 1em;display: flex;
+	flex-direction: column;
+	row-gap:1em;
 	.card-short__img{
-		width: 12em;
+		width: 100%;
 		height: 12em;
+		overflow: hidden;
 		flex-shrink: 0;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		img{
-		width: 100px;
-		height: 100px;
-		object-fit: contain;
+			height: 100%;
+			width: auto;
+			object-fit: contain;
+			object-position: center;
 		}
 	}
 	.card-short__txt{
-		.txt-14{
-			padding-bottom: 1em;
-			flex:1;
-			max-height: 48px;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		row-gap: 2em;
+		font-size: 1em;
+		p{
+			font-size: 1.6em;
+			min-height: 3em;
+			max-height: 3em;
+			flex: 1;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+			width: 100%;
 		}
 		
 	}
-}
-.card-short.price-border{
-	.card-short__txt{
-		row-gap:20px;
+	
+	@media (max-width: 1364px) {
+		font-size: remy(10);
+	}
+	@media (max-width: 767px) {
+		font-size: 10px;
 	}
 }
-.card-short.card-short--flex{
-	font-size: 10px;
-	column-gap:1em;
+.card-short.card-vertical .card-short__txt{text-align: center;}
+.card-short.card-row{
+	flex-direction: row;
+	align-items: center;
+
 	.card-short__img{
 		width: 8em;
 		height: 8em;
-		flex-shrink: 0;
 	}
 	.card-short__txt{
-		flex-direction: row; 
-		flex-grow:1;
-		column-gap: 1.2em;
+		flex-direction: row;
 		align-items: center;
-		.txt-14{flex:1;}
+		justify-content: flex-start;
+		column-gap: 1.25em;
+		p{
+			min-height: unset;
+			max-height: unset;
+			
+		}
+		.price-box, .card-short__txt .card-btn{
+			padding-inline: 1.75em;
+			
+		}
 	}
-	.price-box{
-		margin: 0;
-		flex-shrink: 0;
-		cursor:pointer;
-		padding-inline: 20px;
-		height: 48px;
-		border-radius: 50px;
-		flex-shrink: 0;
+}
+.card-short.card-vertical,.card-short.card-row{
+	.old-price, .new-price, .card-btn, p{
 		font-size: 16px;
-		line-height: 150%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border:1px solid var(--primary);
-		width: fit-content;
-		margin-left: auto;
-		margin-right: auto;
-		
-		@media (min-width: 768px) and (max-width: 1364px) {
-			padding-inline: remy(20);
-			height: remy(48);
+		@media (max-width: 1364px) {
 			font-size: remy(16);
+		}
+		@media (max-width: 767px) {
+			font-size:16px;
 		}
 	}
 }
