@@ -443,7 +443,7 @@
 .card-short{
 	display: flex;
 	align-items: center;
-	column-gap:4px;
+	column-gap:10px;
 	border: 1px solid var(--secondary-1);
 	border-radius: 24px;
 	padding: 10px;
@@ -500,12 +500,12 @@
 		
 		.card-btn, .price-box{margin: 0; padding-inline: 1.73em;}
 		.price-box{font-size: 1em;}
-		.card-btn{font-size: 1.6em;}
+		.card-btn{font-size: 1em;padding-inline: 1.25em;}
 		.card-short__txt{column-gap: 1.45em;font-size: 1.6em;}
 		.price-box>*{font-size: 1em;}
 	}
 	@media (min-width: 768px) and (max-width: 1364px) {
-		column-gap:remy(4);
+		column-gap:remy(10);
 		border-radius: remy(24);
 		padding: remy(10);
 		padding-right: remy(20);
