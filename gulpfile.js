@@ -3,7 +3,6 @@ const browserSync = require("browser-sync").create();
 const watch = require("gulp-watch");
 const sass = require("gulp-sass")(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
-const sourcemaps = require("gulp-sourcemaps");
 const notify = require("gulp-notify");
 const plumber = require("gulp-plumber");
 const pug = require("gulp-pug");
@@ -13,13 +12,13 @@ const formatHtml = require('gulp-format-html');
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const ttf2woff2 = require('gulp-ttf2woff2');
-const cached = require("gulp-cached");
+const newer = require('gulp-newer'); // Для отслеживания новых файлов
 
-// Таск для компиляции PUG в HTML (Пересобираем только измененные файлы)
+// Таск для компиляции PUG в HTML
 gulp.task("pug", function () {
     return gulp
         .src("./src/pug/pages/**/*.pug")
-        .pipe(cached('pug')) // Кешируем файлы, чтобы не пересобирать всё
+        .pipe(newer("./build/")) // Проверяем, есть ли файл в build, если нет — пересобираем
         .pipe(
             plumber({
                 errorHandler: notify.onError(function (err) {
@@ -39,7 +38,7 @@ gulp.task("pug", function () {
 gulp.task("pugUi", function () {
     return gulp
         .src("./src/pug/ui/**/*.pug")
-        .pipe(cached('pugUi')) // Кешируем файлы
+        .pipe(newer("./build/ui/"))
         .pipe(
             plumber({
                 errorHandler: notify.onError(function (err) {
@@ -56,7 +55,7 @@ gulp.task("pugUi", function () {
         .pipe(browserSync.stream());
 });
 
-// Таск для компиляции SCSS в CSS
+// Таск для компиляции SCSS в CSS (без sourcemaps)
 gulp.task("scss", function () {
     return gulp
         .src("./src/scss/main.scss")
@@ -71,7 +70,6 @@ gulp.task("scss", function () {
                 })
             })
         )
-        .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'expanded' }))
         .pipe(
             autoprefixer({
@@ -79,7 +77,6 @@ gulp.task("scss", function () {
             })
         )
         .pipe(gcmq())
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest("./build/css/"))
         .pipe(browserSync.stream());
 });
@@ -136,17 +133,15 @@ gulp.task("server", function () {
 
 // Слежение за изменениями
 gulp.task("watch", function () {
-    // Следим за изменениями в SCSS
+    // Следим за SCSS
     watch("./src/scss/**/*.scss", gulp.series("scss"));
 
-    // Следим за изменениями в PUG (оптимизировано)
+    // Следим за PUG, включая новые файлы
     watch("./src/pug/pages/**/*.pug", gulp.series("pug"));
     watch("./src/pug/ui/**/*.pug", gulp.series("pugUi"));
 
-    // Следим за изменениями в картинках и копируем
+    // Следим за изображениями, JS, видео, шрифтами, библиотеками
     watch("./src/img/**/*.*", gulp.series("copy:img"));
-
-    // Следим за изменениями в JS, видео, шрифтах, библиотеках
     watch("./src/js/**/*.*", gulp.series("copy:js"));
     watch("./src/video/**/*.*", gulp.series("copy:video"));
     watch("./src/fonts/**/*.*", gulp.series("copy:fonts"));
