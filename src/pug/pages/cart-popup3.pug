@@ -1,15 +1,16 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_header-cart-popup
 	include ../sections/_promo-slider
 	main.main
 		
 	
 	//FOOTER
 	include ../sections/_footer
-	//popup-basket
-	.popup-basket
+	//popup-basket отображается за счет класса Visible. Изначально этот класс надо удалить. Он добавляется по клику на компонет с data-btn ="basket-popup" (кнопка корзины в шапке) 
+	
+	.popup-basket.visible(data-modal="basket-popup")
 		button.round-close
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
@@ -46,7 +47,7 @@ block content
 			
 			//Reccomend слайдер
 			.popup-reccomend
-				.h4-bold Рекомендуем к вашему заказу
+				.h4-bold.mb-20 Рекомендуем к вашему заказу
 				.popup-swiper.swiper
 					.swiper-wrapper
 						.swiper-slide

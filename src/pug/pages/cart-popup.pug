@@ -8,8 +8,8 @@ block content
 	
 	//FOOTER
 	include ../sections/_footer
-	//popup-basket
-	.popup-basket(data-modal="basket-popup")
+	//popup-basket отображается за счет класса Visible. Изначально этот класс надо удалить. Он добавляется по клику на компонет с data-btn ="basket-popup" (кнопка корзины в шапке) 
+	.popup-basket.visible(data-modal="basket-popup")
 		button.round-close(data-close)
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
@@ -44,7 +44,7 @@ block content
 				+basket-card-popup
 
 			.popup-reccomend
-				.h4-bold Напитки к вашему заказу:
+				.h4-bold.mb-20 Напитки к вашему заказу:
 				.grid-three-columns.gap-10
 					+card-short-vertical('juice', 'Пепси')
 					+card-short-vertical('juice2', 'Фанта')

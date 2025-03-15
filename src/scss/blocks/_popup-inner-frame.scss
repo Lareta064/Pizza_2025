@@ -1,16 +1,11 @@
 @use "../base/var" as *;
 *[data-modal]{
-	display: none;
-	transition: .3s; 
-}
-*[data-modal].visible{
-	display: flex;
-}
-.visible-right[data-modal]{
-	display: flex;
 	transform: translateX(110%);
-	&.visible{transform: translateX(0);}
+	transition: .3s; display: flex;
 }
+*[data-modal].visible{transform: translateX(0);}
+	
+
 .popup-inner-frame{
 	position: absolute;
 	bottom: 0;
@@ -21,10 +16,43 @@
 	border: 1px solid var(--secondary-1);
 	border-radius: 2.4em 2.4em 0 0;
 	padding: 6em 3em;
+	padding-right: 1em;
+	
 	z-index:5;
 	width: 52.5em;
+	
+	.round-close{
+		position: absolute;
+		z-index: 2;
+		right: 1.7em;
+		top:1.7em;
+	}
+	svg{color: var(--primary)}
+	.scroll-y{
+		max-height: calc(80vh);
+		padding-right: 1em;
+		&>*{padding-right: 2em; }
+	}
+	@media (max-width: 767px) {
+	  padding: 40px 10px 60px;
+	  width: 360px;
+	  .round-close{
+		top: 10px;
+		left: 10px;
+		right:0;
+		position: absolute;
+		svg{color: var(--white)}
+	  }
+	  .title-24{text-align: center; max-width: 170px; margin: 0 auto;}
+	  .scroll-y{
+		
+		padding-right: 0;
+		&>*{padding-right: 0}
+	}
+	}
 }
+.popup-inner-frame.visible[data-modal]{display: block;}
 .visible-down[data-modal]{
-	transform: translateY(-110%);
+	transform: translateY(110%);
 	&.visible{transform: translateY(0);}
 }

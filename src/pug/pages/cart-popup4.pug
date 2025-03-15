@@ -7,8 +7,9 @@ block content
 
 	//FOOTER
 	include ../sections/_footer
-	//popup-basket
-	.popup-basket.visible-right(data-modal="basket-popup")
+	//popup-basket отображается за счет класса Visible. Изначально этот класс надо удалить. Он добавляется по клику на компонет с data-btn ="basket-popup" (кнопка корзины в шапке) 
+	
+	.popup-basket.visible(data-modal="basket-popup")
 		button.round-close(data-close)
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
@@ -42,7 +43,6 @@ block content
 				+basket-card-combo
 				+basket-card-popup
 
-			.h4-bold(data-btn="inner-popup") Выбрать напитки к вашему заказу  
 			//FOOTER
 			.basket-footer.basket-footer--popup
 				//TOTAL SUMM
@@ -61,31 +61,31 @@ block content
 		
 			
 		//popUp поверх корзины. Отображается за счет добавления класса visible. Должно быть внутри класса .popup-basket, так как размещается абсолютом относительно него. 
-		.popup-inner-frame.visible-down(data-modal="inner-popup")
-			button.round-close
-				svg.svg-cross(style="color: white;")
+		.popup-inner-frame.visible-down.visible(data-modal="inner-popup")
+			button.round-close(data-close)
+				svg.svg-cross
 					use(href='./img/sprite.svg#svg-cross')
-			.popup-reccomend
-				.h4-bold Напитки к вашему заказу:
+			.title-24.mb-20 Напитки к&nbsp;вашему заказу:
+			.scroll-y
 				.column-gap-10
 					.card-short.card-row
 						.card-short__img
-							img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+							img(src="./img/goods/juice.webp", srcset="./img/goods/juice@2x.webp 2x" width="80" height="80" alt="img")
 						.card-short__txt
 							p.txt-14 Напитки
 							.price-box от 120&#8381;
 					
 					.card-short.card-row
 						.card-short__img
-							img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+							img(src="./img/goods/souse2.webp", srcset="./img/goods/souse2@2x.webp 2x" width="80" height="80" alt="img")
 						.card-short__txt
-							p.txt-14 Напитки
+							p.txt-14 Соусы
 							.price-box от 120&#8381;
 					.card-short.card-row
 						.card-short__img
-							img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
+							img(src="./img/goods/dessert3.webp", srcset="./img/goods/dessert3@2x.webp 2x" width="80" height="80" alt="img")
 						.card-short__txt
-							p.txt-14 Напитки
+							p.txt-14 Десерты
 							.price-box от 120&#8381;
 
 block variables
