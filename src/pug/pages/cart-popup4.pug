@@ -9,8 +9,8 @@ block content
 	//FOOTER
 	include ../sections/_footer
 	//popup-basket
-	.popup-basket
-		button.round-close
+	.popup-basket(data-modal="basket-popup")
+		button.round-close(data-close)
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
 
@@ -43,6 +43,29 @@ block content
 				+basket-card-combo
 				+basket-card-popup
 
+			.h4-bold(data-btn="inner-popup") Выбрать напитки к вашему заказу  
+			//FOOTER
+			.basket-footer.basket-footer--popup
+				//TOTAL SUMM
+				.total
+					.total__txt Итого: 
+					.total__group
+						.total__count 4 шт. на сумму
+						.price-box 1675 #[small руб.]
+				//BUTTONS
+				.buttons-row
+					a(href="order-page.html").btn-accent Перейти к оформлению
+					button.btn-light
+						span Очистить корзину
+						svg.svg-delete(style="width:1.25em; height: 1.25em;")
+							use(href='./img/sprite.svg#svg-delete')
+		
+			
+		//popUp поверх корзины. Отображается за счет добавления класса visible. Должно быть внутри класса .popup-basket, так как размещается абсолютом относительно него. 
+		.popup-inner-frame(data-modal="inner-popup")
+			button.round-close
+				svg.svg-cross(style="color: white;")
+					use(href='./img/sprite.svg#svg-cross')
 			.popup-reccomend
 				.h4-bold Напитки к вашему заказу:
 				.column-gap-10
@@ -65,24 +88,6 @@ block content
 						.card-short__txt
 							p.txt-14 Напитки
 							.price-box от 120&#8381;
-			//FOOTER
-			.basket-footer.basket-footer--popup
-				//TOTAL SUMM
-				.total
-					.total__txt Итого: 
-					.total__group
-						.total__count 4 шт. на сумму
-						.price-box 1675 #[small руб.]
-				//BUTTONS
-				.buttons-row
-					a(href="order-page.html").btn-accent Перейти к оформлению
-					button.btn-light
-						span Очистить корзину
-						svg.svg-delete(style="width:1.25em; height: 1.25em;")
-							use(href='./img/sprite.svg#svg-delete')
-
-				
-
 
 block variables
 	-var bodyCl = 'lock'

@@ -1,0 +1,94 @@
+//MOBILE HEADER TOP
+.header-mobile
+	.container
+		a(href="index.html").logo
+			img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='232' height='94' loading='lazy' alt='img')
+		+social
+
+//HEADER
+header.header#header-fixed
+	.container
+		.header-row
+			a(href="index.html").logo
+				img(src='./img/logo.webp', srcset='./img/logo@2x.webp 2x' width='232' height='94' loading='lazy' alt='img')
+			.header-content
+				//top row
+				.header-top
+					.schedule-block
+						p
+							strong Прием заказов:
+						p  СР, ЧТ, ВС с 15:00 - 00:00; ПТ, СБ с 15:00 - 02:00; ПН, ВТ - 
+							small выходные дни
+					+social
+				
+					.phone-list
+						a(href="tel:+79055555555").phone-item +7 (905) 555-55-55
+						.phone-list__drop
+							span.carret-down
+							.phone-item__box
+								a(href="tel:+79055555555").phone-item +7 (905) 555-55-55
+				
+				//bottom row
+				.header-bottom
+					.header-navigation#moble-menu
+						.header-menu
+							.header-menu__list
+								ul
+									li.menu-item.active
+										a.menu-link(href="#!") Главная
+									li.menu-item.has-drop#has-drop
+										a.menu-link(href="#!") Меню
+										//иконка галочка на моб версии
+										svg.svg-carret
+											use(href='./img/sprite.svg#svg-carret')
+										.sub-menu#drop-menu
+											ul
+												li.sub-menu-item
+													a(href="").sub-menu-link Пицца
+												li.sub-menu-item
+													a(href="").sub-menu-link Роллы
+												li.sub-menu-item
+													a(href="").sub-menu-link Блюда
+												li.sub-menu-item
+													a(href="").sub-menu-link Салаты
+												li.sub-menu-item
+													a(href="").sub-menu-link Закуски
+												li.sub-menu-item
+													a(href="").sub-menu-link Напитки
+												li.sub-menu-item
+													a(href="").sub-menu-link Наборы
+									
+									li.menu-item
+										a.menu-link(href="delivery.html") Доставка и оплата
+									li.menu-item
+										a.menu-link(href="news.html") Новости и акции
+									li.menu-item
+										a.menu-link(href="about.html") О нас
+									li.menu-item
+										a.menu-link(href="contacts.html") Контакты
+									
+							
+							.contacts-phones
+								a(href="tel:+79055555555").phone-item +7 (905) 555-55-55
+								a(href="tel:+79055555555").phone-item +7 (905) 555-55-55
+							
+							.schedule-block
+								p
+									strong Прием заказов:
+								p  СР, ЧТ, ВС с 15:00 - 00:00; ПТ, СБ с 15:00 - 02:00; ПН, ВТ - 
+									small выходные дни
+
+					.header-profile
+						.profile-status
+							//.signin-btn имеет фоновую картинку иконку входа, что бы скрыть добавляем класс d-none
+							.signin-btn.d-none
+							
+							//.lognin-btn   автатар пользователя
+							.lognin-btn
+								img(src='./img/avatar2.webp', srcset='./img/avatar2@2x.webp 2x' width='24' height='24' loading='lazy' alt='img')
+						button(data-modal="basket-popup").basket-btn
+							.count-notify 5
+					
+					//MOBILE MEMU TOGGLE
+					button.menu-button#menu-toggle
+						span

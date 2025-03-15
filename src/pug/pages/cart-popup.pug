@@ -1,7 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_header-cart-popup
 	include ../sections/_promo-slider
 	main.main
 		
@@ -9,8 +9,8 @@ block content
 	//FOOTER
 	include ../sections/_footer
 	//popup-basket
-	.popup-basket
-		button.round-close
+	.popup-basket(data-modal="basket-popup")
+		button.round-close(data-close)
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
 

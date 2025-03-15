@@ -64,49 +64,56 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-    // FANCY POPUP
-    Fancybox.bind("[data-fancybox]", {
-      // Your custom options
-    });
-
-    // modal с атрибутом [data-modal]
+    
+    /* =============== modal с атрибутом [data-modal] ===============*/ 
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
-
-   
+    const modalFramesClose = document.querySelectorAll('[data-close]');
     if( modalFrames.length > 0){
-      const modalFramesClose = document.querySelectorAll('[data-close]');
+    //  const modalFramesClose = document.querySelectorAll('[data-close]');
 
     for(let item of modalOpen){
       item.addEventListener('click', function(e){
-        // for(let item of  modalFrames){
-        //   item.classList.remove('visible');
-        //   bodyEl.classList.remove('lock');
-        // }
+        for(let item of  modalFrames){
+          item.classList.remove('visible');
+          bodyEl.classList.remove('lock');
+        }
         e.preventDefault();
         const itemAttr = item.getAttribute('data-btn');
 
         for(let frame of modalFrames){
           const frameAttr =frame.getAttribute('data-modal');	
           if(frameAttr == itemAttr){
-           
           frame.classList.add('visible');
           bodyEl.classList.add('lock');
           }
         }
       });
     }
-   
-      if(modalFramesClose){
-        modalFramesClose.forEach((closeItem)=>{
-          closeItem.addEventListener('click', ()=>{
-              bodyEl.classList.remove('lock');
-              closeItem.closest('.visible').classList.remove('visible')
-          });
+    
+    /*==  закрыть модалки  frame-modal по клику на крестик ======*/
+    if(modalFramesClose){
+    	for(let item of modalFramesClose){
+    		item.addEventListener('click', function(e){
+    		e.preventDefault();
+        e.stopPropogation();
+    		item.closest('[data-modal]').classList.remove('visible');
+    		bodyEl.classList.remove('lock');
+    		});
+    	}
+    }
+    
+    /*=============== закрыть модалки по клику вне ===============*/
+      for(let frame of modalFrames){
+        frame.addEventListener('click', function(e){
+          if(e.target === e.currentTarget){
+            this.classList.remove(`visible`);
+            bodyEl.classList.remove('lock');
+          }
         });
-        
       }
     }
+ 
 
     //ACORDION
     $(function() {
@@ -131,68 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
       
       });
     
-    //NEWS SLIDER
-    let newsSlider = new Swiper('.news-slider', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-      speed:1000,
-      navigation: {
-        nextEl: ".news-slider__nav .swiper-button-next",
-        prevEl: ".news-slider__nav .swiper-button-prev",
-      },
-      breakpoints: {
-          320: {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 10,
-          },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1365: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          }
-        },
-    });
-
-    //reccomend slider
-    let reccomendSlider = new Swiper('.reccomend-slider', {
-      slidesPerView: 4,
-      spaceBetween: 30,
-      speed:1000,
-      navigation: {
-        nextEl: ".reccomend-slider__nav .swiper-button-next",
-        prevEl: ".reccomend-slider__nav .swiper-button-prev",
-      },
-      breakpoints: {
-          320: {
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-          },
-          1365: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          }
-        },
-    });
-    let popUpSlider = new Swiper('.popup-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 10,
-      speed:700,
-    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -282,61 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-  // fotorama
-    var swiperNews = new Swiper(".mySwiper", {
-      spaceBetween: 20,
-      slidesPerView: 5,
-      freeMode: true,
-      speed:1000,
-      watchSlidesProgress: true,
-     navigation: {
-        nextEl: ".mySwiper-thumb__nav .swiper-button-next",
-        prevEl: ".mySwiper-thumb__nav .swiper-button-prev",
-      },
-      
-      
-    });
-    var swiper2 = new Swiper(".mySwiper-news", {
-      spaceBetween: 10,
-      speed:1000,
-      navigation: {
-        nextEl: ".mySwiper__nav .swiper-button-next",
-        prevEl: ".mySwiper__nav .swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiperNews,
-      },
-      
-    });
-
-    /** */
-    
-    var newsTeamSlider = new Swiper(".news-team-slider", {
-      spaceBetween: 30,
-      slidesPerView: 3,
-      navigation: {
-        nextEl: ".news-slider__nav .swiper-button-next",
-        prevEl: ".news-slider__nav .swiper-button-prev",
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 'auto',
-          spaceBetween: 10,
-        },
-        768:{
-          slidesPerView: 3,
-          spaceBetween: 10,
-        },
-        1200:{
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        1365:{
-          slidesPerView: 3,
-          spaceBetween: 30,
-        }
-      }
-    });
+  
 });
 document.addEventListener('DOMContentLoaded', function() {
   const tabsContainers = document.querySelectorAll('.tabs-container');

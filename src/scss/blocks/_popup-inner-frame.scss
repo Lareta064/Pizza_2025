@@ -1,0 +1,15 @@
+@use "../base/var" as *;
+.popup-inner-frame{
+	position: absolute;
+	bottom: 0;
+	
+	right: 0;
+    font-size: 10px;
+	box-shadow: 0 -4px 40px 0 rgba(0, 0, 0, 0.08);
+	background: var(--white);
+	border: 1px solid var(--secondary-1);
+	border-radius: 2.4em 2.4em 0 0;
+	padding: 6em 3em;
+	z-index:5;
+	width: 52.5em;
+}
