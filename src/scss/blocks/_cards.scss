@@ -494,11 +494,22 @@
 		}
 
 	}
+	&.price-border{
+		font-size: 10px!important;
+		column-gap:1em;
+		
+		.card-btn, .price-box{margin: 0; padding-inline: 1.73em;}
+		.price-box{font-size: 1em;}
+		.card-btn{font-size: 1.6em;}
+		.card-short__txt{column-gap: 1.45em;font-size: 1.6em;}
+		.price-box>*{font-size: 1em;}
+	}
 	@media (min-width: 768px) and (max-width: 1364px) {
 		column-gap:remy(4);
 		border-radius: remy(24);
 		padding: remy(10);
 		padding-right: remy(20);
+		&.price-border{font-size: remy(10);}
 		&__img{
 			width: remy(104);
 			height: remy(104);
@@ -582,6 +593,17 @@
 		.price-box, .card-short__txt .card-btn{
 			padding-inline: 1.75em;
 			
+		}
+	}
+}
+.card-short.card-vertical,.card-short.card-row{
+	.old-price, .new-price, .card-btn, p{
+		font-size: 16px;
+		@media (max-width: 1364px) {
+			font-size: remy(16);
+		}
+		@media (max-width: 767px) {
+			font-size:16px;
 		}
 	}
 }
