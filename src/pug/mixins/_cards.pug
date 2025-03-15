@@ -412,13 +412,11 @@ mixin basket-card-combo
 					use(href='./img/sprite.svg#svg-delete')
 
 
-mixin miniCard
-	.card-short
+mixin card-short-vertical(img, title)
+	.card-short.card-vertical
 		.card-short__img
-			img(src='../img/goods/pizza2-h370.webp', srcset='../img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+			img(src='./img/goods/'+img+'.webp', srcset='./img/goods/'+img+'@2x.webp 2x' width='120' height='120' loading='lazy' alt='img')
 		.card-short__txt
-			p.txt-14 Пепперони фреш
+			p.txt-16 !{title}
 			.price-box
 				span.new-price от 450&#8381;
-
-	.add-product.price-border

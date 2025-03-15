@@ -96,25 +96,9 @@ section.basket-page
 				.h5 Напитки
 			//обертка для компонентов в 6 колонок
 			.grid-six-columns
-				.add-product.price-border
-					.card-img
-						img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
-					.card-txt
-						p Пепси
-						.card-price 120#[span &#8381;]
-				
-				.add-product.price-border
-					.card-img
-						img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
-					.card-txt
-						p Пепси
-						.card-price 120#[span &#8381;]
-				.add-product.price-border
-					.card-img
-						img(src="../img/goods/juice.webp", srcset="../img/goods/juice@2x.webp 2x" width="95" height="62" alt="img")
-					.card-txt
-						p Пепси
-						.card-price 120#[span &#8381;]
+				+card-short-vertical('juice', 'Пепси')
+				+card-short-vertical('juice2', 'Фанта')
+				+card-short-vertical('juice3', 'Клюквенный морс')
 		//ИТОГОВАЯ СТРОКА
 		.basket-footer
 			//BUTTONS
