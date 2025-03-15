@@ -558,8 +558,28 @@
 		align-items: center;
 		.txt-14{flex:1;}
 	}
-	.card-btn{
+	.price-box{
 		margin: 0;
 		flex-shrink: 0;
+		cursor:pointer;
+		padding-inline: 20px;
+		height: 48px;
+		border-radius: 50px;
+		flex-shrink: 0;
+		font-size: 16px;
+		line-height: 150%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border:1px solid var(--primary);
+		width: fit-content;
+		margin-left: auto;
+		margin-right: auto;
+		
+		@media (min-width: 768px) and (max-width: 1364px) {
+			padding-inline: remy(20);
+			height: remy(48);
+			font-size: remy(16);
+		}
 	}
 }
