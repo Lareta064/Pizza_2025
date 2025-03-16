@@ -214,6 +214,12 @@
 	}
 	&>*{width: max-content; flex-shrink: 0;}
 }
+.switch-label input:checked + span.switch-label-item{
+	border: 1px solid var(--accent-color-2);
+	svg{
+		color: var(--accent-color-2);
+	}
+}
 .payment-types.switch-list{
 	display: flex;
 	flex-direction: column;
