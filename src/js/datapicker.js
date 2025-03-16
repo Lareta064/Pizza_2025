@@ -24,24 +24,29 @@ document.addEventListener("DOMContentLoaded", function () {
 			minDate: 0,
 			showButtonPanel: true, // Включает панель с кнопками
 			currentText: "Сегодня", // Кнопка "Сегодня"
-			prevText: "555",
-			nextText: "555",
+			prevText: "«",
+			nextText: "»",
 			showMonthAfterYear: false,
 			beforeShow: function(input, inst) {
-				setTimeout(function() {
-					var buttonPane = $(inst.dpDiv).find(".ui-datepicker-buttonpane");
-					if (buttonPane.find(".ui-datepicker-clear").length === 0) {
-						$("<button>", {
-							text: "Удалить",
-							class: "ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all",
-							click: function() {
-								$("#datepicker").val(""); // Очищает input
-								$("#datepicker").datepicker("hide"); // Закрывает календарь
-							}
-						}).appendTo(buttonPane);
-					}
-				}, 1);
-			}
+                setTimeout(function() {
+                    var buttonPane = $(inst.dpDiv).find(".ui-datepicker-buttonpane");
+                    if (buttonPane.find(".ui-datepicker-clear").length === 0) {
+                        $("<button>", {
+                            text: "Удалить",
+                            class: "ui-datepicker-clear ui-state-default ui-priority-primary ui-corner-all",
+                            click: function() {
+                                $("#datepicker").val("");
+                                $("#datepicker").datepicker("hide");
+                            }
+                        }).appendTo(buttonPane);
+                    }
+                    // Добавляем обработчик для кнопки "Сегодня"
+                    $(".ui-datepicker-current").on("click", function() {
+                        let today = $.datepicker.formatDate('dd.mm.yy', new Date());
+                        $("#datepicker").val(today);
+                    });
+                }, 10);
+            }
 		});
 	});
 });
