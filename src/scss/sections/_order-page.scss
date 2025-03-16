@@ -7,7 +7,7 @@
 .order-form-body{
 	display: grid;
 	font-size: 10px;
-	grid-template-columns: 57em 1fr;
+	grid-template-columns:1fr 1fr;
 	column-gap:3em;
 	
 	.form-fields{
@@ -18,7 +18,7 @@
 	}
 	@media (max-width: 1364px) {
 		font-size: remy(10);
-		grid-template-columns: 47em 1fr;
+		grid-template-columns: .75fr 1.25fr;
 		.form-col{width: 100%;}
 	}
 	@media (max-width: 767px) {
@@ -33,7 +33,7 @@
     break-inside: avoid;
 	column-gap:6.5em;
 	.form-col{margin-bottom: 3.2em; }
-	@media (max-width: 1364px) {
+	@media (max-width: 1919px) {
 		column-gap:remy(30);
 	}
 	@media (max-width: 767px) {
@@ -80,7 +80,7 @@
 	margin-left: 1.6em;
 }
 .order-form{
-	.order-total-summ .total{
+	.order-total-offset-right .total{
 		margin-left:auto;
 		width: 570px;
 		@media (max-width: 1364px) {
@@ -97,15 +97,77 @@
 		right: 16px;
 	}
 }
+
 .order-form-footer{
+	// display: flex;
+	// flex-direction: column;
 	@media (max-width: 767px) {
 		.form-agree{margin-bottom: 20px;}
 	}
 }
-/**/
+/*order2*/
 .form-item-house.flex{
 	column-gap: 3em;
 	align-items: flex-end;
 	.form-item{flex:1;}
 	.relative-label{flex-shrink:0;}
+}
+.form-item-appartament{
+	column-gap:10px;
+	.form-item{flex:1;}
+}
+.form-agree-wrapper{
+   &>*+*{margin-top: 20px;}
+}
+.order-form-buttons{
+	gap:20px;
+	justify-content: space-between;
+	@media (max-width: 767px) {
+	flex-direction: column-reverse;
+	}
+}
+.note-box{
+	border: 1px solid var(--accent-color-2);
+	border-radius: 10px;
+	padding: 10px;
+	display: flex;
+	column-gap:10px;
+	background-color: #fff;
+}
+#delivery-courier-fields{
+	height: 0;
+	overflow: hidden;
+	transition: .3s; 
+	&.filds-visible{height: 130px;}
+}
+.order-product{
+	font-size: 16px;
+	padding: 1.25em;
+	background-color: #fff;
+	border: 1px solid var(--secondary-1);
+	border-radius: 20px;
+	padding: 20px;
+	.product-name{
+		font-family: var(--second-family);
+		font-weight: 700;
+		font-size: 1.5em;
+		line-height: 1.25;
+		flex:1;
+	}
+	.product-summ-group{
+		flex-shrink: 0;
+		display: flex;
+		column-gap:.65em
+	}
+   .product-summ{font-weight: 700}
+}
+.order-product__row{
+	display: flex;
+	justify-content: space-between;
+	column-gap: 1em;
+
+}
+.order-product__body{
+	font-size: 14px;
+	padding-top: 0.8em;
 }

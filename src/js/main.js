@@ -252,7 +252,25 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   }
-  
+   /*order-page 2 - delivery switch*/
+    /*DELIVERY HIDE FIELDS */
+    const deliverySwitch = document.querySelector('#switch-delivery');
+    if(deliverySwitch){
+      deliverySwitchLabels = deliverySwitch.querySelectorAll('.switch-label');
+      deliverySwitchLabels.forEach((swtch)=>{
+
+        swtch.addEventListener('click', ()=>{
+        
+          const thisInputRadio = swtch.querySelector('[type="radio"]');
+          const hideDeliveryFields = document.querySelector('#delivery-courier-fields');
+          if(swtch.classList.contains('delivery-courier')){
+            if(thisInputRadio.checked){hideDeliveryFields.classList.add('filds-visible')}
+          }else{
+            hideDeliveryFields.classList.remove('filds-visible')
+          }
+        });
+      });
+    }
 });
 document.addEventListener('DOMContentLoaded', function() {
   const tabsContainers = document.querySelectorAll('.tabs-container');

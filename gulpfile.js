@@ -1,6 +1,5 @@
-const gulp = require("gulp"); // Подключаем Gulp
+const gulp = require("gulp");
 const browserSync = require("browser-sync").create();
-const watch = require("gulp-watch");
 const sass = require("gulp-sass")(require('sass'));
 const autoprefixer = require("gulp-autoprefixer");
 const notify = require("gulp-notify");
@@ -13,151 +12,93 @@ const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
 const ttf2woff2 = require('gulp-ttf2woff2');
 
-// 🔥 **Таск для компиляции PUG (следит за всеми .pug-файлами)**
+// Очистка папки build
+gulp.task("clean:build", function () {
+    return del("./build");
+});
+
+// Компиляция PUG
 gulp.task("pug", function () {
     return gulp
-        .src("./src/pug/pages/**/*.pug") // Берем все страницы
-        .pipe(
-            plumber({
-                errorHandler: notify.onError(function (err) {
-                    return {
-                        title: "Pug",
-                        sound: false,
-                        message: err.message
-                    };
-                })
-            })
-        )
+        .src("./src/pug/pages/**/*.pug", { since: gulp.lastRun("pug") })
+        .pipe(plumber({ errorHandler: notify.onError({ title: "Pug", message: "<%= error.message %>" }) }))
         .pipe(pug({ pretty: '\t' }))
         .pipe(gulp.dest("./build/"))
         .pipe(browserSync.stream());
 });
 
-// 🔥 **Таск для UI-компонентов**
+// Компиляция PUG UI-компонентов
 gulp.task("pugUi", function () {
     return gulp
-        .src("./src/pug/ui/**/*.pug")
-        .pipe(
-            plumber({
-                errorHandler: notify.onError(function (err) {
-                    return {
-                        title: "Pug UI",
-                        sound: false,
-                        message: err.message
-                    };
-                })
-            })
-        )
+        .src("./src/pug/ui/**/*.pug", { since: gulp.lastRun("pugUi") })
+        .pipe(plumber({ errorHandler: notify.onError({ title: "Pug UI", message: "<%= error.message %>" }) }))
         .pipe(pug({ pretty: '\t' }))
         .pipe(gulp.dest("./build/ui/"))
         .pipe(browserSync.stream());
 });
 
-// 🔥 **SCSS-компиляция**
+// Компиляция SCSS
 gulp.task("scss", function () {
     return gulp
         .src("./src/scss/main.scss")
-        .pipe(
-            plumber({
-                errorHandler: notify.onError(function (err) {
-                    return {
-                        title: "Styles",
-                        sound: false,
-                        message: err.message
-                    };
-                })
-            })
-        )
-        .pipe(sass({ outputStyle: 'expanded' }))
-        .pipe(
-            autoprefixer({
-                overrideBrowserslist: ["last 4 versions"]
-            })
-        )
+        .pipe(plumber({ errorHandler: notify.onError({ title: "Styles", message: "<%= error.message %>" }) }))
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+        .pipe(autoprefixer({ overrideBrowserslist: ["last 4 versions"] }))
         .pipe(gcmq())
         .pipe(gulp.dest("./build/css/"))
         .pipe(browserSync.stream());
 });
 
-// 🔥 **Шрифты**
+// Шрифты
 gulp.task("ttf2woff2", function () {
-    return gulp.src(['./src/fonts/*.ttf'])
+    return gulp.src("./src/fonts/*.ttf")
         .pipe(ttf2woff2())
-        .pipe(gulp.dest('build/fonts/'));
+        .pipe(gulp.dest("build/fonts/"));
 });
 
-// 🔥 **Копирование изображений в webp**
+// Копирование изображений в webp
 gulp.task("copy:img", function () {
     return gulp.src("./src/img/**/*.*")
         .pipe(webp())
         .pipe(gulp.dest("./build/img/"));
 });
 
-// 🔥 **Копирование библиотек, JS, видео, шрифтов**
-gulp.task("copy:libs", function () {
-    return gulp.src("./src/libs/**/*.*").pipe(gulp.dest("./build/libs/"));
-});
-gulp.task("copy:js", function () {
-    return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
-});
-gulp.task("copy:video", function () {
-    return gulp.src("./src/video/**/*.*").pipe(gulp.dest("./build/video/"));
-});
-gulp.task("copy:fonts", function () {
-    return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./build/fonts/"));
-});
+// Копирование файлов
+gulp.task("copy:js", () => gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/")));
+gulp.task("copy:video", () => gulp.src("./src/video/**/*.*").pipe(gulp.dest("./build/video/")));
+gulp.task("copy:fonts", () => gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./build/fonts/")));
+gulp.task("copy:libs", () => gulp.src("./src/libs/**/*.*").pipe(gulp.dest("./build/libs/")));
 
-// 🔥 **Очистка папки build**
-gulp.task("clean:build", function () {
-    return del("./build");
-});
-
-// 🔥 **Форматирование HTML**
+// Форматирование HTML
 gulp.task("html:prettify", function () {
     return gulp
-        .src('build/**/*.html')
+        .src("build/**/*.html")
         .pipe(formatHtml())
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest("./build/"));
 });
 
-// 🔥 **Запуск локального сервера**
+// Запуск локального сервера
 gulp.task("server", function () {
     browserSync.init({
-        server: {
-            baseDir: "./build/"
-        }
+        server: { baseDir: "./build/" }
     });
 });
 
-// 🔥 **Правильное отслеживание всех PUG-файлов**
+// Наблюдение за изменениями
 gulp.task("watch", function () {
-    // 🔥 **Следим за SCSS**
-    gulp.watch("./src/scss/**/*.scss", gulp.series("scss"));
-
-    // 🔥 **Следим за изменениями в PUG-файлах (включая инклюды)**
-    gulp.watch("./src/pug/**/*.pug", gulp.series("pug"));
-
-    // 🔥 **Следим за UI-компонентами**
-    gulp.watch("./src/pug/ui/**/*.pug", gulp.series("pugUi"));
-
-    // 🔥 **Следим за изображениями, JS, видео, шрифтами**
-    gulp.watch("./src/img/**/*.*", gulp.series("copy:img"));
-    gulp.watch("./src/js/**/*.*", gulp.series("copy:js"));
-    gulp.watch("./src/video/**/*.*", gulp.series("copy:video"));
-    gulp.watch("./src/fonts/**/*.*", gulp.series("copy:fonts"));
-    gulp.watch("./src/libs/**/*.*", gulp.series("copy:libs"));
-
-    // 🔥 **Следим за файлами в `build` и перезагружаем браузер**
-    gulp.watch(["./build/**/*.*"]).on("change", browserSync.reload);
+    gulp.watch("./src/scss/**/*.scss", gulp.series("scss")); // SCSS
+    gulp.watch("./src/pug/**/*.pug", gulp.series("pug")); // Pug
+    gulp.watch("./src/pug/ui/**/*.pug", gulp.series("pugUi")); // UI-компоненты
+    gulp.watch("./src/js/**/*.js", gulp.series("copy:js", browserSync.reload)); // JS с перезагрузкой
+    gulp.watch("./src/img/**/*.*", gulp.series("copy:img")); // Изображения
+    gulp.watch("./src/video/**/*.*", gulp.series("copy:video")); // Видео
+    gulp.watch("./src/fonts/**/*.*", gulp.series("copy:fonts")); // Шрифты
 });
 
-// 🔥 **Запуск всей сборки**
-gulp.task(
-    "default",
-    gulp.series(
-        "clean:build",
-        gulp.parallel("scss", "ttf2woff2", "pug", "pugUi", "copy:img", "copy:js", "copy:libs", "copy:video", "copy:fonts"),
-        "html:prettify",
-        gulp.parallel("server", "watch")
-    )
-);
+// Запуск сборки
+gulp.task("default", gulp.series(
+    "clean:build", // Очистка перед стартом
+    gulp.parallel("scss", "ttf2woff2", "pug", "pugUi", "copy:img", "copy:js", "copy:libs", "copy:video", "copy:fonts"),
+    "html:prettify",
+    gulp.parallel("server", "watch")
+));
