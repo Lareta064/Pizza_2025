@@ -23,7 +23,7 @@
 	position: relative;
 	cursor: pointer;
 	span{user-select: none;}
-	input{width:0.01px; height: 0.01px; position: absolute; top:0; left:0; }
+	input[type="radio"], input[type="checkbox"]{width:0.01px; height: 0.01px; position: absolute; top:0; left:0; }
 	.switch-btn{
 		display: flex;
 		justify-content: center;
@@ -34,7 +34,7 @@
 		line-height: 150%;
 		border-radius: 100px;
 	}
-	input:checked + span.switch-btn{
+	input[type="radio"]:checked + span.switch-btn,inpu[type="checkbox"]t:checked + span.switch-btn {
 		background-color: #fff;
 		box-shadow: 0 12px 38px 0 rgba(0, 0, 0, 0.08);
 		
