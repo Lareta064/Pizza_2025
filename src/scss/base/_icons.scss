@@ -194,3 +194,23 @@ span.check-icon{
 	 background-color: var(--primary);
 	}
 }
+.svg-circle-check{
+	width: 14px;
+	height: 14px;
+	flex-shrink: 0;
+	display: inline-block;
+	color: var(--accent-color-2);
+	vertical-align: middle;
+}
+.svg-arr-left{
+	width: 20px;
+	height: 16px;
+	flex-shrink: 0;
+	display: inline-block;
+	color: var(--accent-color-2);
+	vertical-align: middle;
+	@media (min-width: 768px) and (max-width: 1364px){
+		width: remy(20);
+	   height: remy(16);
+	}
+}

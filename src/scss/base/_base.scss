@@ -245,6 +245,16 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 }
 .mb-20{
 	margin-bottom: 20px!important;
+	
+}
+.mb-40{
+	margin-bottom: 40px!important;
+	@media (max-width: 1364px) {
+		margin-bottom: remy(40)!important;
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 20px!important;;
+	}
 }
 .main{
 	background-color: #fff;

@@ -4,7 +4,7 @@
 	flex-direction: column;
 	row-gap: 20px;
 }
-.order-form{
+.order-form-body{
 	display: grid;
 	font-size: 10px;
 	grid-template-columns: 57em 1fr;
@@ -16,6 +16,12 @@
 		row-gap:3em;
 		.form-item +.form-item {margin-top: 0;}
 	}
+	@media (max-width: 1364px) {
+		font-size: remy(10);
+	}
+	@media (max-width: 767px) {
+		font-size: 10px;
+	}
 }
 .order-form-group{
 	column-count: 2;
@@ -25,8 +31,46 @@
 	.form-col{margin-bottom: 3.2em; }
 	
 }
-.form-delivery-block,.form-payment-block{width: 235px;}
+
+.form-delivery-block,.form-payment-block{width: 23.5em;}
 .form-time-block{
-	width: 270px;
+	width: 27em;
 	.label-text{flex-grow: 1;}
+	.form-time-radio{
+		.form-item{
+			margin-top: 6px;
+			margin-left: 24px;
+			
+		}
+	}
+}
+.form-promo-row.flex{
+	column-gap: .8em;
+	&+.txt-12{margin-top: .5em;}
+}
+.form-subscribe.form-col{
+	row-gap:.6em;
+}
+.form-subscribe-group.flex{
+	column-gap:.5em;
+	.txt-12 {margin-right: 1em; white-space: nowrap;}
+	.relative-label +.relative-label{margin-left: .6em;
+	}
+}
+.form-subscribe-group.flex + .txt-12{
+	margin-left: 1.6em;
+}
+.order-form{
+	.order-total-summ .total{
+		margin-left:auto;
+		width: 570px;
+		@media (max-width: 1364px) {
+			width: remy(570);
+		}
+		
+	}
+	.tooltip-wrapper{
+		top: 10px;
+		right: 16px;
+	}
 }
