@@ -129,23 +129,36 @@ html(lang="ru")
 					hr
 					label.switch-label
 						input(type="radio" name="pay_type")
-						span.payment-item
-							.payment-icon
+						span.switch-label-item
+							.switch-label__icon
 								svg.svg-wallet
 									use(href='../img/sprite.svg#svg-wallet')
-							p.txt-12 СБП
-							.payment_img
+							.switch-label__txt
+								p.txt-12 СБП
+							.switch-label__img
 								img(src="../img/payment/pay5.webp", width="40" alt="img")
 					pre.
 						label.switch-label
 							input(type="radio" name="pay_type")
-							span.payment-item
-								.payment-icon
+							span.switch-label-item
+								.switch-label__icon
 									svg.svg-wallet
-										use(href='./img/sprite.svg#svg-wallet')
+										use(href='../img/sprite.svg#svg-wallet')
 								p.txt-12 СБП
-								.payment_img
-									img(src="./img/payment/pay5.webp", width="40" alt="img")
+								.switch-label__img
+									img(src="../img/payment/pay5.webp", width="40" alt="img")
+					
+					hr
+					label.switch-label
+						input(type="radio" name="address_li")
+						span.switch-label-item
+							.switch-label__txt__icon
+								svg.svg-pin
+									use(href='../img/sprite.svg#svg-pin')
+							.switch-label__txt
+								p Самовывоз (Смоленский Пассаж) скидка 10%
+								p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
+							
 					
 					//ORDER CARD
 					.order-product
