@@ -24,6 +24,7 @@
 	@media (max-width: 767px) {
 		font-size: 10px;
 		grid-template-columns: 1fr;
+		row-gap: 20px;
 	}
 }
 .order-form-group{
@@ -37,6 +38,7 @@
 	}
 	@media (max-width: 767px) {
 		column-count:1;
+		.form-col{margin-bottom: 2em; }
 	}
 }
 
@@ -84,10 +86,17 @@
 		@media (max-width: 1364px) {
 			width: remy(670);
 		}
+		@media (max-width: 767px) {
+		width: 100%;
+		margin-left:0;
+		}
 		
 	}
 	.tooltip-wrapper{
 		top: 10px;
 		right: 16px;
 	}
+}
+.order-form-footer{
+	.form-agree{margin-bottom: 20px;}
 }

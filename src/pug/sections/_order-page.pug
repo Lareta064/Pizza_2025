@@ -40,15 +40,8 @@ section.order-page
 						
 						.form-item
 							textarea(placeholder="Комментарий к заказу" name="message")
-
-						
-						label.relative-label.form-agree
-							input(type="checkbox" name="chbx1")
-							span.fake-checkbox
-							.label-text
-								p Принимаю #[a(href="#!") условия обработки] персональных данных.
-								
 				
+				//RIGHT COLUMN
 				.order-form-group
 					.form-col.form-delivery-block
 						.h4-bold 2. Варианты доставки
@@ -156,19 +149,27 @@ section.order-page
 								input(type="checkbox" name="subscr_email")
 								span.fake-checkbox
 						p.txt-12.txt-s4 Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
-
-			.order-total-summ.mb-40
-				.total
-					.total__txt Итого: 
-					.total__group
-						.total__count 4 шт. на сумму
-						.price-box 1675 #[small руб.]
 			
-			//BUTTONS GROUP
-			.buttons-row
-				a(href="#!").btn-light
-					svg.svg-arr-left
-						use(href='./img/sprite.svg#svg-arr-left')
-					span Назад к заказам
+			//FORM FOOTER
+			.order-form-footer
+				.form-agree
+					label.relative-label
+						input(type="checkbox" name="chbx1")
+						span.fake-checkbox
+						.label-text
+							p Принимаю #[a(href="#!") условия обработки] персональных данных.
+				.order-total-summ.mb-40
+					.total
+						.total__txt Итого: 
+						.total__group
+							.total__count 4 шт. на сумму
+							.price-box 1675 #[small руб.]
 				
-				a(href="#!").btn-accent Оформить заказ
+				//BUTTONS GROUP
+				.buttons-row
+					a(href="#!").btn-light
+						svg.svg-arr-left
+							use(href='./img/sprite.svg#svg-arr-left')
+						span Назад к заказам
+					
+					a(href="#!").btn-accent Оформить заказ
