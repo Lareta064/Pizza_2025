@@ -98,5 +98,14 @@
 	}
 }
 .order-form-footer{
-	.form-agree{margin-bottom: 20px;}
+	@media (max-width: 767px) {
+		.form-agree{margin-bottom: 20px;}
+	}
+}
+/**/
+.form-item-house.flex{
+	column-gap: 3em;
+	align-items: flex-end;
+	.form-item{flex:1;}
+	.relative-label{flex-shrink:0;}
 }

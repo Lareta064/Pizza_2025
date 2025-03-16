@@ -1,0 +1,182 @@
+section.order-page
+	.container
+		.order-header
+			.order-header__group
+				h1.title-2 Оформление
+				.total__group.flex-sm
+					.total__count 4 шт. на сумму
+					.price-box 1675 #[small руб.]
+			//STEPS
+			.order-steps
+				.order-step
+					.step-num 1
+					span Корзина
+				.order-step-space
+				
+				.order-step.active
+					.step-num 2
+					span Оформление
+				
+				.order-step-space
+				
+				.order-step
+					.step-num 3
+					span Заказ принят
+		form.order-form
+			.order-form-body
+				.form-fields-col
+					.h4-bold 1. Контактные данные
+					.form-fields
+						.form-item
+							input(type="text" name="" placeholder="Имя *")
+						.form-item
+							input(type="text" name="" placeholder="Телефон *")
+						.form-item
+							input(type="text" name="" placeholder="Улица *")
+						.form-item-house.flex
+							.form-item
+								input(type="text" name="" placeholder="Дом *")
+							label.relative-label
+								
+								input(type="checkbox" name="promo")
+								span.fake-checkbox
+								p.txt-16.txt-s4 Частный дом
+								
+						.form-item
+							input(type="text" name="" placeholder="Квартира *")
+						
+						.form-item
+							textarea(placeholder="Комментарий к заказу" name="message")
+				
+				//RIGHT COLUMN
+				.order-form-group
+					.form-col.form-delivery-block
+						.h4-bold 2. Варианты доставки
+						//single item
+						label.relative-label
+							input(type="radio" name="name1")
+							span.fake-radio
+							.label-text
+								p Самовывоз
+								span.txt-s4 г. Энгельс, ул. Трудовая 12/2
+						//single item
+						label.relative-label
+							input(type="radio" name="name1" checked)
+							span.fake-radio
+							.label-text
+								p Доставка курьером
+								span.txt-s4 Минимальный заказ для бесплатной доставки 500 руб.
+					.form-col.form-payment-block
+						.h4-bold 3. Способы оплаты
+						//single item
+						label.relative-label
+							input(type="radio" name="name2")
+							span.fake-radio
+							.label-text
+								p Оплата наличными
+								span.txt-s4 Оплата при получении лично или курьеру
+						//single item
+						label.relative-label
+							input(type="radio" name="name2" checked)
+							span.fake-radio
+							.label-text
+								p Оплата через Яндекс
+								span.txt-s4 Оплата на сайте через систему Яндекс.Деньги
+						//single item
+						label.relative-label
+							input(type="radio" name="name2" checked)
+							span.fake-radio
+							.label-text
+								p Банковской картой онлайн
+								span.txt-s4 Оплата заказа на сайте через защищенный шлюз Яндекса
+						//single item
+						label.relative-label
+							input(type="radio" name="name2" checked)
+							span.fake-radio
+							.label-text
+								p Оплата картой при получении
+								span.txt-s4 Оплата банковской картой при получении заказа при самовывозе или получении курьером
+					
+					.form-col.form-time-block
+						.h4-bold 4. Дополнительно
+						//single item
+						
+						label.relative-label
+							input(type="radio" name="name3")
+							span.fake-radio
+							.label-text
+								p Как можно скорее
+								span.txt-s4 Мы доставляем заказ в течении 40 мин.
+
+							.tooltip-wrapper
+								.tooltip-icon ?
+								.tooltip-content
+									p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						
+						//single item
+						.form-time-radio
+							label.relative-label
+								input(type="radio" name="name3" checked)
+								span.fake-radio
+								.label-text
+									p Доставка на определенное время
+							.form-item
+								input(type="text" name="order_time" placeholder="Введите время доставки *")
+
+					//Promo code
+					.form-col.form-promo
+						.form-promo-block
+							label.relative-label
+								input(type="checkbox" name="promo")
+								span.fake-checkbox
+								.label-text
+									p У меня есть промокод
+							.form-promo-row.flex
+								.form-item
+									input(type="text" name="order_time" placeholder="Введите время доставки *")
+								button(type="button").btn-accent.btn-h30 Применить
+							p.txt-12.txt-s4 Скидка по промокоду 10%
+
+					//form subscribe
+					.form-col.form-subscribe
+						.form-subscribe-group.flex
+							.check-icon
+								svg.svg-circle-check
+									use(href='./img/sprite.svg#svg-circle-check')
+							.txt-12 Согласен на отправку:
+							label.relative-label
+								.label-text
+									p sms
+								input(type="checkbox" name="subscr_sms")
+								span.fake-checkbox
+							
+							label.relative-label
+								.label-text
+									p Email
+								input(type="checkbox" name="subscr_email")
+								span.fake-checkbox
+						p.txt-12.txt-s4 Мы не рассылаем спам. Вы будете получать только актуальную информацию о наших акциях.
+			
+			//FORM FOOTER
+			.order-form-footer
+				.form-agree
+					label.relative-label
+						input(type="checkbox" name="chbx1")
+						span.fake-checkbox
+						.label-text
+							p Принимаю #[a(href="#!") условия обработки] персональных данных.
+				.order-total-summ.mb-40
+					.total
+						.total__txt Итого: 
+						.total__group
+							.total__count 4 шт. на сумму
+							.price-box 1675 #[small руб.]
+				
+				//BUTTONS GROUP
+				.buttons-row
+					a(href="#!").btn-light
+						svg.svg-arr-left
+							use(href='./img/sprite.svg#svg-arr-left')
+						span Назад к заказам
+					
+					a(href="#!").btn-accent Оформить заказ
