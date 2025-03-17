@@ -22,85 +22,86 @@ section.basket-page
 				.order-step
 					.step-num 3
 					span Заказ принят
-		.basket-page-content.pb-50
-			+basket-card
-			+basket-card('pizza2', 'Пицца “Маргарита”', 'Моцарелла, помидоры, томатный соус, орегано.')
-			+basket-card('pizza3', 'Пицца “Карбонара”', 'Бекон, моцарелла, грана падано, яйцо куриное, сливки.')
-			+basket-card('pizza4', 'Пицца “Овощная”', 'Моцарелла, сладкий перец, орегано, помидоры, шампиньоны, томатный соус.')
+		.column-gap-32
+			.basket-page-content
+				+basket-card
+				+basket-card('pizza2', 'Пицца “Маргарита”', 'Моцарелла, помидоры, томатный соус, орегано.')
+				+basket-card('pizza3', 'Пицца “Карбонара”', 'Бекон, моцарелла, грана падано, яйцо куриное, сливки.')
+				+basket-card('pizza4', 'Пицца “Овощная”', 'Моцарелла, сладкий перец, орегано, помидоры, шампиньоны, томатный соус.')
 
-		//Reccomend слайдер
-		.reccomend-products.p-block-50
-			.title-wrapper
-				.h5 Рекомендуем к вашему заказу
-			
-			.reccomend-slider-wrapper.swiper-box
-				//slider nav
-				.reccomend-slider__nav
-					button.swiper-button-prev
-						svg.svg-arr
-							use(href='./img/sprite.svg#svg-arr')
-					button.swiper-button-next
-						svg.svg-arr
-							use(href='./img/sprite.svg#svg-arr')
-				//slider
-				.reccomend-slider.swiper
-					.swiper-wrapper
-						.swiper-slide
-							.card-short.price-border
-								.card-short__img
-									img(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-								.card-short__txt
-									p.txt-16 Пепперони фреш
-									.price-box
-										span.new-price от 450&#8381;
-										
-						.swiper-slide
-							.card-short.price-border
-								.card-short__img
-									img(src='./img/goods/kola.webp', srcset='./img/goods/kola@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-								.card-short__txt
-									p.txt-16 Пепперони фреш
-									.price-box
-										span.new-price 600&#8381;
-										
-						.swiper-slide
-							.card-short.price-border
-								.card-short__img
-									img(src='./img/goods/fri.webp', srcset='./img/goods/fri@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-								.card-short__txt
-									p.txt-16 Пепперони фреш
-									.price-box
-										span.new-price 600&#8381;
-						.swiper-slide
-							.card-short.price-border
-								.card-short__img
-									img(src='./img/goods/fri2.webp', srcset='./img/goods/fri2@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-								.card-short__txt
-									p.txt-16 Пепперони фреш
-									.price-box
-										span.new-price 600&#8381;
-						.swiper-slide
-							.card-short.price-border
-								.card-short__img
-									img(src='./img/goods/souse4.webp', srcset='./img/goods/souse4@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
-								.card-short__txt
-									p.txt-16 Пепперони фреш
-									.price-box
-										span.new-price 600&#8381;
-										
+			//Reccomend слайдер
+			.reccomend-products
+				.title-wrapper
+					.h5 Рекомендуем к вашему заказу
+				
+				.reccomend-slider-wrapper.swiper-box
+					//slider nav
+					.reccomend-slider__nav
+						button.swiper-button-prev
+							svg.svg-arr
+								use(href='./img/sprite.svg#svg-arr')
+						button.swiper-button-next
+							svg.svg-arr
+								use(href='./img/sprite.svg#svg-arr')
+					//slider
+					.reccomend-slider.swiper
+						.swiper-wrapper
+							.swiper-slide
+								.card-short.price-border
+									.card-short__img
+										img(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+									.card-short__txt
+										p.txt-16 Пепперони фреш
+										.price-box
+											span.new-price от 450&#8381;
+											
+							.swiper-slide
+								.card-short.price-border
+									.card-short__img
+										img(src='./img/goods/kola.webp', srcset='./img/goods/kola@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+									.card-short__txt
+										p.txt-16 Пепперони фреш
+										.price-box
+											span.new-price 600&#8381;
+											
+							.swiper-slide
+								.card-short.price-border
+									.card-short__img
+										img(src='./img/goods/fri.webp', srcset='./img/goods/fri@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+									.card-short__txt
+										p.txt-16 Пепперони фреш
+										.price-box
+											span.new-price 600&#8381;
+							.swiper-slide
+								.card-short.price-border
+									.card-short__img
+										img(src='./img/goods/fri2.webp', srcset='./img/goods/fri2@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+									.card-short__txt
+										p.txt-16 Пепперони фреш
+										.price-box
+											span.new-price 600&#8381;
+							.swiper-slide
+								.card-short.price-border
+									.card-short__img
+										img(src='./img/goods/souse4.webp', srcset='./img/goods/souse4@2x.webp 2x' width='104' height='104' loading='lazy' alt='img')
+									.card-short__txt
+										p.txt-16 Пепперони фреш
+										.price-box
+											span.new-price 600&#8381;
+											
 
 
-		//Рекомендуемые продукты - грид-сетка
-		.reccomend-products.p-block-50
-			.title-wrapper
-				.h5 Напитки
-			//обертка для компонентов в 6 колонок
-			.grid-six-columns
-				+card-short-vertical('juice', 'Пепси')
-				+card-short-vertical('juice2', 'Фанта')
-				+card-short-vertical('juice3', 'Клюквенный морс')
-		//ИТОГОВАЯ СТРОКА
-		.basket-footer
+			//Рекомендуемые продукты - грид-сетка
+			.reccomend-products
+				.title-wrapper
+					.h5 Напитки
+				//обертка для компонентов в 6 колонок
+				.grid-six-columns
+					+card-short-vertical('juice', 'Пепси')
+					+card-short-vertical('juice2', 'Фанта')
+					+card-short-vertical('juice3', 'Клюквенный морс')
+			//ИТОГОВАЯ СТРОКА
+			.basket-footer
 			//BUTTONS
 			.buttons-row
 				a(href="order-page.html").btn-accent Перейти к оформлению
