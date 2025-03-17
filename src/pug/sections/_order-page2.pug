@@ -25,7 +25,7 @@ section.order-page
 		form.order-form
 			.order-form-body
 				.form-fields-col
-					.h4-bold 1. Контактные данные
+					.h4-bold Контактные данные
 					.form-fields
 						.form-item
 							input(type="text" name="" placeholder="Имя")
@@ -57,100 +57,143 @@ section.order-page
 				
 				//RIGHT COLUMN
 				.order-right-column
-					.order-form-delivery
-						//выбор доставки
-						.switch-group.switch-delivery#switch-delivery
-							label.switch-label.switch-delivery-courier
-								input(type="radio" name="delivery__type" )
-								span.switch-btn Доставка курьером
-							label.switch-label.switch-delivery-pickup
-								input(type="radio" name="delivery__type" checked)
-								span.switch-btn Самовывоз
+					.form-col
+						.h4-bold Варианты доставки
+						.order-form-delivery
+							//выбор доставки
+							.switch-group.switch-delivery#switch-delivery
+								label.switch-label.switch-delivery-courier
+									input(type="radio" name="delivery__type" )
+									span.switch-btn Доставка курьером
+								label.switch-label.switch-delivery-pickup
+									input(type="radio" name="delivery__type" checked)
+									span.switch-btn Самовывоз
 
-						.switch-delivery-content
-							#delivery-pickup.column-gap-10
-								label.switch-label
-									input(type="radio" name="address_item" checked)
-									span.switch-label-item
-										.switch-label__txt__icon
-											svg.svg-pin
-												use(href='../img/sprite.svg#svg-pin')
-										.switch-label__txt
-											p Самовывоз (Смоленский Пассаж) скидка 10%
-											p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
-								label.switch-label
-									input(type="radio" name="address_item")
-									span.switch-label-item
-										.switch-label__txt__icon
-											svg.svg-pin
-												use(href='../img/sprite.svg#svg-pin')
-										.switch-label__txt
-											p Самовывоз (Смоленский Пассаж) скидка 10%
-											p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
-								label.switch-label
-									input(type="radio" name="address_item")
-									span.switch-label-item
-										.switch-label__txt__icon
-											svg.svg-pin
-												use(href='../img/sprite.svg#svg-pin')
-										.switch-label__txt
-											p Самовывоз (Смоленский Пассаж) скидка 10%
-											p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
-
-							//Поля отображаются при выборе доставки курьером
-							#delivery-courier.column-gap-10
-								.note-box
-									.card-img
-										svg.svg-note
-											use(href='./img/sprite.svg#svg-note')
-									.txt-12.txt-s5 Минимальный заказ для бесплатной доставки 500 руб. Время доставки от 40 мин.
-								
-								.order-delivery-express
+							.switch-delivery-content
+								#delivery-pickup.column-gap-10
 									label.switch-label
-										input(type="radio" name="delivery_time")
+										input(type="radio" name="address_item" checked)
 										span.switch-label-item
+											.switch-label__txt__icon
+												svg.svg-pin
+													use(href='../img/sprite.svg#svg-pin')
 											.switch-label__txt
-												p Быстрее
-								
-								.order-delivery-time
+												p Самовывоз (Смоленский Пассаж) скидка 10%
+												p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
 									label.switch-label
-										input(type="radio" name="delivery_time")
+										input(type="radio" name="address_item")
 										span.switch-label-item
-											.datepicker-block
-												.txt-12 Доставка на определённое время
-												.form-item.order-delivery-date
-													input.datepicker-input#datepicker(type="text" placeholder="Дата")
-													span.datepicker-icon
-														svg.svg-calendare
-															use(href='./img/sprite.svg#svg-calendare')
-												
-												.form-item.order-delivery-clock
-													.dropdown
-														.dropdown-button
-															input.dropdown__input(type="text" readonly placeholder="Выберите время")
-															
-														.dropdown__list
-															ul
-																li.dropdown__list-item(data-value="15:00 - 16:00") 15:00 - 16:00
-																li.dropdown__list-item(data-value="16:00 - 17:00") 16:00 - 17:00
-																li.dropdown__list-item(data-value="17:00 - 18:00") 17:00 - 18:00
-																li.dropdown__list-item(data-value="18:00 - 19:00") 18:00 - 19:00
-																li.dropdown__list-item(data-value="19:00 - 20:00") 19:00 - 20:00
-																li.dropdown__list-item(data-value="20:00 - 21:00") 20:00 - 21:00
-							
-					
-					//ORDER CARD
-					.order-product
-						.order-product__row
-							.product-name Пицца Особая
-							.product-summ-group
-								span.product-count 1 шт
-								span.product-summ 365&nbsp;&#8381;
-						.order-product__body
-							
+											.switch-label__txt__icon
+												svg.svg-pin
+													use(href='../img/sprite.svg#svg-pin')
+											.switch-label__txt
+												p Самовывоз (Смоленский Пассаж) скидка 10%
+												p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
+									label.switch-label
+										input(type="radio" name="address_item")
+										span.switch-label-item
+											.switch-label__txt__icon
+												svg.svg-pin
+													use(href='../img/sprite.svg#svg-pin')
+											.switch-label__txt
+												p Самовывоз (Смоленский Пассаж) скидка 10%
+												p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
 
+									.delivery-discount-summ.txt-16
+										p Скидка за доставку: - 142 руб.	
+								
+								//Поля отображаются при выборе доставки курьером
+								#delivery-courier.column-gap-10
+									.note-box
+										.card-img
+											svg.svg-note
+												use(href='./img/sprite.svg#svg-note')
+										.txt-12.txt-s5 Минимальный заказ для бесплатной доставки 500 руб. Время доставки от 40 мин.
 									
+									.order-delivery-express
+										label.switch-label
+											input(type="radio" name="delivery_time")
+											span.switch-label-item
+												.switch-label__txt
+													p Быстрее
 									
+									.order-delivery-time
+										label.switch-label
+											input(type="radio" name="delivery_time")
+											span.switch-label-item
+												.datepicker-block
+													.txt-12 Доставка на определённое время
+													.form-item.order-delivery-date
+														input.datepicker-input#datepicker(type="text" placeholder="Дата")
+														span.datepicker-icon
+															svg.svg-calendare
+																use(href='./img/sprite.svg#svg-calendare')
+													
+													.form-item.order-delivery-clock
+														.dropdown
+															.dropdown-button
+																input.dropdown__input(type="text" readonly placeholder="Выберите время")
+																
+															.dropdown__list
+																ul
+																	li.dropdown__list-item(data-value="15:00 - 16:00") 15:00 - 16:00
+																	li.dropdown__list-item(data-value="16:00 - 17:00") 16:00 - 17:00
+																	li.dropdown__list-item(data-value="17:00 - 18:00") 17:00 - 18:00
+																	li.dropdown__list-item(data-value="18:00 - 19:00") 18:00 - 19:00
+																	li.dropdown__list-item(data-value="19:00 - 20:00") 19:00 - 20:00
+																	li.dropdown__list-item(data-value="20:00 - 21:00") 20:00 - 21:00
+							
+					.order-form-payment.form-col
+						.h4-bold Способы оплаты
+						.payment-cards
+							.payment-card
+								label.switch-label
+									input(type="radio" name="pay_type" checked)
+									span.switch-label-item
+										.switch-label__icon
+											svg.svg-wallet
+												use(href='../img/sprite.svg#svg-wallet')
+										.switch-label__txt
+											p.txt-12 Оплата наличными
+										.switch-label__img
+											img(src="../img/cash.webp", width="40" alt="img")
+							.payment-card
+								label.switch-label
+									input(type="radio" name="pay_type")
+									span.switch-label-item
+										.switch-label__icon
+											svg.svg-wallet
+												use(href='../img/sprite.svg#svg-wallet')
+										.switch-label__txt
+											p.txt-12 СБП
+										.switch-label__img
+											img(src="../img/visa.webp", width="40" alt="img")
+											img(src="../img/mastercard.webp", width="40" alt="img")
+											img(src="../img/mir.webp", width="40" alt="img")
+			
+							.payment-card
+								label.switch-label
+									input(type="radio" name="pay_type")
+									span.switch-label-item
+										.switch-label__icon
+											svg.svg-wallet
+												use(href='../img/sprite.svg#svg-wallet')
+										.switch-label__txt
+											p.txt-12 СБП
+										.switch-label__img
+											img(src="../img/payment/pay5.webp", width="40" alt="img")
+							.payment-card
+								label.switch-label
+									input(type="radio" name="pay_type")
+									span.switch-label-item
+										.switch-label__icon
+											svg.svg-wallet
+												use(href='../img/sprite.svg#svg-wallet')
+										.switch-label__txt
+											p.txt-12 СБП
+										.switch-label__img
+											img(src="../img/payment/pay5.webp", width="40" alt="img")
+			
 			
 			//FORM FOOTER
 			.order-form-footer

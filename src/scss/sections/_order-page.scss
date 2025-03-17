@@ -3,6 +3,7 @@
 	display: inline-flex;
 	flex-direction: column;
 	row-gap: 20px;
+	width: 100%;
 }
 .order-form-body{
 	display: grid;
@@ -106,6 +107,7 @@
 	}
 }
 /*order2*/
+
 .form-item-house.flex{
 	column-gap: 3em;
 	align-items: flex-end;
@@ -149,7 +151,7 @@ display: none;
 	background-color: #fff;
 	border: 1px solid var(--secondary-1);
 	border-radius: 20px;
-	padding: 20px;
+	padding: 1.25em;
 	.product-name{
 		font-family: var(--second-family);
 		font-weight: 700;
@@ -166,6 +168,10 @@ display: none;
    .basket-card__list{
 	  li{font-size: 14px;}
    }
+   @media(min-width: 768px) and (max-width: 1364px) {
+	font-size: remy(16);
+	.basket-card__list{li{font-size: remy(14)}}
+   }
 }
 .order-product__row{
 	display: flex;
@@ -177,11 +183,14 @@ display: none;
 	font-size: 14px;
 	padding-top: 0.8em;
 	.round-label, .prod-weight{display: inline-flex; margin-right: 5px;}
+	@media(min-width: 768px) and (max-width: 1364px) {
+		font-size: remy(14);
+	   }
 }
 .switch-label-item{
 	display: flex;
 	align-items: center;
-	column-gap:12px;
+	column-gap:1.2em;
 	font-size: 10px;
 	justify-content: space-between;
 	border: 1px solid var(--secondary);
@@ -216,6 +225,9 @@ display: none;
 		}
 	}
 	&>*{width: max-content; flex-shrink: 0;}
+	@media(min-width: 768px) and (max-width: 1364px) {
+		font-size: remy(10);
+	   }
 }
 .switch-label input:checked + span.switch-label-item{
 	border: 1px solid var(--accent-color-2);
@@ -250,6 +262,10 @@ display: none;
 			font-size: 12px;;
 		}
 	}
+	@media(min-width: 768px) and (max-width: 1364px) {
+		column-gap:remy(10);
+		.form-item input{font-size: remy(12);}
+	   }
 }
 .datepicker-block{
 	
@@ -281,6 +297,7 @@ display: none;
 		z-index: 2;
 		pointer-events: none;
 	}
+	@media(min-width: 768px) and (max-width: 1364px) {font-size: 1remy(10);}
 }
 .order-delivery-clock{
 	
@@ -300,6 +317,7 @@ display: none;
 		&:focus{
 			border:1px solid var(--accent-color-2)
 		}
+		@media(min-width: 768px) and (max-width: 1364px) {font-size: 1remy(12);}
 	}
 	.dropdown__list.dropdown__list--visible{
 		border: 1px solid var(--secondary);
@@ -323,6 +341,7 @@ display: none;
         margin: 0 auto;
 		border:0;
 		span{color: white;}
+		
 	}
 	.ui-datepicker-close.ui-state-default{display: none!important;}
 	.ui-datepicker-current, .ui-datepicker-clear{
@@ -343,6 +362,7 @@ display: none;
 	background-color: #fff;
 	border:0;
 	font-size: 14px;
+	@media(min-width: 768px) and (max-width: 1364px) {font-size: remy(14);}
 }
 .ui-datepicker td span, .ui-datepicker td a{text-align: center; }
 .ui-datepicker .ui-state-default.ui-state-active{color: white; background-color: var(--accent-color-1);border-radius:50px;}
@@ -355,4 +375,11 @@ display: none;
 
  .switch-delivery-content{
 	padding-top: 10px;
+	@media(min-width: 768px) and (max-width: 1364px) {padding-top: remy(10);}
+ }
+ .payment-cards{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	.payment-card{width: 100%;}
  }
