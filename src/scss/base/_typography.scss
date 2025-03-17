@@ -251,6 +251,11 @@
 	}
 }
 /**/
+.has-tooltip{
+	position: relative;
+	width: max-content;
+	padding-right: 40px;
+}
 .tooltip-wrapper{
 	position: absolute;
 	top: 0;
@@ -284,4 +289,16 @@
 	&:hover{
 		.tooltip-content{transform: translateY(-106%) scale(1);}
 	}
+}
+
+.tooltip-wrapper.tooltip-left{
+	
+	.tooltip-content{left:0; right: auto;}
+	
+}
+.tooltip-wrapper.tooltip-center{
+	
+	.tooltip-content{left:50%; right: auto;transform: translate(-50%,-106%) scale(0);}
+	&:hover .tooltip-content{left:50%; right: auto;transform: translate(-50%,-106%) scale(1);}
+	
 }

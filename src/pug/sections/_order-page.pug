@@ -21,22 +21,24 @@ section.order-page
 					span Заказ принят
 		form.order-form
 			.order-form-body
-				.form-fields-col
-					.h4-bold 1. Контактные данные
-					.form-fields
-						.form-item
-							input(type="text" name="" placeholder="Имя *")
-						.form-item
-							input(type="text" name="" placeholder="Телефон *")
-						.form-item
-							input(type="text" name="" placeholder="Улица *")
-						.form-item
-							input(type="text" name="" placeholder="Дом *")
-						.form-item
-							input(type="text" name="" placeholder="Квартира *")
-						
-						.form-item
-							textarea(placeholder="Комментарий к заказу" name="message")
+				//Left column
+				.order-left-column
+					.form-fields-col
+						.h4-bold 1. Контактные данные
+						.form-fields
+							.form-item
+								input(type="text" name="" placeholder="Имя *")
+							.form-item
+								input(type="text" name="" placeholder="Телефон *")
+							.form-item
+								input(type="text" name="" placeholder="Улица *")
+							.form-item
+								input(type="text" name="" placeholder="Дом *")
+							.form-item
+								input(type="text" name="" placeholder="Квартира *")
+							
+							.form-item
+								textarea(placeholder="Комментарий к заказу" name="message")
 				
 				//RIGHT COLUMN
 				.order-right-column
@@ -92,7 +94,7 @@ section.order-page
 							.h4-bold 4. Дополнительно
 							//single item
 							
-							label.relative-label
+							label.relative-label.has-tooltip
 								input(type="radio" name="name3")
 								span.fake-radio
 								.label-text

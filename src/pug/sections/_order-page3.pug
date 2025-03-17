@@ -67,7 +67,7 @@
 													p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
 
 										.delivery-discount-summ.txt-16
-											p Скидка за доставку: - 142 руб.	
+											p Скидка за доставку: - 142 руб.
 									
 									//Поля отображаются при выборе доставки курьером
 									#delivery-courier.column-gap-10
@@ -141,10 +141,77 @@
 								
 								.form-item
 									textarea(placeholder="Комментарий к заказу" name="message")
+						//Способы оплаты
+						.order-form-payment.form-col
+							.h4-bold Способы оплаты
+							.payment-cards
+								.payment-card
+									label.switch-label
+										input(type="radio" name="pay_type" checked)
+										span.switch-label-item
+											.switch-label__icon
+												svg.svg-wallet
+													use(href='../img/sprite.svg#svg-wallet')
+											.switch-label__txt
+												p.txt-12 Оплата наличными
+											.switch-label__img
+												img(src="../img/cash.webp", width="40" alt="img")
+								.payment-card
+									label.switch-label
+										input(type="radio" name="pay_type")
+										span.switch-label-item
+											.switch-label__icon
+												svg.svg-wallet
+													use(href='../img/sprite.svg#svg-wallet')
+											.switch-label__txt
+												p.txt-12 СБП
+											.switch-label__img
+												img(src="../img/visa.webp", width="40" alt="img")
+												img(src="../img/mastercard.webp", width="40" alt="img")
+												img(src="../img/mir.webp", width="40" alt="img")
+				
+								.payment-card
+									label.switch-label
+										input(type="radio" name="pay_type")
+										span.switch-label-item
+											.switch-label__icon
+												svg.svg-wallet
+													use(href='../img/sprite.svg#svg-wallet')
+											.switch-label__txt
+												p.txt-12 СБП
+											.switch-label__img
+												img(src="../img/payment/pay5.webp", width="40" alt="img")
+								.payment-card
+									label.switch-label
+										input(type="radio" name="pay_type")
+										span.switch-label-item
+											.switch-label__icon
+												svg.svg-wallet
+													use(href='../img/sprite.svg#svg-wallet')
+											.switch-label__txt
+												p.txt-12 СБП
+											.switch-label__img
+												img(src="../img/payment/pay5.webp", width="40" alt="img")
+					
+						//Promo Block
+						.form-col.form-promo
+							.has-tooltip
+								.h4-bold Промокод
+								.tooltip-wrapper.tooltip-left
+									.tooltip-icon ?
+									.tooltip-content
+										p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							.form-promo-block
+								.form-promo-row.flex
+									.form-item
+										input(type="text" name="order_time" placeholder="Введите время доставки *")
+									button(type="button").btn.btn-h42 Применить
+								p.txt-12.txt-s4 Скидка по промокоду 10%
+					
 					
 					//RIGHT COLUMN
 					.order-right-column
-						.order-composition.grey-bg
+						.order-composition.grey-bg.column-gap-32
 							.title-24 Состав заказа:
 							.column-gap-10
 								//ORDER CARD
@@ -193,14 +260,24 @@
 											li
 												p Соус Сырный
 												span.txt-s4 1 шт, 25 г
-
-										
+								
+								.delivery-amount.txt-16
+									p Стоиомсть доставки: 0 руб.
+							
+							//total summ
+							.order-total-summ
+								.total
+									.total__txt Итого: 
+									.total__group
+										.total__count 4 шт. на сумму
+										.price-box 1675 #[small руб.]
+								
 										
 				
 				//FORM FOOTER
 				.order-form-footer
 					//footer-row
-					.form-agree-wrapper.mb-40
+					.form-agree-wrapper
 						.form-subscribe
 							label.relative-label
 								input(type="checkbox" name="subscr_email")
@@ -217,21 +294,10 @@
 									p Принимаю #[a(href="#!") условия обработки] персональных данных.
 					
 					//footer-row
-					.order-form-buttons.flex
-						//BUTTONS GROUP
-						.buttons-row
-							a(href="#!").btn-light
-								svg.svg-arr-left
-									use(href='./img/sprite.svg#svg-arr-left')
-								span Назад к заказам
-							
-							a(href="#!").btn-accent Оформить заказ
-
-						.order-total-summ
-							.total
-								.total__txt Итого: 
-								.total__group
-									.total__count 4 шт. на сумму
-									.price-box 1675 #[small руб.]
-					
-					
+					.buttons-row
+						a(href="#!").btn-light
+							svg.svg-arr-left
+								use(href='./img/sprite.svg#svg-arr-left')
+							span Назад к заказам
+						
+						a(href="#!").btn-accent Оформить заказ

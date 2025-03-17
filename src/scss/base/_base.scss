@@ -289,6 +289,7 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	flex-wrap: wrap;
 	&>*{width: 100%;}
 }
+
 .column-gap-32{
 	row-gap:32px;
 	@media (max-width: 767px) {

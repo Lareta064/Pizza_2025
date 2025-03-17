@@ -21,36 +21,37 @@ section.order-page
 					span Заказ принят
 		form.order-form
 			.order-form-body
-				.form-fields-col
-					.h4-bold Контактные данные
-					.form-fields
-						.form-item
-							input(type="text" name="" placeholder="Имя")
-						.form-item
-							input(type="text" name="" placeholder="Телефон")
-						.form-item
-							input(type="text" name="" placeholder="Улица")
-						.form-item-house.flex
+				.order-left-column
+					.form-fields-col
+						.h4-bold Контактные данные
+						.form-fields
 							.form-item
-								input(type="text" name="" placeholder="Дом")
-							label.relative-label
-								
-								input(type="checkbox" name="promo")
-								span.fake-checkbox
-								p.txt-16.txt-s4 Частный дом
-								
-						.form-item-appartament.flex
+								input(type="text" name="" placeholder="Имя")
 							.form-item
-								input(type="text" name="" placeholder="Квартира")
+								input(type="text" name="" placeholder="Телефон")
 							.form-item
-								input(type="text" name="" placeholder="Подъезд")
+								input(type="text" name="" placeholder="Улица")
+							.form-item-house.flex
+								.form-item
+									input(type="text" name="" placeholder="Дом")
+								label.relative-label
+									
+									input(type="checkbox" name="promo")
+									span.fake-checkbox
+									p.txt-16.txt-s4 Частный дом
+									
+							.form-item-appartament.flex
+								.form-item
+									input(type="text" name="" placeholder="Квартира")
+								.form-item
+									input(type="text" name="" placeholder="Подъезд")
+								.form-item
+									input(type="text" name="" placeholder="Этаж")
+								.form-item
+									input(type="text" name="" placeholder="Домофон")
+							
 							.form-item
-								input(type="text" name="" placeholder="Этаж")
-							.form-item
-								input(type="text" name="" placeholder="Домофон")
-						
-						.form-item
-							textarea(placeholder="Комментарий к заказу" name="message")
+								textarea(placeholder="Комментарий к заказу" name="message")
 				
 				//RIGHT COLUMN
 				.order-right-column
@@ -142,7 +143,7 @@ section.order-page
 							
 					.order-form-payment.form-col
 						.h4-bold Способы оплаты
-						.payment-cards
+						.payment-cards.payment-cards-columns
 							.payment-card
 								label.switch-label
 									input(type="radio" name="pay_type" checked)
