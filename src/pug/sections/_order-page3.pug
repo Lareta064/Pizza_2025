@@ -3,11 +3,8 @@
 	.container
 		.popup-wrapper-content
 			.order-header
-				.order-header__group
-					h1.title-2 Оформление
-					.total__group.flex-sm
-						.total__count 4 шт. на сумму
-						.price-box 1675 #[small руб.]
+				.title-2 Оформление заказа
+				
 				//STEPS
 				.order-steps
 					.order-step
@@ -26,130 +23,127 @@
 						span Заказ принят
 			form.order-form
 				.order-form-body
-					.form-fields-col
-						.h4-bold 1. Контактные данные
-						.form-fields
-							.form-item
-								input(type="text" name="" placeholder="Имя")
-							.form-item
-								input(type="text" name="" placeholder="Телефон")
-							.form-item
-								input(type="text" name="" placeholder="Улица")
-							.form-item-house.flex
-								.form-item
-									input(type="text" name="" placeholder="Дом")
-								label.relative-label
+					.order-left-column
+						.form-col
+							.h4-bold Варианты доставки
+							.order-form-delivery
+								//выбор доставки
+								.switch-group.switch-delivery#switch-delivery
+									label.switch-label.switch-delivery-courier
+										input(type="radio" name="delivery__type" )
+										span.switch-btn Доставка курьером
+									label.switch-label.switch-delivery-pickup
+										input(type="radio" name="delivery__type" checked)
+										span.switch-btn Самовывоз
+
+								.switch-delivery-content
+									#delivery-pickup.column-gap-10
+										label.switch-label
+											input(type="radio" name="address_item" checked)
+											span.switch-label-item
+												.switch-label__txt__icon
+													svg.svg-pin
+														use(href='../img/sprite.svg#svg-pin')
+												.switch-label__txt
+													p Самовывоз (Смоленский Пассаж) скидка 10%
+													p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
+										label.switch-label
+											input(type="radio" name="address_item")
+											span.switch-label-item
+												.switch-label__txt__icon
+													svg.svg-pin
+														use(href='../img/sprite.svg#svg-pin')
+												.switch-label__txt
+													p Самовывоз (Смоленский Пассаж) скидка 10%
+													p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
+										label.switch-label
+											input(type="radio" name="address_item")
+											span.switch-label-item
+												.switch-label__txt__icon
+													svg.svg-pin
+														use(href='../img/sprite.svg#svg-pin')
+												.switch-label__txt
+													p Самовывоз (Смоленский Пассаж) скидка 10%
+													p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
+
+										.delivery-discount-summ.txt-16
+											p Скидка за доставку: - 142 руб.	
 									
-									input(type="checkbox" name="promo")
-									span.fake-checkbox
-									p.txt-16.txt-s4 Частный дом
-									
-							.form-item-appartament.flex
+									//Поля отображаются при выборе доставки курьером
+									#delivery-courier.column-gap-10
+										.note-box
+											.card-img
+												svg.svg-note
+													use(href='./img/sprite.svg#svg-note')
+											.txt-12.txt-s5 Минимальный заказ для бесплатной доставки 500 руб. Время доставки от 40 мин.
+										
+										.order-delivery-express
+											label.switch-label
+												input(type="radio" name="delivery_time")
+												span.switch-label-item
+													.switch-label__txt
+														p Быстрее
+										
+										.order-delivery-time
+											label.switch-label
+												input(type="radio" name="delivery_time")
+												span.switch-label-item
+													.datepicker-block
+														.txt-12 Доставка на определённое время
+														.form-item.order-delivery-date
+															input.datepicker-input#datepicker(type="text" placeholder="Дата")
+															span.datepicker-icon
+																svg.svg-calendare
+																	use(href='./img/sprite.svg#svg-calendare')
+														
+														.form-item.order-delivery-clock
+															.dropdown
+																.dropdown-button
+																	input.dropdown__input(type="text" readonly placeholder="Выберите время")
+																	
+																.dropdown__list
+																	ul
+																		li.dropdown__list-item(data-value="15:00 - 16:00") 15:00 - 16:00
+																		li.dropdown__list-item(data-value="16:00 - 17:00") 16:00 - 17:00
+																		li.dropdown__list-item(data-value="17:00 - 18:00") 17:00 - 18:00
+																		li.dropdown__list-item(data-value="18:00 - 19:00") 18:00 - 19:00
+																		li.dropdown__list-item(data-value="19:00 - 20:00") 19:00 - 20:00
+																		li.dropdown__list-item(data-value="20:00 - 21:00") 20:00 - 21:00
+						
+						//Контактные данные
+						.form-fields-col
+							.h4-bold Контактные данные
+							.form-fields
 								.form-item
-									input(type="text" name="" placeholder="Квартира")
+									input(type="text" name="" placeholder="Имя")
 								.form-item
-									input(type="text" name="" placeholder="Подъезд")
+									input(type="text" name="" placeholder="Телефон")
 								.form-item
-									input(type="text" name="" placeholder="Этаж")
+									input(type="text" name="" placeholder="Улица")
+								.form-item-house.flex
+									.form-item
+										input(type="text" name="" placeholder="Дом")
+									label.relative-label
+										
+										input(type="checkbox" name="promo")
+										span.fake-checkbox
+										p.txt-16.txt-s4 Частный дом
+										
+								.form-item-appartament.flex
+									.form-item
+										input(type="text" name="" placeholder="Квартира")
+									.form-item
+										input(type="text" name="" placeholder="Подъезд")
+									.form-item
+										input(type="text" name="" placeholder="Этаж")
+									.form-item
+										input(type="text" name="" placeholder="Домофон")
+								
 								.form-item
-									input(type="text" name="" placeholder="Домофон")
-							
-							.form-item
-								textarea(placeholder="Комментарий к заказу" name="message")
+									textarea(placeholder="Комментарий к заказу" name="message")
 					
 					//RIGHT COLUMN
 					.order-right-column
-						.order-form-delivery
-							//выбор доставки
-							.switch-group.switch-delivery#switch-delivery
-								label.switch-label.switch-delivery-courier
-									input(type="radio" name="delivery__type" )
-									span.switch-btn Доставка курьером
-								label.switch-label.switch-delivery-pickup
-									input(type="radio" name="delivery__type" checked)
-									span.switch-btn Самовывоз
-
-							.switch-delivery-content
-								#delivery-pickup.column-gap-10
-									label.switch-label
-										input(type="radio" name="address_item" checked)
-										span.switch-label-item
-											.switch-label__txt__icon
-												svg.svg-pin
-													use(href='../img/sprite.svg#svg-pin')
-											.switch-label__txt
-												p Самовывоз (Смоленский Пассаж) скидка 10%
-												p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
-									label.switch-label
-										input(type="radio" name="address_item")
-										span.switch-label-item
-											.switch-label__txt__icon
-												svg.svg-pin
-													use(href='../img/sprite.svg#svg-pin')
-											.switch-label__txt
-												p Самовывоз (Смоленский Пассаж) скидка 10%
-												p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
-									label.switch-label
-										input(type="radio" name="address_item")
-										span.switch-label-item
-											.switch-label__txt__icon
-												svg.svg-pin
-													use(href='../img/sprite.svg#svg-pin')
-											.switch-label__txt
-												p Самовывоз (Смоленский Пассаж) скидка 10%
-												p.txt-s5 Москва, Смоленская площадь, дом 5 (Смоленский Пассаж)
-
-									.delivery-discount-summ.txt-16
-										p Скидка за доставку: - 142 руб.
-								
-								
-								//Поля отображаются при выборе доставки курьером
-								#delivery-courier.column-gap-10
-									.note-box
-										.card-img
-											svg.svg-note
-												use(href='./img/sprite.svg#svg-note')
-										.txt-12.txt-s5 Минимальный заказ для бесплатной доставки 500 руб. Время доставки от 40 мин.
-									
-									.order-delivery-express
-										label.switch-label
-											input(type="radio" name="delivery_time")
-											span.switch-label-item
-												.switch-label__txt
-													p Быстрее
-									
-									.order-delivery-time
-										label.switch-label
-											input(type="radio" name="delivery_time")
-											span.switch-label-item
-												.datepicker-block
-													.txt-12 Доставка на определённое время
-													.form-item.order-delivery-date
-														input.datepicker-input#datepicker(type="text" placeholder="Дата")
-														span.datepicker-icon
-															svg.svg-calendare
-																use(href='./img/sprite.svg#svg-calendare')
-													
-													.form-item.order-delivery-clock
-														.dropdown
-															.dropdown-button
-																input.dropdown__input(type="text" readonly placeholder="Выберите время")
-																
-															.dropdown__list
-																ul
-																	li.dropdown__list-item(data-value="15:00 - 16:00") 15:00 - 16:00
-																	li.dropdown__list-item(data-value="16:00 - 17:00") 16:00 - 17:00
-																	li.dropdown__list-item(data-value="17:00 - 18:00") 17:00 - 18:00
-																	li.dropdown__list-item(data-value="18:00 - 19:00") 18:00 - 19:00
-																	li.dropdown__list-item(data-value="19:00 - 20:00") 19:00 - 20:00
-																	li.dropdown__list-item(data-value="20:00 - 21:00") 20:00 - 21:00
-
-							//СПОСОБЫ ОПЛАТЫ
-							
-
-
-
-
 						.order-composition.grey-bg
 							.title-24 Состав заказа:
 							.column-gap-10
