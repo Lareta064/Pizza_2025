@@ -7,7 +7,7 @@
 	padding: 2px;
 	background-color: $s2;
 	
-	@media(max-width: 768px) and (max-width: 1364px) {
+	@media(min-width: 768px) and (max-width: 1364px) {
 		height: remy(30);
 		border-radius: remy(50);
 		padding: remy(2);

@@ -34,6 +34,7 @@
     break-inside: avoid;
 	column-gap:6.5em;
 	.form-col{margin-bottom: 3.2em; }
+	.form-col:last-child{margin-bottom:0; }
 	@media (max-width: 1919px) {
 		column-gap:remy(30);
 	}
@@ -100,10 +101,12 @@
 }
 
 .order-form-footer{
-	// display: flex;
-	// flex-direction: column;
+	
 	@media (max-width: 767px) {
-		.form-agree{margin-bottom: 20px;}
+		margin-top: 20px;
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap:20px;
 	}
 }
 /*order2*/
@@ -248,7 +251,7 @@ display: none;
 }
 .datepicker-block{
 	display: flex;
-	column-gap:10px;
+	gap:10px;
 	align-items: center;
 	width: 100%;
 	.txt-12{
@@ -263,9 +266,14 @@ display: none;
 		}
 	}
 	@media(min-width: 768px) and (max-width: 1364px) {
-		column-gap:remy(10);
+		gap:remy(10);
 		.form-item input{font-size: remy(12);}
 	   }
+	@media (max-width: 767px) {
+	   flex-wrap: wrap;
+	   .txt-12 {width: 100%;}
+
+	}
 }
 .datepicker-block{
 	
@@ -381,5 +389,19 @@ display: none;
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	gap:10px;
 	.payment-card{width: 100%;}
+	@media(min-width: 768px) and (max-width: 1364px) {gap: remy(10);}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+	}
+ }
+ .order-right-column{
+	&>*+*{margin-top: 40px;}
+	@media (max-width: 1364px) {
+		&>*+*{margin-top: remy(40);}
+	}
+	@media (max-width: 767px) {
+		&>*+*{margin-top: 30px;}
+	}
  }

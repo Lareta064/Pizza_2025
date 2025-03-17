@@ -2,10 +2,8 @@ section.order-page
 	.container
 		.order-header
 			.order-header__group
-				h1.title-2 Оформление
-				.total__group.flex-sm
-					.total__count 4 шт. на сумму
-					.price-box 1675 #[small руб.]
+				h1.title-2 Оформление заказа
+				
 			//STEPS
 			.order-steps
 				.order-step
@@ -194,11 +192,20 @@ section.order-page
 										.switch-label__img
 											img(src="../img/payment/pay5.webp", width="40" alt="img")
 			
+					//Promo Block
+					.form-col.form-promo
+						.h4-bold Промокод
+						.form-promo-block
+							.form-promo-row.flex
+								.form-item
+									input(type="text" name="order_time" placeholder="Введите время доставки *")
+								button(type="button").btn.btn-h42 Применить
+							p.txt-12.txt-s4 Скидка по промокоду 10%
 			
 			//FORM FOOTER
 			.order-form-footer
 				//footer-row
-				.form-agree-wrapper.mb-40
+				.form-agree-wrapper
 					.form-subscribe
 						label.relative-label
 							input(type="checkbox" name="subscr_email")

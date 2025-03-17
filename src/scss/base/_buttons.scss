@@ -59,6 +59,12 @@
 	padding-inline: 1.5em;
 	@media(min-width:768px) and (max-width: 1364px) {font-size: remy(12);padding-inline: 1.5em;}
 }
+.btn-h42{
+	height: 3.5em;
+	font-size: 12px;
+	padding-inline: 2.35em;
+	@media(min-width:768px) and (max-width: 1364px) {font-size: remy(12)}
+}
 .btn-back, .btn-close, .btn-back-dark, .btn-close-dark, .btn-open-cart{
 	width: 54px;
 	height: 54px;
