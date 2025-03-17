@@ -4,8 +4,37 @@
 	transition: .3s; display: flex;
 }
 *[data-modal].visible{transform: translateX(0);}
+.popup-wrapper{
+	background-color: rgba(0,0,0, .5);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
 	
-
+	z-index: 10;
+	font-size: 10px;
+	
+	
+}
+.popup-wrapper .container{
+	width: 100%;
+	max-width: 117em;
+	
+.popup-wrapper-content	{
+	border-radius: 4em;
+	padding: 4em;
+	background-color: #fff;
+}
+}	
+.popup-wrapper--scroll{
+	overflow-x: hidden;
+    overflow-y: auto;
+	.container{
+		margin: 14em auto;
+	}
+}
 .popup-inner-frame{
 	position: absolute;
 	bottom: 0;
