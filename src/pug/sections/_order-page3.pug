@@ -2,9 +2,12 @@
 	
 	.container
 		.popup-wrapper-content
+			button.round-close(data-close)
+				svg.svg-cross(style="color: white;")
+					use(href='./img/sprite.svg#svg-cross')
 			.order-header
-				.title-2 Оформление заказа
-				
+				.order-header__group
+					.title-2 Оформление заказа
 				//STEPS
 				.order-steps
 					.order-step
