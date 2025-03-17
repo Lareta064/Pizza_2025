@@ -1,0 +1,169 @@
+section.prepared-page
+	.container
+		.order-header
+			.order-header__group
+				h1.title-2 Оформление заказа
+				
+			//STEPS
+			.order-steps
+				.order-step
+					.step-num 1
+					span Корзина
+				.order-step-space
+				
+				.order-step
+					.step-num 2
+					span Оформление
+				
+				.order-step-space
+				
+				.order-step.active
+					.step-num 3
+					span Заказ принят
+		
+		//prepared-page-content
+		.prepared-page-content
+			.prepared-status.flex
+				.h4-upper Статус заказа:
+				p.txt-red Готовится
+			
+			//product table
+			.prepared-table
+				p.title-16.visible-sm Состав заказа:
+				.prepared-table__header
+					.cell-content
+						p Наименование
+					
+					.cell-count
+						p Количество
+					.cell-summ
+						p Стоимость
+				
+				.prepared-table__body
+					//single card
+					.prepared-card
+						.prepared-card__row
+							.prepared-card__img
+								img.img-cover(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='100' height='100' loading='lazy' alt='img')
+							.prepared-card__content
+								.h4-bold Пицца Особая
+								.prepared-card__desk.txt-12
+									p Размер: 28 см
+									p Тесто: Традиционное
+									p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр.
+							.prepared-card__count
+								p 1 шт.
+							.prepared-card__summ
+								p 630 #[span &#8381;]
+						
+						//состав для моб версии
+						.order-product__body
+							span.round-label
+								span Традиционая
+							span.round-label
+								span 42см
+							span.prod-weight Вес: 550 гр.
+					
+					//single card
+					.prepared-card
+						.prepared-card__row
+							.prepared-card__img
+								img.img-cover(src='./img/goods/pizza3-h370.webp', srcset='./img/goods/pizza3-h370@2x.webp 2x' width='100' height='100' loading='lazy' alt='img')
+							.prepared-card__content
+								.h4-bold Пицца Особая
+								.prepared-card__desk.txt-12
+									p Размер: 28 см
+									p Тесто: Традиционное
+									p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр.
+							.prepared-card__count
+								p 1 шт.
+							.prepared-card__summ
+								p 630 #[span &#8381;]
+						//состав для моб версии
+						.order-product__body
+							span.round-label
+								span Традиционая
+							span.round-label
+								span 42см
+							span.prod-weight Вес: 550 гр.
+					
+					//single card
+					.prepared-card
+						.prepared-card__row
+							.prepared-card__img
+								img.img-cover(src='./img/goods/pizza4-h370.webp', srcset='./img/goods/pizza4-h370@2x.webp 2x' width='100' height='100' loading='lazy' alt='img')
+							.prepared-card__content
+								.h4-bold Пицца Особая
+								.prepared-card__desk.txt-12
+									p Размер: 28 см
+									p Тесто: Традиционное
+									p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр.
+							.prepared-card__count
+								p 1 шт.
+							.prepared-card__summ
+								p 630 #[span &#8381;]
+						//состав для моб версии
+						.order-product__body
+							span.round-label
+								span Традиционая
+							span.round-label
+								span 42см
+							span.prod-weight Вес: 550 гр.
+				
+				//table footer
+				.prepared-table__footer
+					.total
+						.total__txt Итого, сумма заказа с&nbsp;доставкой:
+						.total__group
+							.price-box 1675 #[small руб.]
+
+			//contacts-table
+			.contacts-table
+				//колонка
+				.info-box
+					.info-box__title Контактные данные
+					.info-box__list
+						.info-box__item
+							p Имя:
+							p 
+								strong Иванов Иван Иванович
+						.info-box__item
+							p Телефон:
+							p 
+								strong +7 999 88 77 66
+						.info-box__item
+							p Email:
+							p 
+								strong normalno@gmail.com
+				//колонка
+				.info-box
+					.info-box__title Адрес доставки
+					.info-box__list
+						.info-box__item
+							p Улица
+							p 
+								strong Менделеева
+						.info-box__item
+							p Дом
+							p 
+								strong 3
+						.info-box__item
+							p Квартира
+							p 
+								strong 2
+				//колонка
+				.info-box
+					.info-box__title Доставка и оплата
+					.info-box__list
+						.info-box__item
+							p Вариант доставки:
+							p 
+								strong Самовывоз
+						.info-box__item
+							p Способ оплаты:
+							p 
+								strong Наличными
+						.info-box__item
+							p Время доставки:
+							p 
+								strong Ближайшее время

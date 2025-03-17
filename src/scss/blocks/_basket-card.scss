@@ -280,6 +280,12 @@
 	font-weight: 700;
 	font-size: 24px;
 	line-height: 1;
+	@media (max-width: 1919px) {
+		font-size: remy(24);
+	}
+	@media (max-width: 767px) {
+		font-size: 24px;
+	}
 	
 }
 .total__group {
@@ -298,6 +304,13 @@
 			font-weight: 400;
 			font-size: 16px;
 			
+		}
+	}
+	@media (min-width: 768px) and (max-width:1364px){
+		.price-box{
+
+			font-size: remy(34);
+			small{font-size: remy(16);}
 		}
 	}
 }

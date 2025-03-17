@@ -1,0 +1,64 @@
+@use "../base/var" as *;
+.prepared-page-content{
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:1.55em;
+	@media (max-width: 767px) {
+		row-gap:20px;
+	}
+}
+.prepared-table{
+	font-size: 10px;
+	line-height: 1.5;
+	border-bottom: 1px dashed var(--secondary-1);
+	border-top: 1px dashed var(--secondary-1);
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:2.5em;
+	padding-block:2.5em;
+	@media (min-width: 768px) and (max-width: 1364px){
+		font-size: remy(10)
+	}
+	@media (max-width: 767px) {
+		row-gap:20px;
+		padding-block:20px;
+		.total__txt{font-size: 20px;}
+	}
+}
+.prepared-table__header{
+	display: flex;
+	column-gap:2em;
+	font-size: 1.6em;
+	font-weight: 700;
+	
+		.cell-content{flex:1;}
+		.cell-count{
+			width: 70px;
+			flex-grow: 0;
+			text-align: right;
+		}
+		.cell-summ{width: 190px;flex-grow: 0;text-align: right;}
+		@media (max-width: 767px) {
+		display: none;
+		}
+	}
+.prepared-table__body{
+	&>*+*{margin-top: 1em;}
+}
+.prepared-status{
+	column-gap:2em;
+	align-items: flex-end;
+	.txt-red{font-weight: 700;}
+	@media (max-width: 767px) {
+	justify-content: space-between;
+	}
+}
+.contacts-table{
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: 767px) {
+	flex-direction: column;
+	row-gap: 40px;
+	.info-box{width: 100%;}
+	}
+}

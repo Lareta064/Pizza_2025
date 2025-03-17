@@ -190,7 +190,7 @@ display: none;
 .order-product__body{
 	font-size: 14px;
 	padding-top: 0.8em;
-	.round-label, .prod-weight{display: inline-flex; margin-right: 5px;}
+	.round-label, .prod-weight{display: inline-flex; margin-right: 5px; font-size: 14px;}
 	@media(min-width: 768px) and (max-width: 1364px) {
 		font-size: remy(14);
 	   }
