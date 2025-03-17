@@ -306,7 +306,7 @@
 	align-items: center;
 	font-size: 10px;
 	column-gap:2em;
-	margin-bottom: 4em;
+	margin-bottom: 2.7em;
 	justify-content: space-between;
 	@media (max-width: 1364px) {
 		font-size: remy(10);
@@ -315,9 +315,11 @@
 		flex-direction: column;
 		align-items: flex-start;
 		font-size: 10px;
+		margin-bottom: 20px;
 		.order-steps{
 			width: 100%;
-			padding-block:20px;
+			padding-block:0;
+			padding-top: 20px;
 			border-top:1px solid var(--secondary-1);
 		}
 	}
@@ -325,8 +327,9 @@
 .order-header__group{
 	@media (max-width: 767px) {
 		width: 100%;
-		padding-bottom: 20px;
+		padding-block: 20px;
 		&>*+*{margin-top: 10px;}
+		
 	
 	}
 }
