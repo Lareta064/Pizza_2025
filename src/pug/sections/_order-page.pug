@@ -158,19 +158,34 @@ section.order-page
 						.label-text
 							p Принимаю #[a(href="#!") условия обработки] персональных данных.
 				
-				.order-total-offset-right
+				//- .order-total-offset-right
+				//- 	.order-total-summ
+				//- 		.total
+				//- 			.total__txt Итого: 
+				//- 			.total__group
+				//- 				.total__count 4 шт. на сумму
+				//- 				.price-box 1675 #[small руб.]
+				
+				//BUTTONS GROUP
+				//- .buttons-row
+				//- 	a(href="#!").btn-light
+				//- 		svg.svg-arr-left
+				//- 			use(href='./img/sprite.svg#svg-arr-left')
+				//- 		span Назад к заказам
+					
+				//- 	a(href="#!").btn-accent Оформить заказ
+
+				.order-form-buttons.flex
+					.buttons-row
+						a(href="#!").btn-light
+							svg.svg-arr-left
+								use(href='./img/sprite.svg#svg-arr-left')
+							span Назад к заказам
+						
+						a(href="#!").btn-accent Оформить заказ
 					.order-total-summ
 						.total
 							.total__txt Итого: 
 							.total__group
 								.total__count 4 шт. на сумму
 								.price-box 1675 #[small руб.]
-				
-				//BUTTONS GROUP
-				.buttons-row
-					a(href="#!").btn-light
-						svg.svg-arr-left
-							use(href='./img/sprite.svg#svg-arr-left')
-						span Назад к заказам
-					
-					a(href="#!").btn-accent Оформить заказ

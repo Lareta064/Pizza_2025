@@ -101,11 +101,15 @@
 }
 
 .order-form-footer{
-	
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap:40px;
+	@media (max-width: 1364px) {
+		row-gap:remy(40);
+	}
 	@media (max-width: 767px) {
 		margin-top: 20px;
-		display: grid;
-		grid-template-columns: 1fr;
+		
 		row-gap:20px;
 	}
 }
@@ -402,6 +406,6 @@ display: none;
 		&>*+*{margin-top: remy(40);}
 	}
 	@media (max-width: 767px) {
-		&>*+*{margin-top: 30px;}
+		&>*+*{margin-top: 20px;}
 	}
  }
