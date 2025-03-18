@@ -368,9 +368,18 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		row-gap:40px;
 	}
 }
-.pos-relative{
-	position: relative;
-	
+.pos-relative{position: relative;}
+
+.block-sm{
+	display: none!important;
+	@media (max-width: 767px) {
+	display: block!important;
+	}
+}
+.hide-sm{
+	@media (max-width: 767px) {
+	display: none!important;
+	}
 }
 /*.breadcrumbs*/
 
