@@ -1,12 +1,199 @@
 
-section.persone-page
+section.profile-page
 	.container
-		.order-header
+		.section-header
 			h1.title-2 Личный кабинет
-		.tabs-container
+		.tabs-container.profile-tabs
 			.tabs
-				.tab.active(data-tab-target='#content1') Личные данные
-				.tab(data-tab-target='#content2') История заказов
+				.tab.tab-txt.active(data-tab-target='#content1') Личные данные
+				.tab.tab-txt(data-tab-target='#content2') История заказов
 				
 			.tab-content-wrapper
 				#content1.tab-content
+				#content2.tab-content.active
+					.accordion
+						//single item
+						.accordion__item
+							.accordion__title
+								.accordion-btn
+									ul.order-info-list
+										li #[strong Заказ №:]  054334895456
+										li #[strong Дата заказа:] 25.05.2020
+								
+									.accordion__arrow-group
+										p 
+											span.state-close Развернуть
+											span.state-open Свернуть
+										svg.svg-down
+											use(href='./img/sprite.svg#svg-down')
+							
+							.accordion__content
+								//CARD
+								.basket-card.prepared-card
+									//image
+									.basket-card__img
+										img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+									.basket-card__group
+										//title group
+										.basket-card__title
+											.basket-card__product
+												.basket-card__name Пицца Особая
+												.product-summ-group
+													span.product-count 1 шт
+													span.product-summ 365&nbsp;&#8381;
+											.basket-card__row
+												.round-label
+													span 42см
+												.round-label
+													span Традиционное
+												.prod-weight Вес: 550 гр.
+										
+										//text group
+										.basket-card__text
+											.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+											.basket-card__add
+												p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+												
+										
+									//price group
+									.basket-card__total
+										.prod-weight Вес: 550 гр.
+										.prod-count.txt-16 1 шт
+										.price-box
+											span 600#[small &#8381;]
+						
+								//CARD
+								.basket-card.prepared-card
+									//image
+									.basket-card__img
+										img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+									.basket-card__group
+										//title group
+										.basket-card__title
+											.basket-card__product
+												.basket-card__name Пицца Маргарита овощная
+												.product-summ-group
+													span.product-count 1 шт
+													span.product-summ 365&nbsp;&#8381;
+											.basket-card__row
+												.round-label
+													span 42см
+												.round-label
+													span Традиционное
+												.prod-weight Вес: 550 гр.
+										
+										//text group
+										.basket-card__text
+											.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+											.basket-card__add
+												p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+												
+										
+									//price group
+									.basket-card__total
+										.prod-weight Вес: 550 гр.
+										.prod-count.txt-16 1 шт
+										.price-box
+											span 600#[small &#8381;]
+
+						//single item
+						.accordion__item
+							.accordion__title
+								.accordion-btn
+									ul.order-info-list
+										li #[strong Заказ №:]  054334895456
+										li #[strong Дата заказа:] 25.05.2020
+								
+									.accordion__arrow-group
+										p 
+											span.state-close Развернуть
+											span.state-open Свернуть
+										svg.svg-down
+											use(href='./img/sprite.svg#svg-down')
+							
+							.accordion__content
+								.basket-card.prepared-card
+									//image
+									.basket-card__img
+										img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+									.basket-card__group
+										//title group
+										.basket-card__title
+											.basket-card__product
+												.basket-card__name Комбо
+												.product-summ-group
+													span.product-count 1 шт
+													span.product-summ 365&nbsp;&#8381;
+											
+										//text group
+										.basket-card__text
+											.basket-card__desk
+												ul.basket-card__list
+													li
+														p Куриные наггетсы
+														span.txt-s4 6 шт, 110 г.
+													li
+														p Картофель фри
+														span.txt-s4 Стандартная, 80 г
+													li
+														p Соус Сырный
+														span.txt-s4 1 шт, 25 г
+											.basket-card__add
+												p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+												
+										
+									//price group
+									.basket-card__total
+										.prod-weight Вес: 550 гр.
+										.prod-count.txt-16 1 шт
+										.price-box
+											span 600#[small &#8381;]
+
+						//single item
+						.accordion__item
+							.accordion__title
+								.accordion-btn
+									ul.order-info-list
+										li #[strong Заказ №:]  054334895456
+										li #[strong Дата заказа:] 25.05.2020
+								
+									.accordion__arrow-group
+										p 
+											span.state-close Развернуть
+											span.state-open Свернуть
+										svg.svg-down
+											use(href='./img/sprite.svg#svg-down')
+							
+							.accordion__content
+								.basket-card.prepared-card
+									//image
+									.basket-card__img
+										img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+									.basket-card__group
+										//title group
+										.basket-card__title
+											.basket-card__product
+												.basket-card__name Пицца Особая
+												.product-summ-group
+													span.product-count 1 шт
+													span.product-summ 365&nbsp;&#8381;
+											.basket-card__row
+												.round-label
+													span 42см
+												.round-label
+													span Традиционное
+												.prod-weight Вес: 550 гр.
+										
+										//text group
+										.basket-card__text
+											.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+											.basket-card__add
+												p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+												
+										
+									//price group
+									.basket-card__total
+										.prod-weight Вес: 550 гр.
+										.prod-count.txt-16 1 шт
+										.price-box
+											span 600#[small &#8381;]

@@ -186,19 +186,36 @@ html(lang="ru")
 							svg.svg-cross
 								use(href='../img/sprite.svg#svg-cross')
 
-				hr
 				
-				.prepared-card
-					.prepared-card__img
-						img.img-cover(src='../img/goods/pizza1.webp', srcset='../img/goods/pizza1@2x.webp 2x' width='100' height='100' loading='lazy' alt='img')
-					.prepared-card__content
-						.h4-bold Пицца Особая
-						.prepared-card__desk.txt-12
-							p Размер: 28 см
-							p Тесто: Традиционное
-							p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр.
-					.prepared-card__count
-						p 1 шт.
-					.prepared-card__summ
-						p 630 #[span &#8381;]
-
+				
+				hr
+				.basket-card.prepared-card
+					//image
+					.basket-card__img
+						img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+					.basket-card__group
+						//title group
+						.basket-card__title
+							.basket-card__product
+								.basket-card__name Пицца Особая
+								.prod-weight Вес: 550 гр.
+							.basket-card__row
+								.round-label
+									span 42см
+								.round-label
+									span Традиционное
+						
+						//text group
+						.basket-card__text
+							.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+							.basket-card__add
+								p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+								
+						
+					//price group
+					.basket-card__total
+						.prod-weight Вес: 550 гр.
+						.prod-count.txt-16 1 шт
+						.price-box
+							span 600#[small &#8381;]
+						

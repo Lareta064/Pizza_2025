@@ -55,8 +55,13 @@
 	}
 	.basket-card__row{
 		display: flex;
+		align-items: center;
 		gap:4px;
 		flex-wrap: wrap;
+		.prod-weight{
+			font-size: 14px;
+          line-height: 1.43;
+		}
 	}
 	.basket-card__add{
 		display: flex;

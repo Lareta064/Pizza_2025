@@ -337,3 +337,12 @@
 		font-size: 16px;
 	}
 }
+.section-header{
+	margin-bottom: 40px;
+	@media(min-width: 768px) and (max-width: 1364px) {
+		font-size: remy(16);
+	}
+	@media (max-width: 767px) {
+		margin-bottom: 20px;
+	}
+}
