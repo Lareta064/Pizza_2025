@@ -96,6 +96,25 @@ section.profile-page
 										.price-box
 											span 600#[small &#8381;]
 
+								//ИТОГОВАЯ СТРОКА
+								.basket-footer
+									//BUTTONS
+									.buttons-row
+										a(href="#!").btn-light.btn-light--accent Повторить
+										button.btn-light
+											span Удалить из истории
+											svg.svg-delete(style="width:1.25em; height: 1.25em;")
+												use(href='./img/sprite.svg#svg-delete')
+
+									//TOTAL SUMM
+									.total
+										.total__txt Итого: 
+										.total__group
+											.total__count 4 шт. на сумму
+											.price-box 1675 #[small руб.]
+												
+						
+						
 						//single item
 						.accordion__item
 							.accordion__title
@@ -115,7 +134,7 @@ section.profile-page
 								.basket-card.prepared-card
 									//image
 									.basket-card__img
-										img.img-contain(src='../img/goods/pizza-h370.webp', srcset='../img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+										img.img-contain(src='./img/goods/pizza-h370.webp', srcset='./img/goods/pizza-h370@2x.webp 2x' width='' height='' loading='lazy' alt='img')
 									.basket-card__group
 										//title group
 										.basket-card__title

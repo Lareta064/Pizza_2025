@@ -16,6 +16,7 @@
 	border:1px solid $a2;
 	column-gap:12px;
 	white-space: nowrap;
+	cursor:pointer;
 	@media(min-width:768px) and (max-width: 1364px) {
 		height:remy(48);
 		padding-left: remy(28);
@@ -50,7 +51,17 @@
 		background-color: transparent;
 		border-color:$a1;
 		color: $a1;
+		svg{color: $a1;}
 
+	}
+}
+.btn-light.btn-light--accent{
+	border-color:currentColor;
+	color: var(--accent-color-1);
+	&:hover, &:focus{color: white;background-color: var(--accent-color-4);border-color: var(--accent-color-4);}
+	&:active{
+		background-color: transparent;
+		color: var(--accent-color-4);
 	}
 }
 .btn-h30{
