@@ -209,6 +209,11 @@
 .profile-form-body{
 	column-count: 2;
 	column-gap:30px;
+	.fileUpload-label{
+		display: flex;
+		column-gap:10px;
+		align-items: center;
+	}
 	input, textarea{font-size: 14px;}
 	@media (max-width: 1364px) {
 		column-gap:remy(30);
@@ -224,6 +229,7 @@
 		justify-content: space-between;
 		@media (max-width: 1364px) {
 			column-gap:remy(16);
+			.fileUpload-label{column-gap:remy(10);}
 		}
 		@media (max-width: 767px) {
 			flex-direction: column;
@@ -233,6 +239,7 @@
 	@media (max-width: 767px) {
 		flex-direction: column;
 		gap:25px;
+		.fileUpload-label{column-gap:10px;}
 	}
 }
 .form-item-passw .show-passw{
@@ -245,5 +252,15 @@
 	}
 	@media (max-width: 767px) {
 		bottom: 8px;
+	}
+}
+.profile-form-body{
+	position: relative;
+	.fileUpload-group{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: fit-content;
+		transform: translateY(-60px);
 	}
 }

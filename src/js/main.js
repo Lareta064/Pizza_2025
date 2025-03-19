@@ -83,7 +83,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     }
+    // INPUT TYPE="FILE"
+    const fileInputs = document.querySelectorAll(".fileUploadInput");
+
+    if (fileInputs) {
+      fileInputs.forEach((input) => {
+        input.addEventListener("change", (event) => {
+          const label = input.closest(".fileUpload-label");
+          const labelTxt = label.querySelector(".fileUpload-name");
+         
     
+          // Получаем файл и его размер
+          const file = input.files[0];
+          const fileName = file?.name || "Заменить фото";
+    
+          if (file) {
+            // Если файл соответствует требованиям
+            labelTxt.textContent = fileName; // Отображаем имя файла
+           
+          }
+          
+        });
+      });
+    
+      
+    }
     /* =============== modal с атрибутом [data-modal] ===============*/ 
     const modalOpen = document.querySelectorAll('[data-btn]');
     const modalFrames = document.querySelectorAll('[data-modal]');
