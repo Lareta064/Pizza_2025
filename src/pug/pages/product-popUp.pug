@@ -12,22 +12,22 @@ block content
 	//- data-simplebar
 	
 
-	.modal-frame.product-modal.modal-vertical(data-modal="product")
-		.popup-content
-			.popup-body
-				.popup-img.simple-image
+	.modal-frame.product-modal.modal-vertical.visible(data-modal="product")
+		.single-product-content
+			.single-product-body
+				.single-product-img.simple-image
 					img(src="./img/goods/pizza3.webp", srcset="./img/goods/pizza3@2x.webp 2x" width="768" height="476" alt="img")
 				
-				.popup-body-content
-					.popup-header
-						.popup-title Пицца “Особая”
-						.popup-header__row
+				.single-product-body-content
+					.single-product-header
+						.single-product-title Пицца “Особая”
+						.single-product-header__row
 							p.prod-ingrid Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
 							span.prod-weight Вес: 550 гр.
 					
 					
-					.popup-content-center
-						.popup-body__filters
+					.single-product-content-center
+						.single-product-body__filters
 							.switch-group.switch-group--size
 								label.switch-label(data-size="small")
 									input(type="radio" name="switch_name2")
@@ -50,7 +50,7 @@ block content
 									span.switch-btn Сырный бортик
 
 				
-						.popup-body__group
+						.single-product-body__group
 							.title-16 Добавить:
 							.add-products-group.scroll-y
 								+addCard(1,'Лук', 80)
@@ -61,7 +61,7 @@ block content
 								+addCard(6,'Сыры чеддер и пармезан', 79)
 								
 			//FOOTER
-			.popUp-footer
+			.single-product-footer
 				.counter-wrapper__group
 					.counter-wrapper
 						span.txt-bold Количество:
@@ -72,7 +72,7 @@ block content
 					.flex-sm
 						p.prod-weight Вес: 550 гр.
 				
-				.popUp-price-wrapper
+				.single-product-price-wrapper
 					.price-box
 						span.new-price 600&#8381;
 						span.old-price 800&#8381;
