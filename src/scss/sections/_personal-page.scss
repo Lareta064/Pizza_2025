@@ -195,3 +195,14 @@
 		.accordion-btn{align-items: flex-start;}
 	}
 }
+.profile-form-body{
+	column-count: 2;
+	column-gap:30px;
+	input, textarea{font-size: 14px;}
+}
+.form-item-passw .show-passw{
+	position: absolute;
+	right: 0;
+	bottom: 8px;
+	z-index: 2;
+}

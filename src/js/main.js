@@ -64,6 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+    // passw show
+    const passInputs = document.querySelectorAll('.form-item-passw');
+    if(passInputs.length>0){
+      passInputs.forEach((item)=>{
+        const itemBtn = item.querySelector('.show-passw');
+        const itemInp = item.querySelector('INPUT');
+        if(itemBtn){
+          itemBtn.addEventListener('click',()=>{
+            if(itemBtn.classList.contains('active')){
+              itemBtn.classList.remove('active');
+              itemInp.setAttribute('type','password');
+            }else{
+              itemBtn.classList.add('active');
+              itemInp.setAttribute('type','text');
+            }
+          })
+        }
+      });
+    }
     
     /* =============== modal с атрибутом [data-modal] ===============*/ 
     const modalOpen = document.querySelectorAll('[data-btn]');
