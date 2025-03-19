@@ -96,7 +96,7 @@ section.profile-page
 										.price-box
 											span 600#[small &#8381;]
 
-								//ИТОГОВАЯ СТРОКА
+								//ИТОГОВАЯ СУММА
 								.basket-footer
 									//BUTTONS
 									.buttons-row
@@ -112,8 +112,6 @@ section.profile-page
 										.total__group
 											.total__count 4 шт. на сумму
 											.price-box 1675 #[small руб.]
-												
-						
 						
 						//single item
 						.accordion__item
@@ -167,7 +165,51 @@ section.profile-page
 										.prod-count.txt-16 1 шт
 										.price-box
 											span 600#[small &#8381;]
+								
+								//CARD
+								.basket-card.prepared-card
+									//image
+									.basket-card__img
+										img.img-contain(src='./img/goods/salat.webp', srcset='./img/goods/salat@2x.webp 2x' width='' height='' loading='lazy' alt='img')
+									.basket-card__group
+										//title group
+										.basket-card__title
+											.basket-card__product
+												.basket-card__name Салат "Цезарь"
+												.product-summ-group
+													span.product-count 1 шт
+													span.product-summ 365&nbsp;&#8381;
+											
+										//text group
+										.basket-card__text
+											.basket-card__desk Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+											.basket-card__add
+												p Дополнительно: Сыр моцарелла 50 гр. Пепперони 30 гр. Ветчина 30 гр. Маслины 20гр. Оливковое масло 20 гр.
+												
+										
+									//price group
+									.basket-card__total
+										.prod-weight Вес: 550 гр.
+										.prod-count.txt-16 1 шт
+										.price-box
+											span 600#[small &#8381;]
+								//ИТОГОВАЯ СУММА
+								.basket-footer
+									//BUTTONS
+									.buttons-row
+										a(href="#!").btn-light.btn-light--accent Повторить
+										button.btn-light
+											span Удалить из истории
+											svg.svg-delete(style="width:1.25em; height: 1.25em;")
+												use(href='./img/sprite.svg#svg-delete')
 
+									//TOTAL SUMM
+									.total
+										.total__txt Итого: 
+										.total__group
+											.total__count 2 шт. на сумму
+											.price-box 1075 #[small руб.]					
+						
 						//single item
 						.accordion__item
 							.accordion__title
@@ -216,3 +258,24 @@ section.profile-page
 										.prod-count.txt-16 1 шт
 										.price-box
 											span 600#[small &#8381;]
+
+								//ИТОГОВАЯ СУММА
+								.basket-footer
+									//BUTTONS
+									.buttons-row
+										a(href="#!").btn-light.btn-light--accent Повторить
+										button.btn-light
+											span Удалить из истории
+											svg.svg-delete(style="width:1.25em; height: 1.25em;")
+												use(href='./img/sprite.svg#svg-delete')
+
+									//TOTAL SUMM
+									.total
+										.total__txt Итого: 
+										.total__group
+											.total__count 1 шт. на сумму
+											.price-box 675 #[small руб.]
+
+					//CLEAR HISTORY
+					.clear-history-btn.mt-40
+						button.btn-accent Очистить всю историю

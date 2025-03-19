@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 .basket-card.prepared-card{
 	border-bottom: 0;
-	border-top: 1px dashed var(--secondary-1);
+	border-top: 2px dashed var(--secondary-1);
 	.basket-card__text{
 		width: auto;
 		flex:1;
@@ -152,6 +152,16 @@
 	.accordion-btn{
 		justify-content: space-between;
 		column-gap:1em;
+	}
+	.basket-footer{
+		padding-top: 20px;
+		border-top:2px dashed var(--secondary-1);
+		@media (max-width: 767px) {
+		flex-direction: column;
+		border-top:0;
+		.buttons-row{width: 100%;}
+		.buttons-row>*{width: 100%; max-width: 100%;}
+		}
 	}
 	.order-info-list{
 		flex-grow: 1;

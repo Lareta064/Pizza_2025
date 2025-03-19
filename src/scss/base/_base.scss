@@ -227,7 +227,19 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		section, .p-block-50 {padding-block:20px;}
 	}
 }
-.pt-50{
+.pb-10{padding-bottom:10px!important}
+.pb-20{padding-bottom:20px!important}
+.pb-30{padding-bottom:30px!important}
+.pb-40{
+	padding-bottom:40px!important;
+	@media (max-width: 1364px) {
+		padding-bottom: remy(40);
+	}
+	@media (max-width: 767px) {
+		padding-bottom: 20px;
+	}
+}
+.pb-50{
 	padding-top: 50px;
 	@media (max-width: 1364px) {
 		padding-top: remy(50);
@@ -245,10 +257,23 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 		padding-bottom: 20px;
 	}
 }
-.mb-20{
-	margin-bottom: 20px!important;
+.pt-10{padding-top:10px!important}
+.pt-20{padding-top:20px!important}
+.pt-30{padding-top:30px!important}
+.pt-40{
+	padding-top:40px!important;
 	
+	@media (max-width: 1364px) {
+		padding-top: remy(40);
+	}
+	@media (max-width: 767px) {
+		padding-top: 20px;
+	}
 }
+
+.mb-10{margin-bottom: 10px!important;}
+.mb-20{margin-bottom: 20px!important;}
+.mb-30{margin-bottom: 30px!important;}
 .mb-40{
 	margin-bottom: 40px!important;
 	@media (max-width: 1364px) {
@@ -256,6 +281,18 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	}
 	@media (max-width: 767px) {
 		margin-bottom: 20px!important;;
+	}
+}
+.mt-10{margin-top: 10px!important;}
+.mt-20{margin-top: 20px!important;}
+.mt-30{margin-top: 30px!important;}
+.mt-40{
+	margin-top: 40px!important;
+	@media (max-width: 1364px) {
+		margin-top: remy(40)!important;
+	}
+	@media (max-width: 767px) {
+		margin-top: 20px!important;;
 	}
 }
 .main{

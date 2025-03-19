@@ -5,8 +5,8 @@
 	padding-block:3em;
 	
 	color: var(--primary);
-	border-bottom: 1px dashed var(--secondary-1);
-	&:first-child{border-top: 1px dashed var(--secondary-1);}
+	border-bottom: 2px dashed var(--secondary-1);
+	&:first-child{border-top: 2px dashed var(--secondary-1);}
 	.basket-card__img{
 		width: 16em;
 		height: 16em;
@@ -153,7 +153,7 @@
 	@media (max-width: 767px) {
 		font-size: 10px;
 		padding: 10px;
-		border: 1px solid var(--secondary-1);
+		border: 1px solid var(--secondary-1)!important;
 		border-radius: 20px;
 		flex-wrap: wrap;
 		row-gap:10px;
