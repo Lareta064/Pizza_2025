@@ -13,6 +13,7 @@ section.profile-page
 				#content1.tab-content.active
 					.profile-edit-content
 						form.profile-form(action="" method="method")
+							//form-body
 							.profile-form-body
 								.form-item.flex
 									label.form-item-label Имя
@@ -33,6 +34,25 @@ section.profile-page
 									label.form-item-label Пароль:
 									input(type="password" placeholder="Пароль" value="5555555")
 									button(type="button").show-passw
+							//form-footer
+							.profile-form-footer
+								.form-footer-row.flex
+									//CONFIRM CHECKBOX
+									.form-agree-wrapper
+										.form-subscribe
+											label.relative-label
+												input(type="checkbox" name="subscr_email")
+												span.fake-checkbox
+												.label-text
+													p Согласен на получение новостей и других рассылок
+														
+										
+									//BTN
+									button(type="submit").btn-accent.sm-100 Изменить данные
+								
+								.politic-info
+									p Работа с персональными данными на этом сайте ведется в соответствии с #[a(href="#!") политикой конфиденциальности].
+
 										
 				//ИСТОРИЯ ЗАКАЗОВ
 				#content2.tab-content

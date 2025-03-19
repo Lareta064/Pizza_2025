@@ -178,6 +178,11 @@ input.btn{width: fit-content;}
 .show-add-product, .show-all-product{color: $p;}
 .w-100{width:100%!important;}
 .w-auto{width:max-content!important;}
+.sm-100{
+	@media (max-width: 767px) {
+	width: 100%;
+	}
+}
 .filter-label{
 	border-radius: 100px;
 	padding: 8px 10px;

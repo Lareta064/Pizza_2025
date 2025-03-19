@@ -195,14 +195,55 @@
 		.accordion-btn{align-items: flex-start;}
 	}
 }
+.profile-form,.profile-form-footer{
+	display: grid;
+	grid-template-columns: 1fr;
+	gap:30px;
+	@media (max-width: 1364px) {
+		gap:remy(30);
+	}
+	@media (max-width: 767px) {
+		gap:remy(20);
+	}
+}
 .profile-form-body{
 	column-count: 2;
 	column-gap:30px;
 	input, textarea{font-size: 14px;}
+	@media (max-width: 1364px) {
+		column-gap:remy(30);
+	}
+	@media (max-width: 767px) {
+		column-count: 1;
+	}
+}
+.profile-form-footer{
+	
+	.form-footer-row{
+		column-gap:16px;
+		justify-content: space-between;
+		@media (max-width: 1364px) {
+			column-gap:remy(16);
+		}
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap:25px;
+		}
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		gap:25px;
+	}
 }
 .form-item-passw .show-passw{
 	position: absolute;
 	right: 0;
 	bottom: 8px;
 	z-index: 2;
+	@media (max-width: 1364px) {
+		bottom: remy(8);
+	}
+	@media (max-width: 767px) {
+		bottom: 8px;
+	}
 }
