@@ -53,13 +53,18 @@
 	}
 }
 .form-item.flex{
-	gap:10px;
+	
 	.form-item-label{
 		min-width: 4.375em;
 		font-weight: 700;
 		font-size: 16px;
 		line-height: 1.50;
-		color: var(--primary)
+		color: var(--primary);
+		
+	}
+	@media(min-width:768px) and (max-width:1364px){
+		gap:remy(10);
+		.form-item-label{font-size: remy(16);}
 	}
 }
 .form-item +.form-item{margin-top: .75em;}
@@ -297,6 +302,7 @@
 			height: remy(16);
 			margin-right: remy(5);
 			top:remy(3);
+			font-size:remy(14);
 		}
 		
 	}
