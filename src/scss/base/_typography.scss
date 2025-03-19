@@ -345,10 +345,9 @@
 		&>*{margin-bottom: 0;}
 	}
 	@media (max-width: 767px) {
-		&>*{margin-bottom: 0;}
 		padding-top: 20px;
 		padding-bottom: 20px;
-		margin-bottom: 0;
-
+		margin-bottom: 0;		
+		&>*{margin-bottom: 0;}
 	}
 }
