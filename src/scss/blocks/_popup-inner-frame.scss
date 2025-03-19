@@ -2,6 +2,20 @@
 *[data-modal]{
 	transform: translateX(110%);
 	transition: .3s; display: flex;
+	[data-close]{
+		position: absolute;
+		top: -3em;
+		right: -3em;
+		@media (max-width: 1279px) {
+			right: 0;
+			top: -4em;
+		}
+		@media (max-width: 767px) {
+			top: 3em;
+			right: auto;
+			left: 1em;
+		}
+	}
 }
 *[data-modal].visible{transform: translateX(0);}
 .popup-wrapper{
@@ -27,16 +41,16 @@
 		position: relative;
 		[data-close]{
 			position: absolute;
-			top: -3em;
-			right: -3em;
+			top: -30px;
+			right: -30px;
 			@media (max-width: 1279px) {
 				right: 0;
-				top: -4em;
+				top: -40px;
 			}
 			@media (max-width: 767px) {
-				top: 3em;
+				top: 30px;
 				right: auto;
-				left: 1em;
+				left: 10px;
 			}
 		}
 		@media (max-width: 767px) {

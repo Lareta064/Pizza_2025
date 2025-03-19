@@ -14,6 +14,9 @@ block content
 
 	.modal-frame.product-modal.modal-vertical.visible(data-modal="product")
 		.single-product-content
+			button.round-close(data-close)
+				svg.svg-cross(style="color: white;")
+					use(href='./img/sprite.svg#svg-cross')
 			.single-product-body
 				//left image
 				.single-product-img.simple-image
