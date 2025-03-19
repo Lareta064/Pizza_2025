@@ -3,6 +3,9 @@
 	background-color: $p2;
 	overflow: hidden;
 	color: white;
+	@media (max-width: 767px) {
+	padding-bottom: 80px;
+	}
 }
 .footer .footer-content{
 	position: relative;

@@ -257,9 +257,7 @@
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 2;
 	overflow: hidden;
-
 }
-
 
 .product.horiz-mob{
 	@media (max-width: 767px) {
@@ -366,6 +364,7 @@
 	}
 	@media(min-width: 767px) and (max-width: 1364px) {
 		padding: remy(12);
+		border-radius: remy(20);
 		.card-img{height:remy(84)}
 		.card-txt{
 			
@@ -394,9 +393,14 @@
 	.add-product-card{
 		grid-column: span 4;
 	}
-	.add-product{height: 100%;}
+	// .add-product{height: 100%;}
 	@media(min-width: 767px) and (max-width: 1364px) {
 		gap:remy(10);
+	}
+	@media (max-width: 767px) {
+		.add-product-card{
+			grid-column: span 6;
+		}
 	}
 }
 
