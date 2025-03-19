@@ -70,6 +70,10 @@
 	
 	border-bottom: 1px solid $s1;
 	&>*{border-top: 1px solid $s1;}
+	@media (max-width: 767px) {
+		border-bottom: 0;
+		&>*{border-top: 0;}
+	}
 }
 // .total-price{
 // 	display: flex;
@@ -108,7 +112,11 @@
 	column-gap:10px;
 	@media (max-width: 1364px) {
 		column-gap:remy(10);
-		.prod-weight{display: none;}
+		
+	}
+	@media (max-width: 767px) {
+	.prod-weight{display: none;}
+	column-gap:0;
 	}
 }
 .prod-ingrid{
@@ -253,12 +261,12 @@
 		}
 	}
 	@media (max-width: 767px) {
-		padding-top: 0;
+		padding-top: 20px;
 		gap:20px;
 		.counter{
 			column-gap: 5px;
 			 margin-left: 5px;
-			 width: 45%;
+			
 			.counter-minus,
 			.counter-plus{
 				width: 12px;
@@ -288,6 +296,10 @@
 		justify-content: flex-start;
 		flex-wrap: wrap;
 	}
+}
+.single-product-footer .counter-wrapper__group{
+	width: 100%;
+	justify-content: space-between;
 }
 .single-product .single-product-footer{
 	padding-left: calc(100% - 600px);
