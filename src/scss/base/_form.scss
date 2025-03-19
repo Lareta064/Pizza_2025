@@ -12,6 +12,9 @@
 		height: 3em;
 		border-bottom: 1px solid $s;
 		background-color: transparent;
+		&+.txt-12{
+			margin-top: 10px;
+		}
 		&::placeholder{
 			color: var(--secondary-4);
 			font-size: 0.9em;
@@ -21,6 +24,9 @@
 		}
 		@media(min-width:768px) and (max-width:1364px){
 			font-size: remy(16);
+			&+.txt-12{
+			margin-top: remy(10);
+		}
 		}
 	}	
 	textarea{

@@ -1,0 +1,64 @@
+section.autorization-page
+	.container
+		.section-header
+			h1.title-2  Вход в личный кабинет:
+		.autorization-forms
+			//MOBILE-FORM TITLES
+			.switch-group.autorization-page-switch
+				label.switch-label.switch-label-autoriz
+					input(type="radio" name="autoriz-mode" checked)
+					span.switch-btn Авторизация
+				label.switch-label.switch-label-reg
+					input(type="radio" name="autoriz-mode")
+					span.switch-btn Регистрация
+			
+			//left col
+			form.autoriz-form.active(action="" method="method")
+				.h4-upper Авторизация
+				.form-item
+					input(type="text" placeholder="Логин *")
+					p.txt-12 Укажите логин, email или номер телефона, которые вы использовали при регистрации. 
+				.form-item
+					input(type="text" placeholder="Пароль *")
+					p.txt-12 Если вы не помните свой пароль - просто оставьте это поле пустым и вы получите новый, вместе со ссылкой на активацию.
+				
+				.form-agree
+					label.relative-label
+						input(type="checkbox" name="chbx1")
+						span.fake-checkbox
+						.label-text
+							p Принимаю #[a(href="#!") условия обработки] персональных данных.
+				.form-btn
+					a(href="personal-page.html").btn Вход
+
+
+			
+			//right col
+			form.reg-form.grey-bg(action="" method="method")
+				.h4-upper Регистрация
+				.form-item
+					input(type="email" placeholder="Email *")
+					p.txt-12 На указанный email придёт письмо со ссылкой для активации.
+				.form-item
+					input(type="text" placeholder="Телефон *")
+					p.txt-12 Просто номер вашего сотового телефона.
+				.form-item
+					input(type="text" placeholder="Пароль")
+					p.txt-12 Если оставить это поле пустым , то пароль будет сгенерирован автоматически.
+				.form-item
+					input(type="text" placeholder="Логин")
+					p.txt-12 Вы можете указать отдельный логин, чтобы не использовать email для входа.
+				.form-item
+					input(type="text" placeholder="Имя")
+					p.txt-12 Ваше имя, для отображения на сайте.
+				.form-agree
+					label.relative-label
+						input(type="checkbox" name="chbx1")
+						span.fake-checkbox
+						.label-text
+							p Принимаю #[a(href="#!") условия обработки] персональных данных.
+				.form-btn
+					button(type="submit").btn-accent Регистрация
+
+					
+

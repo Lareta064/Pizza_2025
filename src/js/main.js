@@ -398,4 +398,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       });
     });
+
+    /*autorization tabs */
+    const autorizForms = document.querySelectorAll('.autorization-forms');
+    if(autorizForms.length > 0){
+      autorizForms.forEach((item)=>{
+        const autorizForm = item.querySelector('.autoriz-form');
+        const autorizFormSwitch = item.querySelector('.switch-label-autoriz');
+        const regFormSwitch = item.querySelector('.switch-label-reg');
+        const regForm = item.querySelector('.reg-form');
+        autorizFormSwitch.addEventListener('click', ()=>{
+          autorizForm.classList.add('active');
+          regForm.classList.remove('active'); 
+        });
+        regFormSwitch.addEventListener('click', ()=>{
+          autorizForm.classList.remove('active');
+          regForm.classList.add('active'); 
+        });
+      })
+    }
+    
+   
   });
