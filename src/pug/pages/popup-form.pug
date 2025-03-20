@@ -1,0 +1,38 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	include ../sections/_promo-slider
+	main.main
+		
+		
+	
+	//FOOTER
+	include ../sections/_footer-v2
+	//- data-simplebar
+
+	.modal-frame.feedback-modal.visible(data-modal="feedback-form")
+		.modal-frame-content
+			button.round-close(data-close)
+				svg.svg-cross(style="color: white;")
+					use(href='./img/sprite.svg#svg-cross')
+			.modal-frame-body
+				.modal-frame-title  Оставьте свою заявку, и&nbsp;мы перезвоним вам в&nbsp;течение 5 минут!
+				form.feedback-form(action="" method="method")
+					.form-item
+						input(type="text" name="" placeholder="Имя *")
+					.form-item
+						input(type="text" name="" placeholder="Телефон *")
+					
+					.form-item
+						textarea(placeholder="Комментарий к заказу" name="message")
+					.form-btn
+						.form-agree
+							.label-text
+								p Заполняя информацию, Вы даете согласие на обработку персональных данных в соответствии  #[a(href="#!") с политикой конфиденциальности].
+						
+						button.btn(type="submit") Отправить
+				
+		
+block variables
+	-var title = "Pizza Mega Magic";

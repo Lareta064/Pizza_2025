@@ -1,0 +1,51 @@
+@use "../base/var" as *;
+.modal-frame-content{
+	border-radius: 40px;
+	width: 100%;
+	max-width: 570px;
+	padding: 40px;
+	background-color: #fff;
+	position: relative;
+	
+	.modal-frame-title{
+		font-family: var(--second-family);
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 125%;
+		text-align: center;
+		color: var(--primary);
+		margin-bottom: 30px;
+		max-width: 400px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.feedback-form{
+		.form-btn{
+			text-align: center;
+			&>*+*{margin-top: 20px;}
+			.btn{width: 170px;}
+		}
+	}
+	@media (max-width: 1364px) {
+		border-radius: remy(40);
+		width: 100%;
+		max-width: 570px;
+		padding: remy(40);
+	}
+	@media (max-width: 767px) {
+		border-radius: 0;
+		max-width: 100%;
+		padding: 60px 10px;
+		height: 100%;
+		.modal-frame-title{
+			font-size: 20px;
+			line-height: 130%;
+			max-width: 200px;
+		}
+	}
+}
+.modal-frame.feedback-modal{
+	@media (max-width: 767px) {
+	 justify-content: flex-start;
+	}
+}
