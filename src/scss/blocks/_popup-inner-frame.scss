@@ -6,12 +6,13 @@
 		position: absolute;
 		top: -3em;
 		right: -3em;
+		z-index: 3;
 		@media (max-width: 1279px) {
 			right: 0;
 			top: -4em;
 		}
 		@media (max-width: 767px) {
-			top: 3em;
+			top: 1em;
 			right: auto;
 			left: 1em;
 		}
