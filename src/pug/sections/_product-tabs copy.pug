@@ -7,7 +7,7 @@ mixin card(img, title, price, old)
 				.tag-meta.tag-meta--sale Акция!
 				.tag-meta.tag-meta--hit Популярное
 
-			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
+			img.img-cover(src="./img/goods/"+ img +".webp", srcset="./img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
 		
 		.product__body
 			p.product__name !{title}
@@ -31,7 +31,7 @@ mixin card-img-370(img, title, price, old)
 				.tag-meta.tag-meta--sale Акция!
 				.tag-meta.tag-meta--hit Популярное
 
-			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
+			img.img-cover(src="./img/goods/"+ img +".webp", srcset="./img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
 		.product__body
 			p.product__name !{title}
 			block 
@@ -53,7 +53,7 @@ mixin cardMulti(img, title, tags, price,  old )
 				.tag-meta.tag-meta--sale Акция!
 				.tag-meta.tag-meta--hit Популярное
 
-			img.img-cover(src="../img/goods/"+ img +".webp", srcset="../img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
+			img.img-cover(src="./img/goods/"+ img +".webp", srcset="./img/goods/"+ img+"@2x.webp 2x" width="370" height="231" alt="img" loading="lazy")
 		
 		.product__body
 			p.product__name !{title}

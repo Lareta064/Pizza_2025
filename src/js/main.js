@@ -182,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // DROP SELECT
     const dropdowns = document.querySelectorAll('.dropdown');
-
     dropdowns.forEach(function (dropDownWrapper) {
         const dropDownInput = dropDownWrapper.querySelector('.dropdown__input');
         const dropDownList = dropDownWrapper.querySelector('.dropdown__list');
@@ -236,30 +235,42 @@ document.addEventListener("DOMContentLoaded", function () {
             if (radioInput) radioInput.checked = true;
         });
     }
-    
-      /*DELIVERY HIDE FIELDS */
-      const deliverySwitch = document.querySelector('#switch-delivery');
-      if(deliverySwitch){
-        deliverySwitchLabels = deliverySwitch.querySelectorAll('.switch-label');
-        deliverySwitchLabels.forEach((swtch)=>{
+    /*PIZZA SIZE */
+    const sizeToggleWrapper = document.querySelector('.switch-group--size');
+    if(sizeToggleWrapper){
+      const productItem =  document.querySelector('#scale-img');
+      const sizeToggleSwith =  sizeToggleWrapper.querySelectorAll('[data-size]');
+      sizeToggleSwith.forEach((item)=>{
+        item.addEventListener('click', ()=>{
+           const swithAttr = item.getAttribute('data-size');
 
-          swtch.addEventListener('click', ()=>{
-            
-            const thisInputRadio = swtch.querySelector('[type="radio"]');
-            const hideDeliveryFields = document.querySelector('#delivery-courier');
-            const pickupDeliveryFields = document.querySelector('#delivery-pickup');
-            if(swtch.classList.contains('switch-delivery-courier')){
-              if(thisInputRadio.checked){
-                hideDeliveryFields.classList.add('filds-visible');
-                pickupDeliveryFields.classList.add('filds-hide');
-              }
-            }else{
-              hideDeliveryFields.classList.remove('filds-visible');
-              pickupDeliveryFields.classList.remove('filds-hide');
-            }
-          });
+           productItem.className = swithAttr;
         });
-      }
+      });
+    }
+    /*DELIVERY HIDE FIELDS */
+    const deliverySwitch = document.querySelector('#switch-delivery');
+    if(deliverySwitch){
+      deliverySwitchLabels = deliverySwitch.querySelectorAll('.switch-label');
+      deliverySwitchLabels.forEach((swtch)=>{
+
+        swtch.addEventListener('click', ()=>{
+          
+          const thisInputRadio = swtch.querySelector('[type="radio"]');
+          const hideDeliveryFields = document.querySelector('#delivery-courier');
+          const pickupDeliveryFields = document.querySelector('#delivery-pickup');
+          if(swtch.classList.contains('switch-delivery-courier')){
+            if(thisInputRadio.checked){
+              hideDeliveryFields.classList.add('filds-visible');
+              pickupDeliveryFields.classList.add('filds-hide');
+            }
+          }else{
+            hideDeliveryFields.classList.remove('filds-visible');
+            pickupDeliveryFields.classList.remove('filds-hide');
+          }
+        });
+      });
+    }
     //ACORDION
     $(function() {
     
