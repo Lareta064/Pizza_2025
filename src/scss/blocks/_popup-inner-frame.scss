@@ -2,9 +2,9 @@
 *[data-modal]{
 	transform: translateX(110%);
 	transition: .3s; display: flex;
-	[data-close]{
+	.round-close{
 		position: absolute;
-		top: -3em;
+		top: -30;
 		right: -3em;
 		z-index: 3;
 		@media (max-width: 1279px) {
@@ -40,7 +40,7 @@
 		padding: 4em;
 		background-color: #fff;
 		position: relative;
-		[data-close]{
+		.round-close{
 			position: absolute;
 			top: -30px;
 			right: -30px;

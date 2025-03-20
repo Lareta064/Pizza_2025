@@ -316,11 +316,15 @@ main{flex-grow: 1;}
 	}
 }
 
-.flex, .flex-center{
+.flex, .flex-center, .column-center{
 	display: flex;
 	align-items: center;
 }
-
+.column-center{
+  flex-direction: column;
+  justify-content: center;
+  &>*{width: 100%;}
+  }
 .flex-center{
 	justify-content: center;
 }

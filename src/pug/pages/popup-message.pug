@@ -1,0 +1,26 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	include ../sections/_promo-slider
+	main.main
+		
+		
+	
+	//FOOTER
+	include ../sections/_footer-v2
+	//- data-simplebar
+
+	.modal-frame.inform-modal.visible(data-modal="feedback-form")
+		.modal-frame-content.column-center
+			button.round-close(data-close)
+				svg.svg-cross(style="color: white;")
+					use(href='./img/sprite.svg#svg-cross')
+			.modal-frame-body
+				.modal-frame-title  Заказ оформлен успешно!
+				.txt-14.txt-center
+					p Ваш заказ принят в обработку и в ближайшее время мы с вами свяжемся по телефону для подтверждения заказа.
+				button.btn-accent(data-close) Понятно
+		
+block variables
+	-var title = "Pizza Mega Magic";
