@@ -261,16 +261,7 @@
 	width: 100%;
 	justify-content: space-between;
 }
-.single-product .single-product-footer{
-	// padding-left: calc(100% - 600px);
-	// justify-content: space-between;
-	// @media (max-width: 1364px) {
-	// 	padding-left: calc(100% - remy(600));
-	// }
-	// @media (max-width: 767px) {
-   	//      padding-left: 0;
-	// }
-}
+
 .single-product .single-product-price-wrapper{
 	flex-grow: 1;
 	justify-content: space-between;
@@ -283,87 +274,7 @@
 		
 	}
 }
-// .resize-img{
-// 	position: relative;
-// 	height: 295px;
-// 	border-radius: 0 0 25% 25%;
-// 	overflow: hidden;
-// 	// margin-top: -125px;
-	
-// 	.resize-img__borders{
-// 		width: 445px;
-// 		height: 445px;
-// 		display: block;
-// 		position: absolute;
-// 		top:-15px;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		border: 2px dashed $s;
-// 		border-radius: 50%;
-// 		}
-// 		.resize-img__borders:after{
-// 			content: '';
-// 			width: 525px;
-// 			height: 525px;
-// 			border-radius: 50%;
-// 			border: 2px dashed $s;
-// 			position: absolute;
-// 			top: 50%;
-// 			left: 50%;
-// 			transform: translate(-50%, -50%);
-// 		}
-// 		.resize-img__borders:before{
-// 			content: '';
-// 			width: 610px;
-// 			height: 610px;
-// 			border-radius: 50%;
-// 			border: 2px dashed $s;
-// 			position: absolute;
-// 			top: 50%;
-// 			left: 50%;
-// 			transform: translate(-50%, -50%);
-// 		}
-// 		#scale-img{
-// 		position: absolute;
-// 		z-index: 2;
-// 		width: 620px;
-// 		height: 620px;
-// 		max-width: unset;
-// 		position: absolute;
-// 		top:-15px;
-// 		left: 50%;
-// 		transform: translate(-50%, -50%);
-// 		transition: .3s;
-// 		border-radius: 50%;
-		
-// 	}
-// 	#scale-img.maxi{
-// 		width: 620px;
-// 		height: 620px;
-// 		object-fit: cover;
-// 		object-position: center bottom;
-// 	}
-// 	#scale-img.medium{
-// 		width: 545px;
-// 		height: 545px;
-// 		object-fit: cover;
-// 		object-position: center bottom;
-// 	}
-// 	#scale-img.small{
-// 		width: 450px;
-// 		height: 450px;
-// 		object-fit: cover;
-// 		object-position: center bottom;
-// 	}
-// }
 
-
-// .footer.single-product-footer{
-// 	z-index: 10;
-// 	opacity: 1 !important;
-//     visibility: visible !important;
-//     transform: translateY(0) !important;
-// }
 // popUp
 .product-modal{
 	@media (max-width: 767px) {
@@ -403,10 +314,89 @@
 		max-width:  360px;
 		border-radius: 0;
 		height: 100%;
-		&.single-product-special{max-width: 100%;}
 		
 	}
 }
+.product-modal .single-product-content.single-product-special {
+	@media (max-width: 767px) {
+			max-width: 100%;
+			padding: 0;
+		
+		.single-product-body-content{
+			max-width:  380px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		.resize-img__borders{
+			width: 445px;
+			height: 445px;
+			display: block;
+			position: absolute;
+			top:-15px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 0;
+			border-radius: 50%;
+			}
+			.resize-img__borders:after{
+				content: '';
+				width: 475px;
+				height: 475px;
+				border-radius: 50%;
+				border: 2px dashed $s;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.resize-img__borders:before{
+				content: '';
+				width: 550px;
+				height: 550px;
+				border-radius: 50%;
+				border: 2px dashed $s;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			#scale-img{
+			position: absolute;
+			z-index: 2;
+			width: 620px;
+			height: 620px;
+			max-width: unset;
+			position: absolute;
+			top:-15px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: .3s;
+			border-radius: 50%;
+			
+		}
+		#scale-img.maxi{
+			width: 620px;
+			height: 620px;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+		#scale-img.medium{
+			width: 545px;
+			height: 545px;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+		#scale-img.small{
+			width: 480px;
+			height: 480px;
+			object-fit: cover;
+			object-position: center bottom;
+		}
+
+	}
+	
+}
+
 .product-modal  .single-product-img{
 	width: 440px;
 	height: 440px;
