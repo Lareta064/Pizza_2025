@@ -15,8 +15,9 @@ block content
 		section.single-product.single-product-v2
 			.container
 				.single-product-twocolumns
-					.single-product-photo
-						img(src='./img/goods/pizza2-h-370.webp', srcset='./img/goods/pizza2-h-370@2x.webp 2x' width='440' height='440' loading='lazy' alt='img')
+					.single-product-photo.resize-image
+						//класс у картинки зависит от того, как чекбокс выбран
+						img#scale-img.medium(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='740' height='740' loading='lazy' alt='img')
 					
 					
 					//right column
