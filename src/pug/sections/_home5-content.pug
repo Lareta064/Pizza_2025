@@ -45,7 +45,7 @@ mixin card-img-370-cut(img, title, price, old, tags)
 					span Выбрать
 section.products-menu
 	.container
-		.title-wrapper
+		.title-wrapper.txt-center
 			h2.h2 Меню
 		.products-categories
 			.products-categories--grid.scroll-sm
@@ -62,7 +62,7 @@ section.product-assortiment#pizza
 	.container.gap-88
 		//ПИЦЦЫ
 		.product-assortiment-single
-			.title-wrapper
+			.title-wrapper.txt-center
 				.h2 Пицца
 			.tabs-container.gap-40
 				.tabs.scroll-sm
@@ -118,7 +118,7 @@ section.product-assortiment#pizza
 		
 		//Комбо
 		.product-assortiment-single#combo
-			.title-wrapper
+			.title-wrapper.txt-center
 				.h2 Комбо
 			.grid-three-columns
 				+card-img-370('combo2-h370', 'Комбо 2 друга', '650', 800, [{cl: 'new', txtTag: 'Новинка'}, {cl: 'sale', txtTag: 'Акция!'}])
@@ -136,7 +136,7 @@ section.product-assortiment#pizza
 		
 		//Салаты
 		.product-assortiment-single#salat
-			.title-wrapper
+			.title-wrapper.txt-center
 				.h2 Салаты
 			.grid-three-columns
 				+card-img-370-cut('salat', 'Салат Овощной', '130')
@@ -150,7 +150,7 @@ section.product-assortiment#pizza
 		
 		//Дессерты
 		.product-assortiment-single#dessert
-			.title-wrapper
+			.title-wrapper.txt-center
 				.h2 Дессерты
 			.grid-three-columns
 				+card-img-370('dessert', 'Томатный соус', '45')
@@ -161,7 +161,7 @@ section.product-assortiment#pizza
 		
 		//Соусы
 		.product-assortiment-single#souse
-			.title-wrapper
+			.title-wrapper.txt-center
 				.h2 Соусы
 			.grid-three-columns
 				+card-img-370('souse-370', 'Томатный соус', '45')
@@ -172,7 +172,7 @@ section.product-assortiment#pizza
 
 		//Напитки
 		.product-assortiment-single#juce
-			.title-wrapper
+			.title-wrapper.txt-center
 				.h2 Напитки
 			.grid-three-columns
 				+card-img-370('juice', 'Пепси', '85')

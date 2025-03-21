@@ -7,7 +7,7 @@
 }
 @font-face{
 	font-family: 'Chekharda';
-	src: url('../fonts/Chekharda-BoldItalic.woff2'), format('woff2');
+	src: url('../fonts/Chekharda-BoldItalic.woff'), format('woff');
 	font-weight: 400;
 	font-display: swap;
 }
@@ -161,7 +161,9 @@ input::placeholder, textarea::placeholder, textarea::placeholder{
 	font-family: inherit;
 	font-size: inherit;
 }
-
+input[type="radio"], input[type="checkbox"]{
+	appearance: none;
+}
 .container{
 	width: 1190px;
 	padding-left: 10px;

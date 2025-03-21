@@ -1,0 +1,34 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	include ../sections/_promo-slider
+	main.inner-main
+		.breadcrumbs-wrapper
+			.container
+				ul.breadcrumbs
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#!") Второй пункт
+					li
+						a(href="#!") Вложенная страница
+			
+		section.page-404
+			.container
+				.page-error-content
+					h1.title-2 Упс, такой страницы пока нет!
+					
+					.page-error-image
+						img.img-contain(src='./img/404.webp', srcset='./img/404@2x.webp 2x' width='429' height='378' loading='lazy' alt='img')
+		
+					.title-24 Возможно вы попытались загрузить не существующую страницу. Воспользуйтесь навигацией меню или венитесь назад.
+					a.btn-accent.w-auto(href="index.html") Веруться назад
+					
+					
+	
+	//FOOTER
+	include ../sections/_footer
+	
+block variables
+	-var title = "404";
