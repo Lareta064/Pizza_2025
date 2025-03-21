@@ -19,13 +19,16 @@
 	}
 }
 .single-product-head{
+	padding-bottom: 20px;
 	&>*+*{margin-top: 10px;}
 	@media (max-width: 1364px) {
+		padding-bottom: remy(20);
 		&>*+*{margin-top: remy(10);}
 	}
 	@media (max-width: 767px) {
-		&>*+*{margin-top: 4px;}
 		text-align: center;
+		padding-bottom: 0;
+		&>*+*{margin-top: 4px;}
 		.prod-weight{display: none;}
 	}
 }
@@ -82,19 +85,38 @@
 		&>*{grid-column: span 6;}
 	}
 }
+.single-product-additional.sm-three-col{
+	@media (max-width: 767px) {
+			
+		&>*{grid-column: span 4;}
+	}
+}
+.single-product-group{
+	padding-top: 22px;
+	.title-16{margin-bottom: 10px;}
+	@media (max-width: 1364px) {
+		padding-top: remy(22);
+		.title-16{margin-bottom: remy(10);}
+	}
+	@media (max-width: 767px) {
+		padding-top: 0;
+		.title-16{margin-bottom: 10px;}
+	}	
+	
+}
 .single-product-additional.scroll-y{
 	height: 340px;
 	padding-right: 10px;
-	padding-block: 16px;
+	padding-bottom: 16px;
 	@media (max-width: 1364px) {
 		height: remy(340);
 		padding-right: remy(10);
-		padding-block: remy(16);
+		padding-bottom: remy(16);
 	}
 	@media (max-width: 767px) {
 		height: auto;
 		padding-right: 0;
-		padding-block: 0;
+		padding-bottom: 0;
 	}
 }
 .single-product-footer{
@@ -150,6 +172,7 @@
 		}
 	}
 }
+
 .single-product-price-wrapper{
 	display: flex;
 	column-gap:10px;
@@ -306,29 +329,30 @@
 	}
 	.single-product-additional.scroll-y{
 		height: 300px;
-		padding-right: 10px;
-		padding-block: 16px;
+		// padding-right: 10px;
+		// padding-bottom: 16px;
 		@media (max-width: 1364px) {
 			height: remy(300);
-			padding-right: remy(10);
-			padding-block: remy(16);
+			// padding-right: remy(10);
+			// padding-bottom: remy(16);
 		}
 		@media (max-width: 767px) {
 			height: auto;
-			padding-right: 0;
-			padding-block: 0;
+			// padding-right: 0;
+			// padding-bottom: 0;
 		}
 	}
 	@media (max-width: 767px) {
 	height: 100vh;
 	overflow-y: hidden;
 	.product-modal-content{
-		height: calc(100vh - 145px);
+		height: calc(100vh - 250px);
 		overflow: hidden;
 		overflow-y: auto;
 		scrollbar-width: none;
 		&::-webkit-scrollbar{display: none;}
 	}
+	.single-product-footer{padding-top: 0; padding-bottom: 70px;}
 	}
 }
 .modal-frame.product-modal{
