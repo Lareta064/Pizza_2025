@@ -92,7 +92,16 @@
 	width: 12px;
 	height: 7px;
 	display: inline-block;
-	color: $p;
+	color: var(--primary);
+	transition: .3s; 
+}
+.svg-carret-rt{
+	width: 14px;
+	height: 24px;
+	display: inline-block;
+	cursor:pointer;
+	color: var(--primary);
+
 }
 .svg-cross, .svg-out,.svg-reload, .svg-menu, .svg-logo, .svg-star, .svg-discount, .svg-info, .svg-list, .svg-delete, .svg-doc, .svg-favor, .svg-share,.svg-explore, .svg-plus{
 	color: $p;
