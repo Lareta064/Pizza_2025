@@ -172,7 +172,7 @@
 		}
 		.basket-card__text{border:0;}
 		.basket-card__product{display: flex;
-		column-gap:16px; align-items: center; justify-content: space-between; margin-bottom: 10px;}
+		column-gap:16px; align-items: center; justify-content: space-between; }
 		.basket-card__add, .basket-card__text{font-size: 12px; padding: 0; }
 		.basket-card__text{padding-left: 10px;}
 		.basket-card__total{
@@ -213,8 +213,12 @@
 		row-gap:10px;
 		margin-top: 10px;
 		.basket-card__img{
+			width: 114px;
+			height: 114px;
+			@media (max-width: 767px) {
 			width: 97px;
 			height: 97px;
+			}
 		}
 		.basket-card__total{
 			width: 100%;
@@ -222,8 +226,11 @@
 		.basket-card__group{
 			flex-direction: column;
 			row-gap:10px;
-			width: calc(100% - 97px);
+			width: calc(100% - 116px);
 			&>*{width: 100%;}
+			@media (max-width: 767px) {
+				width: calc(100% - 100px);
+				}
 		}
 		.basket-card__text{border:0; row-gap:10px;}
 		.basket-card__product{display: flex;
@@ -251,22 +258,31 @@
 			}
 		}
 		.basket-card__name{
-			font-size: 20px;
-			line-height: 130%;
+			font-size: 24px;
+            line-height: 125%;
 			margin-bottom: 0;
+			@media (max-width: 767px) {
+			
+				font-size: 20px;
+				line-height: 130%;
+			}
+			
 		}
 		.basket-card__remove{.svg-delete{display: flex;}}
 		.remove-basket-add{ margin-left: 10px;}
 		.basket-card__product .prod-weight{
 			  display: block;
-			  font-size: 12px;
+			  font-size: 14px;
 			  flex-shrink: 0;
+			  @media (max-width: 767px) {
+				font-size: 12px;
+			  }
 		}
 		.basket-card__title{
 			padding-inline: 10px 0;
 			margin-bottom: 0;
 		}
-		.basket-card__row{margin-top: 10px;}
+		// .basket-card__row{margin-top: 10px;}
 		.basket-card__list{margin-top: 0;}
 	}
 	
@@ -376,7 +392,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			font-size:1.333333em ;
+			font-size:16px ;
+			@media (max-width: 1364px) {
+				font-size:remy(16);
+			}
+			@media (max-width: 767px) {
+				font-size:16px ;
+			}
 		}
 		span{white-space: nowrap;}
 	}
