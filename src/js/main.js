@@ -240,13 +240,15 @@ document.addEventListener("DOMContentLoaded", function () {
     if(sizeToggleWrapper){
       const productItem =  document.querySelector('#scale-img');
       const sizeToggleSwith =  sizeToggleWrapper.querySelectorAll('[data-size]');
-      sizeToggleSwith.forEach((item)=>{
-        item.addEventListener('click', ()=>{
-           const swithAttr = item.getAttribute('data-size');
+      if(sizeToggleSwith.length > 0){
+          sizeToggleSwith.forEach((item)=>{
+            item.addEventListener('click', ()=>{
+              const swithAttr = item.getAttribute('data-size');
 
-           productItem.className = swithAttr;
-        });
-      });
+              productItem.className = swithAttr;
+            });
+          });
+        }
     }
     /*DELIVERY HIDE FIELDS */
     const deliverySwitch = document.querySelector('#switch-delivery');
@@ -273,43 +275,45 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // СЧЕТЧИК
   const counters = document.querySelectorAll('.counter');
+   if(counters){
+      // Перебираем каждый блок счетчика
+      counters.forEach((counter) => {
+        const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
+        const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
+        const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
 
-  // Перебираем каждый блок счетчика
-  counters.forEach((counter) => {
-    const minusButton = counter.querySelector('.counter-minus'); // Кнопка уменьшения
-    const plusButton = counter.querySelector('.counter-plus'); // Кнопка увеличения
-    const counterValue = counter.querySelector('.counter-value'); // Текущее значение (span)
+        // Инициализируем значение (из текста span)
+        let currentValue = parseInt(counterValue.textContent, 10) || 0;
 
-    // Инициализируем значение (из текста span)
-    let currentValue = parseInt(counterValue.textContent, 10) || 0;
+        // Обновляем состояние кнопки уменьшения
+        const updateMinusButtonState = () => {
+          if (currentValue <= 0) {
+            minusButton.setAttribute('disabled', 'disabled');
+          } else {
+            minusButton.removeAttribute('disabled');
+          }
+        };
 
-    // Обновляем состояние кнопки уменьшения
-    const updateMinusButtonState = () => {
-      if (currentValue <= 0) {
-        minusButton.setAttribute('disabled', 'disabled');
-      } else {
-        minusButton.removeAttribute('disabled');
-      }
-    };
+        // Устанавливаем начальное состояние кнопки
+        updateMinusButtonState();
 
-    // Устанавливаем начальное состояние кнопки
-    updateMinusButtonState();
+        // Обработчик клика на кнопку уменьшения
+        minusButton.addEventListener('click', () => {
+          if (currentValue > 0) {
+            currentValue -= 1; // Уменьшаем значение
+            counterValue.textContent = currentValue; // Обновляем текст в span
+            updateMinusButtonState(); // Обновляем состояние кнопки
+          }
+        });
 
-    // Обработчик клика на кнопку уменьшения
-    minusButton.addEventListener('click', () => {
-      if (currentValue > 0) {
-        currentValue -= 1; // Уменьшаем значение
-        counterValue.textContent = currentValue; // Обновляем текст в span
-        updateMinusButtonState(); // Обновляем состояние кнопки
-      }
-    });
-
-    // Обработчик клика на кнопку увеличения
-    plusButton.addEventListener('click', () => {
-      currentValue += 1; // Увеличиваем значение
-      counterValue.textContent = currentValue; // Обновляем текст в span
-      updateMinusButtonState(); // Обновляем состояние кнопки
-    });
+        // Обработчик клика на кнопку увеличения
+        plusButton.addEventListener('click', () => {
+          currentValue += 1; // Увеличиваем значение
+          counterValue.textContent = currentValue; // Обновляем текст в span
+          updateMinusButtonState(); // Обновляем состояние кнопки
+        });
+      });
+    }
     //ACORDION
     $(function() {
     
