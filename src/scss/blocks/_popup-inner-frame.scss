@@ -24,10 +24,12 @@
 	left: 0;
 	right: 0;
 	display: flex;
-	
 	z-index: 10;
 	font-size: 10px;
-	
+	@media(min-width:768px) and (max-width: 1364px){
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 }
 .popup-wrapper .container{
 	width: 100%;
