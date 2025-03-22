@@ -1,0 +1,20 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	include ../sections/_promo-slider
+	main.main
+		include ../sections/_home1-content.pug
+		include ../sections/_cta
+		include ../sections/_our-garantee
+		include ../sections/_discount
+		
+		include ../sections/_about-seo
+	
+	//FOOTER
+	include ../sections/_footer-v2
+	
+	
+
+block variables
+	-var title = "Home1";

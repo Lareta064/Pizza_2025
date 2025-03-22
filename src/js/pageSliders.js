@@ -2,6 +2,15 @@ document.addEventListener("DOMContentLoaded", function () {
    
     // FANCY POPUP
     Fancybox.bind("[data-fancybox]", {});
+    let promoSlider = new Swiper('.promo-slider-swiper',{
+      slidesPerView: 1,
+      effect: "fade",
+      speed: 1000,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+    });
     //NEWS SLIDER
     let newsSlider = new Swiper('.news-slider', {
       slidesPerView: 3,
