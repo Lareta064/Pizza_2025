@@ -16,6 +16,30 @@
 		right: unset!important;
 		
 	}
+	.popup-inner-frame{
+		.round-close{
+			position: absolute!important;
+			z-index: 2;
+			left: auto!important;
+			right: 1.7em!important;
+			top:1.7em!important;
+			
+		}
+		svg{color: var(--primary)}
+		
+		@media (max-width: 767px) {
+		 
+		  .round-close{
+			top: 10px!important;
+			left: 10px!important;
+			right:0!important;
+			position: absolute!important;
+			svg{color: var(--white)}
+		  }
+		 
+		}
+	}
+
 	.order-header > * + *, .order-header .title-34 {
 		margin-top:0!important;margin-bottom: 0!important;
 		

@@ -73,6 +73,7 @@
 		padding: 0;
 	}
 }
+
 .popup-inner-frame{
 	position: absolute;
 	bottom: 0;
@@ -86,13 +87,15 @@
 	padding-right: 1em;
 	
 	z-index:5;
-	width: 52.5em;
+	width: 57.5em;
 	
 	.round-close{
 		position: absolute;
 		z-index: 2;
+		left: auto;
 		right: 1.7em;
 		top:1.7em;
+		
 	}
 	svg{color: var(--primary)}
 	.scroll-y{
