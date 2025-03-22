@@ -2,26 +2,23 @@ extends ../layouts/layout.pug
 
 block content
 	include ../sections/_header
-	include ../sections/_promo-slider
-	main.main
-		
-		
-	
-	//FOOTER
-	include ../sections/_footer-v2
-	//- data-simplebar
-	
-
-	.modal-frame.product-modal.visible(data-modal="product")
-		.single-product-content.sm-pinline-0
-			button.round-close(data-close)
-				svg.svg-cross(style="color: white;")
-					use(href='./img/sprite.svg#svg-cross')
-			.single-product-v2.product-modal-content
+	main.inner-main
+		.breadcrumbs-wrapper
+			.container
+				ul.breadcrumbs
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#!") Второй пункт
+					li
+						a(href="#!") Вложенная страница
+		section.single-product.single-product-v2
+			.container
 				.single-product-twocolumns
 					.single-product-photo.resize-image
 						//класс у картинки зависит от того, как чекбокс выбран
 						img#scale-img.medium(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='740' height='740' loading='lazy' alt='img')
+					
 					
 					//right column
 					.single-product-details
@@ -55,15 +52,13 @@ block content
 									span.switch-btn Сырный бортик
 						
 						//Дополнительно
-						.single-product-group
-							.title-16 Добавить:
-							.single-product-additional.scroll-y
-								+addCard(1,'Лук', 80)
-								+addCard(2,'Перчик Чили', 100)
-								+addCard(3,'Бекон', 130)
-								+addCard(4,'Сыр', 100)
-								+addCard(5,'Моцарелла', 79)
-								+addCard(6,'Сыры чеддер и пармезан', 79)
+						.single-product-additional.scroll-y
+							+addCard(1,'Лук', 80)
+							+addCard(2,'Перчик Чили', 100)
+							+addCard(3,'Бекон', 130)
+							+addCard(4,'Сыр', 100)
+							+addCard(5,'Моцарелла', 79)
+							+addCard(6,'Сыры чеддер и пармезан', 79)
 						
 						//FOOTER
 						.single-product-footer
@@ -85,3 +80,12 @@ block content
 								button.btn-accent 
 									span.hide-sm В корзину
 									span.flex-sm +630
+
+
+	
+	//FOOTER
+	include ../sections/_footer
+	
+
+block variables
+	-var title = "Страница товара";

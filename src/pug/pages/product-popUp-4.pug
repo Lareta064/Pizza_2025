@@ -13,16 +13,14 @@ block content
 	
 
 	.modal-frame.product-modal.visible(data-modal="product")
-		.single-product-content.sm-pinline-0
+		.single-product-content
 			button.round-close(data-close)
 				svg.svg-cross(style="color: white;")
 					use(href='./img/sprite.svg#svg-cross')
-			.single-product-v2.product-modal-content
+			.single-product-v1.product-modal-content
 				.single-product-twocolumns
-					.single-product-photo.resize-image
-						//класс у картинки зависит от того, как чекбокс выбран
-						img#scale-img.medium(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='740' height='740' loading='lazy' alt='img')
-					
+					.single-product-photo
+						img(src='./img/goods/pizza1.webp', srcset='./img/goods/pizza1@2x.webp 2x' width='680' height='424' loading='lazy' alt='img')
 					//right column
 					.single-product-details
 						//title
@@ -34,13 +32,13 @@ block content
 						//filters
 						.single-product-filters
 							.switch-group.switch-group--size
-								label.switch-label(data-size="small")
+								label.switch-label
 									input(type="radio" name="switch_name2")
 									span.switch-btn 28см
-								label.switch-label(data-size="medium")
+								label.switch-label
 									input(type="radio" name="switch_name2" checked)
 									span.switch-btn 32см
-								label.switch-label(data-size="maxi")
+								label.switch-label
 									input(type="radio" name="switch_name2" )
 									span.switch-btn 42см
 							.switch-group
@@ -57,7 +55,7 @@ block content
 						//Дополнительно
 						.single-product-group
 							.title-16 Добавить:
-							.single-product-additional.scroll-y
+							.single-product-additional.sm-three-col.scroll-y
 								+addCard(1,'Лук', 80)
 								+addCard(2,'Перчик Чили', 100)
 								+addCard(3,'Бекон', 130)
@@ -85,3 +83,6 @@ block content
 								button.btn-accent 
 									span.hide-sm В корзину
 									span.flex-sm +630
+				
+block variables
+	-var title = "Pizza Mega Magic";

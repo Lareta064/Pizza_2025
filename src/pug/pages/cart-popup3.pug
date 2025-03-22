@@ -11,14 +11,14 @@ block content
 	//popup-basket отображается за счет класса Visible. Изначально этот класс надо удалить. Он добавляется по клику на компонет с data-btn ="basket-popup" (кнопка корзины в шапке) 
 	
 	.popup-basket.visible(data-modal="basket-popup")
-		button.round-close
+		button(data-close).round-close
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
 
 		.popup-basket-content
 			.order-header.order-header--popup
 				.order-header__group
-					h1.title-2 Корзина:
+					h1.title-34 Корзина:
 					.total__group
 						.total__count 4 шт. на сумму
 						.price-box 1675 #[small руб.]

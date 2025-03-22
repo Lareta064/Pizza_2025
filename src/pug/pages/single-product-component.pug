@@ -1,0 +1,81 @@
+extends ../layouts/layout.pug
+
+block content
+	include ../sections/_header
+	main.inner-main
+		.breadcrumbs-wrapper
+			.container
+				ul.breadcrumbs
+					li
+						a(href="index.html") Главная
+					li
+						a(href="#!") Второй пункт
+					li
+						a(href="#!") Вложенная страница
+		section.single-product.single-product-v1
+			.container
+				.single-product-photo
+					img(src='./img/goods/pizza1.webp', srcset='./img/goods/pizza1@2x.webp 2x' width='340' height='212' loading='lazy' alt='img')
+				
+				.single-product-head
+					.single-product__title  Пицца “Особая”
+					.single-product__desk
+						p.txt-16 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+						.prod-weight Вес: 550 гр.
+	
+				.single-product-filters
+					.switch-group.switch-group--size
+						label.switch-label(data-size="small")
+							input(type="radio" name="switch_name2")
+							span.switch-btn 28см
+						label.switch-label(data-size="medium")
+							input(type="radio" name="switch_name2" checked)
+							span.switch-btn 32см
+						label.switch-label(data-size="maxi")
+							input(type="radio" name="switch_name2" )
+							span.switch-btn 42см
+					.switch-group
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Традиционное
+						label.switch-label
+							input(type="radio" name="switch_name" checked)
+							span.switch-btn Тонкое
+						label.switch-label
+							input(type="radio" name="switch_name")
+							span.switch-btn Сырный бортик
+
+				.single-product-additional.scroll-y
+					+addCard(1,'Лук', 80)
+					+addCard(2,'Перчик Чили', 100)
+					+addCard(3,'Бекон', 130)
+					+addCard(4,'Сыр', 100)
+					+addCard(5,'Моцарелла', 79)
+					+addCard(6,'Сыры чеддер и пармезан', 79)
+				//FOOTER
+				.single-product-footer
+					.counter-wrapper__group
+						.counter-wrapper
+							span.txt-bold Количество:
+							.counter
+								button.counter-minus(type='button' aria-label='Уменьшить количество') –
+								span.counter-value(contenteditable='true') 2
+								button.counter-plus(type='button' aria-label='Увеличить количество') +
+						.flex-sm
+							p.prod-weight Вес: 550 гр.
+					
+					.single-product-price-wrapper
+						.price-box
+							span.new-price 600&#8381;
+							span.old-price 800&#8381;
+							
+						button.btn-accent 
+							span.hide-sm В корзину
+							span.flex-sm +630
+
+	//FOOTER
+	include ../sections/_footer
+	
+
+block variables
+	-var title = "Страница товара";

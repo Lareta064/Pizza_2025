@@ -11,14 +11,14 @@ block content
 	//popup-basket отображается за счет класса Visible. Изначально этот класс надо удалить. Он добавляется по клику на компонет с data-btn ="basket-popup" (кнопка корзины в шапке) 
 	
 	.popup-basket.visible(data-modal="basket-popup")
-		button.round-close
+		button(data-close).round-close
 			svg.svg-cross(style="color: white;")
 				use(href='./img/sprite.svg#svg-cross')
 
 		.popup-basket-content
 			.order-header.order-header--popup
 				.order-header__group
-					h1.title-2 Корзина:
+					h1.title-34 Корзина:
 					.total__group
 						.total__count 4 шт. на сумму
 						.price-box 1675 #[small руб.]
@@ -47,20 +47,20 @@ block content
 			.popup-reccomend
 				.h4-bold.mb-20 Напитки к вашему заказу:
 				.grid-three-columns.gap-10
-					.add-product.price-border
+					a(href="#!").add-product.price-border
 						.card-img
 							img(src="./img/goods/juice6.webp", srcset="./img/goods/juice6@2x.webp 2x" width="95" height="62" alt="img")
 						.card-txt
 							p Напитки
 							.card-btn Выбрать
 					
-					.add-product.price-border
+					a(href="#!").add-product.price-border
 						.card-img
 							img(src="./img/goods/souse2.webp", srcset="./img/goods/souse2@2x.webp 2x" width="95" height="62" alt="img")
 						.card-txt
 							p Соусы
 							.card-btn Выбрать
-					.add-product.price-border
+					a(href="#!").add-product.price-border
 						.card-img
 							img(src="./img/goods/salat.webp", srcset="./img/goods/salat@2x.webp 2x" width="95" height="62" alt="img")
 						.card-txt

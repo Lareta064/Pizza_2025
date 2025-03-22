@@ -10,29 +10,29 @@ block content
 	//FOOTER
 	include ../sections/_footer-v2
 	//- data-simplebar
+	
 
-	.modal-frame.product-modal.modal-vertical.visible(data-modal="product")
-		.single-product-content.single-product-special
+	.modal-frame.product-modal.visible(data-modal="product")
+		.single-product-content
 			button.round-close(data-close)
 				svg.svg-cross(style="color: white;")
 					use(href='./img/sprite.svg#svg-cross')
-			.single-product-body
-				//left image
-				.popup-body__img.resize-img.single-product-img
-					.resize-img__borders
-					img#scale-img.medium(src="./img/goods/pizza-h370.webp", srcset="./img/goods/pizza-h370@2x.webp 2x" width="440" height="440" alt="img")
-				
-				//right content
-				.single-product-body-content
-					.single-product-header
-						.single-product-title Пицца “Особая”
-						.single-product-header__row
-							p.prod-ingrid Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
-							span.prod-weight Вес: 550 гр.
+			.single-product-v2.product-modal-content
+				.single-product-twocolumns
+					.single-product-photo.resize-image
+						//класс у картинки зависит от того, как чекбокс выбран
+						img#scale-img.medium(src='./img/goods/pizza2-h370.webp', srcset='./img/goods/pizza2-h370@2x.webp 2x' width='740' height='740' loading='lazy' alt='img')
 					
-					
-					.single-product-content-center
-						.single-product-body__filters
+					//right column
+					.single-product-details
+						//title
+						.single-product-head
+							.single-product__title  Пицца “Особая”
+							.single-product__desk
+								p.txt-16 Говядина, халапеньо, моцарелла, помидоры, куриное филе, томатный соус.
+								.prod-weight Вес: 550 гр.
+						//filters
+						.single-product-filters
 							.switch-group.switch-group--size
 								label.switch-label(data-size="small")
 									input(type="radio" name="switch_name2")
@@ -53,38 +53,35 @@ block content
 								label.switch-label
 									input(type="radio" name="switch_name")
 									span.switch-btn Сырный бортик
-
-						//Доп продукты
-						.single-product-body__group
+						
+						//Дополнительно
+						.single-product-group
 							.title-16 Добавить:
-							.add-products-group.scroll-y
+							.single-product-additional.scroll-y
 								+addCard(1,'Лук', 80)
 								+addCard(2,'Перчик Чили', 100)
 								+addCard(3,'Бекон', 130)
 								+addCard(4,'Сыр', 100)
 								+addCard(5,'Моцарелла', 79)
 								+addCard(6,'Сыры чеддер и пармезан', 79)
-								
-					//FOOTER
-					.single-product-footer
-						.counter-wrapper__group
-							.counter-wrapper
-								span.txt-bold Количество:
-								.counter
-									button.counter-minus(type='button' aria-label='Уменьшить количество') –
-									span.counter-value(contenteditable='true') 2
-									button.counter-plus(type='button' aria-label='Увеличить количество') +
-							.flex-sm
-								p.prod-weight Вес: 550 гр.
 						
-						.single-product-price-wrapper
-							.price-box
-								span.new-price 600&#8381;
-								span.old-price 800&#8381;
-								
-							button.btn-accent 
-								span.hide-sm В корзину
-								span.flex-sm +630
-		
-block variables
-	-var title = "Pizza Mega Magic";
+						//FOOTER
+						.single-product-footer
+							.counter-wrapper__group
+								.counter-wrapper
+									span.txt-bold Количество:
+									.counter
+										button.counter-minus(type='button' aria-label='Уменьшить количество') –
+										span.counter-value(contenteditable='true') 2
+										button.counter-plus(type='button' aria-label='Увеличить количество') +
+								.flex-sm
+									p.prod-weight Вес: 550 гр.
+							
+							.single-product-price-wrapper
+								.price-box
+									span.new-price 600&#8381;
+									span.old-price 800&#8381;
+									
+								button.btn-accent 
+									span.hide-sm В корзину
+									span.flex-sm +630
