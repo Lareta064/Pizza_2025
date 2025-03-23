@@ -92,3 +92,40 @@
 	}
 
 }
+.mainBanner-content {
+	border-radius: 25px;
+	aspect-ratio: 22 / 7;
+	background-position: left bottom!important;
+	  
+	background-size: cover;
+	padding-left: 70px;
+	position: relative;
+	color: white;
+
+	width: 100%;
+	aspect-ratio:22 / 7;
+	
+ }
+ @media (max-width: 1180px) {
+	.mainBanner-content {
+	  padding-left: 40px;
+	  
+	}
+}
+@media (max-width: 896px) {
+	
+	.mainBanner-content {
+	 
+	  padding-left: 20px;
+	}
+}
+ @media (max-width: 767px) {
+	.mainBanner-content {
+	   width: 100%;
+	   aspect-ratio: 23 / 14;
+	   background-position: left bottom;
+	   background-size: cover;
+	   border-radius: 16px;
+	   
+	}
+}

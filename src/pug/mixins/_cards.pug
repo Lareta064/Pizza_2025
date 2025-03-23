@@ -84,6 +84,28 @@ mixin card(img, title, price, old)
 				
 				button.btn.sm-w100(type="button")
 					span Выбрать
+mixin card-url(img, title, price, old)
+	.product
+		.product__img
+			.product-meta
+				.tag-meta.tag-meta--new Новинка
+				.tag-meta.tag-meta--sale Акция!
+				.tag-meta.tag-meta--hit Популярное
+
+			img.img-cover(src=""+ img  width="370" height="231" alt="img" loading="lazy")
+		
+		.product__body
+			p.product__name !{title}
+			block 
+			
+			.product__footer
+				.price-box
+					span.new-price от #{price} &#8381;
+					if old
+						span.old-price #{old} &#8381;
+				
+				button.btn.sm-w100(type="button")
+					span Выбрать
 mixin card-ui(img, title, price, old)
 	.product
 		.product__img
