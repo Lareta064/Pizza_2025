@@ -1,0 +1,57 @@
+@use "../base/var" as *;
+.contacts-form-grid{
+	display: flex;
+	flex-wrap: wrap;
+	gap:20px;
+	.form-item, .form-btn{
+		width: 100%;
+	}
+	.form-item.w-50 +.form-item.w-50{
+		margin-top: 0;
+	}
+    @media (max-width: 1364px) {
+		gap:remy(20);
+	}
+	@media (max-width: 1364px) {
+		gap:20px;
+	}
+}
+.contacts-form textarea{
+	height: 8em;
+}
+.contacts-content{
+	font-size: 10px;
+	display: grid;
+	grid-template-columns: 67em 1fr;
+	column-gap:13em;
+	@media (max-width: 1364px) {
+		font-size:remy(10);
+		grid-template-columns: 1fr 1fr;
+		column-gap:5em;
+	}
+	@media (max-width: 767px) {
+		grid-template-columns: 1fr;
+		row-gap: 40px;
+		font-size:10px;
+	}
+}
+.contacts-block{
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 150%;
+	color: var(--primary);
+	&__title{
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	@media (min-width: 768px) and (max-width: 1364px) {
+		font-size:remy(16);
+	}
+}
+.contacts-block +.contacts-block{margin-top: 1.25em;}
+.contacts-block .contacts-phones{
+	flex-direction: column;
+	gap: 0.25em;
+	a{font-weight: 400;}
+}

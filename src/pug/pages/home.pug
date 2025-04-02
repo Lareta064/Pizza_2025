@@ -1,7 +1,7 @@
 extends ../layouts/layout.pug
 
 block content
-	include ../sections/_header
+	include ../sections/_header-main-page.pug
 	include ../sections/_promo-slider-short
 	main.main
 		include ../sections/_categories-slider
@@ -22,20 +22,20 @@ block content
 								button.js-group-item.multi-tab-btn Напитки
 							
 							//  КНОПКИ ВТОРОГО УРОВЕНЯ  - ПОДКАТЕГОРИИ  
-							//  ПОДКАТЕГОРИЯ ПЕРВОЙ КАТЕГОРИИ  
+							//  ПОДКАТЕГОРИЯ Пицца
 							.level_2-wrapper
 								.level_2.active.js-level_2.js-group.scroll-sm
 									a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='meat') Мясные
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Рыбные
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='forKids') Детские
-								//  ПОДКАТЕГОРИЯ ВТОРОЙ КАТЕГОРИИ  
+								//  ПОДКАТЕГОРИЯ Роллы
 								.level_2.js-level_2.js-group.scroll-sm
 									a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='japan') Жаренные
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='sweet') Классические
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='fish') Детские
-								//  ПОДКАТЕГОРИЯ ТРЕТЬЕЙ КАТЕГОРИИ  
+								//  ПОДКАТЕГОРИЯ Напитки
 								.level_2.js-level_2.js-group.scroll-sm
 									a.js-group-item.multi-tab-btn.active(href='#!' data-tag='*') Все
 									a.js-group-item.multi-tab-btn(href='#!' data-tag='juice') Сок
@@ -46,21 +46,34 @@ block content
 						.main-content
 							//  ПОДКАТЕГОРИИ Пицца 
 							.grid-three-columns.level_3.active.js-level_3
-								+cardMulti('pizza1', 'Мясная','meat fish', '650', 800)
+								+cardMulti('pizza1', 'Пицца Карбонара','meat fish', '650', 800)
 									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-								+cardMulti('pizza2', 'Детская','meat', '650', 800)
+								+cardMulti('pizza2', 'Пицца Пепперони','meat', '650', 800)
 									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-								+cardMulti('pizza3', 'Рыбная','meat forKids fish', '650', 800)
+								+cardMulti('pizza3', 'Пицца Ранчоус','meat forKids fish', '650', 800)
 									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-								
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/5oT1UNlfbP1736275928.jpeg', 'Пицца Баварская','meat forKids fish', '650', 800)
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/Nh16Yck6lW1736275074.jpeg', 'Пицца Гавайская','meat forKids fish', '850')
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/3jkzUwVLfh1736276507.jpeg', 'Пицца Неаполитанская','meat forKids fish', '650')
+								+cardMulti('pizza2', 'Пицца Ранчоус','meat fish', '650', 800)
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+								+cardMulti('pizza4', 'Пицца “Особая”','meat forKids fish', '650', 800)
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+								+cardMulti('pizza3', 'Пицца “Маргарита”','meat forKids fish', '650', 800)
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+							
 							//  ПОДКАТЕГОРИИ РОЛЛЫ 
 							.grid-three-columns.level_3.js-level_3
-								+cardMulti('pizza4', 'Roll Мясная','japan', '650', 800)
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/5oT1UNlfbP1736275928.jpeg', 'Пицца Баварская','japan sweet ', '650', 800)
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/Nh16Yck6lW1736275074.jpeg', 'Пицца Карбонара','japan sweet fish', '850')
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/3jkzUwVLfh1736276507.jpeg', 'Пицца Ранчоус','japan sweet fish', '650')
 									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-								+cardMulti('pizza5', 'Roll Детская','japan fish', '650', 800)
-									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-								+cardMulti('pizza6', 'Roll Рыбная','sweet', '650', 800)
-									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
+								+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/c5F4BsnHNE1736276776.jpeg', 'Пицца Баварская','japan  fish', '650', 800)
+									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
 								
 								
 							//  ПОДКАТЕГОРИИ НАПИТКИ 
@@ -71,29 +84,7 @@ block content
 									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
 								+cardMulti('pizza3', 'Американо','coffee', '650', 800)
 									p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-								
-
-
-				.product-assortiment-single
-					.title-wrapper.txt-center
-						.h2 Пицца
-					
-					.grid-three-columns
-						+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/5oT1UNlfbP1736275928.jpeg', 'Пицца Баварская', '650', 800)
-							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-						+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/Nh16Yck6lW1736275074.jpeg', 'Пицца Карбонара', '850')
-							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-						+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/3jkzUwVLfh1736276507.jpeg', 'Пицца Ранчоус', '650')
-							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты.
-						+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/c5F4BsnHNE1736276776.jpeg', 'Пицца Баварская', '650', 800)
-							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-						+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/4g8be06sYf1736327074.jpeg', 'Пицца Карбонара', '850')
-							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-						+card-url('https://prilogeniepizza.megamagic.ru/upload/images/menu_item_icon/p3nUINOPtg1736347962.jpg', 'Пицца Ранчоус', '650')
-							p Соус Ранч, сыр Моцарелла, цыпленок барбекю, бекон, томаты. 
-
-					//- 
-		
+			
 		include ../sections/_cta
 		include ../sections/_our-garantee
 		include ../sections/_discount

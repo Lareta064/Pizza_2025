@@ -8,6 +8,8 @@ header.header{
 	transition: .3s;
 	top:0;
 	z-index: 5;
+	&.header-special{border-bottom: 0;}
+	&.header-special.header--slim{border-bottom: 1px solid $s1;}
 	@media (max-width: 767px) {
 		position: fixed;
 		bottom: 0;

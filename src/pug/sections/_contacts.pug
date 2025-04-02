@@ -1,0 +1,45 @@
+section.contacts
+	.container
+		.contacts-content
+			.contacts-content__left
+				h1.title-2.mb-40 Обратная связь
+				form.contacts-form(action="" method="method")
+					.contacts-form-grid
+						.form-item.w-50
+							input(type="text" name="" placeholder="Имя *")
+						.form-item.w-50
+							input(type="email" name="" placeholder="email *")
+						
+						
+						.form-item
+							textarea(placeholder="Комментарий к заказу" name="message")
+						.form-btn
+							.form-agree
+								label.relative-label
+									input(type="checkbox" name="chbx1")
+									span.fake-checkbox
+									.label-text
+										p Принимаю #[a(href="#!") условия обработки] персональных данных.
+							
+							button.btn.mt-40(type="submit") Отправить
+			
+			.contacts-content__right
+				h2.title-2.mb-40 Контакты
+				.contacts-block
+					.contacts-block__title Адрес
+					address Город, адрес: 000000, г. Название города, ул. Название улицы, стр. 5, оф. 205
+				
+				.contacts-block
+					.contacts-block__title Время работы:
+					.schedule-block
+						p СР,ЧТ, ВС с 15:00 - 00:00; ПТ, СБ с 15:00 - 02:00; ПН, ВТ - выходные дни
+				
+				.contacts-block
+					.contacts-block__title Телефоны:
+					.contacts-phones
+						a(href="tel:+79055555555").phone-item +7 (905) 555-55-55
+						a(href="tel:+79055555555").phone-item +7 (905) 555-55-55
+				
+				.contacts-block
+					.contacts-block__title Email:
+					a(href="mailto:info@pz.mcdir.ru").email-link info@pz.mcdir.ru

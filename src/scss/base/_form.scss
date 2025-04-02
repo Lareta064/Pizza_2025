@@ -82,6 +82,11 @@
 		left: 0; z-index: -1;
 	}
 }
+.form-item.w-50{
+	width: 50%;
+	flex:1;
+	
+}
 /*custom select*/
 .dropdown {
 	position: relative;
