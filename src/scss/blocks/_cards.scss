@@ -3,7 +3,7 @@
 
 /*product card*/
 .product{
-	box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.03);
+	box-shadow: 0 5px 8px 0 var(--bx-shadow);
 	background: var(--white);
 	border-radius: 24px;
 	overflow: hidden;
@@ -539,7 +539,7 @@
 			font-size: remy(14);
 		}
 	}
-	&:hover{box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.03);border: 1px solid var(--secondary);}
+	&:hover{box-shadow: 0 5px 8px 0 var(--bx-shadow);border: 1px solid var(--secondary);}
 }
 
 .card-short.card-vertical,.card-short.card-row{

@@ -36,7 +36,11 @@
 	background-position: center;
 	
 }
-:root{
+body{
+	--body-bg: white;
+	--main-bg: white;
+	--bx-shadow:rgba(0, 0, 0, 0.03) ;
+
 	--primary: #1f1f1f;
 	--font-family: "RobotoCondensed",  sans-serif;
 	--second-family: "Cuprum",  sans-serif;
@@ -65,6 +69,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: var(--font-family);
+	background-color: var(--body-bg);
 	font-size: 16px;
     line-height: 1.5;
 	-webkit-font-smoothing: subpixel-antialiased;
@@ -77,6 +82,24 @@ body {
 		font-size:remy(16);
 	}
 	
+}
+body.dark-theme{
+	--body-bg: #1f1f1f;
+	--main-bg: #1f1f1f;
+
+	--bx-shadow:rgba(255, 255, 255, 0.03);
+	--primary: #ffffff;
+	
+	--accent-color-1: #D7001A;
+	--accent-color-2: #FBD10E;
+	--accent-color-4:#BF0017; 
+	
+	--secondary: #BFBFBF;
+	--secondary-1: #EEEEEE;
+	--secondary-2: #F7F7F7;
+	--secondary-4: #A3A7B4;
+	--secondary-5: #86898F;
+	--white: #1f1f1f;
 }
 .lock{
 	overflow: hidden; 
@@ -299,7 +322,7 @@ input[type="radio"], input[type="checkbox"]{
 }
 main{flex-grow: 1;}
 .main{
-	background-color: #fff;
+	background-color: var(--main-bg);
 	padding-top: 55px;
 	padding-bottom: 55px;
 	.reccomend-products{padding-top: 0;}

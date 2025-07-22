@@ -18,11 +18,11 @@ html(lang="ru")
 		link(rel='apple-touch-icon' sizes='180x180' href='./img/favicon/apple-touch-icon.png')
 		link(rel='manifest' href='./img/favicon/site.webmanifest')
 		//fancybox
-		link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css')
+		link(rel='stylesheet' href='./libs/fancybox/fancybox.min.css')
 		//Datapicker
 		link(rel='stylesheet' href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		//Swiper
-		link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css")
+		link(rel="stylesheet", href="./libs/fancybox/fancybox.min.css")
 		link(rel='preconnect' href='https://fonts.googleapis.com')
 		link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin)
 		link(href='https://fonts.googleapis.com/css2?family=Rubik&display=swap' rel='stylesheet')
@@ -33,7 +33,7 @@ html(lang="ru")
 
 			!{customStyle}
 	
-	body(class=(bodyCl !=="" ? bodyCl : ''))
+	body.dark-theme(class=(bodyCl !=="" ? bodyCl : ''))
 
 
 		
@@ -43,13 +43,13 @@ html(lang="ru")
 		script(src="./libs/jquery/jquery-3.0.0.min.js")
 		
 		//Swiper
-		script(src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js")
+		script(src="./libs/swiper/swiper-bundle.min.js")
 		//Datapicker
 		script(src='https://code.jquery.com/jquery-1.12.4.js')
 		script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
 		
 		//fancy
-		script(src='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js')
+		script(src='./libs/fancybox/fancybox.min.js')
 		//=============== custom scripts ===================
 		script(src="./js/datapicker.js")
 		script(src="./js/stories.js")
