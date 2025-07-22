@@ -40,7 +40,7 @@
   .accordion__item .accordion__title:hover {
 	  transition: all 0.5s ease-out;
   }
-  .accordion__content {padding-bottom: 20px;}
+  .accordion__content {padding-bottom: 20px; color: var(--primary);}
   .accordion__item .icon-arr{
 	transition: .3s; 
     align-self:  center;
