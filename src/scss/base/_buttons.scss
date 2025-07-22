@@ -80,7 +80,7 @@
 	width: 54px;
 	height: 54px;
 	display: inline-block;
-	background-color: #fff;
+	background-color: var(--body-bg);
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='22' viewBox='0 0 12 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10.5334 21.1998C10.3844 21.2003 10.2368 21.1713 10.0991 21.1145C9.96139 21.0577 9.83628 20.9742 9.73099 20.8688L0.664321 11.8022C0.453363 11.5884 0.335083 11.3001 0.335083 10.9998C0.335083 10.6994 0.453363 10.4112 0.664321 10.1974L9.73099 1.1307C9.9438 0.917895 10.2324 0.79834 10.5334 0.79834C10.8343 0.79834 11.123 0.917895 11.3358 1.1307C11.5486 1.34351 11.6682 1.63215 11.6682 1.9331C11.6682 2.23406 11.5486 2.5227 11.3358 2.7355L3.05339 10.9998L11.3358 19.264C11.5467 19.4778 11.665 19.7661 11.665 20.0664C11.665 20.3668 11.5467 20.6551 11.3358 20.8688C11.2305 20.9742 11.1054 21.0577 10.9677 21.1145C10.83 21.1713 10.6824 21.2003 10.5334 21.1998Z' fill='%232C2C2C' /%3e%3c/svg%3e");
 	background-size: 12px 22px;
 	background-position: center;
@@ -121,7 +121,7 @@
 }
 .btn-round, .btn-out, .btn-profile,.round-link{
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: var(--body-bg);
 	width: 54px;
 	height: 54px;
 	flex-shrink: 0;

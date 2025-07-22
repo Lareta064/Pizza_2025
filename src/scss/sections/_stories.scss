@@ -167,7 +167,7 @@
 .progress-bar-item::after {
     content: "";
     height: inherit;
-    background-color: #fff;
+    background-color: var(--body-bg);
     border-radius: inherit;
     width: var(--progress-bar-width);
     margin: inherit;

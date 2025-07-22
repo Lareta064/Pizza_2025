@@ -11,7 +11,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap:30px;
-	background-color: #fff;
+	background-color: var(--body-bg);
 	align-items: flex-start;
 	.autorization-page-switch{display: none;}
 	@media (max-width: 1364px) {
@@ -43,6 +43,6 @@
 	  border-radius: 0;
 	  .h4-upper{text-align: center; text-transform: capitalize; font-size: 20px;}
 	  &.active{display: flex;}
-	  background-color: #fff!important;
+	  background-color: var(--body-bg)!important;
 	}
 }

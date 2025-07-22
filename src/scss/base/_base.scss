@@ -40,7 +40,7 @@ body{
 	--body-bg: white;
 	--main-bg: white;
 	--bx-shadow:rgba(0, 0, 0, 0.03) ;
-
+   --grey-item: var(--grey-item);
 	--primary: #1f1f1f;
 	--font-family: "RobotoCondensed",  sans-serif;
 	--second-family: "Cuprum",  sans-serif;
@@ -52,10 +52,11 @@ body{
 	
 	--secondary: #BFBFBF;
 	--secondary-1: #EEEEEE;
-	--secondary-2: #F7F7F7;
+	--secondary-2: var(--grey-item);
 	--secondary-4: #A3A7B4;
 	--secondary-5: #86898F;
 	--white: white;
+	--custom-text:#212529;
 }
 
 html {
@@ -86,8 +87,8 @@ body {
 body.dark-theme{
 	--body-bg: #1f1f1f;
 	--main-bg: #1f1f1f;
-
-	--bx-shadow:rgba(255, 255, 255, 0.03);
+    --grey-item: #484848;
+	--bx-shadow:rgba(255, 255, 255, 0.08);
 	--primary: #ffffff;
 	
 	--accent-color-1: #D7001A;
@@ -96,10 +97,11 @@ body.dark-theme{
 	
 	--secondary: #BFBFBF;
 	--secondary-1: #EEEEEE;
-	--secondary-2: #F7F7F7;
+	--secondary-2: #f7f7f7;
 	--secondary-4: #A3A7B4;
 	--secondary-5: #86898F;
 	--white: #1f1f1f;
+	--custom-text:#f7f7f7;
 }
 .lock{
 	overflow: hidden; 
@@ -234,7 +236,7 @@ input[type="radio"], input[type="checkbox"]{
 .header, .footer{flex-shrink: 0;}
 .inner-main{
 	flex:1; 
-	background-color: #fff; 
+	background-color: var(--body-bg); 
 	padding-top: 20px;
 	padding-bottom: 55px;
 	section, .p-block-50 {padding-block:50px;}

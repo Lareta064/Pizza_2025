@@ -82,7 +82,7 @@
 	margin-left: 1.6em;
 }
 .order-form{
-	background-color: #fff;
+	background-color: var(--body-bg);
 	.order-total-offset-right .total{
 		margin-left:auto;
 		width: 570px;
@@ -144,7 +144,7 @@
 	padding: 10px;
 	display: flex;
 	column-gap:10px;
-	background-color: #fff;
+	background-color: var(--body-bg);
 }
 #delivery-courier{
 	height: 0;
@@ -158,7 +158,7 @@ display: none;
 .order-product{
 	font-size: 16px;
 	padding: 1.25em;
-	background-color: #fff;
+	background-color: var(--body-bg);
 	border: 1px solid var(--secondary-1);
 	border-radius: 20px;
 	padding: 1.25em;
@@ -214,7 +214,7 @@ display: none;
 	font-size: 10px;
 	justify-content: space-between;
 	border: 1px solid var(--secondary);
-	background-color: #fff;
+	background-color: var(--body-bg);
 	border-radius: 1em;
 	padding: 1em;
 	transition: .3s; 
@@ -260,7 +260,7 @@ display: none;
 	flex-direction: column;
 	row-gap: 10px;
 	height: auto;
-	background-color: #fff;
+	background-color: var(--body-bg);
 	&>*{width: 100%;}
 }
 .order-delivery-time {
@@ -373,7 +373,7 @@ display: none;
 		padding: 0;
 		margin: 0;
 		border: 0;
-		background-color: #fff;
+		background-color: var(--body-bg);
 		line-height: 1.43;
 		font-family: inherit;
 		font-size: inherit;
@@ -384,7 +384,7 @@ display: none;
 	}
 }
 .ui-state-default, .ui-widget-content .ui-state-default{
-	background-color: #fff;
+	background-color: var(--body-bg);
 	border:0;
 	font-size: 14px;
 	@media(min-width: 768px) and (max-width: 1364px) {font-size: remy(14);}

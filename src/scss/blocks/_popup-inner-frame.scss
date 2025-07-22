@@ -40,7 +40,7 @@
 	.popup-wrapper-content	{
 		border-radius: 4em;
 		padding: 4em;
-		background-color: #fff;
+		background-color: var(--body-bg);
 		position: relative;
 		.round-close{
 			position: absolute;

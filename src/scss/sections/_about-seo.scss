@@ -1,7 +1,7 @@
 @use "../base/var" as *;
 
 .custom-txt{
-	color: #212529;
+	color: var(--custom-text);
 	p{margin-block: 15px;}
 	@media (max-width: 1364px) {
 		p{margin-block: remy(15);}

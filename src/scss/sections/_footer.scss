@@ -38,7 +38,7 @@
 }
 .footer .social{
 	.social-item {
-		background-color: #fff;
+		background-color: white;
 		svg{fill: $p;}
 		&:hover{background-color: $a2;}
 	}
@@ -89,7 +89,7 @@
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 143%;
-	color: var(--white);
+	color:white;;
 	@media (max-width: 1364px) {
 		
 		font-size: remy(14);

@@ -3,7 +3,7 @@
 .single-product-content {
 	width: 100%;
 	position: relative;
-	background-color: #fff;
+	background-color: var(--body-bg);
 	@media (max-width: 1364px) {
 		column-gap:remy(40);
 		
@@ -267,7 +267,7 @@
 // popUp
 .product-modal{
 	@media (max-width: 767px) {
-		background-color: #fff;
+		background-color: var(--body-bg);
 		.single-product-footer{
 			padding: 20px 10px;
 			position: absolute;

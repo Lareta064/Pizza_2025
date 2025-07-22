@@ -35,7 +35,7 @@
 		border-radius: 100px;
 	}
 	input[type="radio"]:checked + span.switch-btn,inpu[type="checkbox"]t:checked + span.switch-btn {
-		background-color: #fff;
+		background-color: var(--body-bg);
 		box-shadow: 0 12px 38px 0 rgba(0, 0, 0, 0.08);
 		
 

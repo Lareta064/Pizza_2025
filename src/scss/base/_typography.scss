@@ -218,7 +218,7 @@
 		height: 20px;
 	}
 	&::-webkit-scrollbar-track{
-		width: 3px;background-color: #fff;
+		width: 3px;background-color: var(--body-bg);
 	}
 	&::-webkit-scrollbar-thumb{
 		background-color: var(--secondary-1);
