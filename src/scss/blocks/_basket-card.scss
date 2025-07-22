@@ -296,6 +296,12 @@
 	display: flex;
 	align-items: center;
 	column-gap:20px;
+	@media (max-width: 1919px) {
+		column-gap:remy(20);
+	}
+	@media (max-width: 767px) {
+		column-gap:10px;
+	}
 }
 .total__txt{
 	font-weight: 700;
@@ -314,6 +320,7 @@
 		font-family: var(--font-family);
 		font-size: 16px;
 		line-height: 1;
+		white-space: nowrap;
 	}
 	.price-box{
 		font-size: 34px;
@@ -329,9 +336,18 @@
 	}
 	@media (min-width: 768px) and (max-width:1364px){
 		.price-box{
-
 			font-size: remy(34);
 			small{font-size: remy(16);}
+		}
+	}
+	@media (max-width: 767px) {
+		.price-box{
+			font-size: 30px;
+			small{font-size: 16px;}
+		}
+		.total__count{
+			width: 35px;
+			overflow: hidden;
 		}
 	}
 }

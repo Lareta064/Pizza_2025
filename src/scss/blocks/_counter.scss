@@ -74,6 +74,6 @@
     align-items: center;
 }
  .counter-value{justify-content: center;}
-.counter-wrapper__group {
-	column-gap:6px;
+.counter-wrapper__group .counter-wrapper{
+	column-gap:8px;
 }
