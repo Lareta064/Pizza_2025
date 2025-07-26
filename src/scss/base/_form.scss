@@ -8,7 +8,7 @@
 		font-weight: 400;
 		font-size: 16px;
 		font-family: $ff;
-		color: $p;
+		color: var(--primary);
 		height: 3em;
 		border-bottom: 1px solid $s;
 		background-color: transparent;
@@ -20,7 +20,7 @@
 			font-size: 0.9em;
 		}
 		&:focus{
-			border-bottom-color: $p;
+			border-bottom-color: var(--primary);;
 		}
 		@media(min-width:768px) and (max-width:1364px){
 			font-size: remy(16);
@@ -40,8 +40,8 @@
 .form-item.error{
 	&:after{
 		content:'';
-		width: 1уь;
-		height: 1уь;
+		width: 1em;
+		height: 1em;
 		display: inline-block;
 		position: absolute;
 		right: 0;

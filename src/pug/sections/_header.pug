@@ -79,6 +79,19 @@ header.header#header-fixed
 									small выходные дни
 
 					.header-profile
+						
+						//  Определение и установка темы кнопки 
+						.toggle-button__wrapper.user-header-ic
+							script(wfd-invisible='true').
+								const inp = document.createElement('input');
+								inp.type = 'checkbox';
+								inp.name = 'toggle';
+								inp.classList.add('toggle-button');
+								if(+window.localStorage.getItem('colorState'))inp.classList.add('active');
+								document.querySelector('.toggle-button__wrapper').append(inp)
+								
+							//- input.toggle-button(type='checkbox' name='toggle')
+							
 						.profile-status
 							//.signin-btn имеет фоновую картинку иконку входа, что бы скрыть добавляем класс d-none
 							.signin-btn.d-none

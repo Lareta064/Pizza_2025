@@ -35,7 +35,9 @@ header.header{
 		
 	}
 }
-
+.dark-theme{
+	header.header{border-bottom: 0;}
+}
 // HEADER
 .header-row{
   display: flex;

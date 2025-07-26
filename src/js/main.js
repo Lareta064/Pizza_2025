@@ -3,10 +3,45 @@ document.addEventListener("DOMContentLoaded", function () {
     let headerBlock = document.querySelector('header.header');
     const hasDropItem = document.querySelector('#has-drop');
     const dropMenu =  document.querySelector('#drop-menu');
+    setTimeout(function () {
+      document.body.style.opacity = '1';
+      }, 50);
+    let themeToggle = document.querySelectorAll('.toggle-button');
+
+    // === ДОБАВЬ ЭТУ ЧАСТЬ ===
+    const isDark = +localStorage.getItem('colorState') === 1;
+    if (isDark) {
+      document.body.classList.add('dark-theme');
+      for (let btn of themeToggle) {
+        btn.classList.add('active');
+      }
+    }
+    // === КОНЕЦ добавленной части ===
+
+    for (let item of themeToggle) {
+      item.addEventListener('click', function () {
+        localStorage.setItem('clickToggle', 1);
+        if (!this.classList.contains('active')) {
+          for (let btn of themeToggle) {
+            btn.classList.add('active');
+          }
+          document.body.classList.add('dark-theme');
+        } else {
+          document.body.classList.remove('dark-theme');
+          for (let btn of themeToggle) {
+            btn.classList.remove('active');
+          }
+        }
+        if (document.body.classList.contains('dark-theme')) {
+          localStorage.setItem('colorState', 1);
+        } else {
+          localStorage.setItem('colorState', 0);
+        }
+      });
+    }
+
     // HEADER SUBMENU
     if(hasDropItem){
-      
-
       hasDropItem.addEventListener('click', ()=>{
           if(dropMenu.classList.contains('active')){
             dropMenu.classList.remove('active');

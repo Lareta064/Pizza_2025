@@ -40,12 +40,12 @@ body{
 	--body-bg: white;
 	--main-bg: white;
 	--bx-shadow:rgba(0, 0, 0, 0.03) ;
-   --grey-item:#f7f7f7;;
+    --grey-item:#f7f7f7;;
 	--primary: #1f1f1f;
 	--font-family: "RobotoCondensed",  sans-serif;
 	--second-family: "Cuprum",  sans-serif;
 	--font3: 'Chekharda';
-	
+	--modal-bg:rgba(0,0,0, .7);
 	--accent-color-1: #D7001A;
 	--accent-color-2: #FBD10E;
 	--accent-color-4:#BF0017; 
@@ -59,7 +59,54 @@ body{
 	--white: white;
 	--custom-text:#212529;
 }
-
+.toggle-button__wrapper {
+    position: relative;
+    
+}
+.toggle-button__wrapper .toggle-button {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    margin: 0;
+    vertical-align: top;
+    background: #ffffff;
+    border: 1px solid rgb(251, 209, 14);
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    -o-transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
+.toggle-button__wrapper .toggle-button.active {
+    background-color: rgb(251, 209, 14);
+    background-color: rgb(0, 0, 0);
+}
+.toggle-button__wrapper .toggle-button.active::after {
+    -webkit-transform: translateX(calc(100% + 3px));
+    -ms-transform: translateX(calc(100% + 3px));
+    transform: translateX(calc(100% + 3px));
+    background-color: #fff;
+}
+.toggle-button__wrapper .toggle-button::after {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 1.5px;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(251, 209, 14);
+    border-radius: 50%;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    -o-transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+}
 html {
 	scroll-behavior: smooth;
 	
@@ -92,7 +139,7 @@ body.dark-theme{
     --grey-item: #484848;
 	--bx-shadow:rgba(255, 255, 255, 0.08);
 	--primary: #ffffff;
-	
+	--modal-bg: rgba(255,255,255, .7);
 	--accent-color-1: #D7001A;
 	--accent-color-2: #FBD10E;
 	--accent-color-4:#BF0017; 

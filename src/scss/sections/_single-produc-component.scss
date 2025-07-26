@@ -261,6 +261,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.dark-theme{
+	.single-product-photo.resize-image:before, .single-product-photo.resize-image:after{
+		background-image: url("data:image/svg+xml,%3Csvg width='502' height='502' viewBox='0 0 502 502' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='251' cy='251' r='250' stroke='%23FFFFFF' stroke-width='2' stroke-linecap='round' stroke-dasharray='1 15' /%3E%3C/svg%3E");
+	}
+}
 .single-product-photo.resize-image:after{
 	content: '';
 	transform: scale(0.9);

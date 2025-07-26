@@ -28,12 +28,14 @@ html(lang="ru")
 		link(href='https://fonts.googleapis.com/css2?family=Rubik&display=swap' rel='stylesheet')
 		//========= custom styles ========
 		link(rel="stylesheet"  href="./css/main.css")
+		
+
 		title !{title}
 		//-style.
 
 			!{customStyle}
 	
-	body.dark-theme(class=(bodyCl !=="" ? bodyCl : ''))
+	body(style="opacity:0; transition: opacity 0.5s;" class=(bodyCl !=="" ? bodyCl : ''))
 
 
 		
